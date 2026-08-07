@@ -1,0 +1,108 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ───────────────────────────────────────────────
+
+enum Role {
+  FARMER
+  LAB
+  MANUFACTURER
+  DISTRIBUTOR
+  RETAILER
+  ADMIN
+}
+
+enum BatchStatus {
+  CREATED
+  TESTED
+  MANUFACTURED
+  IN_TRANSIT
+  DELIVERED
+  SOLD
+}
+
+enum TestResult {
+  PENDING
+  PASSED
+  FAILED
+}
+
+// ─── Models ──────────────────────────────────────────────
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(FARMER)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  batchesCreated    Batch[]            @relation("BatchCreator")
+  qualityTests      QualityTest[]      @relation("TestConductor")
+  supplyChainEvents SupplyChainEvent[] @relation("EventActor")
+
+  @@map("users")
+}
+
+model Batch {
+  id          String      @id @default(cuid())
+  name        String
+  herbName    String
+  origin      String
+  quantity    Float
+  unit        String      @default("kg")
+  status      BatchStatus @default(CREATED)
+  description String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  // Relations
+  createdById String
+  createdBy   User               @relation("BatchCreator", fields: [createdById], references: [id])
+  qualityTests QualityTest[]
+  supplyChainEvents SupplyChainEvent[]
+
+  @@map("batches")
+}
+
+model QualityTest {
+  id           String     @id @default(cuid())
+  testName     String
+  result       TestResult @default(PENDING)
+  notes        String?
+  testedAt     DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  // Relations
+  batchId      String
+  batch        Batch      @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  conductedById String
+  conductedBy  User       @relation("TestConductor", fields: [conductedById], references: [id])
+
+  @@map("quality_tests")
+}
+
+model SupplyChainEvent {
+  id          String   @id @default(cuid())
+  action      String
+  location    String?
+  notes       String?
+  timestamp   DateTime @default(now())
+
+  // Relations
+  batchId     String
+  batch       Batch    @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  actorId     String
+  actor       User     @relation("EventActor", fields: [actorId], references: [id])
+
+  @@map("supply_chain_events")
+}
