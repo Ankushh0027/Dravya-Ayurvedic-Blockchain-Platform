@@ -1,0 +1,9 @@
+project_name: "Dravya AI"
+version: "0.1.0"
+python_version: "3.12"
+
+paths:
+  raw_datasets: "datasets/raw"
+  processed_datasets: "datasets/processed"
+  final_datasets: "datasets/final"
+  model_output: "models"

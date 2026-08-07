@@ -1,0 +1,31 @@
+# Environment & Virtual Environment
+.venv/
+.env
+
+# Python Bytecode & Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Testing & Linting
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Datasets
+datasets/raw/
+datasets/processed/
+datasets/final/
+
+# Models & Artifacts
+models/
+
+# Generated Reports
+reports/generated/
+
+# IDE & OS Specific
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

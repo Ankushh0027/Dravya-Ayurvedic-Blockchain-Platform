@@ -1,0 +1,332 @@
+dataset_id,class_name,image_count
+CIMPd,Ashok.H,213
+CIMPd,Ashok.U,133
+CIMPd,Bamboo.U,102
+CIMPd,Barlaria.H,284
+CIMPd,Bel.H,358
+CIMPd,Bel.U,201
+CIMPd,Clerodendrum splendens.H,294
+CIMPd,Clerodendrum splendens.U,198
+CIMPd,Curry.U,200
+CIMPd,CustardApple.H,367
+CIMPd,CustardApple.U,255
+CIMPd,Guava.H,126
+CIMPd,Guava.U,62
+CIMPd,Harsingar.H,311
+CIMPd,Hibiscus.U,66
+CIMPd,Jack Fruit.U,87
+CIMPd,Jack fruit.H,210
+CIMPd,Kachnar.U,182
+CIMPd,Lantana.H,456
+CIMPd,Lantana.U,213
+CIMPd,Lemon.H,103
+CIMPd,Lemon.U,68
+CIMPd,"Makoy,U",241
+CIMPd,Makoy.H,410
+CIMPd,Marigold.H,186
+CIMPd,Mint.H,239
+CIMPd,Nasturtium.H,263
+CIMPd,Nasturtium.U,161
+CIMPd,Papaya.H,104
+CIMPd,Rose.H,107
+CIMPd,Rose.U,97
+CIMPd,Rose1.H,169
+CIMPd,Rose1.U,75
+CIMPd,Scarlet Sage.H,299
+CIMPd,Scarlet Sage.U,163
+CIMPd,Tulsi.H,354
+CIMPd,Tulsi.U,200
+CIMPd,curry.H,400
+CIMPd,harshingar.U,198
+CIMPd,hibiscus.H,100
+CIMPd,kachnar.H,326
+CIMPd,leafs,11
+Hugging_Face,Aloevera-Aloe barbadensis,277
+Hugging_Face,Amaranthus Green_Amaranthus viridis,123
+Hugging_Face,Amaranthus Red_Amaranthus tricolor,89
+Hugging_Face,Amla-Phyllanthus emlica Linn,213
+Hugging_Face,Amruta Balli-Tinospora cordifolia,236
+Hugging_Face,Arali-Nerium oleander,235
+Hugging_Face,Arive_Dantu_Amaranthus viridis,122
+Hugging_Face,Ashoka-Saraca asoca,227
+Hugging_Face,Ashwagandha_Withania somnifera,146
+Hugging_Face,Asthma plant_Euphorbia hirta,81
+Hugging_Face,Astma_weed,82
+Hugging_Face,Avacado_Persea americana,146
+Hugging_Face,Avaram_Senna auriculata,66
+Hugging_Face,Badipala,76
+Hugging_Face,Balloon vine_Cardiospermum halicacabum,246
+Hugging_Face,Bamboo-Bambusoideae,264
+Hugging_Face,Basale_Basella alba,249
+Hugging_Face,Beans-Vigna spp. (Genus) or Phaseolus spp. (Genus),97
+Hugging_Face,Bellyache bush (Green)_Jatropha gossypiifolia,81
+Hugging_Face,Benghal dayflower_ Commelina benghalensis,58
+Hugging_Face,Betel-Piper betle,440
+Hugging_Face,Betel_Nut_Areca catechu,146
+Hugging_Face,Big Caltrops_Tribulus terrestris,64
+Hugging_Face,Black-Honey Shrub_Tribulus terrestris,105
+Hugging_Face,Brahmi-Bacopa monnieri,250
+Hugging_Face,Bringaraja-Eclipta prostrata,73
+Hugging_Face,Bristly Wild Grape_Cissus quadrangularis,66
+Hugging_Face,Butterfly Pea_Clitoria ternatea,51
+Hugging_Face,Camphor-Cinnamomum camphora,66
+Hugging_Face,Cape Gooseberry_Physalis peruviana,122
+Hugging_Face,Cardiospermum halicacabum,61
+Hugging_Face,Caricature,76
+Hugging_Face,Castor-Ricinus communis,283
+Hugging_Face,Catharanthus,134
+Hugging_Face,Celery_Apium graveolens,82
+Hugging_Face,Chakte,68
+Hugging_Face,Chilly-Capsicum spp. (Genus),69
+Hugging_Face,Chinese Spinach_Amaranthus dubius,60
+Hugging_Face,Citron lime (herelikai)-Citrus medica (Citron) or Citrus aurantiifolia (Lime),99
+Hugging_Face,Coffee-Coffea spp. (Genus),83
+Hugging_Face,Common Wireweed_Sida rhombifolia,60
+Hugging_Face,Common rue(naagdalli)- Ruta graveolens,67
+Hugging_Face,Coriander-Coriandrum sativum,235
+Hugging_Face,Country Mallow_Abutilon indicum,69
+Hugging_Face,Crown flower_Calotropis gigantea,66
+Hugging_Face,Curry Leaf-Murraya koenigii,483
+Hugging_Face,Doddapatre-Plectanthus amboinicus,288
+Hugging_Face,Drumstick- Moringa oleifera,133
+Hugging_Face,Dwarf Copperleaf (Green)_Acalypha reptans,88
+Hugging_Face,Dwarf copperleaf (Red)_ Acalypha wilkesiana,79
+Hugging_Face,Ekka-Calotropis gigantea,227
+Hugging_Face,Eucalyptus-Eucalyptus spp. (Genus),80
+Hugging_Face,False Amarnath_Digera muricata,101
+Hugging_Face,Fenugreek Leaves_ Trigonella foenum-graecum,80
+Hugging_Face,Ganigale,75
+Hugging_Face,Ganike-Solanum nigrum,286
+Hugging_Face,Gasagase-Grewia asiatica,79
+Hugging_Face,Gauva-Psidium guajava,332
+Hugging_Face,Geranium_ Pelargonium spp. (Genus),146
+Hugging_Face,Giant Pigweed_Amaranthus titan,103
+Hugging_Face,Ginger-Zingiber officinale,82
+Hugging_Face,Globe Amarnath-Gomphrena globosa,81
+Hugging_Face,Gongura_Hibiscus sabdariffa,53
+Hugging_Face,Green Chireta_Andrographis paniculata,69
+Hugging_Face,Henna-Lausonia inermis,223
+Hugging_Face,Hibiscus-Hibiscus rosa sinensis,319
+Hugging_Face,Holy Basil_ Ocimum sanctum,54
+Hugging_Face,Honge-Milletia,252
+Hugging_Face,Indian CopperLeaf_ Acalypha indica,124
+Hugging_Face,Indian Jujube_Ziziphus mauritiana,66
+Hugging_Face,Indian Sarsaparilla_Hemidesmus indicus,84
+Hugging_Face,Indian Stinging Nettle_Urtica dioica subsp. gracilis,106
+Hugging_Face,Indian Thornapple_Datura metel,57
+Hugging_Face,Indian pennywort_Centella asiatica,64
+Hugging_Face,Indian wormwood_Artemisia indica,67
+Hugging_Face,Insulin,235
+Hugging_Face,Ivy Gourd_Coccinia grandis,51
+Hugging_Face,Jackfruit-Artocarpus heterophyllus,166
+Hugging_Face,Jamaica Cherry-Gasagase_ Muntingia calabura,56
+Hugging_Face,Jamun_Syzygium cumini,39
+Hugging_Face,Jasmine-Jasmium,307
+Hugging_Face,Kambajala,59
+Hugging_Face,Karanda_Carissa carandas,74
+Hugging_Face,Kasambruga,48
+Hugging_Face,Kohlrabi-Brassica oleracea var. gongylodes,73
+Hugging_Face,Kokilaksha_Asteracantha longifolia,59
+Hugging_Face,Lagos Spinach_Celosia argentea,84
+Hugging_Face,Lambs Quarters_Chenopodium album,69
+Hugging_Face,Land Caltrops (Bindii)_Tribulus cistoides,63
+Hugging_Face,Lantana- Lantana camara,76
+Hugging_Face,Lemon grass-Cymbopogon citratus,154
+Hugging_Face,Lemon-Citrus limon,326
+Hugging_Face,Lettuce Tree_Pisonia grandis,64
+Hugging_Face,Madagascar Periwinkle_Catharanthus roseus,55
+Hugging_Face,Madras Pea Pumpkin_Sesbania grandiflora,53
+Hugging_Face,Malabar Catmint_Plectranthus amboinicus,65
+Hugging_Face,Malabar_Nut-Justicia adhatoda,51
+Hugging_Face,Malabar_Spinach-Basella alba,185
+Hugging_Face,Mango_Mangifera indica,311
+Hugging_Face,Marigold-Tagetes spp. (Genus),93
+Hugging_Face,Mexican Mint_Plectranthus amboinicus (also known as Cuban Oregano),250
+Hugging_Face,Mexican Prickly Poppy_Argemone mexicana,55
+Hugging_Face,Mint-Mentha,413
+Hugging_Face,Mountain Knotgrass_Aerva lanata,78
+Hugging_Face,Mustard_Brassica juncea,80
+Hugging_Face,Nagadali_Ruta graveolens,152
+Hugging_Face,Nalta Jute_Corchorus olitorius,73
+Hugging_Face,Neem_Azadirachta indica,338
+Hugging_Face,Nelavembu-Andrographis paniculata,90
+Hugging_Face,Nerale,60
+Hugging_Face,Night blooming Cereus_Epiphyllum oxypetalum,54
+Hugging_Face,Nithyapushpa_Vinca rosea,146
+Hugging_Face,Nooni-Morinda citrifolia,218
+Hugging_Face,Oleander_Nerium oleander,62
+Hugging_Face,Onion-Allium cepa,92
+Hugging_Face,Padri,73
+Hugging_Face,Palak(Spinach)-Spinacia oleracea,233
+Hugging_Face,Panicled Foldwing_Dicliptera paniculata,68
+Hugging_Face,Pappaya-Carica papaya,281
+Hugging_Face,Parijatha-Nyctanthes arbor-tristis,106
+Hugging_Face,Pea-Pisum sativum,47
+Hugging_Face,Peepal Tree_Ficus religiosa,63
+Hugging_Face,Pepper-Piper nigrum,154
+Hugging_Face,Pomegranate-Punica granatum,300
+Hugging_Face,Prickly Chaff Flower_Achyranthes aspera,54
+Hugging_Face,Pumpkin-Cucurbita pepo,92
+Hugging_Face,Punarnava_Boerhavia diffusa,76
+Hugging_Face,Purple Fruited Pea Eggplant_Solanum trilobatum,70
+Hugging_Face,Purple Tephrosia_Tephrosia purpurea,59
+Hugging_Face,Raddish-Raphanus sativus,40
+Hugging_Face,Raktachandini_Pterocarpus santalinus,146
+Hugging_Face,Rasna_Alpinia galanga,50
+Hugging_Face,Rosary Pea_Abrus precatorius,66
+Hugging_Face,Rose Apple_Syzygium jambos,56
+Hugging_Face,Rose-Rosa,274
+Hugging_Face,Roxburgh fig_Ficus auriculata,50
+Hugging_Face,Sampige,61
+Hugging_Face,Sandalwood_Santalum album,58
+Hugging_Face,Sapota-Manikara zapota,190
+Hugging_Face,Seethaashoka-Saraca asoca,47
+Hugging_Face,Seethapala,114
+Hugging_Face,Shaggy button weed_Diodia teres,65
+Hugging_Face,Siru Keerai_Amaranthus tristis,68
+Hugging_Face,Small Water Clover_Marsilea minuta,57
+Hugging_Face,Spiderwisp_Cleome viscosa,55
+Hugging_Face,Spinach1,67
+Hugging_Face,Square Stalked Vine_Sarcostemma acidum,159
+Hugging_Face,Stinking Passionflower_Passiflora foetida,66
+Hugging_Face,Sweet Basil_Ocimum basilicum,123
+Hugging_Face,Sweet flag_Acorus calamus,75
+Hugging_Face,Tamarind_Tamarindus indica,176
+Hugging_Face,Taro_Colocasia esculenta,69
+Hugging_Face,Tecoma,69
+Hugging_Face,Thumbe,74
+Hugging_Face,Tinnevelly Senna_Cassia angustifolia (also known as Senna),53
+Hugging_Face,Tomato_Solanum lycopersicum,62
+Hugging_Face,Trellis Vine_Cissus sicyoides,57
+Hugging_Face,Trigonella Foenum-graecum (Fenugreek),36
+Hugging_Face,Tulasi-Ocimum sanctum_Ocimum sanctum (also known as Holy Basil),375
+Hugging_Face,Turmeric_ Curcuma longa,39
+Hugging_Face,Velvet bean_Mucuna pruriens,72
+Hugging_Face,Water Spinach_Ipomoea aquatica,55
+Hugging_Face,Wood_sorel_ Oxalis spp,146
+Hugging_Face,coatbuttons_Tridax procumbens,60
+Hugging_Face,crape Jasmine_Tabernaemontana divaricata,56
+Hugging_Face,heart-leaved moonseed_ Tinospora cordifolia,192
+Hugging_Face,indian Beech_Pongamia pinnata,61
+Hugging_Face,kamakasturi,67
+Hugging_Face,kepala,76
+Kaggle,Medicinal Leaf dataset\Aloevera,118
+Kaggle,Medicinal Leaf dataset\Amla,67
+Kaggle,Medicinal Leaf dataset\Amruthaballi,91
+Kaggle,Medicinal Leaf dataset\Arali,89
+Kaggle,Medicinal Leaf dataset\Astma_weed,82
+Kaggle,Medicinal Leaf dataset\Badipala,76
+Kaggle,Medicinal Leaf dataset\Balloon_Vine,61
+Kaggle,Medicinal Leaf dataset\Bamboo,118
+Kaggle,Medicinal Leaf dataset\Beans,97
+Kaggle,Medicinal Leaf dataset\Betel,114
+Kaggle,Medicinal Leaf dataset\Bhrami,104
+Kaggle,Medicinal Leaf dataset\Bringaraja,73
+Kaggle,Medicinal Leaf dataset\Caricature,76
+Kaggle,Medicinal Leaf dataset\Castor,129
+Kaggle,Medicinal Leaf dataset\Catharanthus,134
+Kaggle,Medicinal Leaf dataset\Chakte,68
+Kaggle,Medicinal Leaf dataset\Chilly,69
+Kaggle,Medicinal Leaf dataset\Citron lime (herelikai),99
+Kaggle,Medicinal Leaf dataset\Coffee,83
+Kaggle,Medicinal Leaf dataset\Common rue(naagdalli),67
+Kaggle,Medicinal Leaf dataset\Coriender,115
+Kaggle,Medicinal Leaf dataset\Curry,168
+Kaggle,Medicinal Leaf dataset\Doddpathre,142
+Kaggle,Medicinal Leaf dataset\Drumstick,56
+Kaggle,Medicinal Leaf dataset\Ekka,81
+Kaggle,Medicinal Leaf dataset\Eucalyptus,80
+Kaggle,Medicinal Leaf dataset\Ganigale,75
+Kaggle,Medicinal Leaf dataset\Ganike,63
+Kaggle,Medicinal Leaf dataset\Gasagase,79
+Kaggle,Medicinal Leaf dataset\Ginger,82
+Kaggle,Medicinal Leaf dataset\Globe Amarnath,81
+Kaggle,Medicinal Leaf dataset\Guava,128
+Kaggle,Medicinal Leaf dataset\Henna,80
+Kaggle,Medicinal Leaf dataset\Hibiscus,118
+Kaggle,Medicinal Leaf dataset\Honge,113
+Kaggle,Medicinal Leaf dataset\Insulin,89
+Kaggle,Medicinal Leaf dataset\Jackfruit,110
+Kaggle,Medicinal Leaf dataset\Jasmine,49
+Kaggle,Medicinal Leaf dataset\Kambajala,59
+Kaggle,Medicinal Leaf dataset\Kasambruga,48
+Kaggle,Medicinal Leaf dataset\Kohlrabi,73
+Kaggle,Medicinal Leaf dataset\Lantana,76
+Kaggle,Medicinal Leaf dataset\Lemon,123
+Kaggle,Medicinal Leaf dataset\Lemongrass,8
+Kaggle,Medicinal Leaf dataset\Malabar_Nut,51
+Kaggle,Medicinal Leaf dataset\Malabar_Spinach,79
+Kaggle,Medicinal Leaf dataset\Mango,103
+Kaggle,Medicinal Leaf dataset\Marigold,93
+Kaggle,Medicinal Leaf dataset\Mint,135
+Kaggle,Medicinal Leaf dataset\Neem,132
+Kaggle,Medicinal Leaf dataset\Nelavembu,90
+Kaggle,Medicinal Leaf dataset\Nerale,62
+Kaggle,Medicinal Leaf dataset\Nooni,72
+Kaggle,Medicinal Leaf dataset\Onion,92
+Kaggle,Medicinal Leaf dataset\Padri,73
+Kaggle,Medicinal Leaf dataset\Palak(Spinach),149
+Kaggle,Medicinal Leaf dataset\Papaya,135
+Kaggle,Medicinal Leaf dataset\Parijatha,66
+Kaggle,Medicinal Leaf dataset\Pea,47
+Kaggle,Medicinal Leaf dataset\Pepper,8
+Kaggle,Medicinal Leaf dataset\Pomoegranate,75
+Kaggle,Medicinal Leaf dataset\Pumpkin,92
+Kaggle,Medicinal Leaf dataset\Raddish,40
+Kaggle,Medicinal Leaf dataset\Rose,106
+Kaggle,Medicinal Leaf dataset\Sampige,61
+Kaggle,Medicinal Leaf dataset\Sapota,44
+Kaggle,Medicinal Leaf dataset\Seethaashoka,47
+Kaggle,Medicinal Leaf dataset\Seethapala,114
+Kaggle,Medicinal Leaf dataset\Spinach1,67
+Kaggle,Medicinal Leaf dataset\Tamarind,176
+Kaggle,Medicinal Leaf dataset\Taro,69
+Kaggle,Medicinal Leaf dataset\Tecoma,69
+Kaggle,Medicinal Leaf dataset\Thumbe,74
+Kaggle,Medicinal Leaf dataset\Tomato,62
+Kaggle,Medicinal Leaf dataset\Tulsi,177
+Kaggle,Medicinal Leaf dataset\Turmeric,39
+Kaggle,Medicinal Leaf dataset\ashoka,81
+Kaggle,Medicinal Leaf dataset\camphor,66
+Kaggle,Medicinal Leaf dataset\kamakasturi,67
+Kaggle,Medicinal Leaf dataset\kepala,76
+Kaggle,Medicinal plant dataset\Aloevera,164
+Kaggle,Medicinal plant dataset\Amla,146
+Kaggle,Medicinal plant dataset\Amruta_Balli,146
+Kaggle,Medicinal plant dataset\Arali,146
+Kaggle,Medicinal plant dataset\Ashoka,146
+Kaggle,Medicinal plant dataset\Ashwagandha,146
+Kaggle,Medicinal plant dataset\Avacado,146
+Kaggle,Medicinal plant dataset\Bamboo,146
+Kaggle,Medicinal plant dataset\Basale,146
+Kaggle,Medicinal plant dataset\Betel,151
+Kaggle,Medicinal plant dataset\Betel_Nut,146
+Kaggle,Medicinal plant dataset\Brahmi,146
+Kaggle,Medicinal plant dataset\Castor,160
+Kaggle,Medicinal plant dataset\Curry_Leaf,146
+Kaggle,Medicinal plant dataset\Doddapatre,146
+Kaggle,Medicinal plant dataset\Ekka,146
+Kaggle,Medicinal plant dataset\Ganike,115
+Kaggle,Medicinal plant dataset\Gauva,146
+Kaggle,Medicinal plant dataset\Geranium,146
+Kaggle,Medicinal plant dataset\Henna,150
+Kaggle,Medicinal plant dataset\Hibiscus,165
+Kaggle,Medicinal plant dataset\Honge,146
+Kaggle,Medicinal plant dataset\Insulin,146
+Kaggle,Medicinal plant dataset\Jasmine,187
+Kaggle,Medicinal plant dataset\Lemon,146
+Kaggle,Medicinal plant dataset\Lemon_grass,146
+Kaggle,Medicinal plant dataset\Mango,146
+Kaggle,Medicinal plant dataset\Mint,153
+Kaggle,Medicinal plant dataset\Nagadali,152
+Kaggle,Medicinal plant dataset\Neem,146
+Kaggle,Medicinal plant dataset\Nithyapushpa,146
+Kaggle,Medicinal plant dataset\Nooni,146
+Kaggle,Medicinal plant dataset\Pappaya,146
+Kaggle,Medicinal plant dataset\Pepper,146
+Kaggle,Medicinal plant dataset\Pomegranate,146
+Kaggle,Medicinal plant dataset\Raktachandini,146
+Kaggle,Medicinal plant dataset\Rose,168
+Kaggle,Medicinal plant dataset\Sapota,146
+Kaggle,Medicinal plant dataset\Tulasi,146
+Kaggle,Medicinal plant dataset\Wood_sorel,146

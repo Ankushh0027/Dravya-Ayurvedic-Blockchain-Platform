@@ -1,0 +1,38 @@
+{
+  "version": "v1",
+  "status": "BLOCKED",
+  "timestamp": "2026-08-02T14:47:32.162866+00:00",
+  "reason": "NO_APPROVED_MAPPINGS",
+  "checks": [
+    {
+      "check_name": "manifest_existence",
+      "status": "PASS",
+      "message": "Manifest file exists.",
+      "metrics": {},
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "check_name": "manifest_approval_status",
+      "status": "BLOCKED",
+      "message": "Manifest status is BLOCKED (NO_APPROVED_MAPPINGS). No approved taxonomy mappings exist.",
+      "metrics": {
+        "approved_mappings_count": 0,
+        "canonical_records_count": 0
+      },
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "statistics": {},
+  "class_statistics": {},
+  "health_statistics": {},
+  "provenance_statistics": {},
+  "input_manifest": "C:\\Dravya-AI-Engine\\reports\\dataset_analysis\\canonical_dataset_manifest_v1.json",
+  "configuration": {
+    "min_samples_per_class": 5,
+    "fail_on_warning": false
+  }
+}

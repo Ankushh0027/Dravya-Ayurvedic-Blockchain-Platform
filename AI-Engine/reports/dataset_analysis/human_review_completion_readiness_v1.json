@@ -1,0 +1,3745 @@
+{
+  "taxonomy_version": "v1",
+  "generated_at": "2026-08-04T15:38:19.271152+00:00",
+  "completion_readiness_status": "READY_FOR_PARTIAL_DATASET",
+  "status_reason": "4 taxonomy mapping(s) approved by explicit human action. 327 mapping(s) remain pending human review.",
+  "total_mappings": 331,
+  "approved_count": 4,
+  "rejected_count": 0,
+  "needs_review_count": 231,
+  "unreviewed_count": 96,
+  "pending_count": 327,
+  "reviewed_count": 4,
+  "progress_percent": 1.21,
+  "total_candidate_groups": 200,
+  "fully_reviewed_groups_count": 1,
+  "pending_groups_count": 199,
+  "approved_mappings_audit": [
+    {
+      "mapping_id": "map_v1_00007",
+      "source_dataset": "CIMPd",
+      "original_class_name": "Clerodendrum splendens.H",
+      "approved_canonical_plant_id": "PLANT-CLERODENDRUM-SPLENDENS-0FC371",
+      "canonical_name": "Clerodendrum splendens",
+      "scientific_name": null,
+      "health_condition": "Healthy",
+      "reviewer_id": "reviewer_001",
+      "evidence": "Source class Clerodendrum splendens.U matches the candidate canonical plant Clerodendrum splendens; botanical recommendation is APPROVE_CANDIDATE.",
+      "reviewed_at": "2026-08-04T15:26:15.971207+00:00",
+      "class_directory_exists": true,
+      "source_image_files_count": 294
+    },
+    {
+      "mapping_id": "map_v1_00008",
+      "source_dataset": "CIMPd",
+      "original_class_name": "Clerodendrum splendens.U",
+      "approved_canonical_plant_id": "PLANT-CLERODENDRUM-SPLENDENS-0FC371",
+      "canonical_name": "Clerodendrum splendens",
+      "scientific_name": null,
+      "health_condition": "Unhealthy",
+      "reviewer_id": "reviewer_001",
+      "evidence": "Candidate canonical plant name Clerodendrum splendens matches the source class Clerodendrum splendens.H; botanical recommendation is APPROVE_CANDIDATE.",
+      "reviewed_at": "2026-08-04T15:27:47.629104+00:00",
+      "class_directory_exists": true,
+      "source_image_files_count": 198
+    },
+    {
+      "mapping_id": "map_v1_00009",
+      "source_dataset": "CIMPd",
+      "original_class_name": "curry.H",
+      "approved_canonical_plant_id": "PLANT-CURRY-0B8E0D",
+      "canonical_name": "curry",
+      "scientific_name": null,
+      "health_condition": "Healthy",
+      "reviewer_id": "reviewer_001",
+      "evidence": "Source classes Curry.U and Medicinal Leaf dataset\\Curry both map to the same candidate canonical plant Curry, with evidence from 2 dataset sources. Botanical recommendation is APPROVE_CANDIDATE.",
+      "reviewed_at": "2026-08-04T15:28:58.803274+00:00",
+      "class_directory_exists": true,
+      "source_image_files_count": 400
+    },
+    {
+      "mapping_id": "map_v1_00010",
+      "source_dataset": "CIMPd",
+      "original_class_name": "Curry.U",
+      "approved_canonical_plant_id": "PLANT-CURRY-0B8E0D",
+      "canonical_name": "curry",
+      "scientific_name": null,
+      "health_condition": "Unhealthy",
+      "reviewer_id": "reviewer_001",
+      "evidence": "Source class Curry maps to the candidate canonical plant Curry. The mapping is supported by the available source-class evidence and botanical recommendation.",
+      "reviewed_at": "2026-08-04T15:31:31.085853+00:00",
+      "class_directory_exists": true,
+      "source_image_files_count": 200
+    }
+  ],
+  "approved_source_files_scanned": 1092,
+  "approved_unique_images_sha256_count": 1092,
+  "approved_duplicate_consolidation_count": 0,
+  "raw_datasets_immutability_verified": true,
+  "next_recommended_review_groups": [
+    {
+      "canonical_plant_id": "PLANT-ALOEVERA-E8FA3C",
+      "canonical_name": "Aloevera",
+      "scientific_name": "Aloe barbadensis",
+      "pending_mappings_count": 3,
+      "total_mappings": 3,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Aloe barbadensis' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00043",
+        "map_v1_00212",
+        "map_v1_00292"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AMARANTHUS-GREEN-3330EE",
+      "canonical_name": "Amaranthus Green",
+      "scientific_name": "Amaranthus viridis",
+      "pending_mappings_count": 1,
+      "total_mappings": 1,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Amaranthus viridis' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00044"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AMARANTHUS-RED-CC834C",
+      "canonical_name": "Amaranthus Red",
+      "scientific_name": "Amaranthus tricolor",
+      "pending_mappings_count": 1,
+      "total_mappings": 1,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Amaranthus tricolor' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00045"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AMLA-DD45E6",
+      "canonical_name": "Amla",
+      "scientific_name": "Phyllanthus emlica Linn",
+      "pending_mappings_count": 3,
+      "total_mappings": 3,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Phyllanthus emlica Linn' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00046",
+        "map_v1_00213",
+        "map_v1_00293"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AMRUTA-BALLI-A5C563",
+      "canonical_name": "Amruta Balli",
+      "scientific_name": "Tinospora cordifolia",
+      "pending_mappings_count": 2,
+      "total_mappings": 2,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Tinospora cordifolia' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00047",
+        "map_v1_00294"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ARALI-138475",
+      "canonical_name": "Arali",
+      "scientific_name": "Nerium oleander",
+      "pending_mappings_count": 3,
+      "total_mappings": 3,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Nerium oleander' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00048",
+        "map_v1_00215",
+        "map_v1_00295"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ASHOKA-BCA1A9",
+      "canonical_name": "Ashoka",
+      "scientific_name": "Saraca asoca",
+      "pending_mappings_count": 3,
+      "total_mappings": 3,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Saraca asoca' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00050",
+        "map_v1_00216",
+        "map_v1_00296"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ASHWAGANDHA-706EEE",
+      "canonical_name": "Ashwagandha",
+      "scientific_name": "Withania somnifera",
+      "pending_mappings_count": 2,
+      "total_mappings": 2,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Withania somnifera' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00051",
+        "map_v1_00297"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ASTHMA-PLANT-F8E669",
+      "canonical_name": "Asthma plant",
+      "scientific_name": "Euphorbia hirta",
+      "pending_mappings_count": 1,
+      "total_mappings": 1,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Euphorbia hirta' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00052"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AVACADO-E1F7B1",
+      "canonical_name": "Avacado",
+      "scientific_name": "Persea americana",
+      "pending_mappings_count": 2,
+      "total_mappings": 2,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Persea americana' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00054",
+        "map_v1_00298"
+      ]
+    }
+  ],
+  "group_statuses": [
+    {
+      "canonical_plant_id": "PLANT-ALOEVERA-E8FA3C",
+      "canonical_name": "Aloevera",
+      "scientific_name": "Aloe barbadensis",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Aloe barbadensis' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00043",
+        "map_v1_00212",
+        "map_v1_00292"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AMARANTHUS-GREEN-3330EE",
+      "canonical_name": "Amaranthus Green",
+      "scientific_name": "Amaranthus viridis",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Amaranthus viridis' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00044"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AMARANTHUS-RED-CC834C",
+      "canonical_name": "Amaranthus Red",
+      "scientific_name": "Amaranthus tricolor",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Amaranthus tricolor' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00045"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AMLA-DD45E6",
+      "canonical_name": "Amla",
+      "scientific_name": "Phyllanthus emlica Linn",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Phyllanthus emlica Linn' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00046",
+        "map_v1_00213",
+        "map_v1_00293"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AMRUTA-BALLI-A5C563",
+      "canonical_name": "Amruta Balli",
+      "scientific_name": "Tinospora cordifolia",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Tinospora cordifolia' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00047",
+        "map_v1_00294"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AMRUTHABALLI-F4E57D",
+      "canonical_name": "Amruthaballi",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Amruthaballi' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00214"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ARALI-138475",
+      "canonical_name": "Arali",
+      "scientific_name": "Nerium oleander",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Nerium oleander' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00048",
+        "map_v1_00215",
+        "map_v1_00295"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ARIVE-DANTU-AMARANTHUS-VIRIDIS-E6F356",
+      "canonical_name": "Arive_Dantu_Amaranthus viridis",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Arive_Dantu_Amaranthus viridis' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00049"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ASHOK-19404C",
+      "canonical_name": "Ashok",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Ashok' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00001",
+        "map_v1_00002"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ASHOKA-BCA1A9",
+      "canonical_name": "Ashoka",
+      "scientific_name": "Saraca asoca",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Saraca asoca' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00050",
+        "map_v1_00216",
+        "map_v1_00296"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ASHWAGANDHA-706EEE",
+      "canonical_name": "Ashwagandha",
+      "scientific_name": "Withania somnifera",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Withania somnifera' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00051",
+        "map_v1_00297"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ASTHMA-PLANT-F8E669",
+      "canonical_name": "Asthma plant",
+      "scientific_name": "Euphorbia hirta",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Euphorbia hirta' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00052"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ASTMA-WEED-0139EC",
+      "canonical_name": "Astma_weed",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Astma_weed' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00053",
+        "map_v1_00217"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AVACADO-E1F7B1",
+      "canonical_name": "Avacado",
+      "scientific_name": "Persea americana",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Persea americana' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00054",
+        "map_v1_00298"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-AVARAM-6C851A",
+      "canonical_name": "Avaram",
+      "scientific_name": "Senna auriculata",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Senna auriculata' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00055"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BADIPALA-FAAC1A",
+      "canonical_name": "Badipala",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Badipala' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00056",
+        "map_v1_00218"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BALLOON-VINE-FE0B54",
+      "canonical_name": "Balloon vine",
+      "scientific_name": "Cardiospermum halicacabum",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Cardiospermum halicacabum' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00057",
+        "map_v1_00219"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BAMBOO-ADD174",
+      "canonical_name": "Bamboo",
+      "scientific_name": null,
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Bamboo' supported by 3 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00003",
+        "map_v1_00220",
+        "map_v1_00299"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BAMBOO-BAMBUSOIDEAE-61726B",
+      "canonical_name": "Bamboo-Bambusoideae",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Bamboo-Bambusoideae' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00058"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BARLARIA-8AF3F2",
+      "canonical_name": "Barlaria",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Barlaria' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00004"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BASALE-839D88",
+      "canonical_name": "Basale",
+      "scientific_name": "Basella alba",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Basella alba' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00059",
+        "map_v1_00300"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BEANS-6EB228",
+      "canonical_name": "Beans",
+      "scientific_name": "Vigna spp. (Genus) or Phaseolus spp. (Genus)",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Vigna spp. (Genus) or Phaseolus spp. (Genus)' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00060",
+        "map_v1_00221"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BEL-A0E500",
+      "canonical_name": "Bel",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Bel' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00005",
+        "map_v1_00006"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BELLYACHE-BUSH-GREEN-D66530",
+      "canonical_name": "Bellyache bush (Green)",
+      "scientific_name": "Jatropha gossypiifolia",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Jatropha gossypiifolia' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00061"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BENGHAL-DAYFLOWER-1FEAEF",
+      "canonical_name": "Benghal dayflower",
+      "scientific_name": "Commelina benghalensis",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Commelina benghalensis' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00062"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BETEL-0C588C",
+      "canonical_name": "Betel",
+      "scientific_name": "Piper betle",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Piper betle' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00063",
+        "map_v1_00222",
+        "map_v1_00301"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BETEL-NUT-92269E",
+      "canonical_name": "Betel_Nut",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Betel_Nut' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00302"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BETEL-NUT-ARECA-CATECHU-2183F4",
+      "canonical_name": "Betel_Nut_Areca catechu",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Betel_Nut_Areca catechu' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00064"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BHRAMI-69F912",
+      "canonical_name": "Bhrami",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Bhrami' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00223"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BIG-CALTROPS-555E01",
+      "canonical_name": "Big Caltrops",
+      "scientific_name": "Tribulus terrestris",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Tribulus terrestris' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00065"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BLACK-C006C7",
+      "canonical_name": "Black",
+      "scientific_name": "Honey Shrub_Tribulus terrestris",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Honey Shrub_Tribulus terrestris' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00066"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BRAHMI-21D695",
+      "canonical_name": "Brahmi",
+      "scientific_name": "Bacopa monnieri",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Bacopa monnieri' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00067",
+        "map_v1_00303"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BRINGARAJA-301515",
+      "canonical_name": "Bringaraja",
+      "scientific_name": "Eclipta prostrata",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Eclipta prostrata' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00068",
+        "map_v1_00224"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BRISTLY-WILD-GRAPE-01F396",
+      "canonical_name": "Bristly Wild Grape",
+      "scientific_name": "Cissus quadrangularis",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Cissus quadrangularis' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00069"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-BUTTERFLY-PEA-5247C2",
+      "canonical_name": "Butterfly Pea",
+      "scientific_name": "Clitoria ternatea",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Clitoria ternatea' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00070"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CAMPHOR-D1792C",
+      "canonical_name": "Camphor",
+      "scientific_name": "Cinnamomum camphora",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Cinnamomum camphora' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00071",
+        "map_v1_00225"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CAPE-GOOSEBERRY-07DA89",
+      "canonical_name": "Cape Gooseberry",
+      "scientific_name": "Physalis peruviana",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Physalis peruviana' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00072"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CARDIOSPERMUM-HALICACABUM-52E151",
+      "canonical_name": "Cardiospermum halicacabum",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Cardiospermum halicacabum' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00073"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CARICATURE-DCBBEF",
+      "canonical_name": "Caricature",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Caricature' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00074",
+        "map_v1_00226"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CASTOR-59ADE5",
+      "canonical_name": "Castor",
+      "scientific_name": "Ricinus communis",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Ricinus communis' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00075",
+        "map_v1_00227",
+        "map_v1_00304"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CATHARANTHUS-286194",
+      "canonical_name": "Catharanthus",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Catharanthus' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00076",
+        "map_v1_00228"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CELERY-DDC517",
+      "canonical_name": "Celery",
+      "scientific_name": "Apium graveolens",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Apium graveolens' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00077"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CHAKTE-E77C90",
+      "canonical_name": "Chakte",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Chakte' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00078",
+        "map_v1_00229"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CHILLY-B0B889",
+      "canonical_name": "Chilly",
+      "scientific_name": "Capsicum spp. (Genus)",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Capsicum spp. (Genus)' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00079",
+        "map_v1_00230"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CHINESE-SPINACH-4131CB",
+      "canonical_name": "Chinese Spinach",
+      "scientific_name": "Amaranthus dubius",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Amaranthus dubius' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00080"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CITRON-LIME-HERELIKAI-0CC593",
+      "canonical_name": "Citron lime (herelikai)",
+      "scientific_name": "Citrus medica (Citron) or Citrus aurantiifolia (Lime)",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Citrus medica (Citron) or Citrus aurantiifolia (Lime)' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00081",
+        "map_v1_00231"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CLERODENDRUM-SPLENDENS-0FC371",
+      "canonical_name": "Clerodendrum splendens",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 2,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 0,
+      "pending_count": 0,
+      "is_fully_reviewed": true,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Clerodendrum splendens' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00007",
+        "map_v1_00008"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-COATBUTTONS-FE16A4",
+      "canonical_name": "coatbuttons",
+      "scientific_name": "Tridax procumbens",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Tridax procumbens' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00082"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-COFFEE-37290D",
+      "canonical_name": "Coffee",
+      "scientific_name": "Coffea spp. (Genus)",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Coffea spp. (Genus)' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00083",
+        "map_v1_00232"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-COMMON-RUE-NAAGDALLI-4514A2",
+      "canonical_name": "Common rue(naagdalli)",
+      "scientific_name": "Ruta graveolens",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Ruta graveolens' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00084",
+        "map_v1_00233"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-COMMON-WIREWEED-35579B",
+      "canonical_name": "Common Wireweed",
+      "scientific_name": "Sida rhombifolia",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Sida rhombifolia' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00085"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CORIANDER-4C44D1",
+      "canonical_name": "Coriander",
+      "scientific_name": "Coriandrum sativum",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Coriandrum sativum' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00086"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CORIENDER-D68D85",
+      "canonical_name": "Coriender",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Coriender' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00234"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-COUNTRY-MALLOW-14174C",
+      "canonical_name": "Country Mallow",
+      "scientific_name": "Abutilon indicum",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Abutilon indicum' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00087"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CRAPE-JASMINE-4C3C12",
+      "canonical_name": "crape Jasmine",
+      "scientific_name": "Tabernaemontana divaricata",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Tabernaemontana divaricata' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00088"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CROWN-FLOWER-7F44AF",
+      "canonical_name": "Crown flower",
+      "scientific_name": "Calotropis gigantea",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Calotropis gigantea' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00089"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CURRY-0B8E0D",
+      "canonical_name": "curry",
+      "scientific_name": null,
+      "total_mappings": 3,
+      "approved_count": 2,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'curry' supported by 3 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00009",
+        "map_v1_00010",
+        "map_v1_00235"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CURRY-LEAF-44F251",
+      "canonical_name": "Curry Leaf",
+      "scientific_name": "Murraya koenigii",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Murraya koenigii' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00090",
+        "map_v1_00305"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-CUSTARDAPPLE-813AF0",
+      "canonical_name": "CustardApple",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 2,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'CustardApple' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00011",
+        "map_v1_00012"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-DODDAPATRE-61CACC",
+      "canonical_name": "Doddapatre",
+      "scientific_name": "Plectanthus amboinicus",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Plectanthus amboinicus' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00091",
+        "map_v1_00306"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-DODDPATHRE-C3D8AA",
+      "canonical_name": "Doddpathre",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Doddpathre' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00236"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-DRUMSTICK-B2E94C",
+      "canonical_name": "Drumstick",
+      "scientific_name": "Moringa oleifera",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Moringa oleifera' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00092",
+        "map_v1_00237"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-DWARF-COPPERLEAF-GREEN-60CCF2",
+      "canonical_name": "Dwarf Copperleaf (Green)",
+      "scientific_name": "Acalypha reptans",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Acalypha reptans' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00093"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-DWARF-COPPERLEAF-RED-843C78",
+      "canonical_name": "Dwarf copperleaf (Red)",
+      "scientific_name": "Acalypha wilkesiana",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Acalypha wilkesiana' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00094"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-EKKA-044723",
+      "canonical_name": "Ekka",
+      "scientific_name": "Calotropis gigantea",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Calotropis gigantea' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00095",
+        "map_v1_00238",
+        "map_v1_00307"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-EUCALYPTUS-B8D976",
+      "canonical_name": "Eucalyptus",
+      "scientific_name": "Eucalyptus spp. (Genus)",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Eucalyptus spp. (Genus)' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00096",
+        "map_v1_00239"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-FALSE-AMARNATH-85B064",
+      "canonical_name": "False Amarnath",
+      "scientific_name": "Digera muricata",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Digera muricata' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00097"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-FENUGREEK-LEAVES-CBDCC8",
+      "canonical_name": "Fenugreek Leaves",
+      "scientific_name": "Trigonella foenum-graecum",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Trigonella foenum-graecum' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00098"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-GANIGALE-24D341",
+      "canonical_name": "Ganigale",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Ganigale' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00099",
+        "map_v1_00240"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-GANIKE-2C09BB",
+      "canonical_name": "Ganike",
+      "scientific_name": "Solanum nigrum",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Solanum nigrum' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00100",
+        "map_v1_00241",
+        "map_v1_00308"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-GASAGASE-790C30",
+      "canonical_name": "Gasagase",
+      "scientific_name": "Grewia asiatica",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Grewia asiatica' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00101",
+        "map_v1_00242"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-GAUVA-B93309",
+      "canonical_name": "Gauva",
+      "scientific_name": "Psidium guajava",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Psidium guajava' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00102",
+        "map_v1_00309"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-GERANIUM-434209",
+      "canonical_name": "Geranium",
+      "scientific_name": "Pelargonium spp. (Genus)",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Pelargonium spp. (Genus)' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00103",
+        "map_v1_00310"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-GIANT-PIGWEED-C490FE",
+      "canonical_name": "Giant Pigweed",
+      "scientific_name": "Amaranthus titan",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Amaranthus titan' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00104"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-GINGER-08DDFF",
+      "canonical_name": "Ginger",
+      "scientific_name": "Zingiber officinale",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Zingiber officinale' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00105",
+        "map_v1_00243"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-GLOBE-AMARNATH-7CE01A",
+      "canonical_name": "Globe Amarnath",
+      "scientific_name": "Gomphrena globosa",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Gomphrena globosa' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00106",
+        "map_v1_00244"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-GONGURA-6BEBC3",
+      "canonical_name": "Gongura",
+      "scientific_name": "Hibiscus sabdariffa",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Hibiscus sabdariffa' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00107"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-GREEN-CHIRETA-B9C96A",
+      "canonical_name": "Green Chireta",
+      "scientific_name": "Andrographis paniculata",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Andrographis paniculata' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00108"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-GUAVA-0E2715",
+      "canonical_name": "Guava",
+      "scientific_name": null,
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Guava' supported by 3 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00013",
+        "map_v1_00014",
+        "map_v1_00245"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-HARSHINGAR-8F2C53",
+      "canonical_name": "harshingar",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'harshingar' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00015"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-HARSINGAR-BEE253",
+      "canonical_name": "Harsingar",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Harsingar' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00016"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-HEART-LEAVED-MOONSEED-581711",
+      "canonical_name": "heart-leaved moonseed",
+      "scientific_name": "Tinospora cordifolia",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Tinospora cordifolia' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00109"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-HENNA-C9594F",
+      "canonical_name": "Henna",
+      "scientific_name": "Lausonia inermis",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Lausonia inermis' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00110",
+        "map_v1_00246",
+        "map_v1_00311"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-HIBISCUS-C9452D",
+      "canonical_name": "hibiscus",
+      "scientific_name": null,
+      "total_mappings": 5,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 5,
+      "unreviewed_count": 0,
+      "pending_count": 5,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'hibiscus' supported by 5 class folder variants across 3 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00017",
+        "map_v1_00018",
+        "map_v1_00111",
+        "map_v1_00247",
+        "map_v1_00312"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-HOLY-BASIL-EA981F",
+      "canonical_name": "Holy Basil",
+      "scientific_name": "Ocimum sanctum",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Ocimum sanctum' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00112"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-HONGE-D30847",
+      "canonical_name": "Honge",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Honge' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00248",
+        "map_v1_00313"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-HONGE-MILLETIA-E65819",
+      "canonical_name": "Honge-Milletia",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Honge-Milletia' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00113"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-BEECH-356967",
+      "canonical_name": "indian Beech",
+      "scientific_name": "Pongamia pinnata",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Pongamia pinnata' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00114"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-COPPERLEAF-1B6B99",
+      "canonical_name": "Indian CopperLeaf",
+      "scientific_name": "Acalypha indica",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Acalypha indica' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00115"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-JUJUBE-EE14E6",
+      "canonical_name": "Indian Jujube",
+      "scientific_name": "Ziziphus mauritiana",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Ziziphus mauritiana' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00116"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-PENNYWORT-D6E0A7",
+      "canonical_name": "Indian pennywort",
+      "scientific_name": "Centella asiatica",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Centella asiatica' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00117"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-SARSAPARILLA-0E04AB",
+      "canonical_name": "Indian Sarsaparilla",
+      "scientific_name": "Hemidesmus indicus",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Hemidesmus indicus' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00118"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-STINGING-NETTLE-ECDFA7",
+      "canonical_name": "Indian Stinging Nettle",
+      "scientific_name": "Urtica dioica subsp. gracilis",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Urtica dioica subsp. gracilis' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00119"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-THORNAPPLE-440F2D",
+      "canonical_name": "Indian Thornapple",
+      "scientific_name": "Datura metel",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Datura metel' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00120"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-WORMWOOD-27AC31",
+      "canonical_name": "Indian wormwood",
+      "scientific_name": "Artemisia indica",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Artemisia indica' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00121"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-INSULIN-8AC02A",
+      "canonical_name": "Insulin",
+      "scientific_name": null,
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Insulin' supported by 3 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00122",
+        "map_v1_00249",
+        "map_v1_00314"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-IVY-GOURD-C3B1EC",
+      "canonical_name": "Ivy Gourd",
+      "scientific_name": "Coccinia grandis",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Coccinia grandis' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00123"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-JACK-FRUIT-4D6B54",
+      "canonical_name": "Jack fruit",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 2,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Jack fruit' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00019",
+        "map_v1_00020"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-JACKFRUIT-290601",
+      "canonical_name": "Jackfruit",
+      "scientific_name": "Artocarpus heterophyllus",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Artocarpus heterophyllus' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00124",
+        "map_v1_00250"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-JAMAICA-CHERRY-0F1149",
+      "canonical_name": "Jamaica Cherry",
+      "scientific_name": "Gasagase_ Muntingia calabura",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Gasagase_ Muntingia calabura' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00125"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-JAMUN-DA152A",
+      "canonical_name": "Jamun",
+      "scientific_name": "Syzygium cumini",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Syzygium cumini' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00126"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-JASMINE-6D1C58",
+      "canonical_name": "Jasmine",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Jasmine' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00251",
+        "map_v1_00315"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-JASMINE-JASMIUM-A02F89",
+      "canonical_name": "Jasmine-Jasmium",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Jasmine-Jasmium' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00127"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-KACHNAR-C3B1E1",
+      "canonical_name": "kachnar",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 2,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'kachnar' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00021",
+        "map_v1_00022"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-KAMAKASTURI-1EC2B3",
+      "canonical_name": "kamakasturi",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'kamakasturi' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00128",
+        "map_v1_00252"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-KAMBAJALA-7451AF",
+      "canonical_name": "Kambajala",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Kambajala' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00129",
+        "map_v1_00253"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-KARANDA-700C35",
+      "canonical_name": "Karanda",
+      "scientific_name": "Carissa carandas",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Carissa carandas' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00130"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-KASAMBRUGA-5E5DD9",
+      "canonical_name": "Kasambruga",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Kasambruga' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00131",
+        "map_v1_00254"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-KEPALA-4D84B4",
+      "canonical_name": "kepala",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'kepala' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00132",
+        "map_v1_00255"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-KOHLRABI-AB6B78",
+      "canonical_name": "Kohlrabi",
+      "scientific_name": "Brassica oleracea var. gongylodes",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Brassica oleracea var. gongylodes' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00133",
+        "map_v1_00256"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-KOKILAKSHA-321B5D",
+      "canonical_name": "Kokilaksha",
+      "scientific_name": "Asteracantha longifolia",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Asteracantha longifolia' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00134"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-LAGOS-SPINACH-E70A3C",
+      "canonical_name": "Lagos Spinach",
+      "scientific_name": "Celosia argentea",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Celosia argentea' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00135"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-LAMBS-QUARTERS-4A1EFD",
+      "canonical_name": "Lambs Quarters",
+      "scientific_name": "Chenopodium album",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Chenopodium album' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00136"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-LAND-CALTROPS-BINDII-400C7C",
+      "canonical_name": "Land Caltrops (Bindii)",
+      "scientific_name": "Tribulus cistoides",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Tribulus cistoides' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00137"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-LANTANA-B4308F",
+      "canonical_name": "Lantana",
+      "scientific_name": null,
+      "total_mappings": 4,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 4,
+      "unreviewed_count": 0,
+      "pending_count": 4,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Lantana' supported by 4 class folder variants across 3 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00023",
+        "map_v1_00024",
+        "map_v1_00138",
+        "map_v1_00257"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-LEAFS-72AB11",
+      "canonical_name": "leafs",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate name 'leafs' is generic/ambiguous. Botanical review required to identify specific plant species.",
+      "mapping_ids": [
+        "map_v1_00025"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-LEMON-F464D7",
+      "canonical_name": "Lemon",
+      "scientific_name": null,
+      "total_mappings": 5,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 5,
+      "unreviewed_count": 0,
+      "pending_count": 5,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Lemon' supported by 5 class folder variants across 3 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00026",
+        "map_v1_00027",
+        "map_v1_00140",
+        "map_v1_00258",
+        "map_v1_00316"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-LEMON-GRASS-8D276E",
+      "canonical_name": "Lemon grass",
+      "scientific_name": "Cymbopogon citratus",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Cymbopogon citratus' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00139",
+        "map_v1_00317"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-LEMONGRASS-CBBD23",
+      "canonical_name": "Lemongrass",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Lemongrass' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00259"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-LETTUCE-TREE-61E42C",
+      "canonical_name": "Lettuce Tree",
+      "scientific_name": "Pisonia grandis",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Pisonia grandis' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00141"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MADAGASCAR-PERIWINKLE-990703",
+      "canonical_name": "Madagascar Periwinkle",
+      "scientific_name": "Catharanthus roseus",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Catharanthus roseus' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00142"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MADRAS-PEA-PUMPKIN-02F5D1",
+      "canonical_name": "Madras Pea Pumpkin",
+      "scientific_name": "Sesbania grandiflora",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Sesbania grandiflora' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00143"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MAKOY-3120E5",
+      "canonical_name": "Makoy",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 2,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Makoy' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00028",
+        "map_v1_00029"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MALABAR-CATMINT-8D8522",
+      "canonical_name": "Malabar Catmint",
+      "scientific_name": "Plectranthus amboinicus",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Plectranthus amboinicus' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00144"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MALABAR-NUT-6D0707",
+      "canonical_name": "Malabar_Nut",
+      "scientific_name": "Justicia adhatoda",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Justicia adhatoda' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00145",
+        "map_v1_00260"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MALABAR-SPINACH-AB6157",
+      "canonical_name": "Malabar_Spinach",
+      "scientific_name": "Basella alba",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Basella alba' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00146",
+        "map_v1_00261"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MANGO-6815F3",
+      "canonical_name": "Mango",
+      "scientific_name": "Mangifera indica",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Mangifera indica' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00147",
+        "map_v1_00262",
+        "map_v1_00318"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MARIGOLD-A5055B",
+      "canonical_name": "Marigold",
+      "scientific_name": null,
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Marigold' supported by 3 class folder variants across 3 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00030",
+        "map_v1_00148",
+        "map_v1_00263"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MEXICAN-MINT-7C6517",
+      "canonical_name": "Mexican Mint",
+      "scientific_name": "Plectranthus amboinicus (also known as Cuban Oregano)",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Plectranthus amboinicus (also known as Cuban Oregano)' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00149"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MEXICAN-PRICKLY-POPPY-A9899C",
+      "canonical_name": "Mexican Prickly Poppy",
+      "scientific_name": "Argemone mexicana",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Argemone mexicana' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00150"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MINT-DC6F17",
+      "canonical_name": "Mint",
+      "scientific_name": null,
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Mint' supported by 3 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00031",
+        "map_v1_00264",
+        "map_v1_00319"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MINT-MENTHA-CF4A1E",
+      "canonical_name": "Mint-Mentha",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Mint-Mentha' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00151"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MOUNTAIN-KNOTGRASS-C38C9B",
+      "canonical_name": "Mountain Knotgrass",
+      "scientific_name": "Aerva lanata",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Aerva lanata' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00152"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-MUSTARD-352B5B",
+      "canonical_name": "Mustard",
+      "scientific_name": "Brassica juncea",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Brassica juncea' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00153"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-NAGADALI-377F35",
+      "canonical_name": "Nagadali",
+      "scientific_name": "Ruta graveolens",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Ruta graveolens' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00154",
+        "map_v1_00320"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-NALTA-JUTE-17D362",
+      "canonical_name": "Nalta Jute",
+      "scientific_name": "Corchorus olitorius",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Corchorus olitorius' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00155"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-NASTURTIUM-4BD622",
+      "canonical_name": "Nasturtium",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 2,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Nasturtium' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00032",
+        "map_v1_00033"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-NEEM-C8DFFB",
+      "canonical_name": "Neem",
+      "scientific_name": "Azadirachta indica",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Azadirachta indica' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00156",
+        "map_v1_00265",
+        "map_v1_00321"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-NELAVEMBU-41331F",
+      "canonical_name": "Nelavembu",
+      "scientific_name": "Andrographis paniculata",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Andrographis paniculata' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00157",
+        "map_v1_00266"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-NERALE-96F5F3",
+      "canonical_name": "Nerale",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Nerale' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00158",
+        "map_v1_00267"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-NIGHT-BLOOMING-CEREUS-D94D98",
+      "canonical_name": "Night blooming Cereus",
+      "scientific_name": "Epiphyllum oxypetalum",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Epiphyllum oxypetalum' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00159"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-NITHYAPUSHPA-A2E68D",
+      "canonical_name": "Nithyapushpa",
+      "scientific_name": "Vinca rosea",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Vinca rosea' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00160",
+        "map_v1_00322"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-NOONI-615FD8",
+      "canonical_name": "Nooni",
+      "scientific_name": "Morinda citrifolia",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Morinda citrifolia' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00161",
+        "map_v1_00268",
+        "map_v1_00323"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-OLEANDER-18B8E6",
+      "canonical_name": "Oleander",
+      "scientific_name": "Nerium oleander",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Nerium oleander' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00162"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ONION-288971",
+      "canonical_name": "Onion",
+      "scientific_name": "Allium cepa",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Allium cepa' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00163",
+        "map_v1_00269"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PADRI-C75B2B",
+      "canonical_name": "Padri",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Padri' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00164",
+        "map_v1_00270"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PALAK-SPINACH-E381DA",
+      "canonical_name": "Palak(Spinach)",
+      "scientific_name": "Spinacia oleracea",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Spinacia oleracea' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00165",
+        "map_v1_00271"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PANICLED-FOLDWING-467A2E",
+      "canonical_name": "Panicled Foldwing",
+      "scientific_name": "Dicliptera paniculata",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Dicliptera paniculata' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00166"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PAPAYA-98A4F7",
+      "canonical_name": "Papaya",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Papaya' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00034",
+        "map_v1_00272"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PAPPAYA-B39584",
+      "canonical_name": "Pappaya",
+      "scientific_name": "Carica papaya",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Carica papaya' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00167",
+        "map_v1_00324"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PARIJATHA-D7F7CE",
+      "canonical_name": "Parijatha",
+      "scientific_name": "Nyctanthes arbor",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Nyctanthes arbor' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00168",
+        "map_v1_00273"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PEA-6D906F",
+      "canonical_name": "Pea",
+      "scientific_name": "Pisum sativum",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Pisum sativum' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00169",
+        "map_v1_00274"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PEEPAL-TREE-7C9A64",
+      "canonical_name": "Peepal Tree",
+      "scientific_name": "Ficus religiosa",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Ficus religiosa' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00170"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PEPPER-8CBBCF",
+      "canonical_name": "Pepper",
+      "scientific_name": "Piper nigrum",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Piper nigrum' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00171",
+        "map_v1_00275",
+        "map_v1_00325"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-POMEGRANATE-CDC566",
+      "canonical_name": "Pomegranate",
+      "scientific_name": "Punica granatum",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Punica granatum' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00172",
+        "map_v1_00326"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-POMOEGRANATE-BEA87A",
+      "canonical_name": "Pomoegranate",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Pomoegranate' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00276"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PRICKLY-CHAFF-FLOWER-A20D1B",
+      "canonical_name": "Prickly Chaff Flower",
+      "scientific_name": "Achyranthes aspera",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Achyranthes aspera' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00173"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PUMPKIN-FF48E5",
+      "canonical_name": "Pumpkin",
+      "scientific_name": "Cucurbita pepo",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Cucurbita pepo' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00174",
+        "map_v1_00277"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PUNARNAVA-D79579",
+      "canonical_name": "Punarnava",
+      "scientific_name": "Boerhavia diffusa",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Boerhavia diffusa' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00175"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PURPLE-FRUITED-PEA-EGGPLANT-983A64",
+      "canonical_name": "Purple Fruited Pea Eggplant",
+      "scientific_name": "Solanum trilobatum",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Solanum trilobatum' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00176"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-PURPLE-TEPHROSIA-9B95E3",
+      "canonical_name": "Purple Tephrosia",
+      "scientific_name": "Tephrosia purpurea",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Tephrosia purpurea' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00177"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-RADDISH-681A6D",
+      "canonical_name": "Raddish",
+      "scientific_name": "Raphanus sativus",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Raphanus sativus' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00178",
+        "map_v1_00278"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-RAKTACHANDINI-61CA5B",
+      "canonical_name": "Raktachandini",
+      "scientific_name": "Pterocarpus santalinus",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Pterocarpus santalinus' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00179",
+        "map_v1_00327"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-RASNA-5DB9D4",
+      "canonical_name": "Rasna",
+      "scientific_name": "Alpinia galanga",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Alpinia galanga' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00180"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ROSARY-PEA-710037",
+      "canonical_name": "Rosary Pea",
+      "scientific_name": "Abrus precatorius",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Abrus precatorius' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00181"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ROSE-618D66",
+      "canonical_name": "Rose",
+      "scientific_name": null,
+      "total_mappings": 4,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 4,
+      "unreviewed_count": 0,
+      "pending_count": 4,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Rose' supported by 4 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00035",
+        "map_v1_00036",
+        "map_v1_00279",
+        "map_v1_00328"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ROSE-APPLE-75A043",
+      "canonical_name": "Rose Apple",
+      "scientific_name": "Syzygium jambos",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Syzygium jambos' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00182"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ROSE-ROSA-01BB0E",
+      "canonical_name": "Rose-Rosa",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Rose-Rosa' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00183"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ROSE1-6A3E76",
+      "canonical_name": "Rose1",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Rose1' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00037",
+        "map_v1_00038"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-ROXBURGH-FIG-FCC344",
+      "canonical_name": "Roxburgh fig",
+      "scientific_name": "Ficus auriculata",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Ficus auriculata' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00184"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SAMPIGE-A2AEAE",
+      "canonical_name": "Sampige",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Sampige' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00185",
+        "map_v1_00280"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SANDALWOOD-FC3ABA",
+      "canonical_name": "Sandalwood",
+      "scientific_name": "Santalum album",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Santalum album' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00186"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SAPOTA-413A94",
+      "canonical_name": "Sapota",
+      "scientific_name": "Manikara zapota",
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Manikara zapota' available with consistent source mappings across 3 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00187",
+        "map_v1_00281",
+        "map_v1_00329"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SCARLET-SAGE-BFF02E",
+      "canonical_name": "Scarlet Sage",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 2,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Scarlet Sage' supported by 2 class folder variants across 1 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00039",
+        "map_v1_00040"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SEETHAASHOKA-504D42",
+      "canonical_name": "Seethaashoka",
+      "scientific_name": "Saraca asoca",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Saraca asoca' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00188",
+        "map_v1_00282"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SEETHAPALA-A4FABF",
+      "canonical_name": "Seethapala",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Seethapala' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00189",
+        "map_v1_00283"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SHAGGY-BUTTON-WEED-3501C1",
+      "canonical_name": "Shaggy button weed",
+      "scientific_name": "Diodia teres",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Diodia teres' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00190"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SIRU-KEERAI-046A8E",
+      "canonical_name": "Siru Keerai",
+      "scientific_name": "Amaranthus tristis",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Amaranthus tristis' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00191"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SMALL-WATER-CLOVER-8D2DF3",
+      "canonical_name": "Small Water Clover",
+      "scientific_name": "Marsilea minuta",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Marsilea minuta' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00192"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SPIDERWISP-C1F836",
+      "canonical_name": "Spiderwisp",
+      "scientific_name": "Cleome viscosa",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Cleome viscosa' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00193"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SPINACH1-78AF20",
+      "canonical_name": "Spinach1",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Spinach1' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00194",
+        "map_v1_00284"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SQUARE-STALKED-VINE-1710DA",
+      "canonical_name": "Square Stalked Vine",
+      "scientific_name": "Sarcostemma acidum",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Sarcostemma acidum' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00195"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-STINKING-PASSIONFLOWER-B921C1",
+      "canonical_name": "Stinking Passionflower",
+      "scientific_name": "Passiflora foetida",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Passiflora foetida' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00196"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SWEET-BASIL-2E8EB6",
+      "canonical_name": "Sweet Basil",
+      "scientific_name": "Ocimum basilicum",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Ocimum basilicum' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00197"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-SWEET-FLAG-38F25B",
+      "canonical_name": "Sweet flag",
+      "scientific_name": "Acorus calamus",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Acorus calamus' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00198"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-TAMARIND-F898CB",
+      "canonical_name": "Tamarind",
+      "scientific_name": "Tamarindus indica",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Tamarindus indica' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00199",
+        "map_v1_00285"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-TARO-8FF52C",
+      "canonical_name": "Taro",
+      "scientific_name": "Colocasia esculenta",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Colocasia esculenta' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00200",
+        "map_v1_00286"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-TECOMA-BD5063",
+      "canonical_name": "Tecoma",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Tecoma' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00201",
+        "map_v1_00287"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-THUMBE-4558A5",
+      "canonical_name": "Thumbe",
+      "scientific_name": null,
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Thumbe' supported by 2 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00202",
+        "map_v1_00288"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-TINNEVELLY-SENNA-6A32FD",
+      "canonical_name": "Tinnevelly Senna",
+      "scientific_name": "Cassia angustifolia (also known as Senna)",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Cassia angustifolia (also known as Senna)' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00203"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-TOMATO-5ED728",
+      "canonical_name": "Tomato",
+      "scientific_name": "Solanum lycopersicum",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Solanum lycopersicum' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00204",
+        "map_v1_00289"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-TRELLIS-VINE-33896F",
+      "canonical_name": "Trellis Vine",
+      "scientific_name": "Cissus sicyoides",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Cissus sicyoides' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00205"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-TRIGONELLA-FOENUM-GRAECUM-FENUGREEK-A7A15E",
+      "canonical_name": "Trigonella Foenum-graecum (Fenugreek)",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Trigonella Foenum-graecum (Fenugreek)' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00206"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-TULASI-EBA4DC",
+      "canonical_name": "Tulasi",
+      "scientific_name": "Ocimum sanctum_Ocimum sanctum (also known as Holy Basil)",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Ocimum sanctum_Ocimum sanctum (also known as Holy Basil)' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00207",
+        "map_v1_00330"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-TULSI-43012C",
+      "canonical_name": "Tulsi",
+      "scientific_name": null,
+      "total_mappings": 3,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 3,
+      "unreviewed_count": 0,
+      "pending_count": 3,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Common plant name 'Tulsi' supported by 3 class folder variants across 2 dataset source(s).",
+      "mapping_ids": [
+        "map_v1_00041",
+        "map_v1_00042",
+        "map_v1_00290"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-TURMERIC-2CCFAF",
+      "canonical_name": "Turmeric",
+      "scientific_name": "Curcuma longa",
+      "total_mappings": 2,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 2,
+      "unreviewed_count": 0,
+      "pending_count": 2,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Curcuma longa' available with consistent source mappings across 2 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00208",
+        "map_v1_00291"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-VELVET-BEAN-FF15D0",
+      "canonical_name": "Velvet bean",
+      "scientific_name": "Mucuna pruriens",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Mucuna pruriens' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00209"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-WATER-SPINACH-A7692D",
+      "canonical_name": "Water Spinach",
+      "scientific_name": "Ipomoea aquatica",
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 0,
+      "unreviewed_count": 1,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "APPROVE_CANDIDATE",
+      "recommendation_reason": "Binomial scientific name 'Ipomoea aquatica' available with consistent source mappings across 1 class folder(s).",
+      "mapping_ids": [
+        "map_v1_00210"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-WOOD-SOREL-A0D454",
+      "canonical_name": "Wood_sorel",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Wood_sorel' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00331"
+      ]
+    },
+    {
+      "canonical_plant_id": "PLANT-WOOD-SOREL-OXALIS-SPP-B39904",
+      "canonical_name": "Wood_sorel_ Oxalis spp",
+      "scientific_name": null,
+      "total_mappings": 1,
+      "approved_count": 0,
+      "rejected_count": 0,
+      "needs_review_count": 1,
+      "unreviewed_count": 0,
+      "pending_count": 1,
+      "is_fully_reviewed": false,
+      "review_recommendation": "NEEDS_BOTANICAL_REVIEW",
+      "recommendation_reason": "Candidate 'Wood_sorel_ Oxalis spp' requires botanical expert verification of species identity and nomenclature.",
+      "mapping_ids": [
+        "map_v1_00211"
+      ]
+    }
+  ]
+}

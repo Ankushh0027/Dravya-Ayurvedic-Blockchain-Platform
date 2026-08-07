@@ -1,0 +1,196 @@
+dataset_a,class_a,dataset_b,class_b,candidate_reason,confidence,review_status
+CIMPd,Ashok.H,Hugging_Face,Ashoka-Saraca asoca,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Ashok.H,Hugging_Face,Seethaashoka-Saraca asoca,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Ashok.H,Kaggle,Medicinal Leaf dataset\ashoka,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Ashok.H,Kaggle,Medicinal Leaf dataset\Seethaashoka,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Ashok.H,Kaggle,Medicinal plant dataset\Ashoka,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Ashok.U,Hugging_Face,Ashoka-Saraca asoca,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Ashok.U,Hugging_Face,Seethaashoka-Saraca asoca,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Ashok.U,Kaggle,Medicinal Leaf dataset\ashoka,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Ashok.U,Kaggle,Medicinal Leaf dataset\Seethaashoka,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Ashok.U,Kaggle,Medicinal plant dataset\Ashoka,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Bamboo.U,Hugging_Face,Bamboo-Bambusoideae,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Bamboo.U,Kaggle,Medicinal Leaf dataset\Bamboo,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Bamboo.U,Kaggle,Medicinal plant dataset\Bamboo,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,curry.H,Hugging_Face,Curry Leaf-Murraya koenigii,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,curry.H,Kaggle,Medicinal Leaf dataset\Curry,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,curry.H,Kaggle,Medicinal plant dataset\Curry_Leaf,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Curry.U,Hugging_Face,Curry Leaf-Murraya koenigii,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Curry.U,Kaggle,Medicinal Leaf dataset\Curry,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Curry.U,Kaggle,Medicinal plant dataset\Curry_Leaf,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Guava.H,Kaggle,Medicinal Leaf dataset\Guava,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Guava.U,Kaggle,Medicinal Leaf dataset\Guava,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,hibiscus.H,Hugging_Face,Hibiscus-Hibiscus rosa sinensis,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,hibiscus.H,Kaggle,Medicinal Leaf dataset\Hibiscus,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,hibiscus.H,Kaggle,Medicinal plant dataset\Hibiscus,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Hibiscus.U,Hugging_Face,Hibiscus-Hibiscus rosa sinensis,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Hibiscus.U,Kaggle,Medicinal Leaf dataset\Hibiscus,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Hibiscus.U,Kaggle,Medicinal plant dataset\Hibiscus,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Lantana.H,Hugging_Face,Lantana- Lantana camara,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Lantana.H,Kaggle,Medicinal Leaf dataset\Lantana,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Lantana.U,Hugging_Face,Lantana- Lantana camara,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Lantana.U,Kaggle,Medicinal Leaf dataset\Lantana,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Lemon.H,Hugging_Face,Lemon grass-Cymbopogon citratus,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Lemon.H,Hugging_Face,Lemon-Citrus limon,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Lemon.H,Kaggle,Medicinal Leaf dataset\Lemon,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Lemon.H,Kaggle,Medicinal Leaf dataset\Lemongrass,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Lemon.H,Kaggle,Medicinal plant dataset\Lemon,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Lemon.H,Kaggle,Medicinal plant dataset\Lemon_grass,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Lemon.U,Hugging_Face,Lemon grass-Cymbopogon citratus,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Lemon.U,Hugging_Face,Lemon-Citrus limon,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Lemon.U,Kaggle,Medicinal Leaf dataset\Lemon,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Lemon.U,Kaggle,Medicinal Leaf dataset\Lemongrass,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Lemon.U,Kaggle,Medicinal plant dataset\Lemon,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Lemon.U,Kaggle,Medicinal plant dataset\Lemon_grass,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Marigold.H,Hugging_Face,Marigold-Tagetes spp. (Genus),CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Marigold.H,Kaggle,Medicinal Leaf dataset\Marigold,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Mint.H,Hugging_Face,Malabar Catmint_Plectranthus amboinicus,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Mint.H,Hugging_Face,Mexican Mint_Plectranthus amboinicus (also known as Cuban Oregano),possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Mint.H,Hugging_Face,Mint-Mentha,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Mint.H,Kaggle,Medicinal Leaf dataset\Mint,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Mint.H,Kaggle,Medicinal plant dataset\Mint,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Papaya.H,Kaggle,Medicinal Leaf dataset\Papaya,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Rose.H,Hugging_Face,Rose Apple_Syzygium jambos,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Rose.H,Hugging_Face,Rose-Rosa,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Rose.H,Kaggle,Medicinal Leaf dataset\Rose,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Rose.H,Kaggle,Medicinal plant dataset\Rose,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Rose.U,Hugging_Face,Rose Apple_Syzygium jambos,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Rose.U,Hugging_Face,Rose-Rosa,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Rose.U,Kaggle,Medicinal Leaf dataset\Rose,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Rose.U,Kaggle,Medicinal plant dataset\Rose,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Rose1.H,Kaggle,Medicinal Leaf dataset\Rose,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Rose1.H,Kaggle,Medicinal plant dataset\Rose,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Rose1.U,Kaggle,Medicinal Leaf dataset\Rose,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Rose1.U,Kaggle,Medicinal plant dataset\Rose,possible_name_similarity,MEDIUM,UNREVIEWED
+CIMPd,Tulsi.H,Kaggle,Medicinal Leaf dataset\Tulsi,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+CIMPd,Tulsi.U,Kaggle,Medicinal Leaf dataset\Tulsi,CIMPd_health_suffix_match,HIGH,UNREVIEWED
+Hugging_Face,Aloevera-Aloe barbadensis,Kaggle,Medicinal Leaf dataset\Aloevera,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Aloevera-Aloe barbadensis,Kaggle,Medicinal plant dataset\Aloevera,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Amla-Phyllanthus emlica Linn,Kaggle,Medicinal Leaf dataset\Amla,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Amla-Phyllanthus emlica Linn,Kaggle,Medicinal plant dataset\Amla,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Amruta Balli-Tinospora cordifolia,Kaggle,Medicinal plant dataset\Amruta_Balli,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Arali-Nerium oleander,Kaggle,Medicinal Leaf dataset\Arali,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Arali-Nerium oleander,Kaggle,Medicinal plant dataset\Arali,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Ashoka-Saraca asoca,Kaggle,Medicinal Leaf dataset\ashoka,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Ashoka-Saraca asoca,Kaggle,Medicinal Leaf dataset\Seethaashoka,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Ashoka-Saraca asoca,Kaggle,Medicinal plant dataset\Ashoka,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Ashwagandha_Withania somnifera,Kaggle,Medicinal plant dataset\Ashwagandha,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Astma_weed,Kaggle,Medicinal Leaf dataset\Astma_weed,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Avacado_Persea americana,Kaggle,Medicinal plant dataset\Avacado,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Badipala,Kaggle,Medicinal Leaf dataset\Badipala,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Balloon vine_Cardiospermum halicacabum,Kaggle,Medicinal Leaf dataset\Balloon_Vine,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Bamboo-Bambusoideae,Kaggle,Medicinal Leaf dataset\Bamboo,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Bamboo-Bambusoideae,Kaggle,Medicinal plant dataset\Bamboo,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Basale_Basella alba,Kaggle,Medicinal plant dataset\Basale,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Beans-Vigna spp. (Genus) or Phaseolus spp. (Genus),Kaggle,Medicinal Leaf dataset\Beans,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Betel-Piper betle,Kaggle,Medicinal Leaf dataset\Betel,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Betel-Piper betle,Kaggle,Medicinal plant dataset\Betel,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Betel-Piper betle,Kaggle,Medicinal plant dataset\Betel_Nut,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Betel_Nut_Areca catechu,Kaggle,Medicinal Leaf dataset\Betel,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Betel_Nut_Areca catechu,Kaggle,Medicinal plant dataset\Betel,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Betel_Nut_Areca catechu,Kaggle,Medicinal plant dataset\Betel_Nut,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Brahmi-Bacopa monnieri,Kaggle,Medicinal plant dataset\Brahmi,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Bringaraja-Eclipta prostrata,Kaggle,Medicinal Leaf dataset\Bringaraja,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Camphor-Cinnamomum camphora,Kaggle,Medicinal Leaf dataset\camphor,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Caricature,Kaggle,Medicinal Leaf dataset\Caricature,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Castor-Ricinus communis,Kaggle,Medicinal Leaf dataset\Castor,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Castor-Ricinus communis,Kaggle,Medicinal plant dataset\Castor,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Catharanthus,Kaggle,Medicinal Leaf dataset\Catharanthus,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Chakte,Kaggle,Medicinal Leaf dataset\Chakte,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Chilly-Capsicum spp. (Genus),Kaggle,Medicinal Leaf dataset\Chilly,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Citron lime (herelikai)-Citrus medica (Citron) or Citrus aurantiifolia (Lime),Kaggle,Medicinal Leaf dataset\Citron lime (herelikai),exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Coffee-Coffea spp. (Genus),Kaggle,Medicinal Leaf dataset\Coffee,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Common rue(naagdalli)- Ruta graveolens,Kaggle,Medicinal Leaf dataset\Common rue(naagdalli),exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,crape Jasmine_Tabernaemontana divaricata,Kaggle,Medicinal Leaf dataset\Jasmine,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,crape Jasmine_Tabernaemontana divaricata,Kaggle,Medicinal plant dataset\Jasmine,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Curry Leaf-Murraya koenigii,Kaggle,Medicinal Leaf dataset\Curry,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Curry Leaf-Murraya koenigii,Kaggle,Medicinal plant dataset\Curry_Leaf,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Doddapatre-Plectanthus amboinicus,Kaggle,Medicinal plant dataset\Doddapatre,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Drumstick- Moringa oleifera,Kaggle,Medicinal Leaf dataset\Drumstick,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Ekka-Calotropis gigantea,Kaggle,Medicinal Leaf dataset\Ekka,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Ekka-Calotropis gigantea,Kaggle,Medicinal plant dataset\Ekka,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Eucalyptus-Eucalyptus spp. (Genus),Kaggle,Medicinal Leaf dataset\Eucalyptus,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Ganigale,Kaggle,Medicinal Leaf dataset\Ganigale,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Ganike-Solanum nigrum,Kaggle,Medicinal Leaf dataset\Ganike,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Ganike-Solanum nigrum,Kaggle,Medicinal plant dataset\Ganike,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Gasagase-Grewia asiatica,Kaggle,Medicinal Leaf dataset\Gasagase,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Gauva-Psidium guajava,Kaggle,Medicinal plant dataset\Gauva,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Geranium_ Pelargonium spp. (Genus),Kaggle,Medicinal plant dataset\Geranium,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Ginger-Zingiber officinale,Kaggle,Medicinal Leaf dataset\Ginger,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Globe Amarnath-Gomphrena globosa,Kaggle,Medicinal Leaf dataset\Globe Amarnath,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Henna-Lausonia inermis,Kaggle,Medicinal Leaf dataset\Henna,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Henna-Lausonia inermis,Kaggle,Medicinal plant dataset\Henna,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Hibiscus-Hibiscus rosa sinensis,Kaggle,Medicinal Leaf dataset\Hibiscus,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Hibiscus-Hibiscus rosa sinensis,Kaggle,Medicinal plant dataset\Hibiscus,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Honge-Milletia,Kaggle,Medicinal Leaf dataset\Honge,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Honge-Milletia,Kaggle,Medicinal plant dataset\Honge,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Insulin,Kaggle,Medicinal Leaf dataset\Insulin,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Insulin,Kaggle,Medicinal plant dataset\Insulin,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Jackfruit-Artocarpus heterophyllus,Kaggle,Medicinal Leaf dataset\Jackfruit,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Jasmine-Jasmium,Kaggle,Medicinal Leaf dataset\Jasmine,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Jasmine-Jasmium,Kaggle,Medicinal plant dataset\Jasmine,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,kamakasturi,Kaggle,Medicinal Leaf dataset\kamakasturi,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Kambajala,Kaggle,Medicinal Leaf dataset\Kambajala,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Kasambruga,Kaggle,Medicinal Leaf dataset\Kasambruga,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,kepala,Kaggle,Medicinal Leaf dataset\kepala,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Kohlrabi-Brassica oleracea var. gongylodes,Kaggle,Medicinal Leaf dataset\Kohlrabi,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Lantana- Lantana camara,Kaggle,Medicinal Leaf dataset\Lantana,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Lemon grass-Cymbopogon citratus,Kaggle,Medicinal Leaf dataset\Lemon,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Lemon grass-Cymbopogon citratus,Kaggle,Medicinal plant dataset\Lemon,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Lemon grass-Cymbopogon citratus,Kaggle,Medicinal plant dataset\Lemon_grass,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Lemon-Citrus limon,Kaggle,Medicinal Leaf dataset\Lemon,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Lemon-Citrus limon,Kaggle,Medicinal Leaf dataset\Lemongrass,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Lemon-Citrus limon,Kaggle,Medicinal plant dataset\Lemon,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Lemon-Citrus limon,Kaggle,Medicinal plant dataset\Lemon_grass,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Madras Pea Pumpkin_Sesbania grandiflora,Kaggle,Medicinal Leaf dataset\Pumpkin,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Malabar Catmint_Plectranthus amboinicus,Kaggle,Medicinal Leaf dataset\Mint,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Malabar Catmint_Plectranthus amboinicus,Kaggle,Medicinal plant dataset\Mint,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Malabar_Nut-Justicia adhatoda,Kaggle,Medicinal Leaf dataset\Malabar_Nut,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Malabar_Spinach-Basella alba,Kaggle,Medicinal Leaf dataset\Malabar_Spinach,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Mango_Mangifera indica,Kaggle,Medicinal Leaf dataset\Mango,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Mango_Mangifera indica,Kaggle,Medicinal plant dataset\Mango,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Marigold-Tagetes spp. (Genus),Kaggle,Medicinal Leaf dataset\Marigold,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Mexican Mint_Plectranthus amboinicus (also known as Cuban Oregano),Kaggle,Medicinal Leaf dataset\Mint,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Mexican Mint_Plectranthus amboinicus (also known as Cuban Oregano),Kaggle,Medicinal plant dataset\Mint,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Mint-Mentha,Kaggle,Medicinal Leaf dataset\Mint,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Mint-Mentha,Kaggle,Medicinal plant dataset\Mint,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Nagadali_Ruta graveolens,Kaggle,Medicinal plant dataset\Nagadali,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Neem_Azadirachta indica,Kaggle,Medicinal Leaf dataset\Neem,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Neem_Azadirachta indica,Kaggle,Medicinal plant dataset\Neem,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Nelavembu-Andrographis paniculata,Kaggle,Medicinal Leaf dataset\Nelavembu,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Nerale,Kaggle,Medicinal Leaf dataset\Nerale,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Nithyapushpa_Vinca rosea,Kaggle,Medicinal plant dataset\Nithyapushpa,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Nooni-Morinda citrifolia,Kaggle,Medicinal Leaf dataset\Nooni,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Nooni-Morinda citrifolia,Kaggle,Medicinal plant dataset\Nooni,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Onion-Allium cepa,Kaggle,Medicinal Leaf dataset\Onion,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Padri,Kaggle,Medicinal Leaf dataset\Padri,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Palak(Spinach)-Spinacia oleracea,Kaggle,Medicinal Leaf dataset\Palak(Spinach),exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Pappaya-Carica papaya,Kaggle,Medicinal plant dataset\Pappaya,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Parijatha-Nyctanthes arbor-tristis,Kaggle,Medicinal Leaf dataset\Parijatha,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Pea-Pisum sativum,Kaggle,Medicinal Leaf dataset\Pea,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Pepper-Piper nigrum,Kaggle,Medicinal Leaf dataset\Pepper,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Pepper-Piper nigrum,Kaggle,Medicinal plant dataset\Pepper,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Pomegranate-Punica granatum,Kaggle,Medicinal plant dataset\Pomegranate,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Pumpkin-Cucurbita pepo,Kaggle,Medicinal Leaf dataset\Pumpkin,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Raddish-Raphanus sativus,Kaggle,Medicinal Leaf dataset\Raddish,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Raktachandini_Pterocarpus santalinus,Kaggle,Medicinal plant dataset\Raktachandini,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Rose Apple_Syzygium jambos,Kaggle,Medicinal Leaf dataset\Rose,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Rose Apple_Syzygium jambos,Kaggle,Medicinal plant dataset\Rose,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Rose-Rosa,Kaggle,Medicinal Leaf dataset\Rose,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Rose-Rosa,Kaggle,Medicinal plant dataset\Rose,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Sampige,Kaggle,Medicinal Leaf dataset\Sampige,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Sapota-Manikara zapota,Kaggle,Medicinal Leaf dataset\Sapota,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Sapota-Manikara zapota,Kaggle,Medicinal plant dataset\Sapota,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Seethaashoka-Saraca asoca,Kaggle,Medicinal Leaf dataset\ashoka,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Seethaashoka-Saraca asoca,Kaggle,Medicinal Leaf dataset\Seethaashoka,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Seethaashoka-Saraca asoca,Kaggle,Medicinal plant dataset\Ashoka,possible_name_similarity,MEDIUM,UNREVIEWED
+Hugging_Face,Seethapala,Kaggle,Medicinal Leaf dataset\Seethapala,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Spinach1,Kaggle,Medicinal Leaf dataset\Spinach1,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Tamarind_Tamarindus indica,Kaggle,Medicinal Leaf dataset\Tamarind,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Taro_Colocasia esculenta,Kaggle,Medicinal Leaf dataset\Taro,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Tecoma,Kaggle,Medicinal Leaf dataset\Tecoma,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Thumbe,Kaggle,Medicinal Leaf dataset\Thumbe,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Tomato_Solanum lycopersicum,Kaggle,Medicinal Leaf dataset\Tomato,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Tulasi-Ocimum sanctum_Ocimum sanctum (also known as Holy Basil),Kaggle,Medicinal plant dataset\Tulasi,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Turmeric_ Curcuma longa,Kaggle,Medicinal Leaf dataset\Turmeric,exact_normalized_name,HIGH,UNREVIEWED
+Hugging_Face,Wood_sorel_ Oxalis spp,Kaggle,Medicinal plant dataset\Wood_sorel,possible_name_similarity,MEDIUM,UNREVIEWED

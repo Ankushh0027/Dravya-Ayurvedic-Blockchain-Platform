@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "status": "BLOCKED",
+  "timestamp": "2026-08-02T14:47:32.162866+00:00",
+  "reason": "NO_APPROVED_MAPPINGS",
+  "total_checks": 2,
+  "total_errors": 0,
+  "total_warnings": 0,
+  "summary": {
+    "manifest_existence": "PASS",
+    "manifest_approval_status": "BLOCKED"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "taxonomy_version": "v1",
+  "exported_at": "2026-08-04T15:38:19.578352+00:00",
+  "total_sessions": 1,
+  "sessions": {
+    "session_v1_001": {
+      "session_id": "session_v1_001",
+      "reviewer_id": "reviewer_001",
+      "taxonomy_version": "v1",
+      "session_status": "ACTIVE",
+      "started_at": "2026-08-04T15:18:46.826616+00:00",
+      "last_updated_at": "2026-08-04T15:31:31.240581+00:00",
+      "reviewed_mapping_ids": [
+        "map_v1_00001",
+        "map_v1_00002",
+        "map_v1_00003",
+        "map_v1_00004",
+        "map_v1_00005",
+        "map_v1_00006",
+        "map_v1_00007",
+        "map_v1_00008",
+        "map_v1_00009",
+        "map_v1_00010"
+      ],
+      "skipped_mapping_ids": [],
+      "approved_mapping_ids": [
+        "map_v1_00007",
+        "map_v1_00008",
+        "map_v1_00009",
+        "map_v1_00010"
+      ],
+      "rejected_mapping_ids": [],
+      "needs_review_mapping_ids": [
+        "map_v1_00001",
+        "map_v1_00002",
+        "map_v1_00003",
+        "map_v1_00004",
+        "map_v1_00005",
+        "map_v1_00006"
+      ],
+      "current_mapping_id": "map_v1_00010",
+      "current_candidate_group_id": "PLANT-CURRY-0B8E0D",
+      "dataset_filter": null,
+      "status_filter": null,
+      "candidate_group_filter": null,
+      "limit_filter": 10,
+      "progress_snapshot": {}
+    }
+  }
+}
