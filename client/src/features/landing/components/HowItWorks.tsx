@@ -1,88 +1,113 @@
-import React from 'react'
-import { Leaf, FlaskConical, Factory, Package, Users, ArrowRight } from 'lucide-react'
-import { FloatingLeaf } from '@/features/landing/components/FloatingLeaf'
+import React from "react"
+import {
+  Leaf,
+  FlaskConical,
+  Factory,
+  Package,
+  Users,
+  ArrowRight,
+} from "lucide-react"
 
 export function HowItWorks() {
   const steps = [
     {
       icon: Leaf,
-      title: '1. Harvest',
-      description: 'Farmers create batches with crop details',
+      number: "01",
+      title: "Harvest",
+      description: "Farmers create batches with crop and origin details.",
     },
     {
       icon: FlaskConical,
-      title: '2. Verify',
-      description: 'Labs & authorities verify quality',
+      number: "02",
+      title: "Verify",
+      description: "Labs and authorities verify quality and authenticity.",
     },
     {
       icon: Factory,
-      title: '3. Process',
-      description: 'Manufacturers process and add details',
+      number: "03",
+      title: "Process",
+      description: "Manufacturers process the herbs and record each stage.",
     },
     {
       icon: Package,
-      title: '4. Distribute',
-      description: 'Distributors & retailers handle with transparency',
+      number: "04",
+      title: "Distribute",
+      description: "Distributors and retailers maintain complete traceability.",
     },
     {
       icon: Users,
-      title: '5. Consumer',
-      description: 'Consumers scan QR & view full journey',
+      number: "05",
+      title: "Consumer",
+      description: "Consumers scan a QR code to explore the complete journey.",
     },
   ]
 
   return (
-    <section className="w-full bg-[#F4F7F5] py-20 relative z-10 rounded-t-[40px] shadow-[0_-10px_40px_rgb(0,0,0,0.02)]">
-      <div className="absolute top-[5%] right-[10%] w-[110px] md:w-[135px] lg:w-[160px] pointer-events-none z-0 opacity-50 mix-blend-multiply">
-        <FloatingLeaf className="w-full h-auto text-primary" rotate={40} />
-      </div>
-      <div className="absolute top-[40%] left-[7%] w-[110px] md:w-[100px] lg:w-[130px] pointer-events-none z-0 opacity-50 mix-blend-multiply">
-        <FloatingLeaf className="w-full h-auto text-primary" rotate={-42} />
-      </div>
-      <div className="max-w-[1400px] mx-auto px-6">
-        <div className="text-center mb-16 space-y-4">
-          <p className="text-[13px] font-bold text-primary tracking-[0.2em] uppercase">
+    <section className="relative overflow-hidden bg-[#F7FAF7] py-24 md:py-32">
+      
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="mb-4 inline-flex items-center rounded-full border border-[#D5E2DB] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#1a4a2c]">
             How It Works
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1e293b] font-serif tracking-tight">
-            Every Step. Every Time. Verified.
+          </span>
+
+          <h2 className="text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+            Every Step.
+            <span className="text-[#1a4a2c]"> Every Time. Verified.</span>
           </h2>
-          <p className="text-[15px] md:text-base text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">
-            Dravya connects the entire supply chain on a unified platform to ensure authenticity and
-            trust at every stage.
+
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-500 md:text-lg">
+            Dravya connects every stage of the Ayurvedic supply chain on one
+            transparent platform, creating trust from harvest to consumer.
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-0 mt-8">
-          {steps.map((step, index) => (
-            <React.Fragment key={step.title}>
-              {/* Step Item */}
-              <div className="flex flex-col items-center text-center w-full lg:w-[220px] z-10 group">
-                <div className="w-[88px] h-[88px] rounded-full bg-[#E8F0EA] flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-md border border-[#D5E2DB]">
-                  <step.icon className="w-10 h-10 text-[#1a4a2c] stroke-[1.5]" />
-                </div>
-                <h3 className="text-[15px] font-bold text-slate-900 mb-2">{step.title}</h3>
-                <p className="text-[13px] text-slate-500 font-medium leading-relaxed px-2 lg:px-4">
-                  {step.description}
-                </p>
-              </div>
+        <div className="relative mt-16">
+          <div className="hidden lg:block absolute left-[10%] right-[10%] top-[47px] border-t border-dashed border-[#B8D0C3]" />
 
-              {/* Connector (hidden on mobile) */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:flex items-center justify-center flex-1 h-[88px] px-2 -mx-4">
-                  <div className="w-full flex items-center">
-                    <div className="h-[2px] w-full border-t-2 border-dashed border-[#B8D0C3]" />
-                    <ArrowRight className="w-6 h-6 text-[#B8D0C3] -ml-2 shrink-0 stroke-[2.5]" />
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5 lg:gap-4">
+            {steps.map((step, index) => {
+              const Icon = step.icon
+
+              return (
+                <div
+                  key={step.title}
+                  className="group relative flex flex-col items-center text-center"
+                >
+                  <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded-2xl border border-[#D5E2DB] bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-lg">
+                    <Icon
+                      className="h-9 w-9 text-[#1a4a2c]"
+                      strokeWidth={1.6}
+                    />
+
+                    <span className="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-[#1a4a2c] text-[10px] font-bold text-white">
+                      {step.number}
+                    </span>
                   </div>
+
+                  <h3 className="mt-6 text-base font-bold text-slate-900">
+                    {step.title}
+                  </h3>
+
+                  <p className="mt-2 max-w-[210px] text-sm leading-6 text-slate-500">
+                    {step.description}
+                  </p>
+
+                  {index < steps.length - 1 && (
+                    <ArrowRight
+                      className="absolute -right-4 top-9 hidden h-5 w-5 text-[#A8C2B3] lg:block"
+                      strokeWidth={1.8}
+                    />
+                  )}
                 </div>
-              )}
-            </React.Fragment>
-          ))}
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>
   )
 }
 
-  )
-}
+  
+
