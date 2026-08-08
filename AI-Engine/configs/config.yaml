@@ -30,4 +30,18 @@ evaluation:
     min_recall: 0.70
     require_all_classes: true
 
+api:
+  service_name: "dravya-ai-engine"
+  title: "Dravya AI Engine - Medicinal Plant Inference API"
+  description: "Production-grade plant classification inference API powered by Dravya AI Engine"
+  version: "0.1.0"
+  max_upload_size_bytes: 10485760
+  allowed_content_types:
+    - "image/jpeg"
+    - "image/jpg"
+    - "image/png"
+    - "image/webp"
+    - "image/bmp"
+
+
 
