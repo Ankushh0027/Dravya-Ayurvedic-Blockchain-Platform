@@ -1,9 +1,4 @@
 import os
-import sys
-
-# Ensure C:\Dravya-AI-Engine is in Python path when executing script directly
-sys.path.insert(0, os.path.abspath(r"C:\Dravya-AI-Engine"))
-
 from src.data import DATASET_PATHS, InventoryScanner, ManifestGenerator
 
 def main():

@@ -7,3 +7,4 @@ paths:
   processed_datasets: "datasets/processed"
   final_datasets: "datasets/final"
   model_output: "models"
+  reports_dir: "reports/dataset_analysis"

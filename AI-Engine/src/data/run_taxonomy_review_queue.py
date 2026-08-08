@@ -4,8 +4,6 @@ import argparse
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 
-sys.path.insert(0, os.path.abspath(r"C:\Dravya-AI-Engine"))
-
 from src.data.taxonomy import MappingStatus
 from src.data.taxonomy_review import ReviewDecision, ReviewDecisionAction
 from src.data.taxonomy_review_queue import TaxonomyReviewQueue, ReviewQueueItem

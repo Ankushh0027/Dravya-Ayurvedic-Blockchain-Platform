@@ -3,6 +3,7 @@ import json
 import pytest
 from pathlib import Path
 
+from src.data.paths import get_reports_dir, get_dataset_paths
 from src.data.taxonomy import (
     CanonicalPlant,
     TaxonomyMapping,
@@ -161,12 +162,14 @@ def test_history_append_only_and_raw_dataset_safety(tmp_path):
     assert queue.engine.history[0].reviewer_id == "botanist_01"
 
     # Verify raw datasets remain safe
-    for path in [r"C:\Datasets\CIMPd", r"C:\Datasets\Hugging_Face", r"C:\Datasets\Kaggle"]:
+    for path in get_dataset_paths().values():
         if os.path.exists(path):
             assert os.path.isdir(path)
 
 def test_export_botanical_review_report_artifact():
-    reports_dir = Path(r"C:\Dravya-AI-Engine\reports\dataset_analysis")
+    reports_dir = get_reports_dir()
+    if not (reports_dir / "canonical_taxonomy_v1.json").exists():
+        pytest.skip("Report state artifacts not present in reports_dir")
     analyzer = BotanicalReviewAnalyzer(version="v1", reports_dir=str(reports_dir))
     report_path = analyzer.generate_report()
     assert report_path.exists()

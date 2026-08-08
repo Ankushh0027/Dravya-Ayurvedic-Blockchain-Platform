@@ -7,14 +7,14 @@ from enum import Enum
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Set, Tuple
+from typing import Dict, List, Any, Optional, Set, Tuple, Union
 
 try:
     from PIL import Image
 except ImportError:
     Image = None
 
-from src.data.paths import DATASET_PATHS, SUPPORTED_IMAGE_EXTENSIONS
+from src.data.paths import DATASET_PATHS, SUPPORTED_IMAGE_EXTENSIONS, get_reports_dir, get_dataset_paths, get_project_root
 from src.data.deduplication import compute_file_sha256
 from src.data.taxonomy import CanonicalPlant, TaxonomyMapping, MappingStatus
 from src.data.dataset_builder import CanonicalDatasetRecord, SourceReference
@@ -23,7 +23,7 @@ from src.data.dataset_builder import CanonicalDatasetRecord, SourceReference
 class PreprocessingConfig:
     version: str = "v1"
     input_manifest: str = ""
-    output_root: str = r"C:\Dravya-AI-Engine\data\processed\v1"
+    output_root: str = field(default_factory=lambda: str(get_project_root() / "data" / "processed" / "v1"))
     image_size: Tuple[int, int] = (224, 224)
     color_mode: str = "RGB"
     interpolation: str = "BILINEAR"
@@ -74,10 +74,10 @@ class CanonicalPreprocessor:
     def __init__(
         self,
         config: Optional[PreprocessingConfig] = None,
-        reports_dir: str = r"C:\Dravya-AI-Engine\reports\dataset_analysis"
+        reports_dir: Optional[Union[str, Path]] = None
     ):
         self.config = config if config is not None else PreprocessingConfig()
-        self.reports_dir = Path(reports_dir)
+        self.reports_dir = Path(reports_dir) if reports_dir is not None else get_reports_dir()
         self.records: List[ProcessedDatasetRecord] = []
         self.statistics: Dict[str, Any] = {}
         self.validation_report: Dict[str, Any] = {}
@@ -387,9 +387,9 @@ class CanonicalPreprocessor:
             }
 
         # 1. Raw Dataset Immutability Check
-        external_roots = [r"C:\Datasets\CIMPd", r"C:\Datasets\Hugging_Face", r"C:\Datasets\Kaggle"]
-        for p in external_roots:
-            if os.path.exists(p) and not os.path.isdir(p):
+        for root_p in get_dataset_paths().values():
+            p = Path(root_p)
+            if p.exists() and not p.is_dir():
                 errors.append(f"Raw dataset path '{p}' was corrupted!")
 
         # 2. Cross-Split SHA-256 Leakage Check

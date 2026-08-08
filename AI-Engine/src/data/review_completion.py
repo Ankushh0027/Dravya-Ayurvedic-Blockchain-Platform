@@ -3,9 +3,9 @@ import json
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Set, Tuple
+from typing import Dict, List, Any, Optional, Set, Tuple, Union
 
-from src.data.paths import DATASET_PATHS, SUPPORTED_IMAGE_EXTENSIONS
+from src.data.paths import DATASET_PATHS, SUPPORTED_IMAGE_EXTENSIONS, get_reports_dir, get_dataset_paths
 from src.data.deduplication import compute_file_sha256
 from src.data.taxonomy import CanonicalPlant, TaxonomyMapping, MappingStatus
 from src.data.taxonomy_review import TaxonomyReviewEngine, atomic_json_write
@@ -41,12 +41,12 @@ class HumanReviewCompletionAnalyzer:
     def __init__(
         self,
         version: str = "v1",
-        reports_dir: str = r"C:\Dravya-AI-Engine\reports\dataset_analysis",
+        reports_dir: Optional[Union[str, Path]] = None,
         dataset_roots: Optional[Dict[str, Path]] = None
     ):
         self.version = version
-        self.reports_dir = Path(reports_dir)
-        self.dataset_roots = dataset_roots if dataset_roots is not None else DATASET_PATHS
+        self.reports_dir = Path(reports_dir) if reports_dir is not None else get_reports_dir()
+        self.dataset_roots = dataset_roots if dataset_roots is not None else get_dataset_paths()
         self.engine = TaxonomyReviewEngine(version=self.version, reports_dir=str(self.reports_dir))
         self.botanical_analyzer = BotanicalReviewAnalyzer(version=self.version, reports_dir=str(self.reports_dir))
 
@@ -183,8 +183,9 @@ class HumanReviewCompletionAnalyzer:
 
         # Raw Datasets Immutability Checks
         raw_paths_intact = True
-        for p in [r"C:\Datasets\CIMPd", r"C:\Datasets\Hugging_Face", r"C:\Datasets\Kaggle"]:
-            if os.path.exists(p) and not os.path.isdir(p):
+        for root_p in self.dataset_roots.values():
+            p = Path(root_p)
+            if p.exists() and not p.is_dir():
                 raw_paths_intact = False
 
         if approved_count > 0:

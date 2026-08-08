@@ -2,6 +2,7 @@ import os
 import json
 import pytest
 from pathlib import Path
+from src.data.paths import get_reports_dir, get_dataset_paths
 
 from src.data.taxonomy import (
     CanonicalPlant,
@@ -270,7 +271,7 @@ def test_18_session_progress_metrics(tmp_path):
 
 # 19. raw dataset immutability
 def test_19_raw_dataset_immutability():
-    for p in [r"C:\Datasets\CIMPd", r"C:\Datasets\Hugging_Face", r"C:\Datasets\Kaggle"]:
+    for p in get_dataset_paths().values():
         if os.path.exists(p):
             assert os.path.isdir(p)
 
@@ -286,7 +287,9 @@ def test_20_repeat_resume_calls_deterministic_ordering(tmp_path):
     assert r1.started_at == r2.started_at
 
 def test_export_session_artifact():
-    reports_dir = Path(r"C:\Dravya-AI-Engine\reports\dataset_analysis")
+    reports_dir = get_reports_dir()
+    if not (reports_dir / "canonical_taxonomy_v1.json").exists():
+        pytest.skip("Report state artifacts not present in reports_dir")
     sm = ReviewSessionManager(version="v1", reports_dir=str(reports_dir))
     session_file = sm.save_sessions()
 

@@ -2,6 +2,7 @@ import os
 import pytest
 import tempfile
 import hashlib
+from pathlib import Path
 from src.data.deduplication import ExactDuplicateDetector, compute_file_sha256
 
 def test_identical_and_different_files(tmp_path):
@@ -93,7 +94,7 @@ def test_within_dataset_duplicate_only(tmp_path):
     assert group["is_cross_dataset"] is False
 
 def test_missing_path_handling():
-    detector = ExactDuplicateDetector({"invalid": r"C:\Path\NonExistent\12345"})
+    detector = ExactDuplicateDetector({"invalid": str(Path("/non_existent_path_12345"))})
     # 6. Missing paths are handled safely with FileNotFoundError
     with pytest.raises(FileNotFoundError):
         detector.scan()

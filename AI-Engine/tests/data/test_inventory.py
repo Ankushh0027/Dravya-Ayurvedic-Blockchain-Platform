@@ -2,10 +2,11 @@ import os
 import pytest
 import tempfile
 import json
+from pathlib import Path
 from src.data import InventoryScanner, ManifestGenerator
 
 def test_missing_dataset_path():
-    scanner = InventoryScanner("non_existent", r"C:\Path\That\Does\Not\Exist\12345")
+    scanner = InventoryScanner("non_existent", str(Path("/path_that_does_not_exist_12345")))
     with pytest.raises(FileNotFoundError):
         scanner.scan()
 

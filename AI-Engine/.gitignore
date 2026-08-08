@@ -13,16 +13,23 @@ __pycache__/
 .coverage
 htmlcov/
 
-# Datasets
-datasets/raw/
-datasets/processed/
-datasets/final/
+# Datasets & Processed Data
+datasets/raw/*
+!datasets/raw/.gitkeep
+datasets/processed/*
+!datasets/processed/.gitkeep
+datasets/final/*
+!datasets/final/.gitkeep
+data/processed/
 
 # Models & Artifacts
-models/
+models/*
+!models/.gitkeep
 
-# Generated Reports
+# Generated Reports & Operational State
 reports/generated/
+reports/dataset_analysis/*.json
+reports/dataset_analysis/*.csv
 
 # IDE & OS Specific
 .vscode/

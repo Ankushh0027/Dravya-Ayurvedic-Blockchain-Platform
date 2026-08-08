@@ -2,7 +2,7 @@ import os
 import json
 from pathlib import Path
 from datetime import datetime, timezone
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional, Tuple, Union
 
 
 from src.data.taxonomy import (
@@ -12,6 +12,7 @@ from src.data.taxonomy import (
     generate_canonical_plant_id
 )
 from src.data.taxonomy_validator import TaxonomyValidator
+from src.data.paths import get_reports_dir
 
 class TaxonomyManager:
     """
@@ -19,9 +20,9 @@ class TaxonomyManager:
     and validation reports without performing automatic class merges.
     """
 
-    def __init__(self, version: str = "v1", reports_dir: str = r"C:\Dravya-AI-Engine\reports\dataset_analysis"):
+    def __init__(self, version: str = "v1", reports_dir: Optional[Union[str, Path]] = None):
         self.version = version
-        self.reports_dir = Path(reports_dir)
+        self.reports_dir = Path(reports_dir) if reports_dir is not None else get_reports_dir()
         self.plants: Dict[str, CanonicalPlant] = {}
         self.mappings: List[TaxonomyMapping] = []
 

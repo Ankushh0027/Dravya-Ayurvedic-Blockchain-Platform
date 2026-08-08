@@ -4,9 +4,10 @@ from enum import Enum
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Union
 
 from src.data.taxonomy_review import atomic_json_write
+from src.data.paths import get_reports_dir
 
 class SessionStatus(str, Enum):
     ACTIVE = "ACTIVE"
@@ -46,9 +47,9 @@ class ReviewSessionManager:
     reviewer isolation, and resume capabilities.
     """
 
-    def __init__(self, version: str = "v1", reports_dir: str = r"C:\Dravya-AI-Engine\reports\dataset_analysis"):
+    def __init__(self, version: str = "v1", reports_dir: Optional[Union[str, Path]] = None):
         self.version = version
-        self.reports_dir = Path(reports_dir)
+        self.reports_dir = Path(reports_dir) if reports_dir is not None else get_reports_dir()
         self.sessions: Dict[str, TaxonomyReviewSession] = {}
         self.load_sessions()
 

@@ -2,6 +2,7 @@ import os
 import json
 import pytest
 from pathlib import Path
+from src.data.paths import get_dataset_paths
 
 from src.data.taxonomy import (
     CanonicalPlant,
@@ -361,7 +362,7 @@ def test_18_atomic_writes_remain_safe(tmp_path):
 
 # 19. raw dataset remains untouched
 def test_19_raw_dataset_remains_untouched():
-    for p in [r"C:\Datasets\CIMPd", r"C:\Datasets\Hugging_Face", r"C:\Datasets\Kaggle"]:
+    for p in get_dataset_paths().values():
         if os.path.exists(p):
             assert os.path.isdir(p)
 

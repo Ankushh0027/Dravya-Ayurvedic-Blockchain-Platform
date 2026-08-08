@@ -3,9 +3,9 @@ import hashlib
 import json
 import csv
 from datetime import datetime, timezone
-from typing import Dict, List, Any, Optional
-
-from src.data.paths import SUPPORTED_IMAGE_EXTENSIONS
+from pathlib import Path
+from typing import Dict, List, Any, Optional, Union
+from src.data.paths import SUPPORTED_IMAGE_EXTENSIONS, get_reports_dir
 
 def compute_file_sha256(file_path: str, chunk_size: int = 131072) -> str:
     """
@@ -121,13 +121,14 @@ class ExactDuplicateDetector:
         }
         return results
 
-    def export_reports(self, scan_results: Dict[str, Any], output_dir: str = r"C:\Dravya-AI-Engine\reports\dataset_analysis") -> Dict[str, str]:
+    def export_reports(self, scan_results: Dict[str, Any], output_dir: Optional[Union[str, Path]] = None) -> Dict[str, str]:
         """
         Exports duplicate analysis JSON and CSV reports.
         """
-        os.makedirs(output_dir, exist_ok=True)
-        json_path = os.path.join(output_dir, "duplicate_analysis.json")
-        csv_path = os.path.join(output_dir, "exact_duplicates.csv")
+        out_dir = str(output_dir) if output_dir is not None else str(get_reports_dir())
+        os.makedirs(out_dir, exist_ok=True)
+        json_path = os.path.join(out_dir, "duplicate_analysis.json")
+        csv_path = os.path.join(out_dir, "exact_duplicates.csv")
 
         # Export JSON
         with open(json_path, "w", encoding="utf-8") as f:

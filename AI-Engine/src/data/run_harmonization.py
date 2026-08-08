@@ -1,8 +1,4 @@
 import os
-import sys
-
-sys.path.insert(0, os.path.abspath(r"C:\Dravya-AI-Engine"))
-
 from src.data import DATASET_PATHS, InventoryScanner, ClassHarmonizationAnalyzer
 
 def main():

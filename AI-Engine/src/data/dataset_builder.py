@@ -4,9 +4,9 @@ import hashlib
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Set, Tuple
+from typing import Dict, List, Any, Optional, Set, Tuple, Union
 
-from src.data.paths import DATASET_PATHS, SUPPORTED_IMAGE_EXTENSIONS
+from src.data.paths import DATASET_PATHS, SUPPORTED_IMAGE_EXTENSIONS, get_reports_dir, get_dataset_paths
 from src.data.deduplication import compute_file_sha256
 from src.data.taxonomy import CanonicalPlant, TaxonomyMapping, MappingStatus
 from src.data.taxonomy_review import atomic_json_write
@@ -46,10 +46,10 @@ class CanonicalDatasetBuilder:
     APPROVED taxonomy mappings without modifying or copying raw dataset files.
     """
 
-    def __init__(self, version: str = "v1", reports_dir: str = r"C:\Dravya-AI-Engine\reports\dataset_analysis", dataset_roots: Optional[Dict[str, Path]] = None):
+    def __init__(self, version: str = "v1", reports_dir: Optional[Union[str, Path]] = None, dataset_roots: Optional[Dict[str, Path]] = None):
         self.version = version
-        self.reports_dir = Path(reports_dir)
-        self.dataset_roots = dataset_roots if dataset_roots is not None else DATASET_PATHS
+        self.reports_dir = Path(reports_dir) if reports_dir is not None else get_reports_dir()
+        self.dataset_roots = dataset_roots if dataset_roots is not None else get_dataset_paths()
         self.plants: Dict[str, CanonicalPlant] = {}
         self.mappings: List[TaxonomyMapping] = []
         self.records: List[CanonicalDatasetRecord] = []

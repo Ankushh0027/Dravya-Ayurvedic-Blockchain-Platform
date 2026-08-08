@@ -1,15 +1,17 @@
 import os
 import json
 import csv
-from typing import List, Dict, Any
+from pathlib import Path
+from typing import List, Dict, Any, Optional, Union
+from src.data.paths import get_reports_dir
 
 class ManifestGenerator:
     """
     Generates dataset inventory reports in JSON, CSV, and terminal summary formats.
     """
 
-    def __init__(self, output_dir: str = r"C:\Dravya-AI-Engine\reports\dataset_analysis"):
-        self.output_dir = os.path.abspath(output_dir)
+    def __init__(self, output_dir: Optional[Union[str, Path]] = None):
+        self.output_dir = str(output_dir) if output_dir is not None else str(get_reports_dir())
         os.makedirs(self.output_dir, exist_ok=True)
 
     def export_json(self, inventories: List[Dict[str, Any]], filename: str = "dataset_inventory.json") -> str:

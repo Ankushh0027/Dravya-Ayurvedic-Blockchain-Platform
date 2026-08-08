@@ -8,6 +8,10 @@ from src.data.paths import (
     SUPPORTED_IMAGE_EXTENSIONS,
     ARCHIVE_EXTENSIONS,
     METADATA_EXTENSIONS,
+    get_reports_dir,
+    get_external_dataset_root,
+    get_dataset_paths,
+    get_project_root,
 )
 from src.data.inventory import InventoryScanner
 from src.data.manifest import ManifestGenerator
@@ -54,6 +58,10 @@ __all__ = [
     "SUPPORTED_IMAGE_EXTENSIONS",
     "ARCHIVE_EXTENSIONS",
     "METADATA_EXTENSIONS",
+    "get_reports_dir",
+    "get_external_dataset_root",
+    "get_dataset_paths",
+    "get_project_root",
     "InventoryScanner",
     "ManifestGenerator",
     "ExactDuplicateDetector",

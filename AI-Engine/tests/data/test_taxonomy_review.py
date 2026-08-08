@@ -1,6 +1,8 @@
 import os
 import pytest
 import json
+from pathlib import Path
+from src.data.paths import get_dataset_paths
 from src.data.taxonomy import (
     CanonicalPlant,
     TaxonomyMapping,
@@ -272,7 +274,6 @@ def test_history_and_version_preservation(tmp_path):
 
 def test_raw_dataset_path_safety():
     # 12. Raw external dataset paths remain untouched
-    external_roots = [r"C:\Datasets\CIMPd", r"C:\Datasets\Hugging_Face", r"C:\Datasets\Kaggle"]
-    for path in external_roots:
+    for path in get_dataset_paths().values():
         if os.path.exists(path):
             assert os.path.isdir(path)

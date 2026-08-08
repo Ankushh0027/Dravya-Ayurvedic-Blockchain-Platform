@@ -3,8 +3,6 @@ import sys
 import argparse
 from pathlib import Path
 
-sys.path.insert(0, os.path.abspath(r"C:\Dravya-AI-Engine"))
-
 from src.data.taxonomy_manager import TaxonomyManager
 from src.data.taxonomy_validator import TaxonomyValidator
 

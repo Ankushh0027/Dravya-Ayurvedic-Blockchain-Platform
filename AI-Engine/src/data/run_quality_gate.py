@@ -3,8 +3,6 @@ import sys
 import argparse
 from pathlib import Path
 
-sys.path.insert(0, os.path.abspath(r"C:\Dravya-AI-Engine"))
-
 from src.data.quality_gate import DatasetQualityGate, QualityGateStatus
 
 def main():

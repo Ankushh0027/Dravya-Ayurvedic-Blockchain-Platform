@@ -2,10 +2,11 @@ import json
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional, Tuple, Union
 
 from src.data.taxonomy import CanonicalPlant, TaxonomyMapping, MappingStatus
 from src.data.taxonomy_review import TaxonomyReviewEngine, ReviewDecision, ReviewDecisionAction
+from src.data.paths import get_reports_dir
 
 @dataclass
 class ReviewQueueItem:
@@ -30,9 +31,9 @@ class TaxonomyReviewQueue:
     Production-grade Taxonomy Review Queue Engine for Dravya AI.
     Exposes filterable queue views, deterministic progress metrics, and review context for human audit.
     """
-    def __init__(self, version: str = "v1", reports_dir: str = r"C:\Dravya-AI-Engine\reports\dataset_analysis"):
+    def __init__(self, version: str = "v1", reports_dir: Optional[Union[str, Path]] = None):
         self.version = version
-        self.reports_dir = Path(reports_dir)
+        self.reports_dir = Path(reports_dir) if reports_dir is not None else get_reports_dir()
         self.engine = TaxonomyReviewEngine(version=self.version, reports_dir=str(self.reports_dir))
         self.items: List[ReviewQueueItem] = []
         self._load_queue()

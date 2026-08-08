@@ -31,7 +31,7 @@ def test_candidate_detection_and_no_automatic_merge():
     mock_inventories = [
         {
             "dataset_id": "CIMPd",
-            "root_path": r"C:\Datasets\CIMPd",
+            "root_path": "/datasets/CIMPd",
             "image_count_per_class": {
                 "Ashok.H": 100,
                 "Ashok.U": 50
@@ -39,14 +39,14 @@ def test_candidate_detection_and_no_automatic_merge():
         },
         {
             "dataset_id": "Hugging_Face",
-            "root_path": r"C:\Datasets\Hugging_Face",
+            "root_path": "/datasets/Hugging_Face",
             "image_count_per_class": {
                 "Ashoka-Saraca asoca": 200
             }
         },
         {
             "dataset_id": "Kaggle",
-            "root_path": r"C:\Datasets\Kaggle",
+            "root_path": "/datasets/Kaggle",
             "image_count_per_class": {
                 "Medicinal Leaf dataset\\Ashoka": 150
             }

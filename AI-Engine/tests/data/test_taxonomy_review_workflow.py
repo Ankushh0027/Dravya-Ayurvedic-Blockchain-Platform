@@ -2,6 +2,7 @@ import os
 import json
 import pytest
 from pathlib import Path
+from src.data.paths import get_dataset_paths
 
 from src.data.taxonomy import (
     CanonicalPlant,
@@ -369,7 +370,7 @@ def test_16_no_automatic_approval_from_botanical_recommendation(tmp_path):
 
 # 17. raw dataset paths remain untouched
 def test_17_raw_dataset_paths_remain_untouched():
-    for p in [r"C:\Datasets\CIMPd", r"C:\Datasets\Hugging_Face", r"C:\Datasets\Kaggle"]:
+    for p in get_dataset_paths().values():
         if os.path.exists(p):
             assert os.path.isdir(p)
 

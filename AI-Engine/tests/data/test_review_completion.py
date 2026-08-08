@@ -2,6 +2,7 @@ import os
 import json
 import pytest
 from pathlib import Path
+from src.data.paths import get_reports_dir
 
 from src.data.taxonomy import (
     CanonicalPlant,
@@ -180,7 +181,9 @@ def test_version_isolation_completion_analyzer(tmp_path):
         a2.analyze_completion_readiness()
 
 def test_export_real_completion_readiness_artifact():
-    real_reports_dir = Path(r"C:\Dravya-AI-Engine\reports\dataset_analysis")
+    real_reports_dir = get_reports_dir()
+    if not (real_reports_dir / "canonical_taxonomy_v1.json").exists():
+        pytest.skip("Report state artifacts not present in reports_dir")
     analyzer = HumanReviewCompletionAnalyzer(version="v1", reports_dir=str(real_reports_dir))
     report = analyzer.analyze_completion_readiness()
 

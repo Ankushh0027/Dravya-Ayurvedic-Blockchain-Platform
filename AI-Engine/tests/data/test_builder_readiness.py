@@ -2,6 +2,7 @@ import os
 import json
 import pytest
 from pathlib import Path
+from src.data.paths import get_reports_dir, get_dataset_paths
 
 from src.data.taxonomy import (
     CanonicalPlant,
@@ -243,7 +244,7 @@ def test_11_invalid_canonical_id_detected(tmp_path):
 
 # 12. raw dataset paths unchanged
 def test_12_raw_dataset_paths_unchanged():
-    for p in [r"C:\Datasets\CIMPd", r"C:\Datasets\Hugging_Face", r"C:\Datasets\Kaggle"]:
+    for p in get_dataset_paths().values():
         if os.path.exists(p):
             assert os.path.isdir(p)
 
@@ -322,7 +323,12 @@ def test_19_progress_report_correctness(tmp_path):
     assert summary["counts_by_status"]["APPROVED"] == 0
 
 def test_export_readiness_artifact():
-    reports_dir = Path(r"C:\Dravya-AI-Engine\reports\dataset_analysis")
+    reports_dir = get_reports_dir()
+    if not (reports_dir / "canonical_taxonomy_v1.json").exists():
+        pytest.skip("Report state artifacts not present in reports_dir")
+    dataset_roots = get_dataset_paths()
+    if not any(r.exists() for r in dataset_roots.values()):
+        pytest.skip("Raw datasets not present locally for integration export test")
     builder = CanonicalDatasetBuilder(version="v1", reports_dir=str(reports_dir))
     builder.load_inputs()
     builder.build_manifest()

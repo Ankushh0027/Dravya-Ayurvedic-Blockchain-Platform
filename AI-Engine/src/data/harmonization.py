@@ -2,7 +2,9 @@ import os
 import json
 import csv
 from datetime import datetime, timezone
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Union
+from pathlib import Path
+from src.data.paths import get_reports_dir
 
 def parse_class_name(dataset_id: str, original_class_name: str) -> Dict[str, Any]:
     """
@@ -208,10 +210,11 @@ class ClassHarmonizationAnalyzer:
             "class_entries": class_entries
         }
 
-    def export_reports(self, analysis_results: Dict[str, Any], output_dir: str = r"C:\Dravya-AI-Engine\reports\dataset_analysis") -> Dict[str, str]:
-        os.makedirs(output_dir, exist_ok=True)
-        csv_path = os.path.join(output_dir, "class_harmonization_candidates.csv")
-        json_path = os.path.join(output_dir, "class_harmonization_analysis.json")
+    def export_reports(self, analysis_results: Dict[str, Any], output_dir: Optional[Union[str, Path]] = None) -> Dict[str, str]:
+        out_dir = str(output_dir) if output_dir is not None else str(get_reports_dir())
+        os.makedirs(out_dir, exist_ok=True)
+        csv_path = os.path.join(out_dir, "class_harmonization_candidates.csv")
+        json_path = os.path.join(out_dir, "class_harmonization_analysis.json")
 
         # Export CSV candidates report
         fieldnames = ["dataset_a", "class_a", "dataset_b", "class_b", "candidate_reason", "confidence", "review_status"]

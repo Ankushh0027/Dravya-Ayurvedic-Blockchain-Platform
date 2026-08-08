@@ -5,10 +5,11 @@ from enum import Enum
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional, Tuple, Union
 
 from src.data.taxonomy import CanonicalPlant, TaxonomyMapping, MappingStatus
 from src.data.taxonomy_validator import TaxonomyValidator
+from src.data.paths import get_reports_dir
 
 def atomic_json_write(filepath: Path, data: Any) -> None:
     """
@@ -57,9 +58,9 @@ class TaxonomyReviewEngine:
     append-only history tracking, and atomic state updates.
     """
 
-    def __init__(self, version: str = "v1", reports_dir: str = r"C:\Dravya-AI-Engine\reports\dataset_analysis"):
+    def __init__(self, version: str = "v1", reports_dir: Optional[Union[str, Path]] = None):
         self.version = version
-        self.reports_dir = Path(reports_dir)
+        self.reports_dir = Path(reports_dir) if reports_dir is not None else get_reports_dir()
         self.plants: Dict[str, CanonicalPlant] = {}
         self.mappings: Dict[str, TaxonomyMapping] = {}
         self.history: List[ReviewDecision] = []

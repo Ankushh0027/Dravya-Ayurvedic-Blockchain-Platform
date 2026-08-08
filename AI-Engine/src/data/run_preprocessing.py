@@ -3,8 +3,6 @@ import sys
 import argparse
 from pathlib import Path
 
-sys.path.insert(0, os.path.abspath(r"C:\Dravya-AI-Engine"))
-
 from src.data.preprocessing import PreprocessingConfig, CanonicalPreprocessor
 
 def main():
@@ -18,19 +16,22 @@ def main():
     parser.add_argument("--train-ratio", type=float, default=0.70, help="Train split ratio (default: 0.70)")
     parser.add_argument("--val-ratio", type=float, default=0.15, help="Validation split ratio (default: 0.15)")
     parser.add_argument("--test-ratio", type=float, default=0.15, help="Test split ratio (default: 0.15)")
-    parser.add_argument("--output-root", type=str, default=r"C:\Dravya-AI-Engine\data\processed\v1", help="Output directory for processed image files")
+    parser.add_argument("--output-root", type=str, default=None, help="Output directory for processed image files")
     parser.add_argument("--force", action="store_true", help="Force overwrite existing processed data")
 
     args = parser.parse_args()
 
-    config = PreprocessingConfig(
-        version=args.version,
-        output_root=args.output_root,
-        image_size=(args.image_size[0], args.image_size[1]),
-        random_seed=args.seed,
-        split_ratios={"train": args.train_ratio, "val": args.val_ratio, "test": args.test_ratio},
-        overwrite_policy="FORCE" if args.force else "NEVER"
-    )
+    config_kwargs = {
+        "version": args.version,
+        "image_size": (args.image_size[0], args.image_size[1]),
+        "random_seed": args.seed,
+        "split_ratios": {"train": args.train_ratio, "val": args.val_ratio, "test": args.test_ratio},
+        "overwrite_policy": "FORCE" if args.force else "NEVER"
+    }
+    if args.output_root:
+        config_kwargs["output_root"] = args.output_root
+
+    config = PreprocessingConfig(**config_kwargs)
 
     print(f"Executing Canonical Preprocessor & Splitter (Version: {args.version})...")
     preprocessor = CanonicalPreprocessor(config=config)
