@@ -49,6 +49,8 @@
 }
 
 :root {
+  --ww:#E1E9E1;
+  --www: #B8CBB8;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -128,3 +130,4 @@
     @apply font-sans;
   }
 }
+
