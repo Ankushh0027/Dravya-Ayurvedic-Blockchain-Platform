@@ -59,6 +59,24 @@ def get_reports_dir() -> Path:
     return config_path
 
 
+def get_evaluation_reports_dir() -> Path:
+    """Return the model evaluation reports output directory path, supporting env var & config overrides."""
+    env_path = os.getenv("DRAVYA_EVALUATION_REPORTS_DIR") or os.getenv(
+        "EVALUATION_REPORTS_DIR_PATH"
+    )
+    if env_path:
+        return Path(env_path)
+
+    config_eval = _CONFIG.get("paths", {}).get(
+        "evaluation_reports_dir", "reports/model_evaluation"
+    )
+    config_path = Path(config_eval)
+    if not config_path.is_absolute():
+        return (PROJECT_ROOT / config_path).resolve()
+    return config_path
+
+
+
 def get_dataset_paths(
     root: Optional[Union[str, Path]] = None,
 ) -> Dict[str, Path]:

@@ -30,6 +30,9 @@ models/*
 reports/generated/
 reports/dataset_analysis/*.json
 reports/dataset_analysis/*.csv
+reports/model_evaluation/*.json
+!reports/model_evaluation/.gitkeep
+
 
 # IDE & OS Specific
 .vscode/
