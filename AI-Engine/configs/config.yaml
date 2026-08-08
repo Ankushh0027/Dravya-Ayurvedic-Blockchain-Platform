@@ -8,3 +8,15 @@ paths:
   final_datasets: "datasets/final"
   model_output: "models"
   reports_dir: "reports/dataset_analysis"
+
+model:
+  architecture: "efficientnet_b0"
+  image_size: 224
+  batch_size: 16
+  epochs: 5
+  learning_rate: 0.001
+  validation_split: 0.2
+  random_seed: 42
+  model_version: "v1"
+  device: "cpu"
+
