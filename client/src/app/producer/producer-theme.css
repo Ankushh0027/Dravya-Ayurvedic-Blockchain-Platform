@@ -11,3 +11,8 @@
   --primary: #153228;
   --primary-foreground: #FFFFFF;
 }
+
+.producer-theme button:has(svg.lucide-sun) {
+  display: none;
+}
+
