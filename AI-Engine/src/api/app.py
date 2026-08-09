@@ -35,6 +35,12 @@ def create_app() -> FastAPI:
     app.include_router(health_router)
     app.include_router(prediction_router)
 
+    @app.get("/", include_in_schema=False)
+    async def root():
+        from fastapi.responses import RedirectResponse
+        return RedirectResponse(url="/docs")
+
+
     # Clean Exception Handlers
     @app.exception_handler(HTTPException)
     async def http_exception_handler(request: Request, exc: HTTPException):

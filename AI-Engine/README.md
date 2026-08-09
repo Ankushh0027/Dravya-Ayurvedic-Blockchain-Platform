@@ -119,25 +119,50 @@ python -m src.data.run_taxonomy_review_queue --version v1 --session-summary
 
 ---
 
+## 🚀 Model & Production Inference API
+
+### Active Model Version (`v1-kaggle`)
+- **Architecture:** EfficientNet-B0 (PyTorch CUDA model, 16.75 MB)
+- **Species Classes:** 82 Canonical Medicinal Plant Species
+- **Test Accuracy:** **98.67%** (2,226 / 2,256 correct predictions)
+- **Validation Accuracy:** **99.33%**
+- **Taxonomy Resolution:** Maps raw class IDs (`DRAVYA_0022`) to common species name (**Aloe vera**) and scientific name (**Aloe barbadensis**).
+
+### Launch Live FastAPI Server
+```bash
+uvicorn src.api.app:app --host 127.0.0.1 --port 8000 --reload
+```
+Interactive OpenAPI Swagger Docs available at **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**.
+
+### Batch Inference CLI
+Process entire directories of plant images in bulk:
+```bash
+python -m src.inference.batch_predictor --input-dir datasets/sample_images --output reports/batch_predictions.json --format json
+```
+
+---
+
 ## 🧪 Testing
 
-Execute the complete automated unit test suite (159 passed tests):
+Execute the complete automated unit and integration test suite:
 ```bash
-pytest -o pythonpath=. -v tests/data
+pytest -o pythonpath=. -v tests/
 ```
 
 ---
 
 ## 📁 Versioned Artifacts Summary
 
-All generated report artifacts are saved under `reports/dataset_analysis/`:
+All generated report artifacts are saved under `reports/dataset_analysis/` and `reports/model_evaluation/`:
+* `models/v1-kaggle/best_model.pth` (Production EfficientNet-B0 checkpoint)
+* `models/v1-kaggle/class_mapping.json` (82 plant species class mapping)
+* `models/v1-kaggle/model_metadata.json` (Model architecture and accuracy metadata)
+* `models/v1-kaggle/evaluation_report.json` (GPU evaluation report with 98.67% test accuracy)
 * `human_review_completion_readiness_v1.json` (Completion & dataset generation readiness report)
 * `review_sessions_v1.json` (Human review session persistence & status log)
 * `canonical_dataset_readiness_v1.json` (Dataset builder readiness & dry-run report)
 * `taxonomy_botanical_review_v1.json` (Evidence-driven botanical recommendations report)
 * `taxonomy_review_progress_v1.json` (Human review progress, session metrics, & per-reviewer summary)
-* `taxonomy_review_v1.json` (Latest human review mapping state)
-* `taxonomy_review_history_v1.json` (Append-only review audit history)
 * `canonical_taxonomy_v1.json` (Canonical plant entities v1)
 * `canonical_dataset_manifest_v1.json` (Canonical dataset manifest v1)
-* `canonical_dataset_quality_report_v1.json` (Pre-training quality gate report)
+

@@ -2,14 +2,28 @@ import json
 import os
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple, Union
-import numpy as np
-from PIL import Image
+try:
+    import numpy as np
+except ImportError:
+    np = None
 
-import torch
-from torch.utils.data import Dataset, DataLoader, random_split
-import torchvision.transforms as T
+try:
+    from PIL import Image
+except ImportError:
+    Image = None
 
-from src.data.paths import get_dataset_paths, get_reports_dir
+try:
+    import torch
+    from torch.utils.data import Dataset, DataLoader, random_split
+    import torchvision.transforms as T
+except ImportError:
+    torch = None
+    Dataset = object
+    DataLoader = None
+    random_split = None
+    T = None
+
+from src.data.paths import get_dataset_paths, get_reports_dir, get_project_root
 from src.data.taxonomy import MappingStatus
 from src.models.config import ModelConfig, load_model_config
 
@@ -111,8 +125,26 @@ class DravyaDataset(Dataset):
 
     def _resolve_image_path(self, record: Dict[str, Any]) -> Optional[Path]:
         """
-        Resolves absolute path to local physical image file using paths.py dataset roots.
+        Resolves absolute path to local physical image file using canonical dataset paths or raw dataset roots.
         """
+        # 1. Check relative_canonical_path inside data/canonical/v1/
+        rel_canon = record.get("relative_canonical_path")
+        if rel_canon:
+            canon_candidate = get_project_root() / "data" / "canonical" / "v1" / rel_canon
+            if canon_candidate.exists():
+                return canon_candidate
+
+        # 2. Check direct canonical_image_path
+        canon_path = record.get("canonical_image_path")
+        if canon_path and Path(canon_path).exists():
+            return Path(canon_path)
+
+        # 3. Check direct raw_image_path / source_file_path
+        raw_path = record.get("raw_image_path") or record.get("source_file_path")
+        if raw_path and Path(raw_path).exists():
+            return Path(raw_path)
+
+        # 4. Check source_references
         refs = record.get("source_references", [])
         if refs:
             ref = refs[0]
@@ -133,7 +165,7 @@ class DravyaDataset(Dataset):
 
     def __getitem__(self, idx: int) -> Tuple[torch.Tensor, int]:
         record = self.records[idx]
-        class_name = record.get("canonical_name", record.get("canonical_plant_id"))
+        class_name = record.get("canonical_class_id") or record.get("canonical_name") or record.get("canonical_plant_id")
         label = self.class_to_idx[class_name]
 
         img_path = self.resolve_image_path(idx)
@@ -148,31 +180,40 @@ class DravyaDataset(Dataset):
 
         if self.transform:
             img_tensor = self.transform(img)
-        else:
+        elif T is not None and img is not None:
             img_tensor = T.ToTensor()(img)
+        else:
+            img_tensor = img
 
         return img_tensor, label
 
     def resolve_image_path(self, idx: int) -> Optional[Path]:
         return self._resolve_image_path(self.records[idx])
 
-    def _create_synthetic_image(self, seed_str: str) -> Image.Image:
+    def _create_synthetic_image(self, seed_str: str) -> Any:
         """
         Generates a deterministic synthetic 224x224 RGB PIL image based on a hash seed.
         Used for unit tests and CPU smoke testing when external raw dataset folders are absent.
         """
-        hash_val = sum(ord(c) for c in str(seed_str))
-        np.random.seed(hash_val % 2**32)
-        arr = np.random.randint(0, 256, (224, 224, 3), dtype=np.uint8)
-        return Image.fromarray(arr)
+        if Image and np:
+            hash_val = sum(ord(c) for c in str(seed_str))
+            np.random.seed(hash_val % 2**32)
+            arr = np.random.randint(0, 256, (224, 224, 3), dtype=np.uint8)
+            return Image.fromarray(arr)
+        elif Image:
+            return Image.new("RGB", (224, 224), color=(128, 128, 128))
+        return None
 
 
 def get_transforms(
     image_size: int = 224, is_training: bool = True
-) -> T.Compose:
+) -> Any:
     """
     Returns image transform pipeline for training or validation/inference.
     """
+    if T is None:
+        return None
+
     mean = [0.485, 0.456, 0.406]
     std = [0.229, 0.224, 0.225]
 

@@ -34,6 +34,9 @@ reports/model_evaluation/*.json
 !reports/model_evaluation/.gitkeep
 
 
+# Zip Archives & Large Files
+*.zip
+
 # IDE & OS Specific
 .vscode/
 .idea/

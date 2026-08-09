@@ -1,11 +1,19 @@
 from typing import Dict, Any, Optional
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torchvision.models as models
+try:
+    import torch
+    import torch.nn as nn
+    import torch.nn.functional as F
+    import torchvision.models as models
+    BaseModule = nn.Module
+except ImportError:
+    torch = None
+    nn = None
+    F = None
+    models = None
+    BaseModule = object
 
 
-class PlantClassifier(nn.Module):
+class PlantClassifier(BaseModule):
     """
     Production-oriented Image Classification Architecture for Dravya AI.
     Wraps EfficientNet (or configurable backbone) with a customized output classifier head

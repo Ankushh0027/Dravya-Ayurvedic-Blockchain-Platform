@@ -54,6 +54,33 @@ class PlantPredictor:
         }
         self.num_classes = len(self.class_to_idx)
 
+        # 1b. Load species taxonomy metadata mapping
+        self.taxonomy_map: Dict[str, Dict[str, Any]] = {}
+        tax_path = self.version_dir / "taxonomy_mapping.json"
+        if tax_path.exists():
+            try:
+                with open(tax_path, "r", encoding="utf-8") as f:
+                    self.taxonomy_map = json.load(f)
+            except Exception:
+                pass
+
+        if not self.taxonomy_map:
+            cand_path = Path(__file__).resolve().parent.parent.parent / "reports" / "dataset_analysis" / "candidate_training_classes_v2.json"
+            if cand_path.exists():
+                try:
+                    with open(cand_path, "r", encoding="utf-8") as f:
+                        cand_data = json.load(f)
+                        for item in cand_data.get("candidate_classes", []):
+                            cid = item.get("class_id")
+                            if cid:
+                                self.taxonomy_map[cid] = {
+                                    "class_id": cid,
+                                    "species_name": item.get("canonical_species_name"),
+                                    "scientific_name": item.get("scientific_name"),
+                                }
+                except Exception:
+                    pass
+
         # 2. Load model metadata & config
         meta_path = self.version_dir / "model_metadata.json"
         if meta_path.exists():
@@ -90,7 +117,26 @@ class PlantPredictor:
         )
 
         checkpoint = torch.load(checkpoint_path, map_location=self.device)
-        state_dict = checkpoint.get("model_state_dict", checkpoint)
+        if isinstance(checkpoint, dict):
+            state_dict = (
+                checkpoint.get("model_state_dict")
+                or checkpoint.get("state_dict")
+                or checkpoint.get("model")
+                or checkpoint.get("net")
+                or checkpoint
+            )
+        else:
+            state_dict = checkpoint
+
+        if isinstance(state_dict, dict):
+            cleaned_state_dict = {}
+            for k, v in state_dict.items():
+                name = k[7:] if k.startswith("module.") else k
+                if name.startswith("backbone.classifier."):
+                    name = name.replace("backbone.classifier.", "classifier.")
+                cleaned_state_dict[name] = v
+            state_dict = cleaned_state_dict
+
         self.model.load_state_dict(state_dict)
         self.model.to(self.device)
         self.model.eval()
@@ -132,11 +178,18 @@ class PlantPredictor:
 
         predictions = []
         for prob, idx in zip(top_probs_list, top_indices_list):
-            class_name = self.idx_to_class.get(idx, f"UNKNOWN_{idx}")
+            raw_class_name = self.idx_to_class.get(idx, f"UNKNOWN_{idx}")
+            tax_info = self.taxonomy_map.get(raw_class_name, {})
+            species_name = tax_info.get("species_name") or raw_class_name
+            scientific_name = tax_info.get("scientific_name")
+
             predictions.append(
                 {
-                    "class_name": class_name,
-                    "canonical_name": class_name,
+                    "class_name": species_name,
+                    "canonical_name": species_name,
+                    "class_id": raw_class_name,
+                    "species_name": species_name,
+                    "scientific_name": scientific_name,
                     "confidence": round(float(prob), 4),
                 }
             )
@@ -144,7 +197,10 @@ class PlantPredictor:
         top_prediction = predictions[0] if predictions else {}
 
         return {
+            "class_id": top_prediction.get("class_id"),
+            "species_name": top_prediction.get("species_name"),
             "canonical_name": top_prediction.get("canonical_name"),
+            "scientific_name": top_prediction.get("scientific_name"),
             "confidence": top_prediction.get("confidence", 0.0),
             "top_k": predictions,
             "model_version": self.version,

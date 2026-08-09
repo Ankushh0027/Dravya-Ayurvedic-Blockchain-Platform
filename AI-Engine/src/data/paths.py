@@ -1,7 +1,11 @@
 import os
 from pathlib import Path
 from typing import Dict, Optional, Union
-import yaml
+
+try:
+    import yaml
+except ImportError:
+    yaml = None
 
 # AI-Engine Project Root (AI-Engine/)
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -9,6 +13,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 def load_config() -> dict:
     """Load configuration from config.yaml with fallback to defaults."""
+    if yaml is None:
+        return {}
     config_path = Path(
         os.getenv("DRAVYA_CONFIG_PATH", PROJECT_ROOT / "configs" / "config.yaml")
     )
@@ -19,6 +25,7 @@ def load_config() -> dict:
         except Exception:
             pass
     return {}
+
 
 
 _CONFIG = load_config()

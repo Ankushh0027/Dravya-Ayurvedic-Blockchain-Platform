@@ -68,7 +68,9 @@ class PredictorDependencyManager:
             self._cached_predictor = predictor
             self._cached_version = active_version
             return predictor
-        except Exception:
+        except Exception as e:
+            import logging
+            logging.exception(f"Failed to load PlantPredictor for version '{active_version}': {e}")
             return None
 
     def get_health_status(self) -> Tuple[str, Optional[str], bool]:

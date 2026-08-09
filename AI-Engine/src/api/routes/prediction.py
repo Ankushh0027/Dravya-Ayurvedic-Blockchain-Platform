@@ -104,19 +104,27 @@ async def predict_plant_image(
 
     top_k_list = [
         TopKPrediction(
-            class_name=item["canonical_name"],
+            class_id=item.get("class_id"),
+            class_name=item.get("species_name") or item.get("canonical_name") or item.get("class_name", "Unknown"),
+            species_name=item.get("species_name") or item.get("canonical_name"),
+            scientific_name=item.get("scientific_name"),
             confidence=item["confidence"],
         )
         for item in raw_res.get("top_k", [])
     ]
 
-    predicted_class = raw_res.get("canonical_name", "Unknown")
+    class_id = raw_res.get("class_id")
+    species_name = raw_res.get("species_name") or raw_res.get("canonical_name", "Unknown")
+    scientific_name = raw_res.get("scientific_name")
     confidence = raw_res.get("confidence", 0.0)
     model_version = raw_res.get("model_version", predictor.version)
 
     return PredictionResponse(
         model_version=model_version,
-        predicted_class=predicted_class,
+        class_id=class_id,
+        predicted_class=species_name,
+        species_name=species_name,
+        scientific_name=scientific_name,
         confidence=confidence,
         top_k=top_k_list,
     )

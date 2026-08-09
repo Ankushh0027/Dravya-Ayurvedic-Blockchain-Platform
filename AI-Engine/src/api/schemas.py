@@ -12,14 +12,20 @@ class HealthResponse(BaseModel):
 
 class TopKPrediction(BaseModel):
     """Schema for individual top-k prediction item."""
-    class_name: str = Field(..., example="Saraca asoca")
+    class_id: Optional[str] = Field(default=None, example="DRAVYA_0022")
+    class_name: str = Field(..., example="Aloe vera")
+    species_name: Optional[str] = Field(default=None, example="Aloe vera")
+    scientific_name: Optional[str] = Field(default=None, example="Aloe barbadensis")
     confidence: float = Field(..., example=0.94)
 
 
 class PredictionResponse(BaseModel):
     """Schema for POST /predict endpoint response."""
-    model_version: str = Field(..., example="v1-smoke")
-    predicted_class: str = Field(..., example="Saraca asoca")
+    model_version: str = Field(..., example="v1-kaggle")
+    class_id: Optional[str] = Field(default=None, example="DRAVYA_0022")
+    predicted_class: str = Field(..., example="Aloe vera")
+    species_name: Optional[str] = Field(default=None, example="Aloe vera")
+    scientific_name: Optional[str] = Field(default=None, example="Aloe barbadensis")
     confidence: float = Field(..., example=0.94)
     top_k: List[TopKPrediction] = Field(default_factory=list)
 
