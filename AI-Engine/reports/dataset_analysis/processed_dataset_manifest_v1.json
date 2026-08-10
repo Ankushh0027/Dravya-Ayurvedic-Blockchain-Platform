@@ -1,0 +1,34 @@
+{
+  "preprocessing_version": "v1",
+  "exported_at": "2026-08-02T14:54:37.374296+00:00",
+  "status": "BLOCKED",
+  "reason": "QUALITY_GATE_BLOCKED_(NO_APPROVED_MAPPINGS)",
+  "configuration": {
+    "version": "v1",
+    "input_manifest": "",
+    "output_root": "C:\\Dravya-AI-Engine\\data\\processed\\v1",
+    "image_size": [
+      224,
+      224
+    ],
+    "color_mode": "RGB",
+    "interpolation": "BILINEAR",
+    "normalization": null,
+    "allowed_formats": [
+      ".jpg",
+      ".jpeg",
+      ".png",
+      ".webp",
+      ".bmp"
+    ],
+    "random_seed": 42,
+    "split_ratios": {
+      "train": 0.7,
+      "val": 0.15,
+      "test": 0.15
+    },
+    "overwrite_policy": "NEVER"
+  },
+  "total_records": 0,
+  "records": []
+}

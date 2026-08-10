@@ -1,0 +1,2262 @@
+{
+  "metadata": {
+    "project": "Dravya AI Engine",
+    "manifest_version": "v2",
+    "exported_at": "2026-08-09T06:53:51.481844+00:00"
+  },
+  "review_summary": {
+    "total_classes": 180,
+    "APPROVED": 94,
+    "NEEDS_REVIEW": 85,
+    "REJECTED": 1
+  },
+  "class_reviews": [
+    {
+      "class_id": "DRAVYA_0001",
+      "canonical_species_name": "Murraya koenigii (Curry Leaf)",
+      "scientific_name": "Murraya koenigii",
+      "total_images": 1397,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 1397 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0002",
+      "canonical_species_name": "Ocimum sanctum (Holy Basil/Tulsi)",
+      "scientific_name": "Ocimum sanctum",
+      "total_images": 1306,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 1306 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0003",
+      "canonical_species_name": "Rosa spp. (Rose)",
+      "scientific_name": "Rosa spp.",
+      "total_images": 1142,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 1142 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0004",
+      "canonical_species_name": "Solanum nigrum (Makoy/Black Nightshade)",
+      "scientific_name": "Solanum nigrum",
+      "total_images": 1115,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 1115 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0005",
+      "canonical_species_name": "Mentha spp. (Mint)",
+      "scientific_name": "Mentha spp.",
+      "total_images": 940,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 940 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0006",
+      "canonical_species_name": "Saraca asoca (Ashoka)",
+      "scientific_name": "Saraca asoca",
+      "total_images": 894,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 894 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0007",
+      "canonical_species_name": "Plectranthus amboinicus (Doddapatre/Indian Borage)",
+      "scientific_name": "Plectranthus amboinicus",
+      "total_images": 891,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 891 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0008",
+      "canonical_species_name": "Piper betle (Betel Leaf)",
+      "scientific_name": "Piper betle",
+      "total_images": 851,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 851 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0009",
+      "canonical_species_name": "Lantana camara (Lantana)",
+      "scientific_name": "Lantana camara",
+      "total_images": 821,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 821 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0010",
+      "canonical_species_name": "Psidium guajava (Guava)",
+      "scientific_name": "Psidium guajava",
+      "total_images": 794,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 794 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0011",
+      "canonical_species_name": "Hibiscus rosa-sinensis (Hibiscus)",
+      "scientific_name": "Hibiscus rosa-sinensis",
+      "total_images": 768,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 768 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0012",
+      "canonical_species_name": "Citrus limon (Lemon)",
+      "scientific_name": "Citrus limon",
+      "total_images": 766,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 766 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0013",
+      "canonical_species_name": "Tinospora cordifolia (Giloy/Amrita)",
+      "scientific_name": "Tinospora cordifolia",
+      "total_images": 665,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 665 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0014",
+      "canonical_species_name": "Bambusoideae (Bamboo)",
+      "scientific_name": "Bambusoideae",
+      "total_images": 630,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 630 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0015",
+      "canonical_species_name": "Annona squamosa (Custard Apple)",
+      "scientific_name": "Annona squamosa",
+      "total_images": 622,
+      "source_datasets": [
+        "CIMPd"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 622 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0016",
+      "canonical_species_name": "Azadirachta indica (Neem)",
+      "scientific_name": "Azadirachta indica",
+      "total_images": 616,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 616 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0017",
+      "canonical_species_name": "Artocarpus heterophyllus (Jackfruit)",
+      "scientific_name": "Artocarpus heterophyllus",
+      "total_images": 573,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 573 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0018",
+      "canonical_species_name": "Ricinus communis (Castor)",
+      "scientific_name": "Ricinus communis",
+      "total_images": 572,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 572 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0019",
+      "canonical_species_name": "Pongamia pinnata (Honge/Karanja)",
+      "scientific_name": "Pongamia pinnata",
+      "total_images": 572,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 572 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0020",
+      "canonical_species_name": "Mangifera indica (Mango)",
+      "scientific_name": "Mangifera indica",
+      "total_images": 560,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 560 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0021",
+      "canonical_species_name": "Aegle marmelos (Bael)",
+      "scientific_name": "Aegle marmelos",
+      "total_images": 559,
+      "source_datasets": [
+        "CIMPd"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 559 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0022",
+      "canonical_species_name": "Aloe vera",
+      "scientific_name": "Aloe barbadensis",
+      "total_images": 559,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 559 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0023",
+      "canonical_species_name": "Jasminum spp. (Jasmine)",
+      "scientific_name": "Jasminum spp.",
+      "total_images": 543,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 543 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0024",
+      "canonical_species_name": "Carica papaya (Papaya)",
+      "scientific_name": "Carica papaya",
+      "total_images": 520,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 520 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0025",
+      "canonical_species_name": "Calotropis gigantea (Crown Flower/Ekka)",
+      "scientific_name": "Calotropis gigantea",
+      "total_images": 520,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 520 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0026",
+      "canonical_species_name": "Nyctanthes arbor-tristis (Harsingar/Parijat)",
+      "scientific_name": "Nyctanthes arbor-tristis",
+      "total_images": 509,
+      "source_datasets": [
+        "CIMPd"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 509 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0027",
+      "canonical_species_name": "Bauhinia variegata (Kachnar)",
+      "scientific_name": "Bauhinia variegata",
+      "total_images": 508,
+      "source_datasets": [
+        "CIMPd"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 508 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0028",
+      "canonical_species_name": "Bacopa monnieri (Brahmi)",
+      "scientific_name": "Bacopa monnieri",
+      "total_images": 500,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 500 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0029",
+      "canonical_species_name": "Clerodendrum splendens",
+      "scientific_name": "Clerodendrum splendens",
+      "total_images": 492,
+      "source_datasets": [
+        "CIMPd"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 492 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0030",
+      "canonical_species_name": "Nerium oleander (Oleander)",
+      "scientific_name": "Nerium oleander",
+      "total_images": 470,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 470 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0031",
+      "canonical_species_name": "Chamaecostus cuspidatus (Insulin Plant)",
+      "scientific_name": "Chamaecostus cuspidatus",
+      "total_images": 470,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Taxonomy conflict or unresolved vernacular name requiring expert review.",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0032",
+      "canonical_species_name": "Salvia splendens (Scarlet Sage)",
+      "scientific_name": "Salvia splendens",
+      "total_images": 462,
+      "source_datasets": [
+        "CIMPd"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 462 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0033",
+      "canonical_species_name": "Lawsonia inermis (Henna)",
+      "scientific_name": "Lawsonia inermis",
+      "total_images": 453,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 453 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0034",
+      "canonical_species_name": "Punica granatum (Pomegranate)",
+      "scientific_name": "Punica granatum",
+      "total_images": 446,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 446 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0035",
+      "canonical_species_name": "Phyllanthus emblica (Amla)",
+      "scientific_name": "Phyllanthus emblica",
+      "total_images": 426,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 426 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0036",
+      "canonical_species_name": "Tropaeolum majus (Nasturtium)",
+      "scientific_name": "Tropaeolum majus",
+      "total_images": 424,
+      "source_datasets": [
+        "CIMPd"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 424 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0037",
+      "canonical_species_name": "Basella alba (Malabar Spinach)",
+      "scientific_name": "Basella alba",
+      "total_images": 395,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 395 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0038",
+      "canonical_species_name": "Manilkara zapota (Sapota/Chikoo)",
+      "scientific_name": "Manilkara zapota",
+      "total_images": 380,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 380 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0039",
+      "canonical_species_name": "Tagetes spp. (Marigold)",
+      "scientific_name": "Tagetes spp.",
+      "total_images": 372,
+      "source_datasets": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 372 images across 3 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0040",
+      "canonical_species_name": "Cardiospermum halicacabum (Balloon Vine)",
+      "scientific_name": "Cardiospermum halicacabum",
+      "total_images": 368,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 368 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0041",
+      "canonical_species_name": "Tamarindus indica (Tamarind)",
+      "scientific_name": "Tamarindus indica",
+      "total_images": 352,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 352 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0042",
+      "canonical_species_name": "Coriandrum sativum (Coriander)",
+      "scientific_name": "Coriandrum sativum",
+      "total_images": 350,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 350 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0043",
+      "canonical_species_name": "Catharanthus roseus (Sadabahar)",
+      "scientific_name": "Catharanthus roseus",
+      "total_images": 323,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 323 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0044",
+      "canonical_species_name": "Cymbopogon citratus (Lemongrass)",
+      "scientific_name": "Cymbopogon citratus",
+      "total_images": 308,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 308 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0045",
+      "canonical_species_name": "Withania somnifera (Ashwagandha)",
+      "scientific_name": "Withania somnifera",
+      "total_images": 292,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 292 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0046",
+      "canonical_species_name": "Persea americana (Avocado)",
+      "scientific_name": "Persea americana",
+      "total_images": 292,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 292 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0047",
+      "canonical_species_name": "Pelargonium spp. (Geranium)",
+      "scientific_name": "Pelargonium spp.",
+      "total_images": 292,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 292 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0048",
+      "canonical_species_name": "Oxalis spp. (Wood Sorrel)",
+      "scientific_name": "Oxalis spp.",
+      "total_images": 292,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 292 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0049",
+      "canonical_species_name": "Barleria (Barlaria)",
+      "scientific_name": "Barleria spp.",
+      "total_images": 284,
+      "source_datasets": [
+        "CIMPd"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 284 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0050",
+      "canonical_species_name": "Euphorbia hirta (Asthma Weed)",
+      "scientific_name": "Euphorbia hirta",
+      "total_images": 245,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 245 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0051",
+      "canonical_species_name": "Amaranthus viridis (Green Amaranth)",
+      "scientific_name": "Amaranthus viridis",
+      "total_images": 245,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 245 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0052",
+      "canonical_species_name": "Palak(Spinach)-Spinacia Oleracea",
+      "scientific_name": "Spinacia oleracea",
+      "total_images": 233,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 233 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0053",
+      "canonical_species_name": "Annona squamosa (Custard Apple/Seethapala)",
+      "scientific_name": "Annona squamosa",
+      "total_images": 228,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 228 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0054",
+      "canonical_species_name": "Nooni",
+      "scientific_name": "Unknown",
+      "total_images": 218,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 218 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0055",
+      "canonical_species_name": "Nooni-Morinda Citrifolia",
+      "scientific_name": "Morinda citrifolia",
+      "total_images": 218,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 218 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0056",
+      "canonical_species_name": "Vigna / Phaseolus spp. (Beans)",
+      "scientific_name": "Vigna / Phaseolus spp.",
+      "total_images": 194,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Taxonomy conflict or unresolved vernacular name requiring expert review.",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0057",
+      "canonical_species_name": "Moringa oleifera (Drumstick/Moringa)",
+      "scientific_name": "Moringa oleifera",
+      "total_images": 189,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 189 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0058",
+      "canonical_species_name": "Malabar_Spinach-Basella Alba",
+      "scientific_name": "Basella alba",
+      "total_images": 185,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 185 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0059",
+      "canonical_species_name": "Tribulus terrestris (Gokhru)",
+      "scientific_name": "Tribulus terrestris",
+      "total_images": 169,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 169 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0060",
+      "canonical_species_name": "Coffea spp. (Coffee)",
+      "scientific_name": "Coffea spp.",
+      "total_images": 166,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 166 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0061",
+      "canonical_species_name": "Zingiber officinale (Ginger)",
+      "scientific_name": "Zingiber officinale",
+      "total_images": 164,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 164 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0062",
+      "canonical_species_name": "Gomphrena globosa (Globe Amaranth)",
+      "scientific_name": "Gomphrena globosa",
+      "total_images": 162,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 162 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0063",
+      "canonical_species_name": "Eucalyptus spp. (Eucalyptus)",
+      "scientific_name": "Eucalyptus spp.",
+      "total_images": 160,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 160 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0064",
+      "canonical_species_name": "Sarcostemma acidum (Somlata)",
+      "scientific_name": "Sarcostemma acidum",
+      "total_images": 159,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 159 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0065",
+      "canonical_species_name": "Grewia asiatica (Phalsa/Gasagase)",
+      "scientific_name": "Grewia asiatica",
+      "total_images": 158,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 158 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0066",
+      "canonical_species_name": "Mentha piperita (Peppermint)",
+      "scientific_name": "Mentha piperita",
+      "total_images": 154,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 154 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0067",
+      "canonical_species_name": "Pepper-Piper Nigrum",
+      "scientific_name": "Piper nigrum",
+      "total_images": 154,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 154 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0068",
+      "canonical_species_name": "Erythrina variegata (Badipala)",
+      "scientific_name": "Erythrina variegata",
+      "total_images": 152,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Taxonomy conflict or unresolved vernacular name requiring expert review.",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0069",
+      "canonical_species_name": "Graptophyllum pictum (Caricature Plant)",
+      "scientific_name": "Graptophyllum pictum",
+      "total_images": 152,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Taxonomy conflict or unresolved vernacular name requiring expert review.",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0070",
+      "canonical_species_name": "Unresolved Kepala Leaf",
+      "scientific_name": "Unknown",
+      "total_images": 152,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Taxonomy conflict or unresolved vernacular name requiring expert review.",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0071",
+      "canonical_species_name": "Nagadali",
+      "scientific_name": "Unknown",
+      "total_images": 152,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 152 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0072",
+      "canonical_species_name": "Nagadali_Ruta Graveolens",
+      "scientific_name": "Ruta graveolens",
+      "total_images": 152,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 152 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0073",
+      "canonical_species_name": "Unresolved Ganigale Leaf",
+      "scientific_name": "Unknown",
+      "total_images": 150,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Taxonomy conflict or unresolved vernacular name requiring expert review.",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0074",
+      "canonical_species_name": "Palak(Spinach)",
+      "scientific_name": "Unknown",
+      "total_images": 149,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 149 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0075",
+      "canonical_species_name": "Leucas aspera (Thumbe)",
+      "scientific_name": "Leucas aspera",
+      "total_images": 148,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 148 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0076",
+      "canonical_species_name": "Eclipta prostrata (Bhringraj)",
+      "scientific_name": "Eclipta prostrata",
+      "total_images": 146,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 146 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0077",
+      "canonical_species_name": "Brassica oleracea var. gongylodes (Kohlrabi)",
+      "scientific_name": "Brassica oleracea",
+      "total_images": 146,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 146 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0078",
+      "canonical_species_name": "Padri",
+      "scientific_name": "Unknown",
+      "total_images": 146,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 146 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0079",
+      "canonical_species_name": "Nithyapushpa",
+      "scientific_name": "Unknown",
+      "total_images": 146,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 146 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0080",
+      "canonical_species_name": "Pappaya",
+      "scientific_name": "Unknown",
+      "total_images": 146,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 146 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0081",
+      "canonical_species_name": "Raktachandini",
+      "scientific_name": "Unknown",
+      "total_images": 146,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 146 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0082",
+      "canonical_species_name": "Areca catechu (Betel Nut)",
+      "scientific_name": "Areca catechu",
+      "total_images": 146,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 146 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0083",
+      "canonical_species_name": "Raktachandini_Pterocarpus Santalinus",
+      "scientific_name": "Pterocarpus santalinus",
+      "total_images": 146,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 146 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0084",
+      "canonical_species_name": "Capsicum spp. (Chilli)",
+      "scientific_name": "Capsicum spp.",
+      "total_images": 138,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 138 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0085",
+      "canonical_species_name": "Colocasia esculenta (Taro)",
+      "scientific_name": "Colocasia esculenta",
+      "total_images": 138,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 138 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0086",
+      "canonical_species_name": "Tecoma spp.",
+      "scientific_name": "Tecoma spp.",
+      "total_images": 138,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 138 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0087",
+      "canonical_species_name": "Unresolved Chakte Leaf",
+      "scientific_name": "Unknown",
+      "total_images": 136,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Taxonomy conflict or unresolved vernacular name requiring expert review.",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0088",
+      "canonical_species_name": "Ruta graveolens (Common Rue)",
+      "scientific_name": "Ruta graveolens",
+      "total_images": 134,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 134 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0089",
+      "canonical_species_name": "Ocimum basilicum var. pilosum (Kamakasturi)",
+      "scientific_name": "Ocimum basilicum",
+      "total_images": 134,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 134 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0090",
+      "canonical_species_name": "Unspecified Spinach Variety",
+      "scientific_name": "Spinacia / Amaranthus spp.",
+      "total_images": 134,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Taxonomy conflict or unresolved vernacular name requiring expert review.",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0091",
+      "canonical_species_name": "Cinnamomum camphora (Camphor Tree)",
+      "scientific_name": "Cinnamomum camphora",
+      "total_images": 132,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 132 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0092",
+      "canonical_species_name": "Solanum lycopersicum (Tomato)",
+      "scientific_name": "Solanum lycopersicum",
+      "total_images": 124,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 124 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0093",
+      "canonical_species_name": "Acalypha indica (Indian Copperleaf)",
+      "scientific_name": "Acalypha indica",
+      "total_images": 124,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 124 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0094",
+      "canonical_species_name": "Ocimum basilicum (Sweet Basil)",
+      "scientific_name": "Ocimum basilicum",
+      "total_images": 123,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 123 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0095",
+      "canonical_species_name": "Nerale",
+      "scientific_name": "Unknown",
+      "total_images": 122,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 122 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0096",
+      "canonical_species_name": "Magnolia champaca (Sampige)",
+      "scientific_name": "Magnolia champaca",
+      "total_images": 122,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 122 images across 2 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0097",
+      "canonical_species_name": "Physalis peruviana (Cape Gooseberry)",
+      "scientific_name": "Physalis peruviana",
+      "total_images": 122,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 122 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0098",
+      "canonical_species_name": "Unresolved Kambajala Leaf",
+      "scientific_name": "Unknown",
+      "total_images": 118,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Taxonomy conflict or unresolved vernacular name requiring expert review.",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0099",
+      "canonical_species_name": "Trigonella foenum-graecum (Fenugreek)",
+      "scientific_name": "Trigonella foenum-graecum",
+      "total_images": 116,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 116 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0100",
+      "canonical_species_name": "Urtica dioica (Stinging Nettle)",
+      "scientific_name": "Urtica dioica",
+      "total_images": 106,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 106 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0101",
+      "canonical_species_name": "Parijatha-Nyctanthes Arbor-Tristis",
+      "scientific_name": "Nyctanthes arbor",
+      "total_images": 106,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 106 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0102",
+      "canonical_species_name": "Amaranthus titan (Giant Pigweed)",
+      "scientific_name": "Amaranthus titan",
+      "total_images": 103,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 103 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0103",
+      "canonical_species_name": "Digera muricata (False Amaranth)",
+      "scientific_name": "Digera muricata",
+      "total_images": 101,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "APPROVED",
+      "review_notes": "High-confidence botanical mapping with 101 images across 1 dataset(s).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0104",
+      "canonical_species_name": "Citron Lime (Herelikai)",
+      "scientific_name": "Unknown",
+      "total_images": 99,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (99 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0105",
+      "canonical_species_name": "Citron Lime (Herelikai)-Citrus Medica (Citron) Or Citrus Aurantiifolia (Lime)",
+      "scientific_name": "Citrus medica",
+      "total_images": 99,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (99 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0106",
+      "canonical_species_name": "Clitoria ternatea (Butterfly Pea)",
+      "scientific_name": "Clitoria ternatea",
+      "total_images": 98,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (98 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0107",
+      "canonical_species_name": "Unresolved Kasambruga Leaf",
+      "scientific_name": "Unknown",
+      "total_images": 96,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Taxonomy conflict or unresolved vernacular name requiring expert review.",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0108",
+      "canonical_species_name": "Onion",
+      "scientific_name": "Unknown",
+      "total_images": 92,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (92 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0109",
+      "canonical_species_name": "Pumpkin",
+      "scientific_name": "Unknown",
+      "total_images": 92,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (92 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0110",
+      "canonical_species_name": "Onion-Allium Cepa",
+      "scientific_name": "Allium cepa",
+      "total_images": 92,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (92 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0111",
+      "canonical_species_name": "Pumpkin-Cucurbita Pepo",
+      "scientific_name": "Cucurbita pepo",
+      "total_images": 92,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (92 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0112",
+      "canonical_species_name": "Nelavembu",
+      "scientific_name": "Unknown",
+      "total_images": 90,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (90 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0113",
+      "canonical_species_name": "Nelavembu-Andrographis Paniculata",
+      "scientific_name": "Andrographis paniculata",
+      "total_images": 90,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (90 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0114",
+      "canonical_species_name": "Amaranthus tricolor (Red Amaranth)",
+      "scientific_name": "Amaranthus tricolor",
+      "total_images": 89,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (89 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0115",
+      "canonical_species_name": "Acalypha reptans (Dwarf Copperleaf)",
+      "scientific_name": "Acalypha reptans",
+      "total_images": 88,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (88 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0116",
+      "canonical_species_name": "Hemidesmus indicus (Anantamul)",
+      "scientific_name": "Hemidesmus indicus",
+      "total_images": 84,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (84 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0117",
+      "canonical_species_name": "Lagos Spinach_Celosia Argentea",
+      "scientific_name": "Celosia argentea",
+      "total_images": 84,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (84 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0118",
+      "canonical_species_name": "Celery_Apium Graveolens",
+      "scientific_name": "Apium graveolens",
+      "total_images": 82,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (82 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0119",
+      "canonical_species_name": "Jatropha gossypiifolia (Bellyache Bush)",
+      "scientific_name": "Jatropha gossypiifolia",
+      "total_images": 81,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (81 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0120",
+      "canonical_species_name": "Mustard_Brassica Juncea",
+      "scientific_name": "Brassica juncea",
+      "total_images": 80,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (80 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0121",
+      "canonical_species_name": "Malabar_Spinach",
+      "scientific_name": "Unknown",
+      "total_images": 79,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (79 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0122",
+      "canonical_species_name": "Acalypha wilkesiana (Red Copperleaf)",
+      "scientific_name": "Acalypha wilkesiana",
+      "total_images": 79,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (79 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0123",
+      "canonical_species_name": "Curcuma longa (Turmeric)",
+      "scientific_name": "Curcuma longa",
+      "total_images": 78,
+      "source_datasets": [
+        "Hugging_Face",
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (78 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0124",
+      "canonical_species_name": "Mountain Knotgrass_Aerva Lanata",
+      "scientific_name": "Aerva lanata",
+      "total_images": 78,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (78 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0125",
+      "canonical_species_name": "Punarnava_Boerhavia Diffusa",
+      "scientific_name": "Boerhavia diffusa",
+      "total_images": 76,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (76 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0126",
+      "canonical_species_name": "Pomoegranate",
+      "scientific_name": "Unknown",
+      "total_images": 75,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (75 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0127",
+      "canonical_species_name": "Acorus calamus (Vacha/Sweet Flag)",
+      "scientific_name": "Acorus calamus",
+      "total_images": 75,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (75 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0128",
+      "canonical_species_name": "Carissa carandas (Karanda)",
+      "scientific_name": "Carissa carandas",
+      "total_images": 74,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (74 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0129",
+      "canonical_species_name": "Nalta Jute_Corchorus Olitorius",
+      "scientific_name": "Corchorus olitorius",
+      "total_images": 73,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (73 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0130",
+      "canonical_species_name": "Mucuna pruriens (Kaunch/Velvet Bean)",
+      "scientific_name": "Mucuna pruriens",
+      "total_images": 72,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (72 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0131",
+      "canonical_species_name": "Purple Fruited Pea Eggplant_Solanum Trilobatum",
+      "scientific_name": "Solanum trilobatum",
+      "total_images": 70,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (70 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0132",
+      "canonical_species_name": "Abutilon indicum (Country Mallow)",
+      "scientific_name": "Abutilon indicum",
+      "total_images": 69,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (69 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0133",
+      "canonical_species_name": "Andrographis paniculata (Kalmegh/Green Chireta)",
+      "scientific_name": "Andrographis paniculata",
+      "total_images": 69,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (69 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0134",
+      "canonical_species_name": "Lambs Quarters_Chenopodium Album",
+      "scientific_name": "Chenopodium album",
+      "total_images": 69,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (69 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0135",
+      "canonical_species_name": "Panicled Foldwing_Dicliptera Paniculata",
+      "scientific_name": "Dicliptera paniculata",
+      "total_images": 68,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (68 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0136",
+      "canonical_species_name": "Amaranthus tristis (Siru Keerai)",
+      "scientific_name": "Amaranthus tristis",
+      "total_images": 68,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (68 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0137",
+      "canonical_species_name": "Artemisia indica (Indian Wormwood)",
+      "scientific_name": "Artemisia indica",
+      "total_images": 67,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (67 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0138",
+      "canonical_species_name": "Parijatha",
+      "scientific_name": "Unknown",
+      "total_images": 66,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (66 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0139",
+      "canonical_species_name": "Senna auriculata (Avaram)",
+      "scientific_name": "Senna auriculata",
+      "total_images": 66,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (66 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0140",
+      "canonical_species_name": "Cissus quadrangularis (Hadjod)",
+      "scientific_name": "Cissus quadrangularis",
+      "total_images": 66,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (66 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0141",
+      "canonical_species_name": "Ziziphus mauritiana (Indian Jujube/Ber)",
+      "scientific_name": "Ziziphus mauritiana",
+      "total_images": 66,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (66 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0142",
+      "canonical_species_name": "Rosary Pea_Abrus Precatorius",
+      "scientific_name": "Abrus precatorius",
+      "total_images": 66,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (66 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0143",
+      "canonical_species_name": "Passiflora foetida (Stinking Passionflower)",
+      "scientific_name": "Passiflora foetida",
+      "total_images": 66,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (66 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0144",
+      "canonical_species_name": "Diodia teres (Shaggy Button Weed)",
+      "scientific_name": "Diodia teres",
+      "total_images": 65,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (65 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.458247+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0145",
+      "canonical_species_name": "Centella asiatica (Gotu Kola/Indian Pennywort)",
+      "scientific_name": "Centella asiatica",
+      "total_images": 64,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (64 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.463147+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0146",
+      "canonical_species_name": "Lettuce Tree_Pisonia Grandis",
+      "scientific_name": "Pisonia grandis",
+      "total_images": 64,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (64 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.463147+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0147",
+      "canonical_species_name": "Land Caltrops (Bindii)_Tribulus Cistoides",
+      "scientific_name": "Tribulus cistoides",
+      "total_images": 63,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (63 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.463147+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0148",
+      "canonical_species_name": "Peepal Tree_Ficus Religiosa",
+      "scientific_name": "Ficus religiosa",
+      "total_images": 63,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (63 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.463147+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0149",
+      "canonical_species_name": "Oleander_Nerium Oleander",
+      "scientific_name": "Nerium oleander",
+      "total_images": 62,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (62 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.463147+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0150",
+      "canonical_species_name": "Amaranthus dubius (Chinese Spinach)",
+      "scientific_name": "Amaranthus dubius",
+      "total_images": 60,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (60 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.463147+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0151",
+      "canonical_species_name": "Tridax procumbens (Coatbuttons)",
+      "scientific_name": "Tridax procumbens",
+      "total_images": 60,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (60 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.463147+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0152",
+      "canonical_species_name": "Sida rhombifolia (Common Wireweed)",
+      "scientific_name": "Sida rhombifolia",
+      "total_images": 60,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (60 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.463147+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0153",
+      "canonical_species_name": "Kokilaksha_Asteracantha Longifolia",
+      "scientific_name": "Asteracantha longifolia",
+      "total_images": 59,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (59 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0154",
+      "canonical_species_name": "Purple Tephrosia_Tephrosia Purpurea",
+      "scientific_name": "Tephrosia purpurea",
+      "total_images": 59,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (59 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0155",
+      "canonical_species_name": "Commelina benghalensis (Dayflower)",
+      "scientific_name": "Commelina benghalensis",
+      "total_images": 58,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (58 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0156",
+      "canonical_species_name": "Santalum album (Sandalwood)",
+      "scientific_name": "Santalum album",
+      "total_images": 58,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (58 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0157",
+      "canonical_species_name": "Datura metel (Indian Thornapple)",
+      "scientific_name": "Datura metel",
+      "total_images": 57,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (57 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0158",
+      "canonical_species_name": "Marsilea minuta (Water Clover)",
+      "scientific_name": "Marsilea minuta",
+      "total_images": 57,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (57 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0159",
+      "canonical_species_name": "Cissus sicyoides (Trellis Vine)",
+      "scientific_name": "Cissus sicyoides",
+      "total_images": 57,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (57 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0160",
+      "canonical_species_name": "Tabernaemontana divaricata (Crape Jasmine)",
+      "scientific_name": "Tabernaemontana divaricata",
+      "total_images": 56,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (56 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0161",
+      "canonical_species_name": "Muntingia calabura (Jamaica Cherry)",
+      "scientific_name": "Muntingia calabura",
+      "total_images": 56,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (56 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0162",
+      "canonical_species_name": "Syzygium jambos (Rose Apple)",
+      "scientific_name": "Syzygium jambos",
+      "total_images": 56,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (56 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0163",
+      "canonical_species_name": "Mexican Prickly Poppy_Argemone Mexicana",
+      "scientific_name": "Argemone mexicana",
+      "total_images": 55,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (55 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0164",
+      "canonical_species_name": "Cleome viscosa (Spiderwisp)",
+      "scientific_name": "Cleome viscosa",
+      "total_images": 55,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (55 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0165",
+      "canonical_species_name": "Ipomoea aquatica (Water Spinach)",
+      "scientific_name": "Ipomoea aquatica",
+      "total_images": 55,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (55 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0166",
+      "canonical_species_name": "Night Blooming Cereus_Epiphyllum Oxypetalum",
+      "scientific_name": "Epiphyllum oxypetalum",
+      "total_images": 54,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (54 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0167",
+      "canonical_species_name": "Prickly Chaff Flower_Achyranthes Aspera",
+      "scientific_name": "Achyranthes aspera",
+      "total_images": 54,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (54 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0168",
+      "canonical_species_name": "Hibiscus sabdariffa (Roselle/Gongura)",
+      "scientific_name": "Hibiscus sabdariffa",
+      "total_images": 53,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (53 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0169",
+      "canonical_species_name": "Madras Pea Pumpkin_Sesbania Grandiflora",
+      "scientific_name": "Sesbania grandiflora",
+      "total_images": 53,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (53 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0170",
+      "canonical_species_name": "Senna alexandrina (Tinnevelly Senna)",
+      "scientific_name": "Senna alexandrina",
+      "total_images": 53,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (53 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0171",
+      "canonical_species_name": "Malabar_Nut",
+      "scientific_name": "Unknown",
+      "total_images": 51,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (51 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0172",
+      "canonical_species_name": "Coccinia grandis (Ivy Gourd)",
+      "scientific_name": "Coccinia grandis",
+      "total_images": 51,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (51 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0173",
+      "canonical_species_name": "Malabar_Nut-Justicia Adhatoda",
+      "scientific_name": "Justicia adhatoda",
+      "total_images": 51,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (51 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0174",
+      "canonical_species_name": "Rasna_Alpinia Galanga",
+      "scientific_name": "Alpinia galanga",
+      "total_images": 50,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (50 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0175",
+      "canonical_species_name": "Ficus auriculata (Roxburgh Fig)",
+      "scientific_name": "Ficus auriculata",
+      "total_images": 50,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (50 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0176",
+      "canonical_species_name": "Pea-Pisum Sativum",
+      "scientific_name": "Pisum sativum",
+      "total_images": 47,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (47 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0177",
+      "canonical_species_name": "Raddish",
+      "scientific_name": "Unknown",
+      "total_images": 40,
+      "source_datasets": [
+        "Kaggle"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (40 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0178",
+      "canonical_species_name": "Raddish-Raphanus Sativus",
+      "scientific_name": "Raphanus sativus",
+      "total_images": 40,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (40 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0179",
+      "canonical_species_name": "Syzygium cumini (Jamun)",
+      "scientific_name": "Syzygium cumini",
+      "total_images": 39,
+      "source_datasets": [
+        "Hugging_Face"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "review_notes": "Insufficient image count (39 images < 100 minimum threshold).",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    },
+    {
+      "class_id": "DRAVYA_0180",
+      "canonical_species_name": "Unspecified Leaf Samples",
+      "scientific_name": "Unknown",
+      "total_images": 11,
+      "source_datasets": [
+        "CIMPd"
+      ],
+      "review_status": "REJECTED",
+      "review_notes": "Non-plant / corrupt junk images folder.",
+      "reviewed_at": "2026-08-09T06:53:51.469186+00:00"
+    }
+  ]
+}

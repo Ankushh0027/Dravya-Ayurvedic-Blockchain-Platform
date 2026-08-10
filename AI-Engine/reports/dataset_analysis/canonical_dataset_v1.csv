@@ -1,0 +1,83 @@
+class_id,canonical_species_name,scientific_name,total_images,train_count,val_count,test_count,sources
+DRAVYA_0001,Murraya koenigii (Curry Leaf),Murraya koenigii,1083,866,108,109,"CIMPd, Hugging_Face"
+DRAVYA_0002,Ocimum sanctum (Holy Basil/Tulsi),Ocimum sanctum,983,786,98,99,"CIMPd, Hugging_Face"
+DRAVYA_0003,Rosa spp. (Rose),Rosa spp.,722,578,72,72,"CIMPd, Hugging_Face"
+DRAVYA_0004,Solanum nigrum (Makoy/Black Nightshade),Solanum nigrum,937,750,94,93,"CIMPd, Hugging_Face"
+DRAVYA_0005,Mentha spp. (Mint),Mentha spp.,652,522,65,65,"CIMPd, Hugging_Face"
+DRAVYA_0006,Saraca asoca (Ashoka),Saraca asoca,620,496,62,62,"CIMPd, Hugging_Face"
+DRAVYA_0007,Plectranthus amboinicus (Doddapatre/Indian Borage),Plectranthus amboinicus,601,481,60,60,Hugging_Face
+DRAVYA_0008,Piper betle (Betel Leaf),Piper betle,440,352,44,44,Hugging_Face
+DRAVYA_0009,Lantana camara (Lantana),Lantana camara,745,596,74,75,"CIMPd, Hugging_Face"
+DRAVYA_0010,Psidium guajava (Guava),Psidium guajava,527,422,53,52,"CIMPd, Hugging_Face, Kaggle"
+DRAVYA_0011,Hibiscus rosa-sinensis (Hibiscus),Hibiscus rosa-sinensis,492,394,49,49,"CIMPd, Hugging_Face, Kaggle"
+DRAVYA_0012,Citrus limon (Lemon),Citrus limon,497,398,50,49,"CIMPd, Hugging_Face"
+DRAVYA_0013,Tinospora cordifolia (Giloy/Amrita),Tinospora cordifolia,420,336,42,42,"Hugging_Face, Kaggle"
+DRAVYA_0014,Bambusoideae (Bamboo),Bambusoideae,366,293,37,36,"CIMPd, Hugging_Face"
+DRAVYA_0015,Annona squamosa (Custard Apple),Annona squamosa,622,498,62,62,CIMPd
+DRAVYA_0016,Azadirachta indica (Neem),Azadirachta indica,338,270,34,34,Hugging_Face
+DRAVYA_0017,Artocarpus heterophyllus (Jackfruit),Artocarpus heterophyllus,463,370,46,47,"CIMPd, Hugging_Face"
+DRAVYA_0018,Ricinus communis (Castor),Ricinus communis,289,231,29,29,"Hugging_Face, Kaggle"
+DRAVYA_0019,Pongamia pinnata (Honge/Karanja),Pongamia pinnata,303,242,30,31,"Hugging_Face, Kaggle"
+DRAVYA_0020,Mangifera indica (Mango),Mangifera indica,311,249,31,31,Hugging_Face
+DRAVYA_0021,Aegle marmelos (Bael),Aegle marmelos,559,447,56,56,CIMPd
+DRAVYA_0022,Aloe vera,Aloe barbadensis,282,226,28,28,"Hugging_Face, Kaggle"
+DRAVYA_0023,Jasminum spp. (Jasmine),Jasminum spp.,307,246,31,30,Hugging_Face
+DRAVYA_0024,Carica papaya (Papaya),Carica papaya,239,191,24,24,"CIMPd, Hugging_Face"
+DRAVYA_0025,Calotropis gigantea (Crown Flower/Ekka),Calotropis gigantea,293,234,29,30,Hugging_Face
+DRAVYA_0026,Nyctanthes arbor-tristis (Harsingar/Parijat),Nyctanthes arbor-tristis,509,407,51,51,CIMPd
+DRAVYA_0027,Bauhinia variegata (Kachnar),Bauhinia variegata,508,406,51,51,CIMPd
+DRAVYA_0028,Bacopa monnieri (Brahmi),Bacopa monnieri,248,198,25,25,Hugging_Face
+DRAVYA_0029,Clerodendrum splendens,Clerodendrum splendens,492,394,49,49,CIMPd
+DRAVYA_0030,Nerium oleander (Oleander),Nerium oleander,235,188,24,23,Hugging_Face
+DRAVYA_0032,Salvia splendens (Scarlet Sage),Salvia splendens,462,370,46,46,CIMPd
+DRAVYA_0033,Lawsonia inermis (Henna),Lawsonia inermis,228,182,23,23,"Hugging_Face, Kaggle"
+DRAVYA_0034,Punica granatum (Pomegranate),Punica granatum,222,178,22,22,Hugging_Face
+DRAVYA_0035,Phyllanthus emblica (Amla),Phyllanthus emblica,213,170,21,22,Hugging_Face
+DRAVYA_0036,Tropaeolum majus (Nasturtium),Tropaeolum majus,424,339,42,43,CIMPd
+DRAVYA_0037,Basella alba (Malabar Spinach),Basella alba,249,199,25,25,Hugging_Face
+DRAVYA_0038,Manilkara zapota (Sapota/Chikoo),Manilkara zapota,190,152,19,19,Hugging_Face
+DRAVYA_0039,Tagetes spp. (Marigold),Tagetes spp.,279,223,28,28,"CIMPd, Hugging_Face"
+DRAVYA_0040,Cardiospermum halicacabum (Balloon Vine),Cardiospermum halicacabum,306,245,31,30,Hugging_Face
+DRAVYA_0041,Tamarindus indica (Tamarind),Tamarindus indica,176,141,18,17,Hugging_Face
+DRAVYA_0042,Coriandrum sativum (Coriander),Coriandrum sativum,235,188,24,23,Hugging_Face
+DRAVYA_0043,Catharanthus roseus (Sadabahar),Catharanthus roseus,189,151,19,19,Hugging_Face
+DRAVYA_0044,Cymbopogon citratus (Lemongrass),Cymbopogon citratus,146,117,15,14,Hugging_Face
+DRAVYA_0045,Withania somnifera (Ashwagandha),Withania somnifera,140,112,14,14,Hugging_Face
+DRAVYA_0046,Persea americana (Avocado),Persea americana,146,117,15,14,Hugging_Face
+DRAVYA_0047,Pelargonium spp. (Geranium),Pelargonium spp.,146,117,15,14,Hugging_Face
+DRAVYA_0048,Oxalis spp. (Wood Sorrel),Oxalis spp.,146,117,15,14,Hugging_Face
+DRAVYA_0049,Barleria (Barlaria),Barleria spp.,284,227,28,29,CIMPd
+DRAVYA_0050,Euphorbia hirta (Asthma Weed),Euphorbia hirta,163,130,16,17,Hugging_Face
+DRAVYA_0051,Amaranthus viridis (Green Amaranth),Amaranthus viridis,245,196,24,25,Hugging_Face
+DRAVYA_0052,Palak(Spinach)-Spinacia Oleracea,Spinacia oleracea,84,67,8,9,Hugging_Face
+DRAVYA_0053,Annona squamosa (Custard Apple/Seethapala),Annona squamosa,114,91,11,12,Hugging_Face
+DRAVYA_0057,Moringa oleifera (Drumstick/Moringa),Moringa oleifera,133,106,13,14,Hugging_Face
+DRAVYA_0058,Malabar_Spinach-Basella Alba,Basella alba,106,85,11,10,Hugging_Face
+DRAVYA_0059,Tribulus terrestris (Gokhru),Tribulus terrestris,169,135,17,17,Hugging_Face
+DRAVYA_0060,Coffea spp. (Coffee),Coffea spp.,83,66,8,9,Hugging_Face
+DRAVYA_0061,Zingiber officinale (Ginger),Zingiber officinale,82,66,8,8,Hugging_Face
+DRAVYA_0062,Gomphrena globosa (Globe Amaranth),Gomphrena globosa,69,55,7,7,Hugging_Face
+DRAVYA_0063,Eucalyptus spp. (Eucalyptus),Eucalyptus spp.,80,64,8,8,Hugging_Face
+DRAVYA_0064,Sarcostemma acidum (Somlata),Sarcostemma acidum,159,127,16,16,Hugging_Face
+DRAVYA_0065,Grewia asiatica (Phalsa/Gasagase),Grewia asiatica,79,63,8,8,Hugging_Face
+DRAVYA_0075,Leucas aspera (Thumbe),Leucas aspera,74,59,7,8,Hugging_Face
+DRAVYA_0076,Eclipta prostrata (Bhringraj),Eclipta prostrata,73,58,7,8,Hugging_Face
+DRAVYA_0077,Brassica oleracea var. gongylodes (Kohlrabi),Brassica oleracea,73,58,7,8,Hugging_Face
+DRAVYA_0078,Padri,Unknown,73,58,7,8,Hugging_Face
+DRAVYA_0084,Capsicum spp. (Chilli),Capsicum spp.,69,55,7,7,Hugging_Face
+DRAVYA_0085,Colocasia esculenta (Taro),Colocasia esculenta,69,55,7,7,Hugging_Face
+DRAVYA_0086,Tecoma spp.,Tecoma spp.,66,53,7,6,Hugging_Face
+DRAVYA_0088,Ruta graveolens (Common Rue),Ruta graveolens,67,54,7,6,Hugging_Face
+DRAVYA_0089,Ocimum basilicum var. pilosum (Kamakasturi),Ocimum basilicum,67,54,7,6,Hugging_Face
+DRAVYA_0091,Cinnamomum camphora (Camphor Tree),Cinnamomum camphora,66,53,7,6,Hugging_Face
+DRAVYA_0092,Solanum lycopersicum (Tomato),Solanum lycopersicum,62,50,6,6,Hugging_Face
+DRAVYA_0093,Acalypha indica (Indian Copperleaf),Acalypha indica,124,99,12,13,Hugging_Face
+DRAVYA_0094,Ocimum basilicum (Sweet Basil),Ocimum basilicum,123,98,12,13,Hugging_Face
+DRAVYA_0095,Nerale,Unknown,62,50,6,6,"Hugging_Face, Kaggle"
+DRAVYA_0096,Magnolia champaca (Sampige),Magnolia champaca,61,49,6,6,Hugging_Face
+DRAVYA_0097,Physalis peruviana (Cape Gooseberry),Physalis peruviana,122,98,12,12,Hugging_Face
+DRAVYA_0099,Trigonella foenum-graecum (Fenugreek),Trigonella foenum-graecum,116,93,12,11,Hugging_Face
+DRAVYA_0100,Urtica dioica (Stinging Nettle),Urtica dioica,106,85,11,10,Hugging_Face
+DRAVYA_0101,Parijatha-Nyctanthes Arbor-Tristis,Nyctanthes arbor,40,32,4,4,Hugging_Face
+DRAVYA_0102,Amaranthus titan (Giant Pigweed),Amaranthus titan,103,82,10,11,Hugging_Face
+DRAVYA_0103,Digera muricata (False Amaranth),Digera muricata,101,81,10,10,Hugging_Face

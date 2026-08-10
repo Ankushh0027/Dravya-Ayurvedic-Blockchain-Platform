@@ -1,0 +1,49 @@
+{
+  "model_version": "v1-smoke",
+  "architecture": "efficientnet_b0",
+  "evaluated_at": "2026-08-08T15:42:53.273480+00:00",
+  "checkpoint_name": "best_model.pth",
+  "num_classes": 2,
+  "total_evaluated_samples": 1092,
+  "random_seed": 42,
+  "evaluation_time_seconds": 225.19,
+  "metrics": {
+    "accuracy": 0.9982,
+    "precision": 0.998,
+    "recall": 0.9984,
+    "f1_score": 0.9981,
+    "per_class_precision": [
+      0.996,
+      1.0
+    ],
+    "per_class_recall": [
+      1.0,
+      0.9967
+    ],
+    "per_class_f1": [
+      0.998,
+      0.9983
+    ],
+    "confusion_matrix": [
+      [
+        492,
+        0
+      ],
+      [
+        2,
+        598
+      ]
+    ]
+  },
+  "class_mapping": {
+    "class_to_idx": {
+      "Clerodendrum splendens": 0,
+      "curry": 1
+    },
+    "idx_to_class": {
+      "0": "Clerodendrum splendens",
+      "1": "curry"
+    }
+  },
+  "dataset_manifest_path": "C:\\Dravya\\Dravya-Ayurvedic-Blockchain-Platform\\AI-Engine\\reports\\dataset_analysis\\canonical_dataset_manifest_v1.json"
+}

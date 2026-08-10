@@ -1,0 +1,7 @@
+{
+  "is_valid": true,
+  "status": "BLOCKED",
+  "reason": "QUALITY_GATE_BLOCKED",
+  "errors_count": 0,
+  "errors": []
+}

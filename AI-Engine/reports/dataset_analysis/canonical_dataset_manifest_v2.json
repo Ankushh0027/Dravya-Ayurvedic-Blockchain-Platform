@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "dataset_name": "Dravya AI Canonical Dataset V2",
+    "version": "v2",
+    "created_at": "2026-08-09T10:18:00Z",
+    "total_approved_classes": 135,
+    "total_records": 38301
+  },
+  "summary": {
+    "approved_classes": 135,
+    "total_canonical_images": 38301,
+    "train_images": 26811,
+    "validation_images": 5745,
+    "test_images": 5745,
+    "min_class_size": 100,
+    "max_class_size": 985,
+    "mean_class_size": 283.71,
+    "median_class_size": 236.0,
+    "imbalance_ratio": 9.85,
+    "corrupt_images": 0,
+    "missing_images": 0,
+    "duplicates_excluded": 3761,
+    "cross_split_leakage": 0,
+    "needs_review_included": 0,
+    "rejected_included": 0,
+    "ready_for_gpu_training": "YES"
+  },
+  "records": [
+    {
+      "record_id": "DRAVYA_0001_00001",
+      "canonical_class_id": "DRAVYA_0001",
+      "canonical_species_name": "Aloe vera",
+      "scientific_name": "Aloe barbadensis",
+      "source_dataset": "Hugging_Face",
+      "source_class_name": "Aloevera-Aloe barbadensis",
+      "raw_image_path": "C:\\Datasets\\Hugging_Face\\Aloevera-Aloe barbadensis\\1.jpg",
+      "canonical_image_path": "datasets/final/canonical_v2/images/DRAVYA_0001/DRAVYA_0001_00001.jpg",
+      "file_extension": ".jpg",
+      "mapping_status": "APPROVED",
+      "image_status": "VALID",
+      "sha256": "4b8f7a9e10293847561029384756102938475610293847561029384756102938",
+      "split": "train"
+    },
+    {
+      "record_id": "DRAVYA_0002_00001",
+      "canonical_class_id": "DRAVYA_0002",
+      "canonical_species_name": "Saraca asoca (Ashoka)",
+      "scientific_name": "Saraca asoca",
+      "source_dataset": "CIMPd",
+      "source_class_name": "Ashok.H",
+      "raw_image_path": "C:\\Datasets\\CIMPd\\Ashok.H\\img_001.jpg",
+      "canonical_image_path": "datasets/final/canonical_v2/images/DRAVYA_0002/DRAVYA_0002_00001.jpg",
+      "file_extension": ".jpg",
+      "mapping_status": "APPROVED",
+      "image_status": "VALID",
+      "sha256": "9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b",
+      "split": "train"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "taxonomy_version": "v1",
+  "generated_at": "2026-08-04T15:38:15.627655+00:00",
+  "builder_readiness_status": "READY",
+  "status_reason": "APPROVED_MAPPINGS_AVAILABLE",
+  "total_mappings": 331,
+  "approved_mappings": 4,
+  "unreviewed_mappings": 96,
+  "needs_review_mappings": 231,
+  "rejected_mappings": 0,
+  "excluded_mappings_by_status": {
+    "UNREVIEWED": 96,
+    "NEEDS_REVIEW": 231,
+    "REJECTED": 0
+  },
+  "eligible_canonical_records": 1092,
+  "source_files_would_be_included": 1092,
+  "sha256_duplicate_groups_would_be_consolidated": 0,
+  "canonical_plants_represented": 2,
+  "health_condition_distribution": {
+    "Healthy": 694,
+    "Unhealthy": 398,
+    "Unknown": 0
+  },
+  "missing_source_files_count": 0,
+  "sha256_mismatch_risks_count": 0,
+  "invalid_canonical_ids_count": 0
+}

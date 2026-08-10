@@ -40,6 +40,17 @@ def create_app() -> FastAPI:
         from fastapi.responses import RedirectResponse
         return RedirectResponse(url="/docs")
 
+    @app.get("/report", include_in_schema=False)
+    async def get_report():
+        from pathlib import Path
+        from fastapi.responses import HTMLResponse
+        report_path = Path(__file__).resolve().parent.parent.parent / "reports" / "dravya_ai_engine_full_report.html"
+        if report_path.exists():
+            with open(report_path, "r", encoding="utf-8") as f:
+                content = f.read()
+            return HTMLResponse(content=content)
+        return HTMLResponse(content="<h1>Report file not found</h1>", status_code=404)
+
 
     # Clean Exception Handlers
     @app.exception_handler(HTTPException)

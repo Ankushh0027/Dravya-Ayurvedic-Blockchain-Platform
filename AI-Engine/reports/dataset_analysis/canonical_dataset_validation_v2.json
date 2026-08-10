@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "dataset_version": "v2",
+    "validated_at": "2026-08-09T10:18:00Z"
+  },
+  "validation_checks": {
+    "exactly_135_approved_classes": true,
+    "zero_needs_review_included": true,
+    "zero_rejected_included": true,
+    "zero_corrupt_images": true,
+    "zero_missing_images": true,
+    "zero_cross_split_leakage": true,
+    "100_percent_provenance_intact": true,
+    "ready_for_gpu_training": "YES"
+  },
+  "summary": {
+    "approved_classes": 135,
+    "total_canonical_images": 38301,
+    "train_images": 26811,
+    "validation_images": 5745,
+    "test_images": 5745,
+    "min_class_size": 100,
+    "max_class_size": 985,
+    "imbalance_ratio": 9.85,
+    "corrupt_images": 0,
+    "missing_images": 0,
+    "duplicates_excluded": 3761,
+    "cross_split_leakage": 0,
+    "needs_review_included": 0,
+    "rejected_included": 0,
+    "ready_for_gpu_training": "YES"
+  }
+}

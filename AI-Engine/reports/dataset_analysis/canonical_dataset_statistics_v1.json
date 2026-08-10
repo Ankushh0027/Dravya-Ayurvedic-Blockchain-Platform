@@ -1,0 +1,21 @@
+{
+  "status": "SUCCESS",
+  "reason": "APPROVED_MAPPINGS_PROCESSED",
+  "taxonomy_version": "v1",
+  "total_approved_mappings": 4,
+  "total_canonical_records": 1092,
+  "unique_images": 1092,
+  "total_canonical_plants": 2,
+  "healthy_count": 694,
+  "unhealthy_count": 398,
+  "unknown_condition_count": 0,
+  "raw_files_scanned": 1092,
+  "duplicate_consolidation_count": 0,
+  "per_plant_counts": {
+    "PLANT-CLERODENDRUM-SPLENDENS-0FC371": 492,
+    "PLANT-CURRY-0B8E0D": 600
+  },
+  "per_source_counts": {
+    "CIMPd": 1092
+  }
+}
