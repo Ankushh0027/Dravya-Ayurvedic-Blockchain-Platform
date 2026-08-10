@@ -78,32 +78,17 @@ export function HowItWorks() {
       setCurrent(api.selectedScrollSnap() + 1)
     })
 
-    // Custom Back-and-Forth (Ping-Pong) Autoplay Timer
+    // Continuous Single Direction Autoplay (1 -> 2 -> 3 -> 4 -> 5 -> 1 -> 2)
     const interval = setInterval(() => {
       if (!api) return
-
-      if (directionRef.current === "forward") {
-        if (api.canScrollNext()) {
-          api.scrollNext()
-        } else {
-          directionRef.current = "backward"
-          api.scrollPrev()
-        }
-      } else {
-        if (api.canScrollPrev()) {
-          api.scrollPrev()
-        } else {
-          directionRef.current = "forward"
-          api.scrollNext()
-        }
-      }
+      api.scrollNext()
     }, 3500)
 
     return () => clearInterval(interval)
   }, [api])
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#F4F8F6] via-white to-[#F4F8F6] py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-[#E1E9E1]/35 border-t border-[#184E48]/10 py-24 lg:py-32">
       
       {/* Background Decorative Elements */}
       <div className="absolute top-[8%] -left-12 w-[280px] md:w-[380px] lg:w-[460px] pointer-events-none z-0 opacity-20 mix-blend-multiply">
@@ -117,7 +102,7 @@ export function HowItWorks() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#184E48]/[0.03] rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-[#184E48]/[0.04] rounded-full blur-2xl pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
         
         {/* Header Tag & Section Title */}
         <div className="mx-auto max-w-3xl text-center mb-12 lg:mb-16">
@@ -139,14 +124,14 @@ export function HowItWorks() {
           </p>
         </div>
 
-        {/* Carousel Container - Expanded width for 4 full-sized cards */}
-        <div className="relative max-w-[1500px] mx-auto px-4 md:px-12">
+        {/* Carousel Container - Reduced width by ~10% (max-w-[1350px]) */}
+        <div className="relative max-w-[1350px] mx-auto px-4 md:px-12">
           
           <Carousel
             setApi={setApi}
             opts={{
               align: "start",
-              loop: false,
+              loop: true,
             }}
             className="w-full"
           >
