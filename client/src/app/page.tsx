@@ -219,21 +219,28 @@ export default function HomePage() {
             </div>
 
             {/* Right Video Container */}
-            <div className="relative group w-full max-w-[850px] mx-auto lg:col-span-7 lg:ml-auto">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-[#184E48]/30 to-primary/30 rounded-[2.5rem] blur-2xl opacity-40 group-hover:opacity-100 group-hover:animate-pulse transition duration-1000"></div>
+            <div className="relative group w-full max-w-[850px] mx-auto lg:col-span-7 lg:ml-auto isolate">
+              {/* Background Glow */}
+              <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-r from-[#184E48]/20 via-emerald-500/10 to-[#184E48]/20 blur-2xl opacity-40 group-hover:opacity-100 transition-opacity duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] pointer-events-none"></div>
 
-              <div className="relative rounded-[2rem] border border-white/60 bg-white/40 p-4 shadow-[0_20px_60px_rgb(0,0,0,0.08)] backdrop-blur-xl transition-all duration-700 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_30px_80px_rgb(24,78,72,0.15)]">
-                <div className="absolute top-8 left-8 flex gap-2 z-20">
+              {/* Main Card */}
+              <div className="relative rounded-[2rem] border border-white/60 bg-white/40 p-4 shadow-[0_20px_60px_rgb(0,0,0,0.08)] backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.025] hover:-translate-y-2 hover:shadow-[0_30px_80px_rgb(24,78,72,0.18)] transform-gpu [backface-visibility:hidden] [will-change:transform,box-shadow]">
+                <div className="absolute top-8 left-8 flex gap-2 z-20 pointer-events-none">
                   <div className="w-3 h-3 rounded-full bg-red-400/80 border border-white/20 shadow-sm"></div>
                   <div className="w-3 h-3 rounded-full bg-amber-400/80 border border-white/20 shadow-sm"></div>
                   <div className="w-3 h-3 rounded-full bg-emerald-400/80 border border-white/20 shadow-sm"></div>
                 </div>
 
-                <div className="overflow-hidden rounded-[1.5rem] border border-slate-100/50 bg-[#1e293b] shadow-inner relative">
-                  <img
-                    src="/dravya_demo_slow.gif"
-                    alt="Dravya platform demo"
-                    className="w-full aspect-[16/9] object-cover object-center opacity-95 transition-opacity duration-500 hover:opacity-100"
+                <div className="overflow-hidden rounded-[1.5rem] border border-slate-100/50 bg-[#1e293b] shadow-inner relative transform-gpu">
+                  <video
+                    src="/Cinematic_second_product_d.mp4"
+                    title="Dravya platform demo"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls
+                    className="w-full aspect-[16/9] block object-cover rounded-[1.5rem] cursor-pointer"
                   />
                 </div>
               </div>
