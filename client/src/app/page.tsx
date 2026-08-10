@@ -1,3 +1,6 @@
+'use client'
+
+import { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { LandingNavbar } from '@/features/landing/components/LandingNavbar'
 import { HowItWorks } from '@/features/landing/components/HowItWorks'
@@ -25,6 +28,38 @@ import { AIVerification } from '@/features/landing/components/aiverification'
 import Image from 'next/image'
 
 export default function HomePage() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const videoElement = videoRef.current
+    if (!videoElement) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            videoElement.muted = false
+            videoElement.play().catch((err) => {
+              console.warn('Autoplay with sound prevented by browser:', err)
+              videoElement.muted = true
+              videoElement.play()
+            })
+          } else {
+            videoElement.pause()
+            videoElement.muted = true
+          }
+        })
+      },
+      { threshold: 0.5 }
+    )
+
+    observer.observe(videoElement)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
+
   return (
     <div className="min-h-screen flex flex-col bg-white relative font-sans overflow-x-hidden">
       <LandingNavbar />
@@ -143,7 +178,7 @@ export default function HomePage() {
 
 
           {/* Right Content (Login Form) */}
-          <div className="w-full lg:w-[450px] flex-shrink-0 py-6">
+          <div className="w-full lg:w-[450px] flex-shrink-0 border-[#184E48] py-6">
             <LoginForm />
           </div>
         </main>
@@ -231,11 +266,10 @@ export default function HomePage() {
 
                 <div className="overflow-hidden rounded-[1.5rem] border border-slate-100/50 bg-[#1e293b] shadow-inner relative transform-gpu">
                   <video
+                    ref={videoRef}
                     src="/Cinematic_second_product_d.mp4"
                     title="Dravya platform demo"
-                    autoPlay
                     loop
-                    muted
                     playsInline
                     controls
                     className="w-full aspect-[16/9] block object-cover rounded-[1.5rem] cursor-pointer"
