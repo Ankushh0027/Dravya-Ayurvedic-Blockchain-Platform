@@ -117,14 +117,11 @@ export function HowItWorks() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#184E48]/[0.03] rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-[#184E48]/[0.04] rounded-full blur-2xl pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         
         {/* Header Tag & Section Title */}
         <div className="mx-auto max-w-3xl text-center mb-12 lg:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#184E48]/10 border border-[#184E48]/20 text-[#184E48] font-semibold text-xs tracking-wider uppercase mb-6 shadow-sm">
-            <Sparkles className="w-4 h-4" />
-            <span>Interactive Workflow Journey</span>
-          </div>
+          
 
           <h2 className="text-4xl font-serif font-extrabold tracking-tight text-slate-900 md:text-5xl lg:text-6xl mb-6 leading-[1.15]">
             Every Step.{" "}
@@ -142,8 +139,8 @@ export function HowItWorks() {
           </p>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative max-w-5xl mx-auto px-4 md:px-12">
+        {/* Carousel Container - Expanded width for 4 full-sized cards */}
+        <div className="relative max-w-[1500px] mx-auto px-4 md:px-12">
           
           <Carousel
             setApi={setApi}
@@ -160,7 +157,7 @@ export function HowItWorks() {
                 return (
                   <CarouselItem
                     key={step.title}
-                    className="pl-3 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3"
+                    className="pl-3 md:pl-4 basis-full md:basis-1/2 lg:basis-1/4"
                   >
                     <div
                       className="group relative flex flex-col justify-between h-full rounded-3xl bg-white p-7 shadow-md shadow-[#184E48]/[0.05] border border-[#184E48]/15 hover:border-[#184E48]/50 hover:shadow-2xl hover:shadow-[#184E48]/20 transition-all duration-500 overflow-hidden"
