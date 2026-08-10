@@ -42,10 +42,7 @@ export function AIVerification() {
         
         {/* Left Side: Context & Content */}
         <div className="flex flex-col justify-center">
-          <span className="mb-6 inline-flex items-center gap-2 self-start rounded-full border border-[#1a4a2c]/20 bg-[#1a4a2c]/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#1a4a2c] shadow-sm">
-            <BrainCircuit className="h-4 w-4" />
-            AI-Powered Verification
-          </span>
+          
 
           <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl lg:text-6xl">
             Identify. Analyze.

@@ -62,9 +62,7 @@ export function HowItWorks() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center mb-20">
-          <span className="mb-6 inline-flex items-center rounded-full border border-[#1a4a2c]/20 bg-[#1a4a2c]/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#1a4a2c] shadow-sm">
-            How It Works
-          </span>
+          
 
           <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl lg:text-6xl mb-6">
             Every Step.

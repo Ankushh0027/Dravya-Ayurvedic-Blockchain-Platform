@@ -1,6 +1,6 @@
 import { StatCard } from '@/components/shared/StatCard'
 import { Package, Clock, CheckCircle2, XCircle } from 'lucide-react'
-import { mockBatches } from '../_data/batches'
+import { mockBatches } from '../data/batches'
 
 export function ProducerStats() {
   const total = mockBatches.length

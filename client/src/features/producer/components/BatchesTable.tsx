@@ -1,6 +1,6 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { Badge } from '@/components/ui/badge'
-import { mockBatches, type BatchStatus } from '../_data/batches'
+import { mockBatches, type BatchStatus } from '../data/batches'
 
 const statusStyles: Record<BatchStatus, string> = {
   verified: 'bg-green-100 text-green-800 hover:bg-green-100',

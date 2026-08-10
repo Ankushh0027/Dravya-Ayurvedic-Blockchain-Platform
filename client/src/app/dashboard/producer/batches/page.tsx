@@ -1,4 +1,4 @@
-import { BatchesTable } from '../_components/BatchesTable'
+import { BatchesTable } from '@/features/producer/components/BatchesTable'
 
 export default function MyBatchesPage() {
   return (

@@ -1,11 +1,11 @@
-import { AppSidebar } from '@/components/layouts/AppSidebar'
+import { ProducerSidebar } from '@/components/layouts/ProducerSidebar'
 import { TopNavbar } from '@/components/layouts/TopNavbar'
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar'
 
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default function ProducerLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
-      <AppSidebar />
+      <ProducerSidebar />
       <SidebarInset>
         <TopNavbar />
         <main className="p-6">{children}</main>

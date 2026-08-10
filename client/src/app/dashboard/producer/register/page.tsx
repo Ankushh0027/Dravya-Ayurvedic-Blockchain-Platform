@@ -1,4 +1,4 @@
-import { RegisterBatchForm } from './_components/RegisterBatchForm'
+import { RegisterBatchForm } from '@/features/producer/components/RegisterBatchForm'
 
 export default function RegisterBatchPage() {
   return (

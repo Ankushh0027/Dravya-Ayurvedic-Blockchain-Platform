@@ -1,5 +1,5 @@
-import { ProducerStats } from './_components/ProducerStats'
-import { BatchesTable } from './_components/BatchesTable'
+import { ProducerStats } from '@/features/producer/components/ProducerStats'
+import { BatchesTable } from '@/features/producer/components/BatchesTable'
 
 export default function ProducerDashboardPage() {
   return (

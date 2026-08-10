@@ -15,9 +15,9 @@ import { Home, Package, Sprout } from 'lucide-react'
 import Link from 'next/link'
 
 const navItems = [
-  { title: 'Dashboard', url: '/producer', icon: Home },
-  { title: 'My Batches', url: '/producer/batches', icon: Package },
-  { title: 'Register Batch', url: '/producer/register', icon: Sprout },
+  { title: 'Dashboard', url: '/dashboard/producer', icon: Home },
+  { title: 'My Batches', url: '/dashboard/producer/batches', icon: Package },
+  { title: 'Register Batch', url: '/dashboard/producer/register', icon: Sprout },
 ]
 
 export function ProducerSidebar() {
