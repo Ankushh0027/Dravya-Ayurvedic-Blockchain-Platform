@@ -55,7 +55,7 @@ export class DistributorController {
   public async receiveBatch(req: AuthenticatedRequest, res: Response): Promise<void> {
     try {
       const distributorId = req.user!.id;
-      const batchId = req.params.id;
+      const batchId = req.params.id as string;
       
       const parsed = distributorActionSchema.safeParse(req.body);
       if (!parsed.success) {
@@ -75,7 +75,7 @@ export class DistributorController {
   public async dispatchBatch(req: AuthenticatedRequest, res: Response): Promise<void> {
     try {
       const distributorId = req.user!.id;
-      const batchId = req.params.id;
+      const batchId = req.params.id as string;
       
       const parsed = distributorActionSchema.safeParse(req.body);
       if (!parsed.success) {
@@ -95,7 +95,7 @@ export class DistributorController {
   public async deliverBatch(req: AuthenticatedRequest, res: Response): Promise<void> {
     try {
       const distributorId = req.user!.id;
-      const batchId = req.params.id;
+      const batchId = req.params.id as string;
       
       const parsed = distributorActionSchema.safeParse(req.body);
       if (!parsed.success) {

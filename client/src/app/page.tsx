@@ -248,11 +248,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AI Verification Section (Pure White background) */}
-      <AIVerification />
-
       {/* How It Works Section (Warmer White --ww background) */}
       <HowItWorks />
+
+      {/* AI Verification Section (Pure White background) */}
+      <AIVerification />
 
       <Footer />
     </div>

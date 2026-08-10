@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { PublicVerificationService } from '../services/public-verification.service';
+import { sendSuccess, sendError } from '../lib/response';
 
 export class PublicController {
   
@@ -9,15 +10,15 @@ export class PublicController {
    */
   public async verifyQR(req: Request, res: Response): Promise<void> {
     try {
-      const code = req.params.code;
+      const code = req.params.code as string;
       if (!code) {
-        res.status(400).json({ success: false, message: 'Code is required' });
+        sendError(res, 'Code is required', 400);
         return;
       }
 
       // Input validation on code format
       if (!/^DRV-[A-Z0-9]{8}$/.test(code)) {
-        res.status(400).json({ success: false, status: 'INVALID_FORMAT', message: 'Invalid code format.' });
+        sendError(res, 'Invalid code format.', 400);
         return;
       }
 
@@ -25,23 +26,21 @@ export class PublicController {
 
       if (!result.verified && result.status) {
         // Safe rejection for public
-        res.status(200).json({ 
-          success: true, 
-          data: {
-            verified: false,
-            status: result.status,
-            message: result.message
-          }
+        sendSuccess(res, 'Verification failed', {
+          verified: false,
+          status: result.status,
+          message: result.message
         });
         return;
       }
 
       // Success
-      res.status(200).json(result);
+      // Note: The original returned the bare result, but since we are standardizing we will use sendSuccess
+      sendSuccess(res, 'Verification successful', result);
     } catch (error: any) {
       console.error('Public verification error:', error);
       // DO NOT expose stack traces or internal DB errors
-      res.status(500).json({ success: false, message: 'An internal error occurred during verification.' });
+      sendError(res, 'An internal error occurred during verification.', 500);
     }
   }
 }

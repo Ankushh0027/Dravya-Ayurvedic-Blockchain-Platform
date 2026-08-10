@@ -2,6 +2,8 @@ import { BlockchainRecordStatus, Role } from '@prisma/client';
 import { prisma } from '../lib/prisma';
 import { FabricConnectionService } from './fabric-connection.service';
 import { HashingService } from './hashing.service';
+import { NotificationService } from './notification.service';
+import { AuditService } from './audit.service';
 
 export class BlockchainService {
   /**
@@ -67,6 +69,29 @@ export class BlockchainService {
           where: { id: record.id },
           data: { status: BlockchainRecordStatus.FAILED },
         });
+
+        // Notify Failure
+        const admin = await prisma.user.findFirst({ where: { role: 'ADMIN' } });
+        if (admin) {
+          NotificationService.createNotification({
+            userId: admin.id,
+            type: 'BLOCKCHAIN_ANCHOR_FAILED',
+            title: 'Blockchain Anchor Failed',
+            message: 'A traceability record could not be anchored to the blockchain.',
+            entityType: 'BLOCKCHAIN_RECORD',
+            entityId: record.id,
+            eventKey: `BLOCKCHAIN_ANCHOR_FAILED:${record.id}`,
+            priority: 'HIGH'
+          });
+
+          await AuditService.recordSecurityEvent({
+            action: 'BLOCKCHAIN_ANCHOR_FAILED',
+            actorId: admin.id,
+            entityType: 'BlockchainRecord',
+            entityId: record.id,
+            metadata: { error: err.message },
+          });
+        }
         return;
       }
 
@@ -109,12 +134,72 @@ export class BlockchainService {
         });
         
         console.log(`Successfully anchored ${recordId} to Fabric.`);
+        
+        // Notify Success
+        let relevantUserId: string | undefined = undefined;
+        if (entityType === 'PRODUCER_VERIFICATION') {
+          const pv = await prisma.producerVerification.findUnique({ where: { id: entityId }, include: { producerProfile: true } });
+          if (pv) relevantUserId = pv.producerProfile.userId;
+        } else if (entityType === 'BATCH_INSPECTION') {
+          const bi = await prisma.batchInspection.findUnique({ where: { id: entityId }, include: { batch: { include: { producerProfile: true } } } });
+          if (bi) relevantUserId = bi.batch.producerProfile.userId;
+        } else if (entityType === 'QUALITY_TEST') {
+          const qt = await prisma.qualityTest.findUnique({ where: { id: entityId }, include: { batch: { include: { producerProfile: true } } } });
+          if (qt) relevantUserId = qt.batch.producerProfile.userId;
+        } else if (entityType === 'SUPPLY_CHAIN_EVENT') {
+          const sce = await prisma.supplyChainEvent.findUnique({ where: { id: entityId }, include: { batch: { include: { producerProfile: true } } } });
+          if (sce) relevantUserId = sce.batch.producerProfile.userId;
+        }
+
+        if (relevantUserId) {
+          NotificationService.createNotification({
+            userId: relevantUserId,
+            type: 'BLOCKCHAIN_ANCHOR_CONFIRMED',
+            title: 'Blockchain Record Confirmed',
+            message: 'A finalized traceability record has been anchored successfully.',
+            entityType: 'BLOCKCHAIN_RECORD',
+            entityId: record.id,
+            eventKey: `BLOCKCHAIN_ANCHOR_CONFIRMED:${record.id}`,
+            priority: 'NORMAL'
+          });
+
+          await AuditService.recordStateChange({
+            action: 'BLOCKCHAIN_ANCHORED',
+            actorId: relevantUserId,
+            entityType: 'BlockchainRecord',
+            entityId: record.id,
+            newState: { status: 'CONFIRMED' },
+          });
+        }
       } catch (err: any) {
         console.error('Fabric transaction failed:', err.message);
         await prisma.blockchainRecord.update({
           where: { id: record.id },
           data: { status: BlockchainRecordStatus.FAILED },
         });
+
+        // Notify Failure
+        const admin = await prisma.user.findFirst({ where: { role: 'ADMIN' } });
+        if (admin) {
+          NotificationService.createNotification({
+            userId: admin.id,
+            type: 'BLOCKCHAIN_ANCHOR_FAILED',
+            title: 'Blockchain Anchor Failed',
+            message: 'A traceability record could not be anchored to the blockchain.',
+            entityType: 'BLOCKCHAIN_RECORD',
+            entityId: record.id,
+            eventKey: `BLOCKCHAIN_ANCHOR_FAILED:${record.id}`,
+            priority: 'HIGH'
+          });
+
+          await AuditService.recordSecurityEvent({
+            action: 'BLOCKCHAIN_ANCHOR_FAILED',
+            actorId: admin.id,
+            entityType: 'BlockchainRecord',
+            entityId: record.id,
+            metadata: { error: err.message },
+          });
+        }
       } finally {
         if (closeFabric) closeFabric();
       }
@@ -165,6 +250,30 @@ export class BlockchainService {
       const recordId = `DRV-${entityType}-${entityId}-V${recordVersion}`;
       const resultBytes = await contract.evaluateTransaction('VerifyRecordHash', recordId, currentHash);
       const isVerified = resultBytes.toString() === 'true';
+
+      if (!isVerified) {
+        const admin = await prisma.user.findFirst({ where: { role: 'ADMIN' } });
+        if (admin) {
+          NotificationService.createNotification({
+            userId: admin.id,
+            type: 'SYSTEM_ALERT',
+            title: 'Traceability Integrity Alert',
+            message: 'A finalized traceability record failed integrity verification.',
+            entityType: 'BLOCKCHAIN_RECORD',
+            entityId: record.id,
+            eventKey: `SYSTEM_ALERT_INTEGRITY:${record.id}`,
+            priority: 'CRITICAL'
+          });
+
+          await AuditService.recordSecurityEvent({
+            action: 'SYSTEM_ALERT',
+            actorId: admin.id,
+            entityType: 'BlockchainRecord',
+            entityId: record.id,
+            metadata: { message: 'A finalized traceability record failed integrity verification.' },
+          });
+        }
+      }
 
       return {
         verified: isVerified,

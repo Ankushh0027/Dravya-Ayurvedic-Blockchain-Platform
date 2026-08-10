@@ -160,11 +160,7 @@ export async function approveLotInspection(req: AuthenticatedRequest, res: Respo
 
     const validation = recordInspectionSchema.safeParse(req.body)
     if (!validation.success) {
-      res.status(400).json({
-        success: false,
-        message: 'Validation failed.',
-        errors: validation.error.flatten().fieldErrors,
-      })
+      sendError(res, 'Validation failed.', 400, validation.error.flatten().fieldErrors)
       return
     }
 
@@ -225,11 +221,7 @@ export async function rejectLotInspection(req: AuthenticatedRequest, res: Respon
 
     const validation = rejectInspectionSchema.safeParse(req.body)
     if (!validation.success) {
-      res.status(400).json({
-        success: false,
-        message: 'Validation failed.',
-        errors: validation.error.flatten().fieldErrors,
-      })
+      sendError(res, 'Validation failed.', 400, validation.error.flatten().fieldErrors)
       return
     }
 

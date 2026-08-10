@@ -75,6 +75,38 @@ enum ParameterResultStatus {
   NOT_APPLICABLE
 }
 
+enum NotificationType {
+  PRODUCER_VERIFICATION_SUBMITTED
+  PRODUCER_VERIFICATION_APPROVED
+  PRODUCER_VERIFICATION_REJECTED
+  LOT_INSPECTION_REQUESTED
+  LOT_INSPECTION_APPROVED
+  LOT_INSPECTION_REJECTED
+  LAB_TEST_ASSIGNED
+  LAB_SAMPLE_RECEIVED
+  LAB_TEST_STARTED
+  LAB_TEST_COMPLETED
+  LAB_TEST_PASSED
+  LAB_TEST_FAILED
+  DISTRIBUTOR_ASSIGNED
+  BATCH_RECEIVED
+  BATCH_DISPATCHED
+  BATCH_DELIVERED
+  BLOCKCHAIN_ANCHOR_CONFIRMED
+  BLOCKCHAIN_ANCHOR_FAILED
+  BATCH_STATUS_CHANGED
+  QR_GENERATED
+  QR_REVOKED
+  SYSTEM_ALERT
+}
+
+enum NotificationPriority {
+  LOW
+  NORMAL
+  HIGH
+  CRITICAL
+}
+
 // ─── Models ──────────────────────────────────────────────
 
 model User {
@@ -98,6 +130,8 @@ model User {
   batchInspections      BatchInspection[]      @relation("BatchInspector")
   generatedReports      LabReport[]            @relation("ReportGenerator")
   assignedDistributions DistributorAssignment[] @relation("AssignedDistributor")
+  notifications         Notification[]
+  auditLogs             AuditLog[]
 
   @@map("users")
 }
@@ -431,4 +465,83 @@ model DistributorAssignment {
   @@index([distributorId])
   @@index([status])
   @@map("distributor_assignments")
+}
+
+// ─── Notifications (Step 9) ────────────────────────────────
+
+model Notification {
+  id         String               @id @default(cuid())
+  userId     String
+  user       User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type       NotificationType
+  title      String
+  message    String
+  entityType String?
+  entityId   String?
+  eventKey   String?
+  priority   NotificationPriority @default(NORMAL)
+  isRead     Boolean              @default(false)
+  readAt     DateTime?
+  createdAt  DateTime             @default(now())
+  updatedAt  DateTime             @updatedAt
+
+  @@unique([userId, eventKey])
+  @@index([userId])
+  @@index([userId, isRead])
+  @@index([createdAt])
+  @@index([userId, createdAt])
+  @@map("notifications")
+}
+
+// ─── Audit Logging (Step 10) ───────────────────────────────
+
+enum AuditAction {
+  USER_REGISTERED
+  USER_LOGIN
+  USER_LOGIN_FAILED
+  PRODUCER_PROFILE_CREATED
+  PRODUCER_PROFILE_UPDATED
+  VERIFICATION_REQUESTED
+  VERIFICATION_APPROVED
+  VERIFICATION_REJECTED
+  INSPECTION_REQUESTED
+  INSPECTION_STARTED
+  INSPECTION_APPROVED
+  INSPECTION_REJECTED
+  LAB_TEST_ASSIGNED
+  LAB_SAMPLE_RECEIVED
+  LAB_TEST_STARTED
+  LAB_RESULT_ADDED
+  LAB_TEST_COMPLETED
+  LAB_REPORT_FINALIZED
+  DISTRIBUTOR_ASSIGNED
+  BATCH_RECEIVED
+  BATCH_DISPATCHED
+  BATCH_DELIVERED
+  BLOCKCHAIN_ANCHORED
+  BLOCKCHAIN_ANCHOR_FAILED
+  QR_GENERATED
+  QR_REVOKED
+  SYSTEM_ALERT
+}
+
+model AuditLog {
+  id            String      @id @default(cuid())
+  actorId       String?
+  actor         User?       @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  action        AuditAction
+  entityType    String?
+  entityId      String?
+  previousState Json?
+  newState      Json?
+  metadata      Json?
+  ipAddress     String?
+  userAgent     String?
+  createdAt     DateTime    @default(now())
+
+  @@index([actorId])
+  @@index([action])
+  @@index([entityType, entityId])
+  @@index([createdAt])
+  @@map("audit_logs")
 }

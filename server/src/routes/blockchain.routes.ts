@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { BlockchainController } from '../controllers/blockchain.controller';
-import { protect, restrictTo } from '../middleware/auth';
+import { authenticate } from '../middleware/auth.middleware';
+import { authorize } from '../middleware/rbac.middleware';
 import { Role } from '@prisma/client';
 
 const router = Router();
@@ -9,22 +10,22 @@ const controller = new BlockchainController();
 // Only ADMIN, VERIFICATION_AUTHORITY, LAB can trigger anchor (retry)
 router.post(
   '/anchor/:entityType/:entityId',
-  protect,
-  restrictTo(Role.ADMIN, Role.VERIFICATION_AUTHORITY, Role.LAB),
+  authenticate,
+  authorize('ADMIN', 'VERIFICATION_AUTHORITY', 'LAB'),
   controller.anchorRecord.bind(controller)
 );
 
 // Any authenticated user can verify
 router.get(
   '/verify/:entityType/:entityId',
-  protect,
+  authenticate,
   controller.verifyRecord.bind(controller)
 );
 
 // Any authenticated user can get history
 router.get(
   '/history/:entityType/:entityId',
-  protect,
+  authenticate,
   controller.getHistory.bind(controller)
 );
 

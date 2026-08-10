@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import { prisma } from '../lib/prisma'
 import { sendSuccess, sendError } from '../lib/response'
-import { createBatchSchema, updateBatchSchema } from '../lib/validators'
+import { createBatchSchema, updateBatchSchema, paginationSchema } from '../lib/validators'
 import { AuthenticatedRequest } from '../middleware/auth.middleware'
 
 // ─── Helpers ─────────────────────────────────────────────
@@ -89,11 +89,7 @@ export async function createBatch(req: AuthenticatedRequest, res: Response): Pro
 
     const validation = createBatchSchema.safeParse(req.body)
     if (!validation.success) {
-      res.status(400).json({
-        success: false,
-        message: 'Validation failed.',
-        errors: validation.error.flatten().fieldErrors,
-      })
+      sendError(res, 'Validation failed.', 400, validation.error.flatten().fieldErrors)
       return
     }
 
@@ -139,8 +135,7 @@ export async function createBatch(req: AuthenticatedRequest, res: Response): Pro
 
 export async function getAllBatches(req: AuthenticatedRequest, res: Response): Promise<void> {
   try {
-    const page = parseInt(getQueryString(req.query.page) || '1')
-    const limit = parseInt(getQueryString(req.query.limit) || '10')
+    const { page, limit } = paginationSchema.parse(req.query)
     const status = getQueryString(req.query.status)
     const skip = (page - 1) * limit
     
@@ -247,11 +242,7 @@ export async function updateBatch(req: AuthenticatedRequest, res: Response): Pro
 
     const validation = updateBatchSchema.safeParse(req.body)
     if (!validation.success) {
-      res.status(400).json({
-        success: false,
-        message: 'Validation failed.',
-        errors: validation.error.flatten().fieldErrors,
-      })
+      sendError(res, 'Validation failed.', 400, validation.error.flatten().fieldErrors)
       return
     }
 

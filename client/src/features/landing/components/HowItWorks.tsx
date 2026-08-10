@@ -89,7 +89,7 @@ export function HowItWorks() {
 
   return (
     <section className="relative overflow-hidden bg-[#E1E9E1]/35 border-t border-[#184E48]/10 py-24 lg:py-32">
-      
+
       {/* Background Decorative Elements */}
       <div className="absolute top-[8%] -left-12 w-[280px] md:w-[380px] lg:w-[460px] pointer-events-none z-0 opacity-20 mix-blend-multiply">
         <LeafSprig className="w-full h-auto text-[#184E48]" />
@@ -103,10 +103,10 @@ export function HowItWorks() {
       <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-[#184E48]/[0.04] rounded-full blur-2xl pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header Tag & Section Title */}
         <div className="mx-auto max-w-3xl text-center mb-12 lg:mb-16">
-          
+
 
           <h2 className="text-4xl font-serif font-extrabold tracking-tight text-slate-900 md:text-5xl lg:text-6xl mb-6 leading-[1.15]">
             Every Step.{" "}
@@ -126,7 +126,7 @@ export function HowItWorks() {
 
         {/* Carousel Container - Reduced width by ~10% (max-w-[1350px]) */}
         <div className="relative max-w-[1350px] mx-auto px-4 md:px-12">
-          
+
           <Carousel
             setApi={setApi}
             opts={{
@@ -154,7 +154,7 @@ export function HowItWorks() {
                       </div>
 
                       <div className="relative z-10 flex-1 flex flex-col">
-                        
+
                         <div className="flex items-center justify-between mb-6">
                           <span className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-[#184E48]/10 text-[#184E48] border border-[#184E48]/20">
                             {step.badge}
@@ -199,11 +199,11 @@ export function HowItWorks() {
           </Carousel>
 
           {/* Carousel Custom Dots & Pagination (Set to exactly 3 dots) */}
-         
+
         </div>
 
         {/* Bottom CTA Banner */}
-       
+
 
       </div>
     </section>

@@ -2,6 +2,8 @@ import { prisma } from '../lib/prisma';
 import { Role, BatchStatus, AssignmentStatus } from '@prisma/client';
 import { BlockchainService } from './blockchain.service';
 import { HashingService } from './hashing.service';
+import { NotificationService } from './notification.service';
+import { AuditService } from './audit.service';
 
 export class SupplyChainService {
   /**
@@ -38,6 +40,25 @@ export class SupplyChainService {
       return newAssignment;
     });
 
+    NotificationService.createNotification({
+      userId: distributorId,
+      type: 'DISTRIBUTOR_ASSIGNED',
+      title: 'New Batch Assigned',
+      message: `Batch ${batch.batchNumber} has been assigned to you.`,
+      entityType: 'DISTRIBUTOR_ASSIGNMENT',
+      entityId: assignment.id,
+      eventKey: `DISTRIBUTOR_ASSIGNED:${assignment.id}`,
+      priority: 'NORMAL'
+    });
+
+    await AuditService.recordStateChange({
+      action: 'DISTRIBUTOR_ASSIGNED',
+      actorId: adminId,
+      entityType: 'DistributorAssignment',
+      entityId: assignment.id,
+      newState: { status: assignment.status, distributorId },
+    });
+
     return assignment;
   }
 
@@ -47,7 +68,10 @@ export class SupplyChainService {
   public static async receiveBatch(batchId: string, distributorId: string, payload: any) {
     const batch = await prisma.batch.findUnique({
       where: { id: batchId },
-      include: { distributorAssignments: { where: { distributorId, status: 'ASSIGNED' } } }
+      include: { 
+        distributorAssignments: { where: { distributorId, status: 'ASSIGNED' } },
+        producerProfile: { select: { userId: true } }
+      }
     });
 
     if (!batch) throw new Error('Batch not found');
@@ -68,7 +92,7 @@ export class SupplyChainService {
 
       await tx.batch.update({
         where: { id: batchId },
-        data: { status: BatchStatus.RECEIVED_BY_DISTRIBUTOR } // Using IN_TRANSIT next, we can use an intermediate if required, or keep it QUALITY_APPROVED until Dispatch. Wait, user said QUALITY_APPROVED -> ASSIGNED -> RECEIVED -> IN_TRANSIT. Since we didn't add RECEIVED_BY_DISTRIBUTOR to enum, I will use IN_TRANSIT on dispatch. For Receive, we can just leave it QUALITY_APPROVED or update assignment. Actually, let's just create the event.
+        data: { status: BatchStatus.QUALITY_APPROVED } // Using IN_TRANSIT next, we can use an intermediate if required, or keep it QUALITY_APPROVED until Dispatch. Wait, user said QUALITY_APPROVED -> ASSIGNED -> RECEIVED -> IN_TRANSIT. Since we didn't add RECEIVED_BY_DISTRIBUTOR to enum, I will use IN_TRANSIT on dispatch. For Receive, we can just leave it QUALITY_APPROVED or update assignment. Actually, let's just create the event.
       });
       // The state machine from prompt: QUALITY_APPROVED -> ASSIGNED -> RECEIVED -> IN_TRANSIT -> DELIVERED.
       // But BatchStatus only has IN_TRANSIT and DELIVERED. So QUALITY_APPROVED remains until IN_TRANSIT.
@@ -99,6 +123,25 @@ export class SupplyChainService {
       Role.DISTRIBUTOR
     ).catch(err => console.error('Blockchain anchor failed for BATCH_RECEIVED:', err));
 
+    NotificationService.createNotification({
+      userId: batch.producerProfile.userId,
+      type: 'BATCH_RECEIVED',
+      title: 'Batch Received',
+      message: `Batch ${batch.batchNumber} has been received by the distributor.`,
+      entityType: 'SUPPLY_CHAIN_EVENT',
+      entityId: result.id,
+      eventKey: `BATCH_RECEIVED:${result.id}`,
+      priority: 'NORMAL'
+    });
+
+    await AuditService.recordStateChange({
+      action: 'BATCH_RECEIVED',
+      actorId: distributorId,
+      entityType: 'SupplyChainEvent',
+      entityId: result.id,
+      newState: { quantity: payload.quantity, location: payload.location },
+    });
+
     return result;
   }
 
@@ -110,7 +153,8 @@ export class SupplyChainService {
       where: { id: batchId },
       include: {
         distributorAssignments: { where: { distributorId, status: 'ACCEPTED' } },
-        supplyChainEvents: { where: { action: 'BATCH_RECEIVED' }, orderBy: { timestamp: 'desc' }, take: 1 }
+        supplyChainEvents: { where: { action: 'BATCH_RECEIVED' }, orderBy: { timestamp: 'desc' }, take: 1 },
+        producerProfile: { select: { userId: true } }
       }
     });
 
@@ -171,6 +215,25 @@ export class SupplyChainService {
       Role.DISTRIBUTOR
     ).catch(err => console.error('Blockchain anchor failed for BATCH_DISPATCHED:', err));
 
+    NotificationService.createNotification({
+      userId: batch.producerProfile.userId,
+      type: 'BATCH_DISPATCHED',
+      title: 'Batch Dispatched',
+      message: `Batch ${batch.batchNumber} has been dispatched.`,
+      entityType: 'SUPPLY_CHAIN_EVENT',
+      entityId: result.id,
+      eventKey: `BATCH_DISPATCHED:${result.id}`,
+      priority: 'NORMAL'
+    });
+
+    await AuditService.recordStateChange({
+      action: 'BATCH_DISPATCHED',
+      actorId: distributorId,
+      entityType: 'SupplyChainEvent',
+      entityId: result.id,
+      newState: { quantity: payload.quantity, location: payload.destination },
+    });
+
     return result;
   }
 
@@ -182,7 +245,8 @@ export class SupplyChainService {
       where: { id: batchId },
       include: {
         distributorAssignments: { where: { distributorId, status: 'ACCEPTED' } },
-        supplyChainEvents: { where: { action: 'BATCH_DISPATCHED' }, orderBy: { timestamp: 'desc' }, take: 1 }
+        supplyChainEvents: { where: { action: 'BATCH_DISPATCHED' }, orderBy: { timestamp: 'desc' }, take: 1 },
+        producerProfile: { select: { userId: true } }
       }
     });
 
@@ -252,6 +316,25 @@ export class SupplyChainService {
       HashingService.getSupplyChainEventPayload(result), 
       Role.DISTRIBUTOR
     ).catch(err => console.error('Blockchain anchor failed for BATCH_DELIVERED:', err));
+
+    NotificationService.createNotification({
+      userId: batch.producerProfile.userId,
+      type: 'BATCH_DELIVERED',
+      title: 'Batch Delivered',
+      message: `Batch ${batch.batchNumber} has been delivered.`,
+      entityType: 'SUPPLY_CHAIN_EVENT',
+      entityId: result.id,
+      eventKey: `BATCH_DELIVERED:${result.id}`,
+      priority: 'NORMAL'
+    });
+
+    await AuditService.recordStateChange({
+      action: 'BATCH_DELIVERED',
+      actorId: distributorId,
+      entityType: 'SupplyChainEvent',
+      entityId: result.id,
+      newState: { quantity: payload.quantity, location: payload.destination },
+    });
 
     return result;
   }

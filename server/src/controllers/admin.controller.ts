@@ -2,6 +2,8 @@ import { Response } from 'express'
 import { prisma } from '../lib/prisma'
 import { sendSuccess, sendError } from '../lib/response'
 import { AuthenticatedRequest } from '../middleware/auth.middleware'
+import { NotificationService } from '../services/notification.service'
+import { AuditService } from '../services/audit.service'
 
 export async function assignVerificationAuthority(req: AuthenticatedRequest, res: Response): Promise<void> {
   try {
@@ -132,7 +134,29 @@ export async function assignLabTest(req: AuthenticatedRequest, res: Response): P
         assignedBy: adminId,
         assignedAt: new Date(),
         status: 'ASSIGNED'
-      }
+      },
+      include: { batch: true } // Need batch details for notification message if helpful
+    })
+
+    NotificationService.createNotification({
+      userId: labId,
+      type: 'LAB_TEST_ASSIGNED',
+      title: 'New Lab Test Assigned',
+      message: `Batch ${qualityTest.batch.batchNumber} has been assigned for testing.`,
+      entityType: 'QUALITY_TEST',
+      entityId: qualityTest.id,
+      eventKey: `LAB_TEST_ASSIGNED:${qualityTest.id}`,
+      priority: 'HIGH'
+    })
+
+    await AuditService.recordStateChange({
+      action: 'LAB_TEST_ASSIGNED',
+      actorId: adminId,
+      entityType: 'QualityTest',
+      entityId: qualityTest.id,
+      newState: { status: qualityTest.status, labId: qualityTest.labId },
+      ipAddress: req.ip,
+      userAgent: req.headers['user-agent']
     })
 
     sendSuccess(res, 'Batch assigned to LAB successfully.', { qualityTest }, 201)

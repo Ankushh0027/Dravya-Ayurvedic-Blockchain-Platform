@@ -1,6 +1,8 @@
 import * as crypto from 'crypto';
 import { prisma } from '../lib/prisma';
 import { QRCode, QRCodeStatus } from '@prisma/client';
+import { NotificationService } from './notification.service';
+import { AuditService } from './audit.service';
 
 export class QRService {
   /**
@@ -30,7 +32,7 @@ export class QRService {
       include: {
         qrCode: true,
         producerProfile: {
-          select: { verificationStatus: true }
+          select: { verificationStatus: true, userId: true }
         },
         inspections: {
           orderBy: { createdAt: 'desc' },
@@ -78,12 +80,31 @@ export class QRService {
     }
 
     // 5. Create QR record
-    await prisma.qRCode.create({
+    const qrRecord = await prisma.qRCode.create({
       data: {
         batchId,
         code: secureCode,
         status: QRCodeStatus.ACTIVE
       }
+    });
+
+    NotificationService.createNotification({
+      userId: batch.producerProfile.userId,
+      type: 'QR_GENERATED',
+      title: 'QR Code Generated',
+      message: `A public verification QR code has been generated for batch ${batch.batchNumber}.`,
+      entityType: 'QR_CODE',
+      entityId: qrRecord.id,
+      eventKey: `QR_GENERATED:${qrRecord.id}`,
+      priority: 'NORMAL'
+    });
+
+    await AuditService.recordStateChange({
+      action: 'QR_GENERATED',
+      actorId: batch.producerProfile.userId, // We can assume producer is the logical actor, or system
+      entityType: 'QRCode',
+      entityId: qrRecord.id,
+      newState: { status: qrRecord.status },
     });
 
     const baseUrl = process.env.PUBLIC_VERIFICATION_BASE_URL || 'http://localhost:3000';
@@ -97,7 +118,10 @@ export class QRService {
    * Revoke an active QR code
    */
   public static async revokeQR(qrId: string, adminId: string): Promise<QRCode> {
-    const qr = await prisma.qRCode.findUnique({ where: { id: qrId } });
+    const qr = await prisma.qRCode.findUnique({ 
+      where: { id: qrId },
+      include: { batch: { include: { producerProfile: { select: { userId: true } } } } }
+    });
     if (!qr) {
       throw new Error('QR Code not found');
     }
@@ -106,7 +130,7 @@ export class QRService {
       throw new Error('QR Code is already revoked');
     }
 
-    return prisma.qRCode.update({
+    const updated = await prisma.qRCode.update({
       where: { id: qrId },
       data: {
         status: QRCodeStatus.REVOKED,
@@ -114,5 +138,26 @@ export class QRService {
         revokedBy: adminId
       }
     });
+
+    NotificationService.createNotification({
+      userId: qr.batch.producerProfile.userId,
+      type: 'QR_REVOKED',
+      title: 'QR Code Revoked',
+      message: `The public verification QR code for batch ${qr.batch.batchNumber} has been revoked.`,
+      entityType: 'QR_CODE',
+      entityId: qr.id,
+      eventKey: `QR_REVOKED:${qr.id}`,
+      priority: 'HIGH'
+    });
+
+    await AuditService.recordStateChange({
+      action: 'QR_REVOKED',
+      actorId: adminId,
+      entityType: 'QRCode',
+      entityId: qr.id,
+      newState: { status: updated.status },
+    });
+
+    return updated;
   }
 }
