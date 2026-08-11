@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/breadcrumb'
 import { UserAvatar } from '@/components/shared/UserAvatar'
 import { ThemeToggle } from '@/components/shared/ThemeToggle'
+import { LanguageSelector } from '@/components/shared/LanguageSelector'
 import { usePathname } from 'next/navigation'
 import { Fragment } from 'react'
 
@@ -45,7 +46,8 @@ export function TopNavbar() {
           })}
         </BreadcrumbList>
       </Breadcrumb>
-      <div className="ml-auto flex items-center gap-4">
+      <div className="ml-auto flex items-center gap-3">
+        <LanguageSelector variant="dashboard" />
         <ThemeToggle />
         <UserAvatar />
       </div>
