@@ -10,99 +10,538 @@ datasource db {
 // ─── Enums ───────────────────────────────────────────────
 
 enum Role {
-  FARMER
-  LAB
-  MANUFACTURER
-  DISTRIBUTOR
-  RETAILER
   ADMIN
+  PRODUCER
+  LAB
+  DISTRIBUTOR
+  VERIFICATION_AUTHORITY
+}
+
+enum VerificationStatus {
+  PENDING
+  UNDER_REVIEW
+  VERIFIED
+  REJECTED
 }
 
 enum BatchStatus {
-  CREATED
-  TESTED
-  MANUFACTURED
+  DRAFT
+  SUBMITTED
+  PENDING_VERIFICATION
+  VERIFIED
+  REJECTED
+  READY_FOR_LAB
+  QUALITY_APPROVED
+  QUALITY_REJECTED
   IN_TRANSIT
   DELIVERED
-  SOLD
 }
 
-enum TestResult {
+enum RequestStatus {
   PENDING
-  PASSED
-  FAILED
+  ASSIGNED
+  UNDER_REVIEW
+  COMPLETED
+}
+
+enum InspectionStatus {
+  PENDING
+  UNDER_INSPECTION
+  APPROVED
+  REJECTED
+}
+
+enum VerificationDecision {
+  APPROVED
+  REJECTED
+}
+
+enum LabTestStatus {
+  PENDING_ASSIGNMENT
+  ASSIGNED
+  SAMPLE_RECEIVED
+  UNDER_TESTING
+  COMPLETED
+}
+
+enum QualityResult {
+  PASS
+  FAIL
+}
+
+enum ParameterResultStatus {
+  PASS
+  FAIL
+  NOT_APPLICABLE
+}
+
+enum NotificationType {
+  PRODUCER_VERIFICATION_SUBMITTED
+  PRODUCER_VERIFICATION_APPROVED
+  PRODUCER_VERIFICATION_REJECTED
+  LOT_INSPECTION_REQUESTED
+  LOT_INSPECTION_APPROVED
+  LOT_INSPECTION_REJECTED
+  LAB_TEST_ASSIGNED
+  LAB_SAMPLE_RECEIVED
+  LAB_TEST_STARTED
+  LAB_TEST_COMPLETED
+  LAB_TEST_PASSED
+  LAB_TEST_FAILED
+  DISTRIBUTOR_ASSIGNED
+  BATCH_RECEIVED
+  BATCH_DISPATCHED
+  BATCH_DELIVERED
+  BLOCKCHAIN_ANCHOR_CONFIRMED
+  BLOCKCHAIN_ANCHOR_FAILED
+  BATCH_STATUS_CHANGED
+  QR_GENERATED
+  QR_REVOKED
+  SYSTEM_ALERT
+}
+
+enum NotificationPriority {
+  LOW
+  NORMAL
+  HIGH
+  CRITICAL
 }
 
 // ─── Models ──────────────────────────────────────────────
 
 model User {
-  id        String   @id @default(cuid())
-  name      String
-  email     String   @unique
-  password  String
-  role      Role     @default(FARMER)
-  isActive  Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  password     String
+  role         Role     @default(PRODUCER)
+  organization String?
+  phone        String?
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 
   // Relations
-  batchesCreated    Batch[]            @relation("BatchCreator")
-  qualityTests      QualityTest[]      @relation("TestConductor")
-  supplyChainEvents SupplyChainEvent[] @relation("EventActor")
+  producerProfile       ProducerProfile?
+  distributorProfile    DistributorProfile?
+  qualityTests          QualityTest[]          @relation("TestConductor")
+  supplyChainEvents     SupplyChainEvent[]     @relation("EventActor")
+  assignedVerifications ProducerVerification[] @relation("AssignedAuthority")
+  batchInspections      BatchInspection[]      @relation("BatchInspector")
+  generatedReports      LabReport[]            @relation("ReportGenerator")
+  assignedDistributions DistributorAssignment[] @relation("AssignedDistributor")
+  notifications         Notification[]
+  auditLogs             AuditLog[]
 
   @@map("users")
 }
 
+model ProducerProfile {
+  id                 String             @id @default(cuid())
+  userId             String             @unique
+  user               User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  farmName           String
+  address            String
+  village            String
+  tehsil             String
+  district           String
+  state              String
+  pincode            String
+  latitude           Float?
+  longitude          Float?
+  landSize           Float
+  landSizeUnit       String             @default("acres")
+  verificationStatus VerificationStatus @default(PENDING)
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+
+  batches               Batch[]
+  verificationDocuments VerificationDocument[]
+  verifications         ProducerVerification[]
+
+  @@map("producer_profiles")
+}
+
+model Herb {
+  id             String   @id @default(cuid())
+  commonName     String
+  botanicalName  String   @unique
+  localName      String?
+  family         String
+  description    String?
+  medicinalUse   String?
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  batches        Batch[]
+
+  @@map("herbs")
+}
+
 model Batch {
-  id          String      @id @default(cuid())
-  name        String
-  herbName    String
-  origin      String
-  quantity    Float
-  unit        String      @default("kg")
-  status      BatchStatus @default(CREATED)
-  description String?
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
+  id                String      @id @default(cuid())
+  batchNumber       String      @unique
+  herbId            String
+  herb              Herb        @relation(fields: [herbId], references: [id])
+  producerProfileId String
+  producerProfile   ProducerProfile @relation(fields: [producerProfileId], references: [id])
+  farmLocation      String
+  latitude          Float?
+  longitude         Float?
+  quantity          Float
+  unit              String      @default("kg")
+  harvestDate       DateTime
+  cultivationMethod String
+  harvestDetails    String?
+  status            BatchStatus @default(DRAFT)
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
 
   // Relations
-  createdById String
-  createdBy   User               @relation("BatchCreator", fields: [createdById], references: [id])
-  qualityTests QualityTest[]
-  supplyChainEvents SupplyChainEvent[]
+  qualityTests           QualityTest[]
+  supplyChainEvents      SupplyChainEvent[]
+  inspections            BatchInspection[]
+  qrCode                 QRCode?
+  distributorAssignments DistributorAssignment[]
 
+  @@index([producerProfileId])
+  @@index([herbId])
+  @@index([status])
+  @@index([batchNumber])
   @@map("batches")
 }
 
 model QualityTest {
-  id           String     @id @default(cuid())
-  testName     String
-  result       TestResult @default(PENDING)
-  notes        String?
-  testedAt     DateTime   @default(now())
-  updatedAt    DateTime   @updatedAt
+  id                 String          @id @default(cuid())
+  batchId            String
+  batch              Batch           @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  labId              String
+  lab                User            @relation("TestConductor", fields: [labId], references: [id])
+  sampleId           String?         @unique
+  assignedBy         String?
+  assignedAt         DateTime?
+  status             LabTestStatus   @default(PENDING_ASSIGNMENT)
+  overallResult      QualityResult?
+  receivedAt         DateTime?
+  testingStartedAt   DateTime?
+  testingCompletedAt DateTime?
+  remarks            String?
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
 
-  // Relations
-  batchId      String
-  batch        Batch      @relation(fields: [batchId], references: [id], onDelete: Cascade)
-  conductedById String
-  conductedBy  User       @relation("TestConductor", fields: [conductedById], references: [id])
+  results            TestResult[]
+  reports            LabReport[]
 
+  @@index([batchId])
+  @@index([labId])
   @@map("quality_tests")
 }
 
+model TestResult {
+  id             String                @id @default(cuid())
+  qualityTestId  String
+  qualityTest    QualityTest           @relation(fields: [qualityTestId], references: [id], onDelete: Cascade)
+  parameter      String
+  value          Float?
+  unit           String?
+  referenceRange String?
+  resultStatus   ParameterResultStatus
+  remarks        String?
+  createdAt      DateTime              @default(now())
+  updatedAt      DateTime              @updatedAt
+
+  @@index([qualityTestId])
+  @@map("test_results")
+}
+
+model LabReport {
+  id             String      @id @default(cuid())
+  qualityTestId  String
+  qualityTest    QualityTest @relation(fields: [qualityTestId], references: [id], onDelete: Cascade)
+  reportNumber   String      @unique
+  reportUrl      String
+  reportFileName String
+  reportFileType String
+  status         String      @default("DRAFT") // DRAFT, FINALIZED
+  generatedBy    String
+  generator      User        @relation("ReportGenerator", fields: [generatedBy], references: [id])
+  generatedAt    DateTime    @default(now())
+  finalizedAt    DateTime?
+
+  @@index([qualityTestId])
+  @@map("lab_reports")
+}
+
 model SupplyChainEvent {
-  id          String   @id @default(cuid())
-  action      String
-  location    String?
-  notes       String?
-  timestamp   DateTime @default(now())
+  id              String   @id @default(cuid())
+  action          String
+  location        String?
+  notes           String?
+  quantity        Float?
+  unit            String?
+  latitude        Float?
+  longitude       Float?
+  referenceNumber String?
+  timestamp       DateTime @default(now())
 
   // Relations
-  batchId     String
-  batch       Batch    @relation(fields: [batchId], references: [id], onDelete: Cascade)
-  actorId     String
-  actor       User     @relation("EventActor", fields: [actorId], references: [id])
+  batchId         String
+  batch           Batch    @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  actorId         String
+  actor           User     @relation("EventActor", fields: [actorId], references: [id])
 
   @@map("supply_chain_events")
+}
+
+model VerificationDocument {
+  id                String   @id @default(cuid())
+  producerProfileId String
+  producerProfile   ProducerProfile @relation(fields: [producerProfileId], references: [id], onDelete: Cascade)
+  type              String
+  fileUrl           String
+  fileName          String
+  fileType          String
+  uploadedBy        String
+  createdAt         DateTime @default(now())
+
+  @@index([producerProfileId])
+  @@map("verification_documents")
+}
+
+model ProducerVerification {
+  id                  String               @id @default(cuid())
+  producerProfileId   String
+  producerProfile     ProducerProfile      @relation(fields: [producerProfileId], references: [id], onDelete: Cascade)
+  authorityId         String?
+  authority           User?                @relation("AssignedAuthority", fields: [authorityId], references: [id])
+  assignedBy          String?
+  assignedAt          DateTime?
+  status              RequestStatus        @default(PENDING)
+  decision            VerificationDecision?
+  verificationType    String               @default("INITIAL")
+  identityVerified    Boolean?
+  documentsVerified   Boolean?
+  landVerified        Boolean?
+  locationVerified    Boolean?
+  cultivationVerified Boolean?
+  inspectionDate      DateTime?
+  latitude            Float?
+  longitude           Float?
+  observations        String?
+  rejectionReason     String?
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
+
+  @@index([producerProfileId])
+  @@index([authorityId])
+  @@map("producer_verifications")
+}
+
+model BatchInspection {
+  id                    String               @id @default(cuid())
+  batchId               String
+  batch                 Batch                @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  authorityId           String?
+  authority             User?                @relation("BatchInspector", fields: [authorityId], references: [id])
+  assignedBy            String?
+  assignedAt            DateTime?
+  status                InspectionStatus     @default(PENDING)
+  decision              VerificationDecision?
+  declaredQuantity      Float
+  inspectedQuantity     Float?
+  herbIdentityVerified  Boolean?
+  physicalQualityStatus String?
+  packagingStatus       String?
+  documentsVerified     Boolean?
+  inspectionDate        DateTime?
+  latitude              Float?
+  longitude             Float?
+  observations          String?
+  rejectionReason       String?
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
+
+  @@index([batchId])
+  @@index([authorityId])
+  @@map("batch_inspections")
+}
+
+// ─── Blockchain ──────────────────────────────────────────────
+
+enum BlockchainRecordStatus {
+  PENDING
+  SUBMITTED
+  CONFIRMED
+  FAILED
+}
+
+model BlockchainRecord {
+  id            String                 @id @default(cuid())
+  entityType    String
+  entityId      String
+  recordVersion Int
+  dataHash      String
+  transactionId String?
+  blockNumber   String?
+  network       String?
+  channel       String?
+  chaincode     String?
+  status        BlockchainRecordStatus @default(PENDING)
+  anchoredAt    DateTime?
+  createdAt     DateTime               @default(now())
+  updatedAt     DateTime               @updatedAt
+
+  @@unique([entityType, entityId, recordVersion])
+  @@index([entityType, entityId])
+  @@index([status])
+  @@map("blockchain_records")
+}
+
+// ─── Public Traceability (Step 7) ────────────────────────
+
+enum QRCodeStatus {
+  ACTIVE
+  REVOKED
+}
+
+model QRCode {
+  id        String       @id @default(cuid())
+  code      String       @unique
+  batchId   String       @unique
+  batch     Batch        @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  status    QRCodeStatus @default(ACTIVE)
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  revokedAt DateTime?
+  revokedBy String?
+
+  @@index([status])
+  @@map("qr_codes")
+}
+
+// ─── Supply Chain & Distribution (Step 8) ────────────────
+
+enum AssignmentStatus {
+  ASSIGNED
+  ACCEPTED
+  COMPLETED
+  CANCELLED
+}
+
+model DistributorProfile {
+  id               String   @id @default(cuid())
+  userId           String   @unique
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  address          String
+  city             String
+  district         String
+  state            String
+  pincode          String
+  latitude         Float?
+  longitude        Float?
+  licenseNumber    String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("distributor_profiles")
+}
+
+model DistributorAssignment {
+  id            String           @id @default(cuid())
+  batchId       String
+  batch         Batch            @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  distributorId String
+  distributor   User             @relation("AssignedDistributor", fields: [distributorId], references: [id])
+  assignedBy    String
+  assignedAt    DateTime         @default(now())
+  status        AssignmentStatus @default(ASSIGNED)
+  acceptedAt    DateTime?
+  completedAt   DateTime?
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+
+  @@index([batchId])
+  @@index([distributorId])
+  @@index([status])
+  @@map("distributor_assignments")
+}
+
+// ─── Notifications (Step 9) ────────────────────────────────
+
+model Notification {
+  id         String               @id @default(cuid())
+  userId     String
+  user       User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type       NotificationType
+  title      String
+  message    String
+  entityType String?
+  entityId   String?
+  eventKey   String?
+  priority   NotificationPriority @default(NORMAL)
+  isRead     Boolean              @default(false)
+  readAt     DateTime?
+  createdAt  DateTime             @default(now())
+  updatedAt  DateTime             @updatedAt
+
+  @@unique([userId, eventKey])
+  @@index([userId])
+  @@index([userId, isRead])
+  @@index([createdAt])
+  @@index([userId, createdAt])
+  @@map("notifications")
+}
+
+// ─── Audit Logging (Step 10) ───────────────────────────────
+
+enum AuditAction {
+  USER_REGISTERED
+  USER_LOGIN
+  USER_LOGIN_FAILED
+  PRODUCER_PROFILE_CREATED
+  PRODUCER_PROFILE_UPDATED
+  VERIFICATION_REQUESTED
+  VERIFICATION_APPROVED
+  VERIFICATION_REJECTED
+  INSPECTION_REQUESTED
+  INSPECTION_STARTED
+  INSPECTION_APPROVED
+  INSPECTION_REJECTED
+  LAB_TEST_ASSIGNED
+  LAB_SAMPLE_RECEIVED
+  LAB_TEST_STARTED
+  LAB_RESULT_ADDED
+  LAB_TEST_COMPLETED
+  LAB_REPORT_FINALIZED
+  DISTRIBUTOR_ASSIGNED
+  BATCH_RECEIVED
+  BATCH_DISPATCHED
+  BATCH_DELIVERED
+  BLOCKCHAIN_ANCHORED
+  BLOCKCHAIN_ANCHOR_FAILED
+  QR_GENERATED
+  QR_REVOKED
+  SYSTEM_ALERT
+}
+
+model AuditLog {
+  id            String      @id @default(cuid())
+  actorId       String?
+  actor         User?       @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  action        AuditAction
+  entityType    String?
+  entityId      String?
+  previousState Json?
+  newState      Json?
+  metadata      Json?
+  ipAddress     String?
+  userAgent     String?
+  createdAt     DateTime    @default(now())
+
+  @@index([actorId])
+  @@index([action])
+  @@index([entityType, entityId])
+  @@index([createdAt])
+  @@map("audit_logs")
 }
