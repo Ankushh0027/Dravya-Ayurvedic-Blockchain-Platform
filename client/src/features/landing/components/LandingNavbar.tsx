@@ -3,16 +3,38 @@
 import { Button } from '@/components/ui/button'
 import { Smartphone } from 'lucide-react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
+import { cn } from '@/lib/utils'
 import { LanguageSelector } from '@/components/shared/LanguageSelector'
 
-export function LandingNavbar() {
+const navLinks = [
+  { key: 'nav.home', href: '/' },
+  { key: 'nav.about', href: '/about' },
+  { key: 'nav.howItWorks', href: '/how-it-works' },
+  { key: 'nav.features', href: '/features' },
+  { key: 'nav.contact', href: '/contact' },
+]
+
+export function LandingNavbar({ className }: { className?: string }) {
   const { t } = useTranslation()
+  const pathname = usePathname()
+
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/'
+    return pathname === href || pathname.startsWith(href + '/')
+  }
 
   return (
-    <div className="w-full bg-[#184E48] backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgb(0,0,0,0.1)] transition-all duration-300">
+    <div
+      className={cn(
+        'w-full bg-[#184E48] backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgb(0,0,0,0.1)] transition-all duration-300',
+        className
+      )}
+    >
       <nav className="flex items-center justify-between px-6 py-2.5 max-w-7xl mx-auto w-full">
-        <div className="flex items-center gap-3">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3">
           <div className="w-[66px] h-[66px] rounded-full overflow-hidden flex-shrink-0">
             <img
               src="/logo-out.png"
@@ -20,7 +42,6 @@ export function LandingNavbar() {
               className="w-full h-full object-cover object-center"
             />
           </div>
-
           <div className="flex flex-col justify-center">
             <div className="flex items-center gap-2.5">
               <h1 className="text-xl md:text-2xl font-bold leading-none text-white tracking-tight font-serif">
@@ -31,43 +52,33 @@ export function LandingNavbar() {
                 द्रव्य
               </span>
             </div>
-
             <p className="text-[10px] text-slate-300 font-bold tracking-[0.15em] uppercase mt-1">
               {t('landing.tagline')}
             </p>
           </div>
-        </div>
+        </Link>
 
+        {/* Nav Links */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/" className="text-base font-bold text-white border-b-2 border-teal-200 pb-1">
-            {t('nav.home')}
-          </Link>
-          <Link
-            href="/about"
-            className="text-base font-semibold text-slate-300 hover:text-white transition-colors"
-          >
-            {t('nav.about')}
-          </Link>
-          <Link
-            href="#"
-            className="text-base font-semibold text-slate-300 hover:text-white transition-colors"
-          >
-            {t('nav.howItWorks')}
-          </Link>
-          <Link
-            href="#"
-            className="text-base font-semibold text-slate-300 hover:text-white transition-colors"
-          >
-            {t('nav.features')}
-          </Link>
-          <Link
-            href="#"
-            className="text-base font-semibold text-slate-300 hover:text-white transition-colors"
-          >
-            {t('nav.contact')}
-          </Link>
+          {navLinks.map((link) => {
+            const active = isActive(link.href)
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-base transition-colors duration-200 ${
+                  active
+                    ? 'font-bold text-white border-b-2 border-teal-200 pb-1'
+                    : 'font-semibold text-slate-300 hover:text-white'
+                }`}
+              >
+                {t(link.key)}
+              </Link>
+            )
+          })}
         </div>
 
+        {/* Right side */}
         <div className="flex items-center gap-4">
           <Button
             variant="outline"
