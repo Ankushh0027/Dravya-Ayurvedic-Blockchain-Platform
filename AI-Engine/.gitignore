@@ -43,6 +43,8 @@ models/*
 reports/generated/
 *.log
 logs/
+runs/
+
 
 # Zip Archives & Compressed Files
 *.zip
