@@ -1,0 +1,90 @@
+{
+  "taxonomy_version": "v1",
+  "total_mappings": 331,
+  "counts_by_status": {
+    "UNREVIEWED": 96,
+    "NEEDS_REVIEW": 231,
+    "APPROVED": 4,
+    "REJECTED": 0
+  },
+  "counts_by_dataset": {
+    "CIMPd": {
+      "total": 42,
+      "UNREVIEWED": 15,
+      "NEEDS_REVIEW": 23,
+      "APPROVED": 4,
+      "REJECTED": 0
+    },
+    "Hugging_Face": {
+      "total": 169,
+      "UNREVIEWED": 76,
+      "NEEDS_REVIEW": 93,
+      "APPROVED": 0,
+      "REJECTED": 0
+    },
+    "Kaggle": {
+      "total": 120,
+      "UNREVIEWED": 5,
+      "NEEDS_REVIEW": 115,
+      "APPROVED": 0,
+      "REJECTED": 0
+    }
+  },
+  "counts_by_health_condition": {
+    "Healthy": {
+      "total": 22,
+      "UNREVIEWED": 7,
+      "NEEDS_REVIEW": 13,
+      "APPROVED": 2,
+      "REJECTED": 0
+    },
+    "Unhealthy": {
+      "total": 19,
+      "UNREVIEWED": 7,
+      "NEEDS_REVIEW": 10,
+      "APPROVED": 2,
+      "REJECTED": 0
+    },
+    "Unknown": {
+      "total": 290,
+      "UNREVIEWED": 82,
+      "NEEDS_REVIEW": 208,
+      "APPROVED": 0,
+      "REJECTED": 0
+    }
+  },
+  "counts_by_reviewer": {
+    "reviewer_001": {
+      "total_decisions": 10,
+      "APPROVED": 0,
+      "REJECTED": 0,
+      "NEEDS_REVIEW": 6,
+      "APPROVE": 4
+    }
+  },
+  "candidate_group_metrics": {
+    "total_candidate_groups": 200,
+    "fully_reviewed_groups": 1,
+    "pending_groups": 199
+  },
+  "active_sessions": 1,
+  "paused_sessions": 0,
+  "completed_sessions": 0,
+  "abandoned_sessions": 0,
+  "progress_by_reviewer": {
+    "reviewer_001": {
+      "total_sessions": 1,
+      "reviewed_mappings": 10,
+      "approved": 4,
+      "rejected": 0,
+      "needs_review": 6,
+      "skipped": 0
+    }
+  },
+  "reviewed_count": 4,
+  "pending_count": 327,
+  "progress_percent": 1.21,
+  "approval_rate": 100.0,
+  "rejection_rate": 0.0,
+  "generated_at": "2026-08-04T15:33:41.913752+00:00"
+}

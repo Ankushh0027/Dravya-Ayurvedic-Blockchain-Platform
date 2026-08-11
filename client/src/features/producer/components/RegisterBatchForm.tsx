@@ -5,8 +5,10 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
+import { useTranslation } from 'react-i18next'
 
 export function RegisterBatchForm() {
+  const { t } = useTranslation()
   const [submitted, setSubmitted] = useState(false)
   const [cultivationFile, setCultivationFile] = useState<File | null>(null)
   const [harvestFiles, setHarvestFiles] = useState<File[]>([])
@@ -24,7 +26,6 @@ export function RegisterBatchForm() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    // TODO: replace with real API call once the batch + file upload endpoints exist on the server
     console.log('Submitting batch:', form, { cultivationFile, harvestFiles })
     setSubmitted(true)
   }
@@ -32,12 +33,12 @@ export function RegisterBatchForm() {
   if (submitted) {
     return (
       <div className="rounded-lg border p-6 text-center">
-        <p className="font-medium">Batch submitted for verification</p>
+        <p className="font-medium">{t('producer.submittedTitle')}</p>
         <p className="text-sm text-muted-foreground mt-1">
-          You&apos;ll see it under My Batches once processing begins.
+          {t('producer.submittedSubtitle')}
         </p>
         <Button className="mt-4" variant="outline" onClick={() => setSubmitted(false)}>
-          Register another batch
+          {t('producer.registerAnother')}
         </Button>
       </div>
     )
@@ -47,36 +48,36 @@ export function RegisterBatchForm() {
     <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border p-6">
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="herbName">Herb name</Label>
+          <Label htmlFor="herbName">{t('producer.herbName')}</Label>
           <Input id="herbName" name="herbName" placeholder="Ashwagandha" value={form.herbName} onChange={handleChange} required />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="botanicalName">Botanical name</Label>
+          <Label htmlFor="botanicalName">{t('producer.botanicalName')}</Label>
           <Input id="botanicalName" name="botanicalName" placeholder="Withania somnifera" value={form.botanicalName} onChange={handleChange} required />
         </div>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="harvestDate">Harvest date</Label>
+          <Label htmlFor="harvestDate">{t('producer.harvestDate')}</Label>
           <Input id="harvestDate" name="harvestDate" type="date" value={form.harvestDate} onChange={handleChange} required />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="farmLocation">Farm location</Label>
+          <Label htmlFor="farmLocation">{t('producer.farmLocation')}</Label>
           <Input id="farmLocation" name="farmLocation" placeholder="Sehore, Madhya Pradesh" value={form.farmLocation} onChange={handleChange} required />
         </div>
       </div>
       <div className="space-y-2">
-        <Label htmlFor="description">Description (optional)</Label>
-        <Textarea id="description" name="description" placeholder="Any additional notes" value={form.description} onChange={handleChange} />
+        <Label htmlFor="description">{t('producer.descriptionOptional')}</Label>
+        <Textarea id="description" name="description" placeholder="..." value={form.description} onChange={handleChange} />
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="cultivationFile">Cultivation details</Label>
+          <Label htmlFor="cultivationFile">{t('producer.cultivationDetails')}</Label>
           <label
             htmlFor="cultivationFile"
             className="flex cursor-pointer flex-col items-center justify-center rounded-md border border-dashed p-4 text-center text-sm text-muted-foreground hover:bg-muted/50"
           >
-            {cultivationFile ? cultivationFile.name : 'Click to upload or drag and drop'}
+            {cultivationFile ? cultivationFile.name : t('producer.clickUploadOrDrag')}
           </label>
           <input
             id="cultivationFile"
@@ -87,12 +88,12 @@ export function RegisterBatchForm() {
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="harvestFiles">Harvest images</Label>
+          <Label htmlFor="harvestFiles">{t('producer.harvestImages')}</Label>
           <label
             htmlFor="harvestFiles"
             className="flex cursor-pointer flex-col items-center justify-center rounded-md border border-dashed p-4 text-center text-sm text-muted-foreground hover:bg-muted/50"
           >
-            {harvestFiles.length > 0 ? `${harvestFiles.length} file(s) selected` : 'Click to upload or drag and drop'}
+            {harvestFiles.length > 0 ? `${harvestFiles.length} ${t('producer.filesSelected')}` : t('producer.clickUploadOrDrag')}
           </label>
           <input
             id="harvestFiles"
@@ -104,7 +105,7 @@ export function RegisterBatchForm() {
           />
         </div>
       </div>
-      <Button type="submit">Submit batch</Button>
+      <Button type="submit">{t('producer.submitBatch')}</Button>
     </form>
   )
 }

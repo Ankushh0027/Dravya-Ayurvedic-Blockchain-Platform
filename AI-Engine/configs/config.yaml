@@ -1,0 +1,47 @@
+project_name: "Dravya AI"
+version: "0.1.0"
+python_version: "3.12"
+
+paths:
+  raw_datasets: "datasets/raw"
+  processed_datasets: "datasets/processed"
+  final_datasets: "datasets/final"
+  model_output: "models"
+  reports_dir: "reports/dataset_analysis"
+  evaluation_reports_dir: "reports/model_evaluation"
+
+
+model:
+  architecture: "efficientnet_b0"
+  image_size: 224
+  batch_size: 16
+  epochs: 5
+  learning_rate: 0.001
+  validation_split: 0.2
+  random_seed: 42
+  model_version: "v1"
+  device: "cpu"
+
+evaluation:
+  quality_gate:
+    min_accuracy: 0.70
+    min_macro_f1: 0.70
+    min_precision: 0.70
+    min_recall: 0.70
+    require_all_classes: true
+
+api:
+  service_name: "dravya-ai-engine"
+  title: "Dravya AI Engine - Medicinal Plant Inference API"
+  description: "Production-grade plant classification inference API powered by Dravya AI Engine"
+  version: "0.1.0"
+  max_upload_size_bytes: 10485760
+  allowed_content_types:
+    - "image/jpeg"
+    - "image/jpg"
+    - "image/png"
+    - "image/webp"
+    - "image/bmp"
+
+
+

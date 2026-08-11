@@ -21,7 +21,10 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel"
 
+import { useTranslation } from 'react-i18next'
+
 export function HowItWorks() {
+  const { t } = useTranslation()
   const [api, setApi] = React.useState<CarouselApi>()
   const [current, setCurrent] = React.useState(0)
   const directionRef = React.useRef<"forward" | "backward">("forward")
@@ -30,42 +33,42 @@ export function HowItWorks() {
     {
       icon: Leaf,
       number: "01",
-      title: "Harvest",
-      subtitle: "Origin & Batch Creation",
-      description: "Farmers log raw herb origin, geo-location, and harvest batch data directly onto the platform.",
-      badge: "Source",
+      title: t('landing.step1Title'),
+      subtitle: t('landing.step1Subtitle'),
+      description: t('landing.step1Desc'),
+      badge: t('landing.step1Badge'),
     },
     {
       icon: FlaskConical,
       number: "02",
-      title: "Verify",
-      subtitle: "Lab & Quality Assurance",
-      description: "Certified labs verify heavy metals, purity, moisture levels, and authenticity metrics.",
-      badge: "Testing",
+      title: t('landing.step2Title'),
+      subtitle: t('landing.step2Subtitle'),
+      description: t('landing.step2Desc'),
+      badge: t('landing.step2Badge'),
     },
     {
       icon: Factory,
       number: "03",
-      title: "Process",
-      subtitle: "Standardized Processing",
-      description: "Manufacturers process herbs into formulations with full environmental and parameter logs.",
-      badge: "Manufacturing",
+      title: t('landing.step3Title'),
+      subtitle: t('landing.step3Subtitle'),
+      description: t('landing.step3Desc'),
+      badge: t('landing.step3Badge'),
     },
     {
       icon: Package,
       number: "04",
-      title: "Distribute",
-      subtitle: "Chain of Custody",
-      description: "Distributors and retailers maintain temperature, custody, and real-time location logs.",
-      badge: "Logistics",
+      title: t('landing.step4Title'),
+      subtitle: t('landing.step4Subtitle'),
+      description: t('landing.step4Desc'),
+      badge: t('landing.step4Badge'),
     },
     {
       icon: Users,
       number: "05",
-      title: "Consumer",
-      subtitle: "QR Code Verification",
-      description: "End consumers scan a QR code on packaging to view the complete lab & journey audit trail.",
-      badge: "Trust",
+      title: t('landing.step5Title'),
+      subtitle: t('landing.step5Subtitle'),
+      description: t('landing.step5Desc'),
+      badge: t('landing.step5Badge'),
     },
   ]
 
@@ -78,7 +81,6 @@ export function HowItWorks() {
       setCurrent(api.selectedScrollSnap() + 1)
     })
 
-    // Continuous Single Direction Autoplay (1 -> 2 -> 3 -> 4 -> 5 -> 1 -> 2)
     const interval = setInterval(() => {
       if (!api) return
       api.scrollNext()
@@ -107,24 +109,16 @@ export function HowItWorks() {
         {/* Header Tag & Section Title */}
         <div className="mx-auto max-w-3xl text-center mb-12 lg:mb-16">
 
-
           <h2 className="text-4xl font-serif font-extrabold tracking-tight text-slate-900 md:text-5xl lg:text-6xl mb-6 leading-[1.15]">
-            Every Step.{" "}
-            <span className="text-[#184E48] relative whitespace-nowrap">
-              Every Time.
-              <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#184E48]/30" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" strokeWidth="3" />
-              </svg>
-            </span>
-            <br className="hidden md:block" /> Verified.
+            {t('landing.howItWorksTitle')}
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-slate-600 font-medium">
-            Swipe through the 5 stages of Dravya&apos;s Ayurvedic supply chain verification.
+            {t('landing.howItWorksSub')}
           </p>
         </div>
 
-        {/* Carousel Container - Reduced width by ~10% (max-w-[1350px]) */}
+        {/* Carousel Container */}
         <div className="relative max-w-[1350px] mx-auto px-4 md:px-12">
 
           <Carousel
@@ -141,7 +135,7 @@ export function HowItWorks() {
 
                 return (
                   <CarouselItem
-                    key={step.title}
+                    key={index}
                     className="pl-3 md:pl-4 basis-full md:basis-1/2 lg:basis-1/4"
                   >
                     <div
@@ -182,7 +176,7 @@ export function HowItWorks() {
 
                       <div className="relative z-10 pt-5 mt-6 border-t border-slate-100 flex items-center justify-between">
                         <span className="text-[12px] font-bold text-slate-400 group-hover:text-[#184E48] transition-colors duration-300">
-                          Verified Stage {step.number}
+                          {t('landing.verifiedStage')} {step.number}
                         </span>
                         <CheckCircle2 className="w-4 h-4 text-[#184E48] opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>

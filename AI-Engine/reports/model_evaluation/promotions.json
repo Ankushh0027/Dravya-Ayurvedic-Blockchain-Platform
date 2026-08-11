@@ -1,0 +1,95 @@
+{
+  "last_updated": "2026-08-08T15:43:35.270180+00:00",
+  "total_events": 1,
+  "promotions": [
+    {
+      "status": "PROMOTED",
+      "candidate_version": "v1-smoke",
+      "previous_active_version": "v1-smoke",
+      "promoted_at": "2026-08-08T15:43:35.270180+00:00",
+      "forced": false,
+      "metrics": {
+        "accuracy": 0.9982,
+        "precision": 0.998,
+        "recall": 0.9984,
+        "f1_score": 0.9981,
+        "per_class_precision": [
+          0.996,
+          1.0
+        ],
+        "per_class_recall": [
+          1.0,
+          0.9967
+        ],
+        "per_class_f1": [
+          0.998,
+          0.9983
+        ],
+        "confusion_matrix": [
+          [
+            492,
+            0
+          ],
+          [
+            2,
+            598
+          ]
+        ]
+      },
+      "quality_gate": {
+        "passed": true,
+        "model_version": "v1-smoke",
+        "thresholds": {
+          "min_accuracy": 0.7,
+          "min_macro_f1": 0.7,
+          "min_precision": 0.7,
+          "min_recall": 0.7,
+          "require_all_classes": true
+        },
+        "checks": {
+          "artifact_exists": true,
+          "version_matches": true,
+          "total_samples_valid": true,
+          "accuracy_passed": true,
+          "macro_f1_passed": true,
+          "precision_passed": true,
+          "recall_passed": true,
+          "confusion_matrix_valid": true,
+          "classes_evaluated_valid": true,
+          "no_nan_values": true,
+          "metadata_consistent": true
+        },
+        "failed_checks": [],
+        "metrics": {
+          "accuracy": 0.9982,
+          "precision": 0.998,
+          "recall": 0.9984,
+          "f1_score": 0.9981,
+          "per_class_precision": [
+            0.996,
+            1.0
+          ],
+          "per_class_recall": [
+            1.0,
+            0.9967
+          ],
+          "per_class_f1": [
+            0.998,
+            0.9983
+          ],
+          "confusion_matrix": [
+            [
+              492,
+              0
+            ],
+            [
+              2,
+              598
+            ]
+          ]
+        },
+        "evaluated_at": "2026-08-08T15:42:53.273480+00:00"
+      }
+    }
+  ]
+}

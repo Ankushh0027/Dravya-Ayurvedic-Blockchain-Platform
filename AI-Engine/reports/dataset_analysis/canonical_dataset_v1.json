@@ -1,0 +1,1060 @@
+{
+  "metadata": {
+    "dataset_name": "Dravya AI Canonical Dataset V1",
+    "version": "v1",
+    "created_at": "2026-08-09T07:31:32.458956+00:00",
+    "random_seed": 42,
+    "source_inventory_version": "v3",
+    "candidate_manifest_version": "v2",
+    "duplicate_audit_version": "v3"
+  },
+  "summary": {
+    "total_physical_images_scanned": 42062,
+    "total_unique_sha256_hashes": 29161,
+    "total_canonical_images_materialized": 22547,
+    "num_approved_classes": 94,
+    "needs_review_classes_excluded": {
+      "CIMPd": {
+        "total_images": 8592,
+        "unique_hashes": 8592,
+        "duplicate_groups": 0,
+        "duplicate_files": 0,
+        "duplicate_instances": 0
+      },
+      "Kaggle": {
+        "total_images": 12845,
+        "unique_hashes": 12747,
+        "duplicate_groups": 98,
+        "duplicate_files": 196,
+        "duplicate_instances": 98
+      },
+      "Hugging_Face": {
+        "total_images": 20625,
+        "unique_hashes": 20530,
+        "duplicate_groups": 95,
+        "duplicate_files": 190,
+        "duplicate_instances": 95
+      }
+    },
+    "train_images": 18037,
+    "validation_images": 2254,
+    "test_images": 2256,
+    "cross_split_hash_leakage": 0,
+    "corrupt_images": 0,
+    "hash_mismatches": 0,
+    "min_class_size": 40,
+    "max_class_size": 1083,
+    "mean_class_size": 274.96,
+    "median_class_size": 201.5,
+    "imbalance_ratio": 27.07,
+    "ready_for_gpu_training": "YES"
+  },
+  "per_class_breakdown": [
+    {
+      "class_id": "DRAVYA_0001",
+      "canonical_species_name": "Murraya koenigii (Curry Leaf)",
+      "scientific_name": "Murraya koenigii",
+      "total_images": 1083,
+      "train_count": 866,
+      "val_count": 108,
+      "test_count": 109,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0002",
+      "canonical_species_name": "Ocimum sanctum (Holy Basil/Tulsi)",
+      "scientific_name": "Ocimum sanctum",
+      "total_images": 983,
+      "train_count": 786,
+      "val_count": 98,
+      "test_count": 99,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0003",
+      "canonical_species_name": "Rosa spp. (Rose)",
+      "scientific_name": "Rosa spp.",
+      "total_images": 722,
+      "train_count": 578,
+      "val_count": 72,
+      "test_count": 72,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0004",
+      "canonical_species_name": "Solanum nigrum (Makoy/Black Nightshade)",
+      "scientific_name": "Solanum nigrum",
+      "total_images": 937,
+      "train_count": 750,
+      "val_count": 94,
+      "test_count": 93,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0005",
+      "canonical_species_name": "Mentha spp. (Mint)",
+      "scientific_name": "Mentha spp.",
+      "total_images": 652,
+      "train_count": 522,
+      "val_count": 65,
+      "test_count": 65,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0006",
+      "canonical_species_name": "Saraca asoca (Ashoka)",
+      "scientific_name": "Saraca asoca",
+      "total_images": 620,
+      "train_count": 496,
+      "val_count": 62,
+      "test_count": 62,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0007",
+      "canonical_species_name": "Plectranthus amboinicus (Doddapatre/Indian Borage)",
+      "scientific_name": "Plectranthus amboinicus",
+      "total_images": 601,
+      "train_count": 481,
+      "val_count": 60,
+      "test_count": 60,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0008",
+      "canonical_species_name": "Piper betle (Betel Leaf)",
+      "scientific_name": "Piper betle",
+      "total_images": 440,
+      "train_count": 352,
+      "val_count": 44,
+      "test_count": 44,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0009",
+      "canonical_species_name": "Lantana camara (Lantana)",
+      "scientific_name": "Lantana camara",
+      "total_images": 745,
+      "train_count": 596,
+      "val_count": 74,
+      "test_count": 75,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0010",
+      "canonical_species_name": "Psidium guajava (Guava)",
+      "scientific_name": "Psidium guajava",
+      "total_images": 527,
+      "train_count": 422,
+      "val_count": 53,
+      "test_count": 52,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0011",
+      "canonical_species_name": "Hibiscus rosa-sinensis (Hibiscus)",
+      "scientific_name": "Hibiscus rosa-sinensis",
+      "total_images": 492,
+      "train_count": 394,
+      "val_count": 49,
+      "test_count": 49,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face",
+        "Kaggle"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0012",
+      "canonical_species_name": "Citrus limon (Lemon)",
+      "scientific_name": "Citrus limon",
+      "total_images": 497,
+      "train_count": 398,
+      "val_count": 50,
+      "test_count": 49,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0013",
+      "canonical_species_name": "Tinospora cordifolia (Giloy/Amrita)",
+      "scientific_name": "Tinospora cordifolia",
+      "total_images": 420,
+      "train_count": 336,
+      "val_count": 42,
+      "test_count": 42,
+      "sources": [
+        "Hugging_Face",
+        "Kaggle"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0014",
+      "canonical_species_name": "Bambusoideae (Bamboo)",
+      "scientific_name": "Bambusoideae",
+      "total_images": 366,
+      "train_count": 293,
+      "val_count": 37,
+      "test_count": 36,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0015",
+      "canonical_species_name": "Annona squamosa (Custard Apple)",
+      "scientific_name": "Annona squamosa",
+      "total_images": 622,
+      "train_count": 498,
+      "val_count": 62,
+      "test_count": 62,
+      "sources": [
+        "CIMPd"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0016",
+      "canonical_species_name": "Azadirachta indica (Neem)",
+      "scientific_name": "Azadirachta indica",
+      "total_images": 338,
+      "train_count": 270,
+      "val_count": 34,
+      "test_count": 34,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0017",
+      "canonical_species_name": "Artocarpus heterophyllus (Jackfruit)",
+      "scientific_name": "Artocarpus heterophyllus",
+      "total_images": 463,
+      "train_count": 370,
+      "val_count": 46,
+      "test_count": 47,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0018",
+      "canonical_species_name": "Ricinus communis (Castor)",
+      "scientific_name": "Ricinus communis",
+      "total_images": 289,
+      "train_count": 231,
+      "val_count": 29,
+      "test_count": 29,
+      "sources": [
+        "Hugging_Face",
+        "Kaggle"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0019",
+      "canonical_species_name": "Pongamia pinnata (Honge/Karanja)",
+      "scientific_name": "Pongamia pinnata",
+      "total_images": 303,
+      "train_count": 242,
+      "val_count": 30,
+      "test_count": 31,
+      "sources": [
+        "Hugging_Face",
+        "Kaggle"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0020",
+      "canonical_species_name": "Mangifera indica (Mango)",
+      "scientific_name": "Mangifera indica",
+      "total_images": 311,
+      "train_count": 249,
+      "val_count": 31,
+      "test_count": 31,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0021",
+      "canonical_species_name": "Aegle marmelos (Bael)",
+      "scientific_name": "Aegle marmelos",
+      "total_images": 559,
+      "train_count": 447,
+      "val_count": 56,
+      "test_count": 56,
+      "sources": [
+        "CIMPd"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0022",
+      "canonical_species_name": "Aloe vera",
+      "scientific_name": "Aloe barbadensis",
+      "total_images": 282,
+      "train_count": 226,
+      "val_count": 28,
+      "test_count": 28,
+      "sources": [
+        "Hugging_Face",
+        "Kaggle"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0023",
+      "canonical_species_name": "Jasminum spp. (Jasmine)",
+      "scientific_name": "Jasminum spp.",
+      "total_images": 307,
+      "train_count": 246,
+      "val_count": 31,
+      "test_count": 30,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0024",
+      "canonical_species_name": "Carica papaya (Papaya)",
+      "scientific_name": "Carica papaya",
+      "total_images": 239,
+      "train_count": 191,
+      "val_count": 24,
+      "test_count": 24,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0025",
+      "canonical_species_name": "Calotropis gigantea (Crown Flower/Ekka)",
+      "scientific_name": "Calotropis gigantea",
+      "total_images": 293,
+      "train_count": 234,
+      "val_count": 29,
+      "test_count": 30,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0026",
+      "canonical_species_name": "Nyctanthes arbor-tristis (Harsingar/Parijat)",
+      "scientific_name": "Nyctanthes arbor-tristis",
+      "total_images": 509,
+      "train_count": 407,
+      "val_count": 51,
+      "test_count": 51,
+      "sources": [
+        "CIMPd"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0027",
+      "canonical_species_name": "Bauhinia variegata (Kachnar)",
+      "scientific_name": "Bauhinia variegata",
+      "total_images": 508,
+      "train_count": 406,
+      "val_count": 51,
+      "test_count": 51,
+      "sources": [
+        "CIMPd"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0028",
+      "canonical_species_name": "Bacopa monnieri (Brahmi)",
+      "scientific_name": "Bacopa monnieri",
+      "total_images": 248,
+      "train_count": 198,
+      "val_count": 25,
+      "test_count": 25,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0029",
+      "canonical_species_name": "Clerodendrum splendens",
+      "scientific_name": "Clerodendrum splendens",
+      "total_images": 492,
+      "train_count": 394,
+      "val_count": 49,
+      "test_count": 49,
+      "sources": [
+        "CIMPd"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0030",
+      "canonical_species_name": "Nerium oleander (Oleander)",
+      "scientific_name": "Nerium oleander",
+      "total_images": 235,
+      "train_count": 188,
+      "val_count": 24,
+      "test_count": 23,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0032",
+      "canonical_species_name": "Salvia splendens (Scarlet Sage)",
+      "scientific_name": "Salvia splendens",
+      "total_images": 462,
+      "train_count": 370,
+      "val_count": 46,
+      "test_count": 46,
+      "sources": [
+        "CIMPd"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0033",
+      "canonical_species_name": "Lawsonia inermis (Henna)",
+      "scientific_name": "Lawsonia inermis",
+      "total_images": 228,
+      "train_count": 182,
+      "val_count": 23,
+      "test_count": 23,
+      "sources": [
+        "Hugging_Face",
+        "Kaggle"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0034",
+      "canonical_species_name": "Punica granatum (Pomegranate)",
+      "scientific_name": "Punica granatum",
+      "total_images": 222,
+      "train_count": 178,
+      "val_count": 22,
+      "test_count": 22,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0035",
+      "canonical_species_name": "Phyllanthus emblica (Amla)",
+      "scientific_name": "Phyllanthus emblica",
+      "total_images": 213,
+      "train_count": 170,
+      "val_count": 21,
+      "test_count": 22,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0036",
+      "canonical_species_name": "Tropaeolum majus (Nasturtium)",
+      "scientific_name": "Tropaeolum majus",
+      "total_images": 424,
+      "train_count": 339,
+      "val_count": 42,
+      "test_count": 43,
+      "sources": [
+        "CIMPd"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0037",
+      "canonical_species_name": "Basella alba (Malabar Spinach)",
+      "scientific_name": "Basella alba",
+      "total_images": 249,
+      "train_count": 199,
+      "val_count": 25,
+      "test_count": 25,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0038",
+      "canonical_species_name": "Manilkara zapota (Sapota/Chikoo)",
+      "scientific_name": "Manilkara zapota",
+      "total_images": 190,
+      "train_count": 152,
+      "val_count": 19,
+      "test_count": 19,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0039",
+      "canonical_species_name": "Tagetes spp. (Marigold)",
+      "scientific_name": "Tagetes spp.",
+      "total_images": 279,
+      "train_count": 223,
+      "val_count": 28,
+      "test_count": 28,
+      "sources": [
+        "CIMPd",
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0040",
+      "canonical_species_name": "Cardiospermum halicacabum (Balloon Vine)",
+      "scientific_name": "Cardiospermum halicacabum",
+      "total_images": 306,
+      "train_count": 245,
+      "val_count": 31,
+      "test_count": 30,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0041",
+      "canonical_species_name": "Tamarindus indica (Tamarind)",
+      "scientific_name": "Tamarindus indica",
+      "total_images": 176,
+      "train_count": 141,
+      "val_count": 18,
+      "test_count": 17,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0042",
+      "canonical_species_name": "Coriandrum sativum (Coriander)",
+      "scientific_name": "Coriandrum sativum",
+      "total_images": 235,
+      "train_count": 188,
+      "val_count": 24,
+      "test_count": 23,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0043",
+      "canonical_species_name": "Catharanthus roseus (Sadabahar)",
+      "scientific_name": "Catharanthus roseus",
+      "total_images": 189,
+      "train_count": 151,
+      "val_count": 19,
+      "test_count": 19,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0044",
+      "canonical_species_name": "Cymbopogon citratus (Lemongrass)",
+      "scientific_name": "Cymbopogon citratus",
+      "total_images": 146,
+      "train_count": 117,
+      "val_count": 15,
+      "test_count": 14,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0045",
+      "canonical_species_name": "Withania somnifera (Ashwagandha)",
+      "scientific_name": "Withania somnifera",
+      "total_images": 140,
+      "train_count": 112,
+      "val_count": 14,
+      "test_count": 14,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0046",
+      "canonical_species_name": "Persea americana (Avocado)",
+      "scientific_name": "Persea americana",
+      "total_images": 146,
+      "train_count": 117,
+      "val_count": 15,
+      "test_count": 14,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0047",
+      "canonical_species_name": "Pelargonium spp. (Geranium)",
+      "scientific_name": "Pelargonium spp.",
+      "total_images": 146,
+      "train_count": 117,
+      "val_count": 15,
+      "test_count": 14,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0048",
+      "canonical_species_name": "Oxalis spp. (Wood Sorrel)",
+      "scientific_name": "Oxalis spp.",
+      "total_images": 146,
+      "train_count": 117,
+      "val_count": 15,
+      "test_count": 14,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0049",
+      "canonical_species_name": "Barleria (Barlaria)",
+      "scientific_name": "Barleria spp.",
+      "total_images": 284,
+      "train_count": 227,
+      "val_count": 28,
+      "test_count": 29,
+      "sources": [
+        "CIMPd"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0050",
+      "canonical_species_name": "Euphorbia hirta (Asthma Weed)",
+      "scientific_name": "Euphorbia hirta",
+      "total_images": 163,
+      "train_count": 130,
+      "val_count": 16,
+      "test_count": 17,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0051",
+      "canonical_species_name": "Amaranthus viridis (Green Amaranth)",
+      "scientific_name": "Amaranthus viridis",
+      "total_images": 245,
+      "train_count": 196,
+      "val_count": 24,
+      "test_count": 25,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0052",
+      "canonical_species_name": "Palak(Spinach)-Spinacia Oleracea",
+      "scientific_name": "Spinacia oleracea",
+      "total_images": 84,
+      "train_count": 67,
+      "val_count": 8,
+      "test_count": 9,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0053",
+      "canonical_species_name": "Annona squamosa (Custard Apple/Seethapala)",
+      "scientific_name": "Annona squamosa",
+      "total_images": 114,
+      "train_count": 91,
+      "val_count": 11,
+      "test_count": 12,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0057",
+      "canonical_species_name": "Moringa oleifera (Drumstick/Moringa)",
+      "scientific_name": "Moringa oleifera",
+      "total_images": 133,
+      "train_count": 106,
+      "val_count": 13,
+      "test_count": 14,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0058",
+      "canonical_species_name": "Malabar_Spinach-Basella Alba",
+      "scientific_name": "Basella alba",
+      "total_images": 106,
+      "train_count": 85,
+      "val_count": 11,
+      "test_count": 10,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0059",
+      "canonical_species_name": "Tribulus terrestris (Gokhru)",
+      "scientific_name": "Tribulus terrestris",
+      "total_images": 169,
+      "train_count": 135,
+      "val_count": 17,
+      "test_count": 17,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0060",
+      "canonical_species_name": "Coffea spp. (Coffee)",
+      "scientific_name": "Coffea spp.",
+      "total_images": 83,
+      "train_count": 66,
+      "val_count": 8,
+      "test_count": 9,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0061",
+      "canonical_species_name": "Zingiber officinale (Ginger)",
+      "scientific_name": "Zingiber officinale",
+      "total_images": 82,
+      "train_count": 66,
+      "val_count": 8,
+      "test_count": 8,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0062",
+      "canonical_species_name": "Gomphrena globosa (Globe Amaranth)",
+      "scientific_name": "Gomphrena globosa",
+      "total_images": 69,
+      "train_count": 55,
+      "val_count": 7,
+      "test_count": 7,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0063",
+      "canonical_species_name": "Eucalyptus spp. (Eucalyptus)",
+      "scientific_name": "Eucalyptus spp.",
+      "total_images": 80,
+      "train_count": 64,
+      "val_count": 8,
+      "test_count": 8,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0064",
+      "canonical_species_name": "Sarcostemma acidum (Somlata)",
+      "scientific_name": "Sarcostemma acidum",
+      "total_images": 159,
+      "train_count": 127,
+      "val_count": 16,
+      "test_count": 16,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0065",
+      "canonical_species_name": "Grewia asiatica (Phalsa/Gasagase)",
+      "scientific_name": "Grewia asiatica",
+      "total_images": 79,
+      "train_count": 63,
+      "val_count": 8,
+      "test_count": 8,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0075",
+      "canonical_species_name": "Leucas aspera (Thumbe)",
+      "scientific_name": "Leucas aspera",
+      "total_images": 74,
+      "train_count": 59,
+      "val_count": 7,
+      "test_count": 8,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0076",
+      "canonical_species_name": "Eclipta prostrata (Bhringraj)",
+      "scientific_name": "Eclipta prostrata",
+      "total_images": 73,
+      "train_count": 58,
+      "val_count": 7,
+      "test_count": 8,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0077",
+      "canonical_species_name": "Brassica oleracea var. gongylodes (Kohlrabi)",
+      "scientific_name": "Brassica oleracea",
+      "total_images": 73,
+      "train_count": 58,
+      "val_count": 7,
+      "test_count": 8,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0078",
+      "canonical_species_name": "Padri",
+      "scientific_name": "Unknown",
+      "total_images": 73,
+      "train_count": 58,
+      "val_count": 7,
+      "test_count": 8,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0084",
+      "canonical_species_name": "Capsicum spp. (Chilli)",
+      "scientific_name": "Capsicum spp.",
+      "total_images": 69,
+      "train_count": 55,
+      "val_count": 7,
+      "test_count": 7,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0085",
+      "canonical_species_name": "Colocasia esculenta (Taro)",
+      "scientific_name": "Colocasia esculenta",
+      "total_images": 69,
+      "train_count": 55,
+      "val_count": 7,
+      "test_count": 7,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0086",
+      "canonical_species_name": "Tecoma spp.",
+      "scientific_name": "Tecoma spp.",
+      "total_images": 66,
+      "train_count": 53,
+      "val_count": 7,
+      "test_count": 6,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0088",
+      "canonical_species_name": "Ruta graveolens (Common Rue)",
+      "scientific_name": "Ruta graveolens",
+      "total_images": 67,
+      "train_count": 54,
+      "val_count": 7,
+      "test_count": 6,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0089",
+      "canonical_species_name": "Ocimum basilicum var. pilosum (Kamakasturi)",
+      "scientific_name": "Ocimum basilicum",
+      "total_images": 67,
+      "train_count": 54,
+      "val_count": 7,
+      "test_count": 6,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0091",
+      "canonical_species_name": "Cinnamomum camphora (Camphor Tree)",
+      "scientific_name": "Cinnamomum camphora",
+      "total_images": 66,
+      "train_count": 53,
+      "val_count": 7,
+      "test_count": 6,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0092",
+      "canonical_species_name": "Solanum lycopersicum (Tomato)",
+      "scientific_name": "Solanum lycopersicum",
+      "total_images": 62,
+      "train_count": 50,
+      "val_count": 6,
+      "test_count": 6,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0093",
+      "canonical_species_name": "Acalypha indica (Indian Copperleaf)",
+      "scientific_name": "Acalypha indica",
+      "total_images": 124,
+      "train_count": 99,
+      "val_count": 12,
+      "test_count": 13,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0094",
+      "canonical_species_name": "Ocimum basilicum (Sweet Basil)",
+      "scientific_name": "Ocimum basilicum",
+      "total_images": 123,
+      "train_count": 98,
+      "val_count": 12,
+      "test_count": 13,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0095",
+      "canonical_species_name": "Nerale",
+      "scientific_name": "Unknown",
+      "total_images": 62,
+      "train_count": 50,
+      "val_count": 6,
+      "test_count": 6,
+      "sources": [
+        "Hugging_Face",
+        "Kaggle"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0096",
+      "canonical_species_name": "Magnolia champaca (Sampige)",
+      "scientific_name": "Magnolia champaca",
+      "total_images": 61,
+      "train_count": 49,
+      "val_count": 6,
+      "test_count": 6,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0097",
+      "canonical_species_name": "Physalis peruviana (Cape Gooseberry)",
+      "scientific_name": "Physalis peruviana",
+      "total_images": 122,
+      "train_count": 98,
+      "val_count": 12,
+      "test_count": 12,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0099",
+      "canonical_species_name": "Trigonella foenum-graecum (Fenugreek)",
+      "scientific_name": "Trigonella foenum-graecum",
+      "total_images": 116,
+      "train_count": 93,
+      "val_count": 12,
+      "test_count": 11,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0100",
+      "canonical_species_name": "Urtica dioica (Stinging Nettle)",
+      "scientific_name": "Urtica dioica",
+      "total_images": 106,
+      "train_count": 85,
+      "val_count": 11,
+      "test_count": 10,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0101",
+      "canonical_species_name": "Parijatha-Nyctanthes Arbor-Tristis",
+      "scientific_name": "Nyctanthes arbor",
+      "total_images": 40,
+      "train_count": 32,
+      "val_count": 4,
+      "test_count": 4,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0102",
+      "canonical_species_name": "Amaranthus titan (Giant Pigweed)",
+      "scientific_name": "Amaranthus titan",
+      "total_images": 103,
+      "train_count": 82,
+      "val_count": 10,
+      "test_count": 11,
+      "sources": [
+        "Hugging_Face"
+      ]
+    },
+    {
+      "class_id": "DRAVYA_0103",
+      "canonical_species_name": "Digera muricata (False Amaranth)",
+      "scientific_name": "Digera muricata",
+      "total_images": 101,
+      "train_count": 81,
+      "val_count": 10,
+      "test_count": 10,
+      "sources": [
+        "Hugging_Face"
+      ]
+    }
+  ]
+}

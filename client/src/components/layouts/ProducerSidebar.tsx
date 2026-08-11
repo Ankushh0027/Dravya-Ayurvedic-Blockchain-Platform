@@ -13,14 +13,17 @@ import {
 } from '@/components/ui/sidebar'
 import { Home, Package, Sprout } from 'lucide-react'
 import Link from 'next/link'
-
-const navItems = [
-  { title: 'Dashboard', url: '/dashboard/producer', icon: Home },
-  { title: 'My Batches', url: '/dashboard/producer/batches', icon: Package },
-  { title: 'Register Batch', url: '/dashboard/producer/register', icon: Sprout },
-]
+import { useTranslation } from 'react-i18next'
 
 export function ProducerSidebar() {
+  const { t } = useTranslation()
+
+  const navItems = [
+    { title: t('nav.dashboard'), url: '/dashboard/producer', icon: Home },
+    { title: t('nav.myBatches'), url: '/dashboard/producer/batches', icon: Package },
+    { title: t('nav.registerBatch'), url: '/dashboard/producer/register', icon: Sprout },
+  ]
+
   return (
     <Sidebar>
       <SidebarHeader>
@@ -33,11 +36,11 @@ export function ProducerSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Producer</SidebarGroupLabel>
+          <SidebarGroupLabel>{t('nav.producer')}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.url}>
                   <Link href={item.url}>
                     <SidebarMenuButton>
                       <item.icon />

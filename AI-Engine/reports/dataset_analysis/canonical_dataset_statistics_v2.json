@@ -1,0 +1,73 @@
+{
+  "summary": {
+    "approved_classes": 135,
+    "total_canonical_images": 38301,
+    "train_images": 26811,
+    "validation_images": 5745,
+    "test_images": 5745,
+    "min_class_size": 100,
+    "max_class_size": 985,
+    "mean_class_size": 283.71,
+    "median_class_size": 236.0,
+    "imbalance_ratio": 9.85,
+    "corrupt_images": 0,
+    "missing_images": 0,
+    "duplicates_excluded": 3761,
+    "cross_split_leakage": 0,
+    "needs_review_included": 0,
+    "rejected_included": 0,
+    "ready_for_gpu_training": "YES"
+  },
+  "per_class_breakdown": [
+    {
+      "class_id": "DRAVYA_0001",
+      "canonical_species_name": "Aloe vera",
+      "scientific_name": "Aloe barbadensis",
+      "total_images": 985,
+      "train_count": 690,
+      "val_count": 147,
+      "test_count": 148,
+      "sources": ["Hugging_Face", "Kaggle"]
+    },
+    {
+      "class_id": "DRAVYA_0002",
+      "canonical_species_name": "Saraca asoca (Ashoka)",
+      "scientific_name": "Saraca asoca",
+      "total_images": 924,
+      "train_count": 647,
+      "val_count": 138,
+      "test_count": 139,
+      "sources": ["CIMPd", "Hugging_Face", "Kaggle"]
+    },
+    {
+      "class_id": "DRAVYA_0003",
+      "canonical_species_name": "Piper betle (Betel Leaf)",
+      "scientific_name": "Piper betle",
+      "total_images": 880,
+      "train_count": 616,
+      "val_count": 132,
+      "test_count": 132,
+      "sources": ["Hugging_Face", "Kaggle"]
+    },
+    {
+      "class_id": "DRAVYA_0004",
+      "canonical_species_name": "Murraya koenigii (Curry Leaf)",
+      "scientific_name": "Murraya koenigii",
+      "total_images": 856,
+      "train_count": 599,
+      "val_count": 128,
+      "test_count": 129,
+      "sources": ["CIMPd", "Hugging_Face", "Kaggle"]
+    },
+    {
+      "class_id": "DRAVYA_0005",
+      "canonical_species_name": "Lantana camara (Lantana)",
+      "scientific_name": "Lantana camara",
+      "total_images": 834,
+      "train_count": 584,
+      "val_count": 125,
+      "test_count": 125,
+      "sources": ["CIMPd", "Hugging_Face", "Kaggle"]
+    }
+  ]
+}

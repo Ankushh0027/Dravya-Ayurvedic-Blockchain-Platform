@@ -1,0 +1,2544 @@
+{
+  "taxonomy_version": "v1",
+  "exported_at": "2026-08-02T14:36:40.477694+00:00",
+  "total_canonical_plants": 200,
+  "plants": [
+    {
+      "canonical_plant_id": "PLANT-ASHOK-19404C",
+      "canonical_name": "Ashok",
+      "common_name": "Ashok",
+      "scientific_name": null,
+      "aliases": [
+        "Ashok"
+      ],
+      "created_at": "2026-08-02T14:36:40.471920+00:00",
+      "updated_at": "2026-08-02T14:36:40.471934+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BAMBOO-ADD174",
+      "canonical_name": "Bamboo",
+      "common_name": "Bamboo",
+      "scientific_name": null,
+      "aliases": [
+        "Bamboo"
+      ],
+      "created_at": "2026-08-02T14:36:40.471987+00:00",
+      "updated_at": "2026-08-02T14:36:40.471990+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BARLARIA-8AF3F2",
+      "canonical_name": "Barlaria",
+      "common_name": "Barlaria",
+      "scientific_name": null,
+      "aliases": [
+        "Barlaria"
+      ],
+      "created_at": "2026-08-02T14:36:40.472001+00:00",
+      "updated_at": "2026-08-02T14:36:40.472003+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BEL-A0E500",
+      "canonical_name": "Bel",
+      "common_name": "Bel",
+      "scientific_name": null,
+      "aliases": [
+        "Bel"
+      ],
+      "created_at": "2026-08-02T14:36:40.472012+00:00",
+      "updated_at": "2026-08-02T14:36:40.472014+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CLERODENDRUM-SPLENDENS-0FC371",
+      "canonical_name": "Clerodendrum splendens",
+      "common_name": "Clerodendrum splendens",
+      "scientific_name": null,
+      "aliases": [
+        "Clerodendrum splendens"
+      ],
+      "created_at": "2026-08-02T14:36:40.472033+00:00",
+      "updated_at": "2026-08-02T14:36:40.472035+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CURRY-0B8E0D",
+      "canonical_name": "curry",
+      "common_name": "curry",
+      "scientific_name": null,
+      "aliases": [
+        "curry"
+      ],
+      "created_at": "2026-08-02T14:36:40.472049+00:00",
+      "updated_at": "2026-08-02T14:36:40.472050+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CUSTARDAPPLE-813AF0",
+      "canonical_name": "CustardApple",
+      "common_name": "CustardApple",
+      "scientific_name": null,
+      "aliases": [
+        "CustardApple"
+      ],
+      "created_at": "2026-08-02T14:36:40.472065+00:00",
+      "updated_at": "2026-08-02T14:36:40.472066+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-GUAVA-0E2715",
+      "canonical_name": "Guava",
+      "common_name": "Guava",
+      "scientific_name": null,
+      "aliases": [
+        "Guava"
+      ],
+      "created_at": "2026-08-02T14:36:40.472079+00:00",
+      "updated_at": "2026-08-02T14:36:40.472080+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-HARSHINGAR-8F2C53",
+      "canonical_name": "harshingar",
+      "common_name": "harshingar",
+      "scientific_name": null,
+      "aliases": [
+        "harshingar"
+      ],
+      "created_at": "2026-08-02T14:36:40.472093+00:00",
+      "updated_at": "2026-08-02T14:36:40.472094+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-HARSINGAR-BEE253",
+      "canonical_name": "Harsingar",
+      "common_name": "Harsingar",
+      "scientific_name": null,
+      "aliases": [
+        "Harsingar"
+      ],
+      "created_at": "2026-08-02T14:36:40.472102+00:00",
+      "updated_at": "2026-08-02T14:36:40.472103+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-HIBISCUS-C9452D",
+      "canonical_name": "hibiscus",
+      "common_name": "hibiscus",
+      "scientific_name": null,
+      "aliases": [
+        "hibiscus"
+      ],
+      "created_at": "2026-08-02T14:36:40.472111+00:00",
+      "updated_at": "2026-08-02T14:36:40.472112+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-JACK-FRUIT-4D6B54",
+      "canonical_name": "Jack fruit",
+      "common_name": "Jack fruit",
+      "scientific_name": null,
+      "aliases": [
+        "Jack fruit"
+      ],
+      "created_at": "2026-08-02T14:36:40.472126+00:00",
+      "updated_at": "2026-08-02T14:36:40.472127+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-KACHNAR-C3B1E1",
+      "canonical_name": "kachnar",
+      "common_name": "kachnar",
+      "scientific_name": null,
+      "aliases": [
+        "kachnar"
+      ],
+      "created_at": "2026-08-02T14:36:40.472140+00:00",
+      "updated_at": "2026-08-02T14:36:40.472141+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-LANTANA-B4308F",
+      "canonical_name": "Lantana",
+      "common_name": "Lantana",
+      "scientific_name": null,
+      "aliases": [
+        "Lantana"
+      ],
+      "created_at": "2026-08-02T14:36:40.472156+00:00",
+      "updated_at": "2026-08-02T14:36:40.472157+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-LEAFS-72AB11",
+      "canonical_name": "leafs",
+      "common_name": "leafs",
+      "scientific_name": null,
+      "aliases": [
+        "leafs"
+      ],
+      "created_at": "2026-08-02T14:36:40.472170+00:00",
+      "updated_at": "2026-08-02T14:36:40.472171+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-LEMON-F464D7",
+      "canonical_name": "Lemon",
+      "common_name": "Lemon",
+      "scientific_name": null,
+      "aliases": [
+        "Lemon"
+      ],
+      "created_at": "2026-08-02T14:36:40.472181+00:00",
+      "updated_at": "2026-08-02T14:36:40.472182+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MAKOY-3120E5",
+      "canonical_name": "Makoy",
+      "common_name": "Makoy",
+      "scientific_name": null,
+      "aliases": [
+        "Makoy"
+      ],
+      "created_at": "2026-08-02T14:36:40.472196+00:00",
+      "updated_at": "2026-08-02T14:36:40.472198+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MARIGOLD-A5055B",
+      "canonical_name": "Marigold",
+      "common_name": "Marigold",
+      "scientific_name": null,
+      "aliases": [
+        "Marigold"
+      ],
+      "created_at": "2026-08-02T14:36:40.472210+00:00",
+      "updated_at": "2026-08-02T14:36:40.472211+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MINT-DC6F17",
+      "canonical_name": "Mint",
+      "common_name": "Mint",
+      "scientific_name": null,
+      "aliases": [
+        "Mint"
+      ],
+      "created_at": "2026-08-02T14:36:40.472218+00:00",
+      "updated_at": "2026-08-02T14:36:40.472220+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-NASTURTIUM-4BD622",
+      "canonical_name": "Nasturtium",
+      "common_name": "Nasturtium",
+      "scientific_name": null,
+      "aliases": [
+        "Nasturtium"
+      ],
+      "created_at": "2026-08-02T14:36:40.472228+00:00",
+      "updated_at": "2026-08-02T14:36:40.472229+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PAPAYA-98A4F7",
+      "canonical_name": "Papaya",
+      "common_name": "Papaya",
+      "scientific_name": null,
+      "aliases": [
+        "Papaya"
+      ],
+      "created_at": "2026-08-02T14:36:40.472242+00:00",
+      "updated_at": "2026-08-02T14:36:40.472244+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ROSE-618D66",
+      "canonical_name": "Rose",
+      "common_name": "Rose",
+      "scientific_name": null,
+      "aliases": [
+        "Rose"
+      ],
+      "created_at": "2026-08-02T14:36:40.472252+00:00",
+      "updated_at": "2026-08-02T14:36:40.472253+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ROSE1-6A3E76",
+      "canonical_name": "Rose1",
+      "common_name": "Rose1",
+      "scientific_name": null,
+      "aliases": [
+        "Rose1"
+      ],
+      "created_at": "2026-08-02T14:36:40.472269+00:00",
+      "updated_at": "2026-08-02T14:36:40.472271+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SCARLET-SAGE-BFF02E",
+      "canonical_name": "Scarlet Sage",
+      "common_name": "Scarlet Sage",
+      "scientific_name": null,
+      "aliases": [
+        "Scarlet Sage"
+      ],
+      "created_at": "2026-08-02T14:36:40.472285+00:00",
+      "updated_at": "2026-08-02T14:36:40.472287+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-TULSI-43012C",
+      "canonical_name": "Tulsi",
+      "common_name": "Tulsi",
+      "scientific_name": null,
+      "aliases": [
+        "Tulsi"
+      ],
+      "created_at": "2026-08-02T14:36:40.472301+00:00",
+      "updated_at": "2026-08-02T14:36:40.472302+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ALOEVERA-E8FA3C",
+      "canonical_name": "Aloevera",
+      "common_name": "Aloevera",
+      "scientific_name": "Aloe barbadensis",
+      "aliases": [
+        "Aloevera",
+        "Aloe barbadensis"
+      ],
+      "created_at": "2026-08-02T14:36:40.472317+00:00",
+      "updated_at": "2026-08-02T14:36:40.472318+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-AMARANTHUS-GREEN-3330EE",
+      "canonical_name": "Amaranthus Green",
+      "common_name": "Amaranthus Green",
+      "scientific_name": "Amaranthus viridis",
+      "aliases": [
+        "Amaranthus Green",
+        "Amaranthus viridis"
+      ],
+      "created_at": "2026-08-02T14:36:40.472327+00:00",
+      "updated_at": "2026-08-02T14:36:40.472329+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-AMARANTHUS-RED-CC834C",
+      "canonical_name": "Amaranthus Red",
+      "common_name": "Amaranthus Red",
+      "scientific_name": "Amaranthus tricolor",
+      "aliases": [
+        "Amaranthus Red",
+        "Amaranthus tricolor"
+      ],
+      "created_at": "2026-08-02T14:36:40.472337+00:00",
+      "updated_at": "2026-08-02T14:36:40.472338+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-AMLA-DD45E6",
+      "canonical_name": "Amla",
+      "common_name": "Amla",
+      "scientific_name": "Phyllanthus emlica Linn",
+      "aliases": [
+        "Amla",
+        "Phyllanthus emlica Linn"
+      ],
+      "created_at": "2026-08-02T14:36:40.472346+00:00",
+      "updated_at": "2026-08-02T14:36:40.472348+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-AMRUTA-BALLI-A5C563",
+      "canonical_name": "Amruta Balli",
+      "common_name": "Amruta Balli",
+      "scientific_name": "Tinospora cordifolia",
+      "aliases": [
+        "Amruta Balli",
+        "Tinospora cordifolia"
+      ],
+      "created_at": "2026-08-02T14:36:40.472357+00:00",
+      "updated_at": "2026-08-02T14:36:40.472358+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ARALI-138475",
+      "canonical_name": "Arali",
+      "common_name": "Arali",
+      "scientific_name": "Nerium oleander",
+      "aliases": [
+        "Arali",
+        "Nerium oleander"
+      ],
+      "created_at": "2026-08-02T14:36:40.472366+00:00",
+      "updated_at": "2026-08-02T14:36:40.472367+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ARIVE-DANTU-AMARANTHUS-VIRIDIS-E6F356",
+      "canonical_name": "Arive_Dantu_Amaranthus viridis",
+      "common_name": "Arive_Dantu_Amaranthus viridis",
+      "scientific_name": null,
+      "aliases": [
+        "Arive_Dantu_Amaranthus viridis"
+      ],
+      "created_at": "2026-08-02T14:36:40.472376+00:00",
+      "updated_at": "2026-08-02T14:36:40.472378+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ASHOKA-BCA1A9",
+      "canonical_name": "Ashoka",
+      "common_name": "Ashoka",
+      "scientific_name": "Saraca asoca",
+      "aliases": [
+        "Ashoka",
+        "Saraca asoca"
+      ],
+      "created_at": "2026-08-02T14:36:40.472385+00:00",
+      "updated_at": "2026-08-02T14:36:40.472386+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ASHWAGANDHA-706EEE",
+      "canonical_name": "Ashwagandha",
+      "common_name": "Ashwagandha",
+      "scientific_name": "Withania somnifera",
+      "aliases": [
+        "Ashwagandha",
+        "Withania somnifera"
+      ],
+      "created_at": "2026-08-02T14:36:40.472394+00:00",
+      "updated_at": "2026-08-02T14:36:40.472395+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ASTHMA-PLANT-F8E669",
+      "canonical_name": "Asthma plant",
+      "common_name": "Asthma plant",
+      "scientific_name": "Euphorbia hirta",
+      "aliases": [
+        "Asthma plant",
+        "Euphorbia hirta"
+      ],
+      "created_at": "2026-08-02T14:36:40.472405+00:00",
+      "updated_at": "2026-08-02T14:36:40.472406+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ASTMA-WEED-0139EC",
+      "canonical_name": "Astma_weed",
+      "common_name": "Astma_weed",
+      "scientific_name": null,
+      "aliases": [
+        "Astma_weed"
+      ],
+      "created_at": "2026-08-02T14:36:40.472414+00:00",
+      "updated_at": "2026-08-02T14:36:40.472415+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-AVACADO-E1F7B1",
+      "canonical_name": "Avacado",
+      "common_name": "Avacado",
+      "scientific_name": "Persea americana",
+      "aliases": [
+        "Avacado",
+        "Persea americana"
+      ],
+      "created_at": "2026-08-02T14:36:40.472423+00:00",
+      "updated_at": "2026-08-02T14:36:40.472424+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-AVARAM-6C851A",
+      "canonical_name": "Avaram",
+      "common_name": "Avaram",
+      "scientific_name": "Senna auriculata",
+      "aliases": [
+        "Avaram",
+        "Senna auriculata"
+      ],
+      "created_at": "2026-08-02T14:36:40.472432+00:00",
+      "updated_at": "2026-08-02T14:36:40.472433+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BADIPALA-FAAC1A",
+      "canonical_name": "Badipala",
+      "common_name": "Badipala",
+      "scientific_name": null,
+      "aliases": [
+        "Badipala"
+      ],
+      "created_at": "2026-08-02T14:36:40.472440+00:00",
+      "updated_at": "2026-08-02T14:36:40.472442+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BALLOON-VINE-FE0B54",
+      "canonical_name": "Balloon vine",
+      "common_name": "Balloon vine",
+      "scientific_name": "Cardiospermum halicacabum",
+      "aliases": [
+        "Balloon vine",
+        "Cardiospermum halicacabum"
+      ],
+      "created_at": "2026-08-02T14:36:40.472450+00:00",
+      "updated_at": "2026-08-02T14:36:40.472452+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BAMBOO-BAMBUSOIDEAE-61726B",
+      "canonical_name": "Bamboo-Bambusoideae",
+      "common_name": "Bamboo-Bambusoideae",
+      "scientific_name": null,
+      "aliases": [
+        "Bamboo-Bambusoideae"
+      ],
+      "created_at": "2026-08-02T14:36:40.472460+00:00",
+      "updated_at": "2026-08-02T14:36:40.472462+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BASALE-839D88",
+      "canonical_name": "Basale",
+      "common_name": "Basale",
+      "scientific_name": "Basella alba",
+      "aliases": [
+        "Basale",
+        "Basella alba"
+      ],
+      "created_at": "2026-08-02T14:36:40.472470+00:00",
+      "updated_at": "2026-08-02T14:36:40.472472+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BEANS-6EB228",
+      "canonical_name": "Beans",
+      "common_name": "Beans",
+      "scientific_name": "Vigna spp. (Genus) or Phaseolus spp. (Genus)",
+      "aliases": [
+        "Beans",
+        "Vigna spp. (Genus) or Phaseolus spp. (Genus)"
+      ],
+      "created_at": "2026-08-02T14:36:40.472479+00:00",
+      "updated_at": "2026-08-02T14:36:40.472480+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BELLYACHE-BUSH-GREEN-D66530",
+      "canonical_name": "Bellyache bush (Green)",
+      "common_name": "Bellyache bush (Green)",
+      "scientific_name": "Jatropha gossypiifolia",
+      "aliases": [
+        "Bellyache bush (Green)",
+        "Jatropha gossypiifolia"
+      ],
+      "created_at": "2026-08-02T14:36:40.472490+00:00",
+      "updated_at": "2026-08-02T14:36:40.472491+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BENGHAL-DAYFLOWER-1FEAEF",
+      "canonical_name": "Benghal dayflower",
+      "common_name": "Benghal dayflower",
+      "scientific_name": "Commelina benghalensis",
+      "aliases": [
+        "Benghal dayflower",
+        "Commelina benghalensis"
+      ],
+      "created_at": "2026-08-02T14:36:40.472500+00:00",
+      "updated_at": "2026-08-02T14:36:40.472502+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BETEL-0C588C",
+      "canonical_name": "Betel",
+      "common_name": "Betel",
+      "scientific_name": "Piper betle",
+      "aliases": [
+        "Betel",
+        "Piper betle"
+      ],
+      "created_at": "2026-08-02T14:36:40.472509+00:00",
+      "updated_at": "2026-08-02T14:36:40.472510+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BETEL-NUT-ARECA-CATECHU-2183F4",
+      "canonical_name": "Betel_Nut_Areca catechu",
+      "common_name": "Betel_Nut_Areca catechu",
+      "scientific_name": null,
+      "aliases": [
+        "Betel_Nut_Areca catechu"
+      ],
+      "created_at": "2026-08-02T14:36:40.472519+00:00",
+      "updated_at": "2026-08-02T14:36:40.472520+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BIG-CALTROPS-555E01",
+      "canonical_name": "Big Caltrops",
+      "common_name": "Big Caltrops",
+      "scientific_name": "Tribulus terrestris",
+      "aliases": [
+        "Big Caltrops",
+        "Tribulus terrestris"
+      ],
+      "created_at": "2026-08-02T14:36:40.472529+00:00",
+      "updated_at": "2026-08-02T14:36:40.472530+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BLACK-C006C7",
+      "canonical_name": "Black",
+      "common_name": "Black",
+      "scientific_name": "Honey Shrub_Tribulus terrestris",
+      "aliases": [
+        "Black",
+        "Honey Shrub_Tribulus terrestris"
+      ],
+      "created_at": "2026-08-02T14:36:40.472540+00:00",
+      "updated_at": "2026-08-02T14:36:40.472542+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BRAHMI-21D695",
+      "canonical_name": "Brahmi",
+      "common_name": "Brahmi",
+      "scientific_name": "Bacopa monnieri",
+      "aliases": [
+        "Brahmi",
+        "Bacopa monnieri"
+      ],
+      "created_at": "2026-08-02T14:36:40.472549+00:00",
+      "updated_at": "2026-08-02T14:36:40.472550+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BRINGARAJA-301515",
+      "canonical_name": "Bringaraja",
+      "common_name": "Bringaraja",
+      "scientific_name": "Eclipta prostrata",
+      "aliases": [
+        "Bringaraja",
+        "Eclipta prostrata"
+      ],
+      "created_at": "2026-08-02T14:36:40.472559+00:00",
+      "updated_at": "2026-08-02T14:36:40.472560+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BRISTLY-WILD-GRAPE-01F396",
+      "canonical_name": "Bristly Wild Grape",
+      "common_name": "Bristly Wild Grape",
+      "scientific_name": "Cissus quadrangularis",
+      "aliases": [
+        "Bristly Wild Grape",
+        "Cissus quadrangularis"
+      ],
+      "created_at": "2026-08-02T14:36:40.472569+00:00",
+      "updated_at": "2026-08-02T14:36:40.472570+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BUTTERFLY-PEA-5247C2",
+      "canonical_name": "Butterfly Pea",
+      "common_name": "Butterfly Pea",
+      "scientific_name": "Clitoria ternatea",
+      "aliases": [
+        "Butterfly Pea",
+        "Clitoria ternatea"
+      ],
+      "created_at": "2026-08-02T14:36:40.472578+00:00",
+      "updated_at": "2026-08-02T14:36:40.472579+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CAMPHOR-D1792C",
+      "canonical_name": "Camphor",
+      "common_name": "Camphor",
+      "scientific_name": "Cinnamomum camphora",
+      "aliases": [
+        "Camphor",
+        "Cinnamomum camphora"
+      ],
+      "created_at": "2026-08-02T14:36:40.472587+00:00",
+      "updated_at": "2026-08-02T14:36:40.472588+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CAPE-GOOSEBERRY-07DA89",
+      "canonical_name": "Cape Gooseberry",
+      "common_name": "Cape Gooseberry",
+      "scientific_name": "Physalis peruviana",
+      "aliases": [
+        "Cape Gooseberry",
+        "Physalis peruviana"
+      ],
+      "created_at": "2026-08-02T14:36:40.472596+00:00",
+      "updated_at": "2026-08-02T14:36:40.472598+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CARDIOSPERMUM-HALICACABUM-52E151",
+      "canonical_name": "Cardiospermum halicacabum",
+      "common_name": "Cardiospermum halicacabum",
+      "scientific_name": null,
+      "aliases": [
+        "Cardiospermum halicacabum"
+      ],
+      "created_at": "2026-08-02T14:36:40.472607+00:00",
+      "updated_at": "2026-08-02T14:36:40.472608+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CARICATURE-DCBBEF",
+      "canonical_name": "Caricature",
+      "common_name": "Caricature",
+      "scientific_name": null,
+      "aliases": [
+        "Caricature"
+      ],
+      "created_at": "2026-08-02T14:36:40.472616+00:00",
+      "updated_at": "2026-08-02T14:36:40.472617+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CASTOR-59ADE5",
+      "canonical_name": "Castor",
+      "common_name": "Castor",
+      "scientific_name": "Ricinus communis",
+      "aliases": [
+        "Castor",
+        "Ricinus communis"
+      ],
+      "created_at": "2026-08-02T14:36:40.472624+00:00",
+      "updated_at": "2026-08-02T14:36:40.472626+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CATHARANTHUS-286194",
+      "canonical_name": "Catharanthus",
+      "common_name": "Catharanthus",
+      "scientific_name": null,
+      "aliases": [
+        "Catharanthus"
+      ],
+      "created_at": "2026-08-02T14:36:40.472633+00:00",
+      "updated_at": "2026-08-02T14:36:40.472634+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CELERY-DDC517",
+      "canonical_name": "Celery",
+      "common_name": "Celery",
+      "scientific_name": "Apium graveolens",
+      "aliases": [
+        "Celery",
+        "Apium graveolens"
+      ],
+      "created_at": "2026-08-02T14:36:40.472642+00:00",
+      "updated_at": "2026-08-02T14:36:40.472643+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CHAKTE-E77C90",
+      "canonical_name": "Chakte",
+      "common_name": "Chakte",
+      "scientific_name": null,
+      "aliases": [
+        "Chakte"
+      ],
+      "created_at": "2026-08-02T14:36:40.472651+00:00",
+      "updated_at": "2026-08-02T14:36:40.472652+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CHILLY-B0B889",
+      "canonical_name": "Chilly",
+      "common_name": "Chilly",
+      "scientific_name": "Capsicum spp. (Genus)",
+      "aliases": [
+        "Chilly",
+        "Capsicum spp. (Genus)"
+      ],
+      "created_at": "2026-08-02T14:36:40.472661+00:00",
+      "updated_at": "2026-08-02T14:36:40.472662+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CHINESE-SPINACH-4131CB",
+      "canonical_name": "Chinese Spinach",
+      "common_name": "Chinese Spinach",
+      "scientific_name": "Amaranthus dubius",
+      "aliases": [
+        "Chinese Spinach",
+        "Amaranthus dubius"
+      ],
+      "created_at": "2026-08-02T14:36:40.472672+00:00",
+      "updated_at": "2026-08-02T14:36:40.472673+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CITRON-LIME-HERELIKAI-0CC593",
+      "canonical_name": "Citron lime (herelikai)",
+      "common_name": "Citron lime (herelikai)",
+      "scientific_name": "Citrus medica (Citron) or Citrus aurantiifolia (Lime)",
+      "aliases": [
+        "Citron lime (herelikai)",
+        "Citrus medica (Citron) or Citrus aurantiifolia (Lime)"
+      ],
+      "created_at": "2026-08-02T14:36:40.472683+00:00",
+      "updated_at": "2026-08-02T14:36:40.472684+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-COATBUTTONS-FE16A4",
+      "canonical_name": "coatbuttons",
+      "common_name": "coatbuttons",
+      "scientific_name": "Tridax procumbens",
+      "aliases": [
+        "coatbuttons",
+        "Tridax procumbens"
+      ],
+      "created_at": "2026-08-02T14:36:40.472692+00:00",
+      "updated_at": "2026-08-02T14:36:40.472694+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-COFFEE-37290D",
+      "canonical_name": "Coffee",
+      "common_name": "Coffee",
+      "scientific_name": "Coffea spp. (Genus)",
+      "aliases": [
+        "Coffee",
+        "Coffea spp. (Genus)"
+      ],
+      "created_at": "2026-08-02T14:36:40.472701+00:00",
+      "updated_at": "2026-08-02T14:36:40.472702+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-COMMON-RUE-NAAGDALLI-4514A2",
+      "canonical_name": "Common rue(naagdalli)",
+      "common_name": "Common rue(naagdalli)",
+      "scientific_name": "Ruta graveolens",
+      "aliases": [
+        "Common rue(naagdalli)",
+        "Ruta graveolens"
+      ],
+      "created_at": "2026-08-02T14:36:40.472712+00:00",
+      "updated_at": "2026-08-02T14:36:40.472714+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-COMMON-WIREWEED-35579B",
+      "canonical_name": "Common Wireweed",
+      "common_name": "Common Wireweed",
+      "scientific_name": "Sida rhombifolia",
+      "aliases": [
+        "Common Wireweed",
+        "Sida rhombifolia"
+      ],
+      "created_at": "2026-08-02T14:36:40.472722+00:00",
+      "updated_at": "2026-08-02T14:36:40.472723+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CORIANDER-4C44D1",
+      "canonical_name": "Coriander",
+      "common_name": "Coriander",
+      "scientific_name": "Coriandrum sativum",
+      "aliases": [
+        "Coriander",
+        "Coriandrum sativum"
+      ],
+      "created_at": "2026-08-02T14:36:40.472731+00:00",
+      "updated_at": "2026-08-02T14:36:40.472732+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-COUNTRY-MALLOW-14174C",
+      "canonical_name": "Country Mallow",
+      "common_name": "Country Mallow",
+      "scientific_name": "Abutilon indicum",
+      "aliases": [
+        "Country Mallow",
+        "Abutilon indicum"
+      ],
+      "created_at": "2026-08-02T14:36:40.472740+00:00",
+      "updated_at": "2026-08-02T14:36:40.472741+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CRAPE-JASMINE-4C3C12",
+      "canonical_name": "crape Jasmine",
+      "common_name": "crape Jasmine",
+      "scientific_name": "Tabernaemontana divaricata",
+      "aliases": [
+        "crape Jasmine",
+        "Tabernaemontana divaricata"
+      ],
+      "created_at": "2026-08-02T14:36:40.472749+00:00",
+      "updated_at": "2026-08-02T14:36:40.472750+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CROWN-FLOWER-7F44AF",
+      "canonical_name": "Crown flower",
+      "common_name": "Crown flower",
+      "scientific_name": "Calotropis gigantea",
+      "aliases": [
+        "Crown flower",
+        "Calotropis gigantea"
+      ],
+      "created_at": "2026-08-02T14:36:40.472760+00:00",
+      "updated_at": "2026-08-02T14:36:40.472761+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CURRY-LEAF-44F251",
+      "canonical_name": "Curry Leaf",
+      "common_name": "Curry Leaf",
+      "scientific_name": "Murraya koenigii",
+      "aliases": [
+        "Curry Leaf",
+        "Murraya koenigii"
+      ],
+      "created_at": "2026-08-02T14:36:40.472769+00:00",
+      "updated_at": "2026-08-02T14:36:40.472771+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-DODDAPATRE-61CACC",
+      "canonical_name": "Doddapatre",
+      "common_name": "Doddapatre",
+      "scientific_name": "Plectanthus amboinicus",
+      "aliases": [
+        "Doddapatre",
+        "Plectanthus amboinicus"
+      ],
+      "created_at": "2026-08-02T14:36:40.472779+00:00",
+      "updated_at": "2026-08-02T14:36:40.472780+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-DRUMSTICK-B2E94C",
+      "canonical_name": "Drumstick",
+      "common_name": "Drumstick",
+      "scientific_name": "Moringa oleifera",
+      "aliases": [
+        "Drumstick",
+        "Moringa oleifera"
+      ],
+      "created_at": "2026-08-02T14:36:40.472787+00:00",
+      "updated_at": "2026-08-02T14:36:40.472789+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-DWARF-COPPERLEAF-GREEN-60CCF2",
+      "canonical_name": "Dwarf Copperleaf (Green)",
+      "common_name": "Dwarf Copperleaf (Green)",
+      "scientific_name": "Acalypha reptans",
+      "aliases": [
+        "Dwarf Copperleaf (Green)",
+        "Acalypha reptans"
+      ],
+      "created_at": "2026-08-02T14:36:40.472797+00:00",
+      "updated_at": "2026-08-02T14:36:40.472799+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-DWARF-COPPERLEAF-RED-843C78",
+      "canonical_name": "Dwarf copperleaf (Red)",
+      "common_name": "Dwarf copperleaf (Red)",
+      "scientific_name": "Acalypha wilkesiana",
+      "aliases": [
+        "Dwarf copperleaf (Red)",
+        "Acalypha wilkesiana"
+      ],
+      "created_at": "2026-08-02T14:36:40.472809+00:00",
+      "updated_at": "2026-08-02T14:36:40.472811+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-EKKA-044723",
+      "canonical_name": "Ekka",
+      "common_name": "Ekka",
+      "scientific_name": "Calotropis gigantea",
+      "aliases": [
+        "Ekka",
+        "Calotropis gigantea"
+      ],
+      "created_at": "2026-08-02T14:36:40.472819+00:00",
+      "updated_at": "2026-08-02T14:36:40.472820+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-EUCALYPTUS-B8D976",
+      "canonical_name": "Eucalyptus",
+      "common_name": "Eucalyptus",
+      "scientific_name": "Eucalyptus spp. (Genus)",
+      "aliases": [
+        "Eucalyptus",
+        "Eucalyptus spp. (Genus)"
+      ],
+      "created_at": "2026-08-02T14:36:40.472828+00:00",
+      "updated_at": "2026-08-02T14:36:40.472829+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-FALSE-AMARNATH-85B064",
+      "canonical_name": "False Amarnath",
+      "common_name": "False Amarnath",
+      "scientific_name": "Digera muricata",
+      "aliases": [
+        "False Amarnath",
+        "Digera muricata"
+      ],
+      "created_at": "2026-08-02T14:36:40.472838+00:00",
+      "updated_at": "2026-08-02T14:36:40.472839+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-FENUGREEK-LEAVES-CBDCC8",
+      "canonical_name": "Fenugreek Leaves",
+      "common_name": "Fenugreek Leaves",
+      "scientific_name": "Trigonella foenum-graecum",
+      "aliases": [
+        "Fenugreek Leaves",
+        "Trigonella foenum-graecum"
+      ],
+      "created_at": "2026-08-02T14:36:40.472847+00:00",
+      "updated_at": "2026-08-02T14:36:40.472850+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-GANIGALE-24D341",
+      "canonical_name": "Ganigale",
+      "common_name": "Ganigale",
+      "scientific_name": null,
+      "aliases": [
+        "Ganigale"
+      ],
+      "created_at": "2026-08-02T14:36:40.472857+00:00",
+      "updated_at": "2026-08-02T14:36:40.472859+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-GANIKE-2C09BB",
+      "canonical_name": "Ganike",
+      "common_name": "Ganike",
+      "scientific_name": "Solanum nigrum",
+      "aliases": [
+        "Ganike",
+        "Solanum nigrum"
+      ],
+      "created_at": "2026-08-02T14:36:40.472866+00:00",
+      "updated_at": "2026-08-02T14:36:40.472867+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-GASAGASE-790C30",
+      "canonical_name": "Gasagase",
+      "common_name": "Gasagase",
+      "scientific_name": "Grewia asiatica",
+      "aliases": [
+        "Gasagase",
+        "Grewia asiatica"
+      ],
+      "created_at": "2026-08-02T14:36:40.472875+00:00",
+      "updated_at": "2026-08-02T14:36:40.472876+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-GAUVA-B93309",
+      "canonical_name": "Gauva",
+      "common_name": "Gauva",
+      "scientific_name": "Psidium guajava",
+      "aliases": [
+        "Gauva",
+        "Psidium guajava"
+      ],
+      "created_at": "2026-08-02T14:36:40.472884+00:00",
+      "updated_at": "2026-08-02T14:36:40.472885+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-GERANIUM-434209",
+      "canonical_name": "Geranium",
+      "common_name": "Geranium",
+      "scientific_name": "Pelargonium spp. (Genus)",
+      "aliases": [
+        "Geranium",
+        "Pelargonium spp. (Genus)"
+      ],
+      "created_at": "2026-08-02T14:36:40.472892+00:00",
+      "updated_at": "2026-08-02T14:36:40.472894+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-GIANT-PIGWEED-C490FE",
+      "canonical_name": "Giant Pigweed",
+      "common_name": "Giant Pigweed",
+      "scientific_name": "Amaranthus titan",
+      "aliases": [
+        "Giant Pigweed",
+        "Amaranthus titan"
+      ],
+      "created_at": "2026-08-02T14:36:40.472903+00:00",
+      "updated_at": "2026-08-02T14:36:40.472904+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-GINGER-08DDFF",
+      "canonical_name": "Ginger",
+      "common_name": "Ginger",
+      "scientific_name": "Zingiber officinale",
+      "aliases": [
+        "Ginger",
+        "Zingiber officinale"
+      ],
+      "created_at": "2026-08-02T14:36:40.472913+00:00",
+      "updated_at": "2026-08-02T14:36:40.472915+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-GLOBE-AMARNATH-7CE01A",
+      "canonical_name": "Globe Amarnath",
+      "common_name": "Globe Amarnath",
+      "scientific_name": "Gomphrena globosa",
+      "aliases": [
+        "Globe Amarnath",
+        "Gomphrena globosa"
+      ],
+      "created_at": "2026-08-02T14:36:40.472923+00:00",
+      "updated_at": "2026-08-02T14:36:40.472925+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-GONGURA-6BEBC3",
+      "canonical_name": "Gongura",
+      "common_name": "Gongura",
+      "scientific_name": "Hibiscus sabdariffa",
+      "aliases": [
+        "Gongura",
+        "Hibiscus sabdariffa"
+      ],
+      "created_at": "2026-08-02T14:36:40.472932+00:00",
+      "updated_at": "2026-08-02T14:36:40.472934+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-GREEN-CHIRETA-B9C96A",
+      "canonical_name": "Green Chireta",
+      "common_name": "Green Chireta",
+      "scientific_name": "Andrographis paniculata",
+      "aliases": [
+        "Green Chireta",
+        "Andrographis paniculata"
+      ],
+      "created_at": "2026-08-02T14:36:40.472942+00:00",
+      "updated_at": "2026-08-02T14:36:40.472943+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-HEART-LEAVED-MOONSEED-581711",
+      "canonical_name": "heart-leaved moonseed",
+      "common_name": "heart-leaved moonseed",
+      "scientific_name": "Tinospora cordifolia",
+      "aliases": [
+        "heart-leaved moonseed",
+        "Tinospora cordifolia"
+      ],
+      "created_at": "2026-08-02T14:36:40.472952+00:00",
+      "updated_at": "2026-08-02T14:36:40.472953+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-HENNA-C9594F",
+      "canonical_name": "Henna",
+      "common_name": "Henna",
+      "scientific_name": "Lausonia inermis",
+      "aliases": [
+        "Henna",
+        "Lausonia inermis"
+      ],
+      "created_at": "2026-08-02T14:36:40.472961+00:00",
+      "updated_at": "2026-08-02T14:36:40.472963+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-HOLY-BASIL-EA981F",
+      "canonical_name": "Holy Basil",
+      "common_name": "Holy Basil",
+      "scientific_name": "Ocimum sanctum",
+      "aliases": [
+        "Holy Basil",
+        "Ocimum sanctum"
+      ],
+      "created_at": "2026-08-02T14:36:40.472977+00:00",
+      "updated_at": "2026-08-02T14:36:40.472978+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-HONGE-MILLETIA-E65819",
+      "canonical_name": "Honge-Milletia",
+      "common_name": "Honge-Milletia",
+      "scientific_name": null,
+      "aliases": [
+        "Honge-Milletia"
+      ],
+      "created_at": "2026-08-02T14:36:40.472986+00:00",
+      "updated_at": "2026-08-02T14:36:40.472987+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-BEECH-356967",
+      "canonical_name": "indian Beech",
+      "common_name": "indian Beech",
+      "scientific_name": "Pongamia pinnata",
+      "aliases": [
+        "indian Beech",
+        "Pongamia pinnata"
+      ],
+      "created_at": "2026-08-02T14:36:40.472996+00:00",
+      "updated_at": "2026-08-02T14:36:40.472997+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-COPPERLEAF-1B6B99",
+      "canonical_name": "Indian CopperLeaf",
+      "common_name": "Indian CopperLeaf",
+      "scientific_name": "Acalypha indica",
+      "aliases": [
+        "Indian CopperLeaf",
+        "Acalypha indica"
+      ],
+      "created_at": "2026-08-02T14:36:40.473006+00:00",
+      "updated_at": "2026-08-02T14:36:40.473007+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-JUJUBE-EE14E6",
+      "canonical_name": "Indian Jujube",
+      "common_name": "Indian Jujube",
+      "scientific_name": "Ziziphus mauritiana",
+      "aliases": [
+        "Indian Jujube",
+        "Ziziphus mauritiana"
+      ],
+      "created_at": "2026-08-02T14:36:40.473015+00:00",
+      "updated_at": "2026-08-02T14:36:40.473016+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-PENNYWORT-D6E0A7",
+      "canonical_name": "Indian pennywort",
+      "common_name": "Indian pennywort",
+      "scientific_name": "Centella asiatica",
+      "aliases": [
+        "Indian pennywort",
+        "Centella asiatica"
+      ],
+      "created_at": "2026-08-02T14:36:40.473025+00:00",
+      "updated_at": "2026-08-02T14:36:40.473027+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-SARSAPARILLA-0E04AB",
+      "canonical_name": "Indian Sarsaparilla",
+      "common_name": "Indian Sarsaparilla",
+      "scientific_name": "Hemidesmus indicus",
+      "aliases": [
+        "Indian Sarsaparilla",
+        "Hemidesmus indicus"
+      ],
+      "created_at": "2026-08-02T14:36:40.473035+00:00",
+      "updated_at": "2026-08-02T14:36:40.473036+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-STINGING-NETTLE-ECDFA7",
+      "canonical_name": "Indian Stinging Nettle",
+      "common_name": "Indian Stinging Nettle",
+      "scientific_name": "Urtica dioica subsp. gracilis",
+      "aliases": [
+        "Indian Stinging Nettle",
+        "Urtica dioica subsp. gracilis"
+      ],
+      "created_at": "2026-08-02T14:36:40.473045+00:00",
+      "updated_at": "2026-08-02T14:36:40.473047+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-THORNAPPLE-440F2D",
+      "canonical_name": "Indian Thornapple",
+      "common_name": "Indian Thornapple",
+      "scientific_name": "Datura metel",
+      "aliases": [
+        "Indian Thornapple",
+        "Datura metel"
+      ],
+      "created_at": "2026-08-02T14:36:40.473055+00:00",
+      "updated_at": "2026-08-02T14:36:40.473056+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-INDIAN-WORMWOOD-27AC31",
+      "canonical_name": "Indian wormwood",
+      "common_name": "Indian wormwood",
+      "scientific_name": "Artemisia indica",
+      "aliases": [
+        "Indian wormwood",
+        "Artemisia indica"
+      ],
+      "created_at": "2026-08-02T14:36:40.473064+00:00",
+      "updated_at": "2026-08-02T14:36:40.473065+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-INSULIN-8AC02A",
+      "canonical_name": "Insulin",
+      "common_name": "Insulin",
+      "scientific_name": null,
+      "aliases": [
+        "Insulin"
+      ],
+      "created_at": "2026-08-02T14:36:40.473073+00:00",
+      "updated_at": "2026-08-02T14:36:40.473074+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-IVY-GOURD-C3B1EC",
+      "canonical_name": "Ivy Gourd",
+      "common_name": "Ivy Gourd",
+      "scientific_name": "Coccinia grandis",
+      "aliases": [
+        "Ivy Gourd",
+        "Coccinia grandis"
+      ],
+      "created_at": "2026-08-02T14:36:40.473240+00:00",
+      "updated_at": "2026-08-02T14:36:40.473243+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-JACKFRUIT-290601",
+      "canonical_name": "Jackfruit",
+      "common_name": "Jackfruit",
+      "scientific_name": "Artocarpus heterophyllus",
+      "aliases": [
+        "Jackfruit",
+        "Artocarpus heterophyllus"
+      ],
+      "created_at": "2026-08-02T14:36:40.473257+00:00",
+      "updated_at": "2026-08-02T14:36:40.473259+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-JAMAICA-CHERRY-0F1149",
+      "canonical_name": "Jamaica Cherry",
+      "common_name": "Jamaica Cherry",
+      "scientific_name": "Gasagase_ Muntingia calabura",
+      "aliases": [
+        "Jamaica Cherry",
+        "Gasagase_ Muntingia calabura"
+      ],
+      "created_at": "2026-08-02T14:36:40.473269+00:00",
+      "updated_at": "2026-08-02T14:36:40.473270+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-JAMUN-DA152A",
+      "canonical_name": "Jamun",
+      "common_name": "Jamun",
+      "scientific_name": "Syzygium cumini",
+      "aliases": [
+        "Jamun",
+        "Syzygium cumini"
+      ],
+      "created_at": "2026-08-02T14:36:40.473278+00:00",
+      "updated_at": "2026-08-02T14:36:40.473280+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-JASMINE-JASMIUM-A02F89",
+      "canonical_name": "Jasmine-Jasmium",
+      "common_name": "Jasmine-Jasmium",
+      "scientific_name": null,
+      "aliases": [
+        "Jasmine-Jasmium"
+      ],
+      "created_at": "2026-08-02T14:36:40.473288+00:00",
+      "updated_at": "2026-08-02T14:36:40.473290+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-KAMAKASTURI-1EC2B3",
+      "canonical_name": "kamakasturi",
+      "common_name": "kamakasturi",
+      "scientific_name": null,
+      "aliases": [
+        "kamakasturi"
+      ],
+      "created_at": "2026-08-02T14:36:40.473299+00:00",
+      "updated_at": "2026-08-02T14:36:40.473300+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-KAMBAJALA-7451AF",
+      "canonical_name": "Kambajala",
+      "common_name": "Kambajala",
+      "scientific_name": null,
+      "aliases": [
+        "Kambajala"
+      ],
+      "created_at": "2026-08-02T14:36:40.473308+00:00",
+      "updated_at": "2026-08-02T14:36:40.473309+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-KARANDA-700C35",
+      "canonical_name": "Karanda",
+      "common_name": "Karanda",
+      "scientific_name": "Carissa carandas",
+      "aliases": [
+        "Karanda",
+        "Carissa carandas"
+      ],
+      "created_at": "2026-08-02T14:36:40.473318+00:00",
+      "updated_at": "2026-08-02T14:36:40.473320+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-KASAMBRUGA-5E5DD9",
+      "canonical_name": "Kasambruga",
+      "common_name": "Kasambruga",
+      "scientific_name": null,
+      "aliases": [
+        "Kasambruga"
+      ],
+      "created_at": "2026-08-02T14:36:40.473328+00:00",
+      "updated_at": "2026-08-02T14:36:40.473330+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-KEPALA-4D84B4",
+      "canonical_name": "kepala",
+      "common_name": "kepala",
+      "scientific_name": null,
+      "aliases": [
+        "kepala"
+      ],
+      "created_at": "2026-08-02T14:36:40.473338+00:00",
+      "updated_at": "2026-08-02T14:36:40.473339+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-KOHLRABI-AB6B78",
+      "canonical_name": "Kohlrabi",
+      "common_name": "Kohlrabi",
+      "scientific_name": "Brassica oleracea var. gongylodes",
+      "aliases": [
+        "Kohlrabi",
+        "Brassica oleracea var. gongylodes"
+      ],
+      "created_at": "2026-08-02T14:36:40.473347+00:00",
+      "updated_at": "2026-08-02T14:36:40.473348+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-KOKILAKSHA-321B5D",
+      "canonical_name": "Kokilaksha",
+      "common_name": "Kokilaksha",
+      "scientific_name": "Asteracantha longifolia",
+      "aliases": [
+        "Kokilaksha",
+        "Asteracantha longifolia"
+      ],
+      "created_at": "2026-08-02T14:36:40.473356+00:00",
+      "updated_at": "2026-08-02T14:36:40.473357+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-LAGOS-SPINACH-E70A3C",
+      "canonical_name": "Lagos Spinach",
+      "common_name": "Lagos Spinach",
+      "scientific_name": "Celosia argentea",
+      "aliases": [
+        "Lagos Spinach",
+        "Celosia argentea"
+      ],
+      "created_at": "2026-08-02T14:36:40.473365+00:00",
+      "updated_at": "2026-08-02T14:36:40.473366+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-LAMBS-QUARTERS-4A1EFD",
+      "canonical_name": "Lambs Quarters",
+      "common_name": "Lambs Quarters",
+      "scientific_name": "Chenopodium album",
+      "aliases": [
+        "Lambs Quarters",
+        "Chenopodium album"
+      ],
+      "created_at": "2026-08-02T14:36:40.473374+00:00",
+      "updated_at": "2026-08-02T14:36:40.473376+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-LAND-CALTROPS-BINDII-400C7C",
+      "canonical_name": "Land Caltrops (Bindii)",
+      "common_name": "Land Caltrops (Bindii)",
+      "scientific_name": "Tribulus cistoides",
+      "aliases": [
+        "Land Caltrops (Bindii)",
+        "Tribulus cistoides"
+      ],
+      "created_at": "2026-08-02T14:36:40.473385+00:00",
+      "updated_at": "2026-08-02T14:36:40.473386+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-LEMON-GRASS-8D276E",
+      "canonical_name": "Lemon grass",
+      "common_name": "Lemon grass",
+      "scientific_name": "Cymbopogon citratus",
+      "aliases": [
+        "Lemon grass",
+        "Cymbopogon citratus"
+      ],
+      "created_at": "2026-08-02T14:36:40.473399+00:00",
+      "updated_at": "2026-08-02T14:36:40.473400+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-LETTUCE-TREE-61E42C",
+      "canonical_name": "Lettuce Tree",
+      "common_name": "Lettuce Tree",
+      "scientific_name": "Pisonia grandis",
+      "aliases": [
+        "Lettuce Tree",
+        "Pisonia grandis"
+      ],
+      "created_at": "2026-08-02T14:36:40.473415+00:00",
+      "updated_at": "2026-08-02T14:36:40.473416+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MADAGASCAR-PERIWINKLE-990703",
+      "canonical_name": "Madagascar Periwinkle",
+      "common_name": "Madagascar Periwinkle",
+      "scientific_name": "Catharanthus roseus",
+      "aliases": [
+        "Madagascar Periwinkle",
+        "Catharanthus roseus"
+      ],
+      "created_at": "2026-08-02T14:36:40.473425+00:00",
+      "updated_at": "2026-08-02T14:36:40.473427+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MADRAS-PEA-PUMPKIN-02F5D1",
+      "canonical_name": "Madras Pea Pumpkin",
+      "common_name": "Madras Pea Pumpkin",
+      "scientific_name": "Sesbania grandiflora",
+      "aliases": [
+        "Madras Pea Pumpkin",
+        "Sesbania grandiflora"
+      ],
+      "created_at": "2026-08-02T14:36:40.473436+00:00",
+      "updated_at": "2026-08-02T14:36:40.473437+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MALABAR-CATMINT-8D8522",
+      "canonical_name": "Malabar Catmint",
+      "common_name": "Malabar Catmint",
+      "scientific_name": "Plectranthus amboinicus",
+      "aliases": [
+        "Malabar Catmint",
+        "Plectranthus amboinicus"
+      ],
+      "created_at": "2026-08-02T14:36:40.473445+00:00",
+      "updated_at": "2026-08-02T14:36:40.473446+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MALABAR-NUT-6D0707",
+      "canonical_name": "Malabar_Nut",
+      "common_name": "Malabar_Nut",
+      "scientific_name": "Justicia adhatoda",
+      "aliases": [
+        "Malabar_Nut",
+        "Justicia adhatoda"
+      ],
+      "created_at": "2026-08-02T14:36:40.473456+00:00",
+      "updated_at": "2026-08-02T14:36:40.473457+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MALABAR-SPINACH-AB6157",
+      "canonical_name": "Malabar_Spinach",
+      "common_name": "Malabar_Spinach",
+      "scientific_name": "Basella alba",
+      "aliases": [
+        "Malabar_Spinach",
+        "Basella alba"
+      ],
+      "created_at": "2026-08-02T14:36:40.473464+00:00",
+      "updated_at": "2026-08-02T14:36:40.473466+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MANGO-6815F3",
+      "canonical_name": "Mango",
+      "common_name": "Mango",
+      "scientific_name": "Mangifera indica",
+      "aliases": [
+        "Mango",
+        "Mangifera indica"
+      ],
+      "created_at": "2026-08-02T14:36:40.473473+00:00",
+      "updated_at": "2026-08-02T14:36:40.473474+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MEXICAN-MINT-7C6517",
+      "canonical_name": "Mexican Mint",
+      "common_name": "Mexican Mint",
+      "scientific_name": "Plectranthus amboinicus (also known as Cuban Oregano)",
+      "aliases": [
+        "Mexican Mint",
+        "Plectranthus amboinicus (also known as Cuban Oregano)"
+      ],
+      "created_at": "2026-08-02T14:36:40.473487+00:00",
+      "updated_at": "2026-08-02T14:36:40.473489+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MEXICAN-PRICKLY-POPPY-A9899C",
+      "canonical_name": "Mexican Prickly Poppy",
+      "common_name": "Mexican Prickly Poppy",
+      "scientific_name": "Argemone mexicana",
+      "aliases": [
+        "Mexican Prickly Poppy",
+        "Argemone mexicana"
+      ],
+      "created_at": "2026-08-02T14:36:40.473498+00:00",
+      "updated_at": "2026-08-02T14:36:40.473499+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MINT-MENTHA-CF4A1E",
+      "canonical_name": "Mint-Mentha",
+      "common_name": "Mint-Mentha",
+      "scientific_name": null,
+      "aliases": [
+        "Mint-Mentha"
+      ],
+      "created_at": "2026-08-02T14:36:40.473507+00:00",
+      "updated_at": "2026-08-02T14:36:40.473509+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MOUNTAIN-KNOTGRASS-C38C9B",
+      "canonical_name": "Mountain Knotgrass",
+      "common_name": "Mountain Knotgrass",
+      "scientific_name": "Aerva lanata",
+      "aliases": [
+        "Mountain Knotgrass",
+        "Aerva lanata"
+      ],
+      "created_at": "2026-08-02T14:36:40.473519+00:00",
+      "updated_at": "2026-08-02T14:36:40.473521+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-MUSTARD-352B5B",
+      "canonical_name": "Mustard",
+      "common_name": "Mustard",
+      "scientific_name": "Brassica juncea",
+      "aliases": [
+        "Mustard",
+        "Brassica juncea"
+      ],
+      "created_at": "2026-08-02T14:36:40.473529+00:00",
+      "updated_at": "2026-08-02T14:36:40.473530+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-NAGADALI-377F35",
+      "canonical_name": "Nagadali",
+      "common_name": "Nagadali",
+      "scientific_name": "Ruta graveolens",
+      "aliases": [
+        "Nagadali",
+        "Ruta graveolens"
+      ],
+      "created_at": "2026-08-02T14:36:40.473538+00:00",
+      "updated_at": "2026-08-02T14:36:40.473539+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-NALTA-JUTE-17D362",
+      "canonical_name": "Nalta Jute",
+      "common_name": "Nalta Jute",
+      "scientific_name": "Corchorus olitorius",
+      "aliases": [
+        "Nalta Jute",
+        "Corchorus olitorius"
+      ],
+      "created_at": "2026-08-02T14:36:40.473548+00:00",
+      "updated_at": "2026-08-02T14:36:40.473549+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-NEEM-C8DFFB",
+      "canonical_name": "Neem",
+      "common_name": "Neem",
+      "scientific_name": "Azadirachta indica",
+      "aliases": [
+        "Neem",
+        "Azadirachta indica"
+      ],
+      "created_at": "2026-08-02T14:36:40.473556+00:00",
+      "updated_at": "2026-08-02T14:36:40.473557+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-NELAVEMBU-41331F",
+      "canonical_name": "Nelavembu",
+      "common_name": "Nelavembu",
+      "scientific_name": "Andrographis paniculata",
+      "aliases": [
+        "Nelavembu",
+        "Andrographis paniculata"
+      ],
+      "created_at": "2026-08-02T14:36:40.473566+00:00",
+      "updated_at": "2026-08-02T14:36:40.473567+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-NERALE-96F5F3",
+      "canonical_name": "Nerale",
+      "common_name": "Nerale",
+      "scientific_name": null,
+      "aliases": [
+        "Nerale"
+      ],
+      "created_at": "2026-08-02T14:36:40.473624+00:00",
+      "updated_at": "2026-08-02T14:36:40.473626+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-NIGHT-BLOOMING-CEREUS-D94D98",
+      "canonical_name": "Night blooming Cereus",
+      "common_name": "Night blooming Cereus",
+      "scientific_name": "Epiphyllum oxypetalum",
+      "aliases": [
+        "Night blooming Cereus",
+        "Epiphyllum oxypetalum"
+      ],
+      "created_at": "2026-08-02T14:36:40.473635+00:00",
+      "updated_at": "2026-08-02T14:36:40.473637+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-NITHYAPUSHPA-A2E68D",
+      "canonical_name": "Nithyapushpa",
+      "common_name": "Nithyapushpa",
+      "scientific_name": "Vinca rosea",
+      "aliases": [
+        "Nithyapushpa",
+        "Vinca rosea"
+      ],
+      "created_at": "2026-08-02T14:36:40.473645+00:00",
+      "updated_at": "2026-08-02T14:36:40.473646+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-NOONI-615FD8",
+      "canonical_name": "Nooni",
+      "common_name": "Nooni",
+      "scientific_name": "Morinda citrifolia",
+      "aliases": [
+        "Nooni",
+        "Morinda citrifolia"
+      ],
+      "created_at": "2026-08-02T14:36:40.473654+00:00",
+      "updated_at": "2026-08-02T14:36:40.473655+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-OLEANDER-18B8E6",
+      "canonical_name": "Oleander",
+      "common_name": "Oleander",
+      "scientific_name": "Nerium oleander",
+      "aliases": [
+        "Oleander",
+        "Nerium oleander"
+      ],
+      "created_at": "2026-08-02T14:36:40.473662+00:00",
+      "updated_at": "2026-08-02T14:36:40.473664+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ONION-288971",
+      "canonical_name": "Onion",
+      "common_name": "Onion",
+      "scientific_name": "Allium cepa",
+      "aliases": [
+        "Onion",
+        "Allium cepa"
+      ],
+      "created_at": "2026-08-02T14:36:40.473671+00:00",
+      "updated_at": "2026-08-02T14:36:40.473674+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PADRI-C75B2B",
+      "canonical_name": "Padri",
+      "common_name": "Padri",
+      "scientific_name": null,
+      "aliases": [
+        "Padri"
+      ],
+      "created_at": "2026-08-02T14:36:40.473681+00:00",
+      "updated_at": "2026-08-02T14:36:40.473682+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PALAK-SPINACH-E381DA",
+      "canonical_name": "Palak(Spinach)",
+      "common_name": "Palak(Spinach)",
+      "scientific_name": "Spinacia oleracea",
+      "aliases": [
+        "Palak(Spinach)",
+        "Spinacia oleracea"
+      ],
+      "created_at": "2026-08-02T14:36:40.473690+00:00",
+      "updated_at": "2026-08-02T14:36:40.473691+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PANICLED-FOLDWING-467A2E",
+      "canonical_name": "Panicled Foldwing",
+      "common_name": "Panicled Foldwing",
+      "scientific_name": "Dicliptera paniculata",
+      "aliases": [
+        "Panicled Foldwing",
+        "Dicliptera paniculata"
+      ],
+      "created_at": "2026-08-02T14:36:40.473700+00:00",
+      "updated_at": "2026-08-02T14:36:40.473701+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PAPPAYA-B39584",
+      "canonical_name": "Pappaya",
+      "common_name": "Pappaya",
+      "scientific_name": "Carica papaya",
+      "aliases": [
+        "Pappaya",
+        "Carica papaya"
+      ],
+      "created_at": "2026-08-02T14:36:40.473708+00:00",
+      "updated_at": "2026-08-02T14:36:40.473709+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PARIJATHA-D7F7CE",
+      "canonical_name": "Parijatha",
+      "common_name": "Parijatha",
+      "scientific_name": "Nyctanthes arbor",
+      "aliases": [
+        "Parijatha",
+        "Nyctanthes arbor"
+      ],
+      "created_at": "2026-08-02T14:36:40.473718+00:00",
+      "updated_at": "2026-08-02T14:36:40.473719+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PEA-6D906F",
+      "canonical_name": "Pea",
+      "common_name": "Pea",
+      "scientific_name": "Pisum sativum",
+      "aliases": [
+        "Pea",
+        "Pisum sativum"
+      ],
+      "created_at": "2026-08-02T14:36:40.473726+00:00",
+      "updated_at": "2026-08-02T14:36:40.473727+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PEEPAL-TREE-7C9A64",
+      "canonical_name": "Peepal Tree",
+      "common_name": "Peepal Tree",
+      "scientific_name": "Ficus religiosa",
+      "aliases": [
+        "Peepal Tree",
+        "Ficus religiosa"
+      ],
+      "created_at": "2026-08-02T14:36:40.473735+00:00",
+      "updated_at": "2026-08-02T14:36:40.473736+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PEPPER-8CBBCF",
+      "canonical_name": "Pepper",
+      "common_name": "Pepper",
+      "scientific_name": "Piper nigrum",
+      "aliases": [
+        "Pepper",
+        "Piper nigrum"
+      ],
+      "created_at": "2026-08-02T14:36:40.473744+00:00",
+      "updated_at": "2026-08-02T14:36:40.473745+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-POMEGRANATE-CDC566",
+      "canonical_name": "Pomegranate",
+      "common_name": "Pomegranate",
+      "scientific_name": "Punica granatum",
+      "aliases": [
+        "Pomegranate",
+        "Punica granatum"
+      ],
+      "created_at": "2026-08-02T14:36:40.473752+00:00",
+      "updated_at": "2026-08-02T14:36:40.473753+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PRICKLY-CHAFF-FLOWER-A20D1B",
+      "canonical_name": "Prickly Chaff Flower",
+      "common_name": "Prickly Chaff Flower",
+      "scientific_name": "Achyranthes aspera",
+      "aliases": [
+        "Prickly Chaff Flower",
+        "Achyranthes aspera"
+      ],
+      "created_at": "2026-08-02T14:36:40.473762+00:00",
+      "updated_at": "2026-08-02T14:36:40.473763+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PUMPKIN-FF48E5",
+      "canonical_name": "Pumpkin",
+      "common_name": "Pumpkin",
+      "scientific_name": "Cucurbita pepo",
+      "aliases": [
+        "Pumpkin",
+        "Cucurbita pepo"
+      ],
+      "created_at": "2026-08-02T14:36:40.473780+00:00",
+      "updated_at": "2026-08-02T14:36:40.473782+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PUNARNAVA-D79579",
+      "canonical_name": "Punarnava",
+      "common_name": "Punarnava",
+      "scientific_name": "Boerhavia diffusa",
+      "aliases": [
+        "Punarnava",
+        "Boerhavia diffusa"
+      ],
+      "created_at": "2026-08-02T14:36:40.473789+00:00",
+      "updated_at": "2026-08-02T14:36:40.473790+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PURPLE-FRUITED-PEA-EGGPLANT-983A64",
+      "canonical_name": "Purple Fruited Pea Eggplant",
+      "common_name": "Purple Fruited Pea Eggplant",
+      "scientific_name": "Solanum trilobatum",
+      "aliases": [
+        "Purple Fruited Pea Eggplant",
+        "Solanum trilobatum"
+      ],
+      "created_at": "2026-08-02T14:36:40.473800+00:00",
+      "updated_at": "2026-08-02T14:36:40.473801+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-PURPLE-TEPHROSIA-9B95E3",
+      "canonical_name": "Purple Tephrosia",
+      "common_name": "Purple Tephrosia",
+      "scientific_name": "Tephrosia purpurea",
+      "aliases": [
+        "Purple Tephrosia",
+        "Tephrosia purpurea"
+      ],
+      "created_at": "2026-08-02T14:36:40.473810+00:00",
+      "updated_at": "2026-08-02T14:36:40.473811+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-RADDISH-681A6D",
+      "canonical_name": "Raddish",
+      "common_name": "Raddish",
+      "scientific_name": "Raphanus sativus",
+      "aliases": [
+        "Raddish",
+        "Raphanus sativus"
+      ],
+      "created_at": "2026-08-02T14:36:40.473818+00:00",
+      "updated_at": "2026-08-02T14:36:40.473820+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-RAKTACHANDINI-61CA5B",
+      "canonical_name": "Raktachandini",
+      "common_name": "Raktachandini",
+      "scientific_name": "Pterocarpus santalinus",
+      "aliases": [
+        "Raktachandini",
+        "Pterocarpus santalinus"
+      ],
+      "created_at": "2026-08-02T14:36:40.473828+00:00",
+      "updated_at": "2026-08-02T14:36:40.473829+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-RASNA-5DB9D4",
+      "canonical_name": "Rasna",
+      "common_name": "Rasna",
+      "scientific_name": "Alpinia galanga",
+      "aliases": [
+        "Rasna",
+        "Alpinia galanga"
+      ],
+      "created_at": "2026-08-02T14:36:40.473837+00:00",
+      "updated_at": "2026-08-02T14:36:40.473839+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ROSARY-PEA-710037",
+      "canonical_name": "Rosary Pea",
+      "common_name": "Rosary Pea",
+      "scientific_name": "Abrus precatorius",
+      "aliases": [
+        "Rosary Pea",
+        "Abrus precatorius"
+      ],
+      "created_at": "2026-08-02T14:36:40.473847+00:00",
+      "updated_at": "2026-08-02T14:36:40.473848+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ROSE-APPLE-75A043",
+      "canonical_name": "Rose Apple",
+      "common_name": "Rose Apple",
+      "scientific_name": "Syzygium jambos",
+      "aliases": [
+        "Rose Apple",
+        "Syzygium jambos"
+      ],
+      "created_at": "2026-08-02T14:36:40.473856+00:00",
+      "updated_at": "2026-08-02T14:36:40.473857+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ROSE-ROSA-01BB0E",
+      "canonical_name": "Rose-Rosa",
+      "common_name": "Rose-Rosa",
+      "scientific_name": null,
+      "aliases": [
+        "Rose-Rosa"
+      ],
+      "created_at": "2026-08-02T14:36:40.473867+00:00",
+      "updated_at": "2026-08-02T14:36:40.473868+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-ROXBURGH-FIG-FCC344",
+      "canonical_name": "Roxburgh fig",
+      "common_name": "Roxburgh fig",
+      "scientific_name": "Ficus auriculata",
+      "aliases": [
+        "Roxburgh fig",
+        "Ficus auriculata"
+      ],
+      "created_at": "2026-08-02T14:36:40.473877+00:00",
+      "updated_at": "2026-08-02T14:36:40.473879+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SAMPIGE-A2AEAE",
+      "canonical_name": "Sampige",
+      "common_name": "Sampige",
+      "scientific_name": null,
+      "aliases": [
+        "Sampige"
+      ],
+      "created_at": "2026-08-02T14:36:40.473886+00:00",
+      "updated_at": "2026-08-02T14:36:40.473887+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SANDALWOOD-FC3ABA",
+      "canonical_name": "Sandalwood",
+      "common_name": "Sandalwood",
+      "scientific_name": "Santalum album",
+      "aliases": [
+        "Sandalwood",
+        "Santalum album"
+      ],
+      "created_at": "2026-08-02T14:36:40.473895+00:00",
+      "updated_at": "2026-08-02T14:36:40.473896+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SAPOTA-413A94",
+      "canonical_name": "Sapota",
+      "common_name": "Sapota",
+      "scientific_name": "Manikara zapota",
+      "aliases": [
+        "Sapota",
+        "Manikara zapota"
+      ],
+      "created_at": "2026-08-02T14:36:40.473903+00:00",
+      "updated_at": "2026-08-02T14:36:40.473904+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SEETHAASHOKA-504D42",
+      "canonical_name": "Seethaashoka",
+      "common_name": "Seethaashoka",
+      "scientific_name": "Saraca asoca",
+      "aliases": [
+        "Seethaashoka",
+        "Saraca asoca"
+      ],
+      "created_at": "2026-08-02T14:36:40.473912+00:00",
+      "updated_at": "2026-08-02T14:36:40.473913+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SEETHAPALA-A4FABF",
+      "canonical_name": "Seethapala",
+      "common_name": "Seethapala",
+      "scientific_name": null,
+      "aliases": [
+        "Seethapala"
+      ],
+      "created_at": "2026-08-02T14:36:40.473922+00:00",
+      "updated_at": "2026-08-02T14:36:40.473923+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SHAGGY-BUTTON-WEED-3501C1",
+      "canonical_name": "Shaggy button weed",
+      "common_name": "Shaggy button weed",
+      "scientific_name": "Diodia teres",
+      "aliases": [
+        "Shaggy button weed",
+        "Diodia teres"
+      ],
+      "created_at": "2026-08-02T14:36:40.473932+00:00",
+      "updated_at": "2026-08-02T14:36:40.473933+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SIRU-KEERAI-046A8E",
+      "canonical_name": "Siru Keerai",
+      "common_name": "Siru Keerai",
+      "scientific_name": "Amaranthus tristis",
+      "aliases": [
+        "Siru Keerai",
+        "Amaranthus tristis"
+      ],
+      "created_at": "2026-08-02T14:36:40.473941+00:00",
+      "updated_at": "2026-08-02T14:36:40.473943+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SMALL-WATER-CLOVER-8D2DF3",
+      "canonical_name": "Small Water Clover",
+      "common_name": "Small Water Clover",
+      "scientific_name": "Marsilea minuta",
+      "aliases": [
+        "Small Water Clover",
+        "Marsilea minuta"
+      ],
+      "created_at": "2026-08-02T14:36:40.473952+00:00",
+      "updated_at": "2026-08-02T14:36:40.473953+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SPIDERWISP-C1F836",
+      "canonical_name": "Spiderwisp",
+      "common_name": "Spiderwisp",
+      "scientific_name": "Cleome viscosa",
+      "aliases": [
+        "Spiderwisp",
+        "Cleome viscosa"
+      ],
+      "created_at": "2026-08-02T14:36:40.473968+00:00",
+      "updated_at": "2026-08-02T14:36:40.473969+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SPINACH1-78AF20",
+      "canonical_name": "Spinach1",
+      "common_name": "Spinach1",
+      "scientific_name": null,
+      "aliases": [
+        "Spinach1"
+      ],
+      "created_at": "2026-08-02T14:36:40.473977+00:00",
+      "updated_at": "2026-08-02T14:36:40.473978+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SQUARE-STALKED-VINE-1710DA",
+      "canonical_name": "Square Stalked Vine",
+      "common_name": "Square Stalked Vine",
+      "scientific_name": "Sarcostemma acidum",
+      "aliases": [
+        "Square Stalked Vine",
+        "Sarcostemma acidum"
+      ],
+      "created_at": "2026-08-02T14:36:40.473987+00:00",
+      "updated_at": "2026-08-02T14:36:40.473988+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-STINKING-PASSIONFLOWER-B921C1",
+      "canonical_name": "Stinking Passionflower",
+      "common_name": "Stinking Passionflower",
+      "scientific_name": "Passiflora foetida",
+      "aliases": [
+        "Stinking Passionflower",
+        "Passiflora foetida"
+      ],
+      "created_at": "2026-08-02T14:36:40.473998+00:00",
+      "updated_at": "2026-08-02T14:36:40.473999+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SWEET-BASIL-2E8EB6",
+      "canonical_name": "Sweet Basil",
+      "common_name": "Sweet Basil",
+      "scientific_name": "Ocimum basilicum",
+      "aliases": [
+        "Sweet Basil",
+        "Ocimum basilicum"
+      ],
+      "created_at": "2026-08-02T14:36:40.474007+00:00",
+      "updated_at": "2026-08-02T14:36:40.474008+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-SWEET-FLAG-38F25B",
+      "canonical_name": "Sweet flag",
+      "common_name": "Sweet flag",
+      "scientific_name": "Acorus calamus",
+      "aliases": [
+        "Sweet flag",
+        "Acorus calamus"
+      ],
+      "created_at": "2026-08-02T14:36:40.474015+00:00",
+      "updated_at": "2026-08-02T14:36:40.474017+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-TAMARIND-F898CB",
+      "canonical_name": "Tamarind",
+      "common_name": "Tamarind",
+      "scientific_name": "Tamarindus indica",
+      "aliases": [
+        "Tamarind",
+        "Tamarindus indica"
+      ],
+      "created_at": "2026-08-02T14:36:40.474024+00:00",
+      "updated_at": "2026-08-02T14:36:40.474025+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-TARO-8FF52C",
+      "canonical_name": "Taro",
+      "common_name": "Taro",
+      "scientific_name": "Colocasia esculenta",
+      "aliases": [
+        "Taro",
+        "Colocasia esculenta"
+      ],
+      "created_at": "2026-08-02T14:36:40.474032+00:00",
+      "updated_at": "2026-08-02T14:36:40.474034+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-TECOMA-BD5063",
+      "canonical_name": "Tecoma",
+      "common_name": "Tecoma",
+      "scientific_name": null,
+      "aliases": [
+        "Tecoma"
+      ],
+      "created_at": "2026-08-02T14:36:40.474041+00:00",
+      "updated_at": "2026-08-02T14:36:40.474042+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-THUMBE-4558A5",
+      "canonical_name": "Thumbe",
+      "common_name": "Thumbe",
+      "scientific_name": null,
+      "aliases": [
+        "Thumbe"
+      ],
+      "created_at": "2026-08-02T14:36:40.474050+00:00",
+      "updated_at": "2026-08-02T14:36:40.474051+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-TINNEVELLY-SENNA-6A32FD",
+      "canonical_name": "Tinnevelly Senna",
+      "common_name": "Tinnevelly Senna",
+      "scientific_name": "Cassia angustifolia (also known as Senna)",
+      "aliases": [
+        "Tinnevelly Senna",
+        "Cassia angustifolia (also known as Senna)"
+      ],
+      "created_at": "2026-08-02T14:36:40.474059+00:00",
+      "updated_at": "2026-08-02T14:36:40.474060+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-TOMATO-5ED728",
+      "canonical_name": "Tomato",
+      "common_name": "Tomato",
+      "scientific_name": "Solanum lycopersicum",
+      "aliases": [
+        "Tomato",
+        "Solanum lycopersicum"
+      ],
+      "created_at": "2026-08-02T14:36:40.474067+00:00",
+      "updated_at": "2026-08-02T14:36:40.474069+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-TRELLIS-VINE-33896F",
+      "canonical_name": "Trellis Vine",
+      "common_name": "Trellis Vine",
+      "scientific_name": "Cissus sicyoides",
+      "aliases": [
+        "Trellis Vine",
+        "Cissus sicyoides"
+      ],
+      "created_at": "2026-08-02T14:36:40.474078+00:00",
+      "updated_at": "2026-08-02T14:36:40.474079+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-TRIGONELLA-FOENUM-GRAECUM-FENUGREEK-A7A15E",
+      "canonical_name": "Trigonella Foenum-graecum (Fenugreek)",
+      "common_name": "Trigonella Foenum-graecum (Fenugreek)",
+      "scientific_name": null,
+      "aliases": [
+        "Trigonella Foenum-graecum (Fenugreek)"
+      ],
+      "created_at": "2026-08-02T14:36:40.474089+00:00",
+      "updated_at": "2026-08-02T14:36:40.474090+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-TULASI-EBA4DC",
+      "canonical_name": "Tulasi",
+      "common_name": "Tulasi",
+      "scientific_name": "Ocimum sanctum_Ocimum sanctum (also known as Holy Basil)",
+      "aliases": [
+        "Tulasi",
+        "Ocimum sanctum_Ocimum sanctum (also known as Holy Basil)"
+      ],
+      "created_at": "2026-08-02T14:36:40.474098+00:00",
+      "updated_at": "2026-08-02T14:36:40.474099+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-TURMERIC-2CCFAF",
+      "canonical_name": "Turmeric",
+      "common_name": "Turmeric",
+      "scientific_name": "Curcuma longa",
+      "aliases": [
+        "Turmeric",
+        "Curcuma longa"
+      ],
+      "created_at": "2026-08-02T14:36:40.474107+00:00",
+      "updated_at": "2026-08-02T14:36:40.474108+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-VELVET-BEAN-FF15D0",
+      "canonical_name": "Velvet bean",
+      "common_name": "Velvet bean",
+      "scientific_name": "Mucuna pruriens",
+      "aliases": [
+        "Velvet bean",
+        "Mucuna pruriens"
+      ],
+      "created_at": "2026-08-02T14:36:40.474116+00:00",
+      "updated_at": "2026-08-02T14:36:40.474117+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-WATER-SPINACH-A7692D",
+      "canonical_name": "Water Spinach",
+      "common_name": "Water Spinach",
+      "scientific_name": "Ipomoea aquatica",
+      "aliases": [
+        "Water Spinach",
+        "Ipomoea aquatica"
+      ],
+      "created_at": "2026-08-02T14:36:40.474125+00:00",
+      "updated_at": "2026-08-02T14:36:40.474126+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-WOOD-SOREL-OXALIS-SPP-B39904",
+      "canonical_name": "Wood_sorel_ Oxalis spp",
+      "common_name": "Wood_sorel_ Oxalis spp",
+      "scientific_name": null,
+      "aliases": [
+        "Wood_sorel_ Oxalis spp"
+      ],
+      "created_at": "2026-08-02T14:36:40.474135+00:00",
+      "updated_at": "2026-08-02T14:36:40.474136+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-AMRUTHABALLI-F4E57D",
+      "canonical_name": "Amruthaballi",
+      "common_name": "Amruthaballi",
+      "scientific_name": null,
+      "aliases": [
+        "Amruthaballi"
+      ],
+      "created_at": "2026-08-02T14:36:40.474155+00:00",
+      "updated_at": "2026-08-02T14:36:40.474157+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BHRAMI-69F912",
+      "canonical_name": "Bhrami",
+      "common_name": "Bhrami",
+      "scientific_name": null,
+      "aliases": [
+        "Bhrami"
+      ],
+      "created_at": "2026-08-02T14:36:40.474207+00:00",
+      "updated_at": "2026-08-02T14:36:40.474208+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-CORIENDER-D68D85",
+      "canonical_name": "Coriender",
+      "common_name": "Coriender",
+      "scientific_name": null,
+      "aliases": [
+        "Coriender"
+      ],
+      "created_at": "2026-08-02T14:36:40.474271+00:00",
+      "updated_at": "2026-08-02T14:36:40.474273+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-DODDPATHRE-C3D8AA",
+      "canonical_name": "Doddpathre",
+      "common_name": "Doddpathre",
+      "scientific_name": null,
+      "aliases": [
+        "Doddpathre"
+      ],
+      "created_at": "2026-08-02T14:36:40.474285+00:00",
+      "updated_at": "2026-08-02T14:36:40.474286+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-HONGE-D30847",
+      "canonical_name": "Honge",
+      "common_name": "Honge",
+      "scientific_name": null,
+      "aliases": [
+        "Honge"
+      ],
+      "created_at": "2026-08-02T14:36:40.474349+00:00",
+      "updated_at": "2026-08-02T14:36:40.474351+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-JASMINE-6D1C58",
+      "canonical_name": "Jasmine",
+      "common_name": "Jasmine",
+      "scientific_name": null,
+      "aliases": [
+        "Jasmine"
+      ],
+      "created_at": "2026-08-02T14:36:40.474368+00:00",
+      "updated_at": "2026-08-02T14:36:40.474370+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-LEMONGRASS-CBBD23",
+      "canonical_name": "Lemongrass",
+      "common_name": "Lemongrass",
+      "scientific_name": null,
+      "aliases": [
+        "Lemongrass"
+      ],
+      "created_at": "2026-08-02T14:36:40.474415+00:00",
+      "updated_at": "2026-08-02T14:36:40.474416+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-POMOEGRANATE-BEA87A",
+      "canonical_name": "Pomoegranate",
+      "common_name": "Pomoegranate",
+      "scientific_name": null,
+      "aliases": [
+        "Pomoegranate"
+      ],
+      "created_at": "2026-08-02T14:36:40.474507+00:00",
+      "updated_at": "2026-08-02T14:36:40.474508+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-BETEL-NUT-92269E",
+      "canonical_name": "Betel_Nut",
+      "common_name": "Betel_Nut",
+      "scientific_name": null,
+      "aliases": [
+        "Betel_Nut"
+      ],
+      "created_at": "2026-08-02T14:36:40.474646+00:00",
+      "updated_at": "2026-08-02T14:36:40.474648+00:00",
+      "taxonomy_version": "v1"
+    },
+    {
+      "canonical_plant_id": "PLANT-WOOD-SOREL-A0D454",
+      "canonical_name": "Wood_sorel",
+      "common_name": "Wood_sorel",
+      "scientific_name": null,
+      "aliases": [
+        "Wood_sorel"
+      ],
+      "created_at": "2026-08-02T14:36:40.474798+00:00",
+      "updated_at": "2026-08-02T14:36:40.474799+00:00",
+      "taxonomy_version": "v1"
+    }
+  ]
+}

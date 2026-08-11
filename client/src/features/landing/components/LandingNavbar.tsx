@@ -1,9 +1,14 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
-import { Smartphone, ChevronDown, Sprout } from 'lucide-react'
+import { Smartphone } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
+import { useTranslation } from 'react-i18next'
+import { LanguageSelector } from '@/components/shared/LanguageSelector'
 
 export function LandingNavbar() {
+  const { t } = useTranslation()
+
   return (
     <div className="w-full bg-[#184E48] backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgb(0,0,0,0.1)] transition-all duration-300">
       <nav className="flex items-center justify-between px-6 py-2.5 max-w-7xl mx-auto w-full">
@@ -28,38 +33,38 @@ export function LandingNavbar() {
             </div>
 
             <p className="text-[10px] text-slate-300 font-bold tracking-[0.15em] uppercase mt-1">
-              Trust in every herb
+              {t('landing.tagline')}
             </p>
           </div>
         </div>
 
         <div className="hidden md:flex items-center gap-8">
           <Link href="/" className="text-base font-bold text-white border-b-2 border-teal-200 pb-1">
-            Home
+            {t('nav.home')}
           </Link>
           <Link
             href="/about"
             className="text-base font-semibold text-slate-300 hover:text-white transition-colors"
           >
-            About
+            {t('nav.about')}
           </Link>
           <Link
             href="#"
             className="text-base font-semibold text-slate-300 hover:text-white transition-colors"
           >
-            How It Works
+            {t('nav.howItWorks')}
           </Link>
           <Link
             href="#"
             className="text-base font-semibold text-slate-300 hover:text-white transition-colors"
           >
-            Features
+            {t('nav.features')}
           </Link>
           <Link
             href="#"
             className="text-base font-semibold text-slate-300 hover:text-white transition-colors"
           >
-            Contact
+            {t('nav.contact')}
           </Link>
         </div>
 
@@ -69,15 +74,9 @@ export function LandingNavbar() {
             className="hidden lg:flex items-center gap-2 rounded-lg border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white px-5"
           >
             <Smartphone className="w-4 h-4 text-teal-200" />
-            Download App
+            {t('nav.downloadApp')}
           </Button>
-          <Button
-            variant="outline"
-            className="flex items-center gap-2 rounded-lg border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white px-4"
-          >
-            English
-            <ChevronDown className="w-4 h-4 text-slate-300" />
-          </Button>
+          <LanguageSelector variant="navbar" />
         </div>
       </nav>
     </div>

@@ -1,0 +1,181 @@
+candidate_canonical_name,scientific_name,taxon_category,total_images,dataset_count,datasets_present,status,cimpd_healthy_images,cimpd_unhealthy_images,raw_classes_count
+Murraya koenigii (Curry Leaf),Murraya koenigii,Tree,1397,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,400,200,5
+Ocimum sanctum (Holy Basil/Tulsi),Ocimum sanctum,Herb,1306,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,354,200,6
+Rosa spp. (Rose),Rosa spp.,Shrub,1142,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,276,172,8
+Solanum nigrum (Makoy/Black Nightshade),Solanum nigrum,Herb,1115,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,410,241,5
+Mentha spp. (Mint),Mentha spp.,Herb,940,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,239,0,4
+Saraca asoca (Ashoka),Saraca asoca,Tree,894,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,213,133,7
+Plectranthus amboinicus (Doddapatre/Indian Borage),Plectranthus amboinicus,Herb,891,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,5
+Piper betle (Betel Leaf),Piper betle,Vine,851,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,4
+Lantana camara (Lantana),Lantana camara,Shrub,821,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,456,213,4
+Psidium guajava (Guava),Psidium guajava,Tree,794,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,126,62,5
+Hibiscus rosa-sinensis (Hibiscus),Hibiscus rosa-sinensis,Shrub,768,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,100,66,5
+Citrus limon (Lemon),Citrus limon,Tree,766,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,103,68,5
+Tinospora cordifolia (Giloy/Amrita),Tinospora cordifolia,Climbing Shrub,665,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,4
+Bambusoideae (Bamboo),Bambusoideae,Grass/Tree,630,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,102,4
+Annona squamosa (Custard Apple),Annona squamosa,Tree,622,1,CIMPd,APPROVED_HARMONIZED,367,255,2
+Azadirachta indica (Neem),Azadirachta indica,Tree,616,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Artocarpus heterophyllus (Jackfruit),Artocarpus heterophyllus,Tree,573,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,210,87,4
+Ricinus communis (Castor),Ricinus communis,Shrub/Tree,572,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Pongamia pinnata (Honge/Karanja),Pongamia pinnata,Tree,572,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,4
+Mangifera indica (Mango),Mangifera indica,Tree,560,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Aegle marmelos (Bael),Aegle marmelos,Tree,559,1,CIMPd,APPROVED_HARMONIZED,358,201,2
+Aloe vera,Aloe barbadensis,Succulent,559,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Jasminum spp. (Jasmine),Jasminum spp.,Shrub/Vine,543,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Carica papaya (Papaya),Carica papaya,Tree,520,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,104,0,3
+Calotropis gigantea (Crown Flower/Ekka),Calotropis gigantea,Shrub,520,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,4
+Nyctanthes arbor-tristis (Harsingar/Parijat),Nyctanthes arbor-tristis,Tree,509,1,CIMPd,APPROVED_HARMONIZED,311,198,2
+Bauhinia variegata (Kachnar),Bauhinia variegata,Tree,508,1,CIMPd,APPROVED_HARMONIZED,326,182,2
+Bacopa monnieri (Brahmi),Bacopa monnieri,Herb,500,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Clerodendrum splendens,Clerodendrum splendens,Vine,492,1,CIMPd,APPROVED_HARMONIZED,294,198,2
+Nerium oleander (Oleander),Nerium oleander,Shrub,470,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Chamaecostus cuspidatus (Insulin Plant),Chamaecostus cuspidatus,Herb,470,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,3
+Salvia splendens (Scarlet Sage),Salvia splendens,Herb,462,1,CIMPd,APPROVED_HARMONIZED,299,163,2
+Lawsonia inermis (Henna),Lawsonia inermis,Shrub,453,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Punica granatum (Pomegranate),Punica granatum,Shrub/Tree,446,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Phyllanthus emblica (Amla),Phyllanthus emblica,Tree,426,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Tropaeolum majus (Nasturtium),Tropaeolum majus,Herb,424,1,CIMPd,APPROVED_HARMONIZED,263,161,2
+Basella alba (Malabar Spinach),Basella alba,Climbing Vine,395,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Manilkara zapota (Sapota/Chikoo),Manilkara zapota,Tree,380,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Tagetes spp. (Marigold),Tagetes spp.,Herb,372,3,"CIMPd, Hugging_Face, Kaggle",APPROVED_HARMONIZED,186,0,3
+Cardiospermum halicacabum (Balloon Vine),Cardiospermum halicacabum,Climber,368,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Tamarindus indica (Tamarind),Tamarindus indica,Tree,352,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Coriandrum sativum (Coriander),Coriandrum sativum,Herb,350,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Catharanthus roseus (Sadabahar),Catharanthus roseus,Shrub,323,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Cymbopogon citratus (Lemongrass),Cymbopogon citratus,Grass,308,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Withania somnifera (Ashwagandha),Withania somnifera,Herb,292,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Persea americana (Avocado),Persea americana,Tree,292,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Pelargonium spp. (Geranium),Pelargonium spp.,Herb,292,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Oxalis spp. (Wood Sorrel),Oxalis spp.,Herb,292,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Barleria (Barlaria),Barleria spp.,Shrub,284,1,CIMPd,APPROVED_HARMONIZED,284,0,1
+Euphorbia hirta (Asthma Weed),Euphorbia hirta,Herb,245,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,3
+Amaranthus viridis (Green Amaranth),Amaranthus viridis,Leafy Herb,245,1,Hugging_Face,APPROVED_HARMONIZED,0,0,2
+Palak(Spinach)-Spinacia Oleracea,Spinacia oleracea,Herb/Plant,233,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Annona squamosa (Custard Apple/Seethapala),Annona squamosa,Tree,228,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Nooni,Unknown,Herb/Plant,218,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,2
+Nooni-Morinda Citrifolia,Morinda citrifolia,Herb/Plant,218,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Vigna / Phaseolus spp. (Beans),Vigna / Phaseolus spp.,Herb/Vine,194,2,"Hugging_Face, Kaggle",TAXONOMY_CONFLICT_MULTI_GENUS,0,0,2
+Moringa oleifera (Drumstick/Moringa),Moringa oleifera,Tree,189,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Malabar_Spinach-Basella Alba,Basella alba,Herb/Plant,185,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Tribulus terrestris (Gokhru),Tribulus terrestris,Herb,169,1,Hugging_Face,APPROVED_HARMONIZED,0,0,2
+Coffea spp. (Coffee),Coffea spp.,Shrub,166,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Zingiber officinale (Ginger),Zingiber officinale,Herb,164,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Gomphrena globosa (Globe Amaranth),Gomphrena globosa,Herb,162,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Eucalyptus spp. (Eucalyptus),Eucalyptus spp.,Tree,160,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Sarcostemma acidum (Somlata),Sarcostemma acidum,Shrub,159,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Grewia asiatica (Phalsa/Gasagase),Grewia asiatica,Shrub,158,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Mentha piperita (Peppermint),Mentha piperita,Herb,154,1,Kaggle,APPROVED_HARMONIZED,0,0,2
+Pepper-Piper Nigrum,Piper nigrum,Herb/Plant,154,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Erythrina variegata (Badipala),Erythrina variegata,Tree,152,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,2
+Graptophyllum pictum (Caricature Plant),Graptophyllum pictum,Shrub,152,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,2
+Unresolved Kepala Leaf,Unknown,Herb,152,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,2
+Nagadali,Unknown,Herb/Plant,152,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Nagadali_Ruta Graveolens,Ruta graveolens,Herb/Plant,152,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Unresolved Ganigale Leaf,Unknown,Herb,150,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,2
+Palak(Spinach),Unknown,Herb/Plant,149,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Leucas aspera (Thumbe),Leucas aspera,Herb,148,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,2
+Eclipta prostrata (Bhringraj),Eclipta prostrata,Herb,146,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Brassica oleracea var. gongylodes (Kohlrabi),Brassica oleracea,Vegetable,146,2,"Hugging_Face, Kaggle",SINGLE_DATASET_UNIQUE,0,0,2
+Padri,Unknown,Herb/Plant,146,2,"Hugging_Face, Kaggle",SINGLE_DATASET_UNIQUE,0,0,2
+Nithyapushpa,Unknown,Herb/Plant,146,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Pappaya,Unknown,Herb/Plant,146,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Raktachandini,Unknown,Herb/Plant,146,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Areca catechu (Betel Nut),Areca catechu,Palm Tree,146,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Raktachandini_Pterocarpus Santalinus,Pterocarpus santalinus,Herb/Plant,146,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Capsicum spp. (Chilli),Capsicum spp.,Herb,138,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Colocasia esculenta (Taro),Colocasia esculenta,Herb,138,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Tecoma spp.,Tecoma spp.,Shrub,138,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,2
+Unresolved Chakte Leaf,Unknown,Herb,136,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,2
+Ruta graveolens (Common Rue),Ruta graveolens,Herb,134,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Ocimum basilicum var. pilosum (Kamakasturi),Ocimum basilicum,Herb,134,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,2
+Unspecified Spinach Variety,Spinacia / Amaranthus spp.,Herb,134,2,"Hugging_Face, Kaggle",AMBIGUOUS_GENERIC_NAME,0,0,2
+Cinnamomum camphora (Camphor Tree),Cinnamomum camphora,Tree,132,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Solanum lycopersicum (Tomato),Solanum lycopersicum,Herb,124,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Acalypha indica (Indian Copperleaf),Acalypha indica,Herb,124,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Ocimum basilicum (Sweet Basil),Ocimum basilicum,Herb,123,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Nerale,Unknown,Herb/Plant,122,2,"Hugging_Face, Kaggle",SINGLE_DATASET_UNIQUE,0,0,2
+Magnolia champaca (Sampige),Magnolia champaca,Tree,122,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,2
+Physalis peruviana (Cape Gooseberry),Physalis peruviana,Shrub,122,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Unresolved Kambajala Leaf,Unknown,Herb,118,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,2
+Trigonella foenum-graecum (Fenugreek),Trigonella foenum-graecum,Herb,116,1,Hugging_Face,APPROVED_HARMONIZED,0,0,2
+Urtica dioica (Stinging Nettle),Urtica dioica,Herb,106,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Parijatha-Nyctanthes Arbor-Tristis,Nyctanthes arbor,Herb/Plant,106,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Amaranthus titan (Giant Pigweed),Amaranthus titan,Herb,103,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Digera muricata (False Amaranth),Digera muricata,Herb,101,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Citron Lime (Herelikai),Unknown,Herb/Plant,99,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Citron Lime (Herelikai)-Citrus Medica (Citron) Or Citrus Aurantiifolia (Lime),Citrus medica,Herb/Plant,99,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Clitoria ternatea (Butterfly Pea),Clitoria ternatea,Vine,98,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Unresolved Kasambruga Leaf,Unknown,Herb,96,2,"Hugging_Face, Kaggle",UNRESOLVED_VERNACULAR,0,0,2
+Onion,Unknown,Herb/Plant,92,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Pumpkin,Unknown,Herb/Plant,92,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Onion-Allium Cepa,Allium cepa,Herb/Plant,92,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Pumpkin-Cucurbita Pepo,Cucurbita pepo,Herb/Plant,92,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Nelavembu,Unknown,Herb/Plant,90,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Nelavembu-Andrographis Paniculata,Andrographis paniculata,Herb/Plant,90,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Amaranthus tricolor (Red Amaranth),Amaranthus tricolor,Leafy Herb,89,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Acalypha reptans (Dwarf Copperleaf),Acalypha reptans,Herb,88,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Hemidesmus indicus (Anantamul),Hemidesmus indicus,Shrub/Climber,84,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Lagos Spinach_Celosia Argentea,Celosia argentea,Herb/Plant,84,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Celery_Apium Graveolens,Apium graveolens,Herb/Plant,82,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Jatropha gossypiifolia (Bellyache Bush),Jatropha gossypiifolia,Shrub,81,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Mustard_Brassica Juncea,Brassica juncea,Herb/Plant,80,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Malabar_Spinach,Unknown,Herb/Plant,79,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Acalypha wilkesiana (Red Copperleaf),Acalypha wilkesiana,Shrub,79,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Curcuma longa (Turmeric),Curcuma longa,Herb,78,2,"Hugging_Face, Kaggle",APPROVED_HARMONIZED,0,0,2
+Mountain Knotgrass_Aerva Lanata,Aerva lanata,Herb/Plant,78,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Punarnava_Boerhavia Diffusa,Boerhavia diffusa,Herb/Plant,76,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Pomoegranate,Unknown,Herb/Plant,75,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Acorus calamus (Vacha/Sweet Flag),Acorus calamus,Herb,75,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Carissa carandas (Karanda),Carissa carandas,Shrub,74,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Nalta Jute_Corchorus Olitorius,Corchorus olitorius,Herb/Plant,73,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Mucuna pruriens (Kaunch/Velvet Bean),Mucuna pruriens,Climber,72,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Purple Fruited Pea Eggplant_Solanum Trilobatum,Solanum trilobatum,Herb/Plant,70,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Abutilon indicum (Country Mallow),Abutilon indicum,Shrub,69,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Andrographis paniculata (Kalmegh/Green Chireta),Andrographis paniculata,Herb,69,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Lambs Quarters_Chenopodium Album,Chenopodium album,Herb/Plant,69,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Panicled Foldwing_Dicliptera Paniculata,Dicliptera paniculata,Herb/Plant,68,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Amaranthus tristis (Siru Keerai),Amaranthus tristis,Leafy Herb,68,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Artemisia indica (Indian Wormwood),Artemisia indica,Herb,67,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Parijatha,Unknown,Herb/Plant,66,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Senna auriculata (Avaram),Senna auriculata,Shrub,66,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Cissus quadrangularis (Hadjod),Cissus quadrangularis,Vine,66,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Ziziphus mauritiana (Indian Jujube/Ber),Ziziphus mauritiana,Tree,66,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Rosary Pea_Abrus Precatorius,Abrus precatorius,Herb/Plant,66,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Passiflora foetida (Stinking Passionflower),Passiflora foetida,Vine,66,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Diodia teres (Shaggy Button Weed),Diodia teres,Herb,65,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Centella asiatica (Gotu Kola/Indian Pennywort),Centella asiatica,Herb,64,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Lettuce Tree_Pisonia Grandis,Pisonia grandis,Herb/Plant,64,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Land Caltrops (Bindii)_Tribulus Cistoides,Tribulus cistoides,Herb/Plant,63,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Peepal Tree_Ficus Religiosa,Ficus religiosa,Herb/Plant,63,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Oleander_Nerium Oleander,Nerium oleander,Herb/Plant,62,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Amaranthus dubius (Chinese Spinach),Amaranthus dubius,Leafy Herb,60,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Tridax procumbens (Coatbuttons),Tridax procumbens,Herb,60,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Sida rhombifolia (Common Wireweed),Sida rhombifolia,Herb,60,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Kokilaksha_Asteracantha Longifolia,Asteracantha longifolia,Herb/Plant,59,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Purple Tephrosia_Tephrosia Purpurea,Tephrosia purpurea,Herb/Plant,59,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Commelina benghalensis (Dayflower),Commelina benghalensis,Herb,58,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Santalum album (Sandalwood),Santalum album,Tree,58,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Datura metel (Indian Thornapple),Datura metel,Shrub,57,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Marsilea minuta (Water Clover),Marsilea minuta,Fern,57,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Cissus sicyoides (Trellis Vine),Cissus sicyoides,Vine,57,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Tabernaemontana divaricata (Crape Jasmine),Tabernaemontana divaricata,Shrub,56,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Muntingia calabura (Jamaica Cherry),Muntingia calabura,Tree,56,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Syzygium jambos (Rose Apple),Syzygium jambos,Tree,56,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Mexican Prickly Poppy_Argemone Mexicana,Argemone mexicana,Herb/Plant,55,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Cleome viscosa (Spiderwisp),Cleome viscosa,Herb,55,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Ipomoea aquatica (Water Spinach),Ipomoea aquatica,Aquatic Herb,55,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Night Blooming Cereus_Epiphyllum Oxypetalum,Epiphyllum oxypetalum,Herb/Plant,54,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Prickly Chaff Flower_Achyranthes Aspera,Achyranthes aspera,Herb/Plant,54,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Hibiscus sabdariffa (Roselle/Gongura),Hibiscus sabdariffa,Shrub,53,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Madras Pea Pumpkin_Sesbania Grandiflora,Sesbania grandiflora,Herb/Plant,53,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Senna alexandrina (Tinnevelly Senna),Senna alexandrina,Shrub,53,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Malabar_Nut,Unknown,Herb/Plant,51,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Coccinia grandis (Ivy Gourd),Coccinia grandis,Vine,51,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Malabar_Nut-Justicia Adhatoda,Justicia adhatoda,Herb/Plant,51,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Rasna_Alpinia Galanga,Alpinia galanga,Herb/Plant,50,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Ficus auriculata (Roxburgh Fig),Ficus auriculata,Tree,50,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Pea-Pisum Sativum,Pisum sativum,Herb/Plant,47,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Raddish,Unknown,Herb/Plant,40,1,Kaggle,SINGLE_DATASET_UNIQUE,0,0,1
+Raddish-Raphanus Sativus,Raphanus sativus,Herb/Plant,40,1,Hugging_Face,SINGLE_DATASET_UNIQUE,0,0,1
+Syzygium cumini (Jamun),Syzygium cumini,Tree,39,1,Hugging_Face,APPROVED_HARMONIZED,0,0,1
+Unspecified Leaf Samples,Unknown,Junk,11,1,CIMPd,INVALID_NON_PLANT,0,0,1

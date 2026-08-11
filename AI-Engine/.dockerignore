@@ -1,0 +1,45 @@
+# Environment & Virtual Environments
+.venv/
+.env
+env/
+venv/
+
+# Git & Version Control
+.git/
+.gitignore
+
+# Python Cache & Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Datasets (Raw, Processed, Final)
+datasets/raw/*
+!datasets/raw/.gitkeep
+datasets/processed/*
+!datasets/processed/.gitkeep
+datasets/final/*
+!datasets/final/.gitkeep
+
+# Models & Checkpoints (Runtime Mounted via Volume)
+models/*
+!models/.gitkeep
+
+# Reports & Operational Artifacts
+reports/generated/
+reports/dataset_analysis/*.json
+reports/dataset_analysis/*.csv
+reports/model_evaluation/*.json
+!reports/model_evaluation/.gitkeep
+
+# IDEs & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

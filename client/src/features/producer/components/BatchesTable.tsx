@@ -1,6 +1,9 @@
+'use client'
+
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { Badge } from '@/components/ui/badge'
 import { mockBatches, type BatchStatus } from '../data/batches'
+import { useTranslation } from 'react-i18next'
 
 const statusStyles: Record<BatchStatus, string> = {
   verified: 'bg-green-100 text-green-800 hover:bg-green-100',
@@ -8,23 +11,25 @@ const statusStyles: Record<BatchStatus, string> = {
   rejected: 'bg-red-100 text-red-800 hover:bg-red-100',
 }
 
-const statusLabels: Record<BatchStatus, string> = {
-  verified: 'Verified',
-  pending: 'Pending',
-  rejected: 'Rejected',
-}
-
 export function BatchesTable() {
+  const { t } = useTranslation()
+
+  const statusLabels: Record<BatchStatus, string> = {
+    verified: t('producer.statusVerified'),
+    pending: t('producer.statusPending'),
+    rejected: t('producer.statusRejected'),
+  }
+
   return (
     <div className="rounded-lg border">
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Herb</TableHead>
-            <TableHead>Batch ID</TableHead>
-            <TableHead>Quantity</TableHead>
-            <TableHead>Harvest Date</TableHead>
-            <TableHead>Status</TableHead>
+            <TableHead>{t('producer.tableHerb')}</TableHead>
+            <TableHead>{t('producer.tableBatchId')}</TableHead>
+            <TableHead>{t('producer.tableQuantity')}</TableHead>
+            <TableHead>{t('producer.tableHarvestDate')}</TableHead>
+            <TableHead>{t('producer.tableStatus')}</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>

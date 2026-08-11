@@ -27,6 +27,8 @@ import { Mail, Lock, EyeOff, Eye, Users, ShieldCheck, Sprout } from 'lucide-reac
 import { useState } from 'react'
 import Image from 'next/image'
 
+import { useTranslation } from 'react-i18next'
+
 const formSchema = z.object({
   email: z.string().email({
     message: 'Please enter a valid email address.',
@@ -37,6 +39,7 @@ const formSchema = z.object({
 })
 
 export function LoginForm() {
+  const { t } = useTranslation()
   const login = useAuthStore((state) => state.login)
   const router = useRouter()
   const [showPassword, setShowPassword] = useState(false)
@@ -53,7 +56,7 @@ export function LoginForm() {
     // eslint-disable-next-line react-hooks/immutability
     document.cookie = 'auth_token=mock_token; path=/'
     login({ id: '1', name: 'Demo User', email: values.email, role: 'admin' })
-    toast.success('Successfully logged in!')
+    toast.success(t('common.success'))
     router.push('/dashboard')
   }
 
@@ -67,10 +70,10 @@ export function LoginForm() {
           
           <CardHeader className="pt-8 pb-4 flex flex-col items-center text-center">
             <CardTitle className="text-2xl font-bold text-slate-900 tracking-tight">
-              Welcome Back
+              {t('auth.welcomeBack')}
             </CardTitle>
             <CardDescription className="text-slate-500 font-medium text-sm mt-1.5">
-              Login to access your secure dashboard
+              {t('auth.loginSubtitle')}
             </CardDescription>
           </CardHeader>
           
@@ -83,13 +86,13 @@ export function LoginForm() {
                   render={({ field }) => (
                     <FormItem className="space-y-1.5">
                       <FormLabel className="text-slate-700 font-semibold text-sm ml-1">
-                        Email Address
+                        {t('auth.emailLabel')}
                       </FormLabel>
                       <FormControl>
                         <div className="relative">
                           <Mail className="absolute left-3.5 top-3 h-4 w-4 text-slate-400" />
                           <Input
-                            placeholder="Enter your email"
+                            placeholder={t('auth.emailPlaceholder')}
                             className="pl-10 h-11 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-base shadow-sm"
                             {...field}
                           />
@@ -105,14 +108,14 @@ export function LoginForm() {
                   render={({ field }) => (
                     <FormItem className="space-y-1.5">
                       <FormLabel className="text-slate-700 font-semibold text-sm ml-1">
-                        Password
+                        {t('auth.passwordLabel')}
                       </FormLabel>
                       <FormControl>
                         <div className="relative">
                           <Lock className="absolute left-3.5 top-3 h-4 w-4 text-slate-400" />
                           <Input
                             type={showPassword ? 'text' : 'password'}
-                            placeholder="Enter your password"
+                            placeholder={t('auth.passwordPlaceholder')}
                             className="pl-10 pr-10 h-11 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-base shadow-sm"
                             {...field}
                           />
@@ -145,13 +148,13 @@ export function LoginForm() {
                         <path d="M1 5L5 9L13 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
-                    Remember me
+                    {t('auth.rememberMe')}
                   </label>
                   <a
                     href="#"
                     className="text-[14px] font-semibold text-[#184E48] hover:text-[#184E48]/80 transition-colors"
                   >
-                    Forgot password?
+                    {t('auth.forgotPassword')}
                   </a>
                 </div>
 
@@ -159,7 +162,7 @@ export function LoginForm() {
                   type="submit"
                   className="w-full h-12 rounded-xl text-[16px] font-semibold bg-[#184E48] hover:bg-[#184E48]/90 text-white shadow-[0_4px_14px_0_rgb(24,78,72,0.2)] hover:shadow-[0_6px_20px_rgb(24,78,72,0.23)] transition-all active:scale-[0.98]"
                 >
-                  Sign In
+                  {t('auth.signIn')}
                 </Button>
 
               </form>
@@ -169,15 +172,15 @@ export function LoginForm() {
           <CardFooter className="flex-col gap-3 border-t border-slate-100 px-8 py-5 bg-slate-50/50">
             <div className="flex items-center justify-center gap-2 text-[13px] font-semibold text-[#1a4a2c] mb-2">
               <ShieldCheck className="w-4 h-4 text-[#184E48]" />
-              <span>Secure, encrypted authentication</span>
+              <span>{t('auth.secureAuth')}</span>
             </div>
             
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[12px] text-slate-500 font-medium">
-              <a href="#" className="hover:text-slate-800 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-slate-800 transition-colors">{t('auth.privacyPolicy')}</a>
               <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-              <a href="#" className="hover:text-slate-800 transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-slate-800 transition-colors">{t('auth.termsOfService')}</a>
               <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-              <a href="#" className="hover:text-slate-800 transition-colors">Help Center</a>
+              <a href="#" className="hover:text-slate-800 transition-colors">{t('auth.helpCenter')}</a>
             </div>
           </CardFooter>
         </Card>

@@ -1,0 +1,60 @@
+# Environment & Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Testing, Coverage & Linting
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Datasets & Processed Data (Raw dataset images ignored; directory structures preserved)
+datasets/raw/*
+!datasets/raw/.gitkeep
+datasets/processed/*
+!datasets/processed/.gitkeep
+datasets/final/*
+!datasets/final/.gitkeep
+data/processed/
+
+# Model Checkpoints & Deep Learning Weights
+models/*
+!models/.gitkeep
+!models/active_model.json
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# Generated Operational Reports & Logs
+reports/generated/
+*.log
+logs/
+runs/
+
+
+# Zip Archives & Compressed Files
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
+
+# IDE & OS Specific Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

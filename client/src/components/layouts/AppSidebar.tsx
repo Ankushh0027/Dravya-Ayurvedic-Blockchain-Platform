@@ -23,18 +23,22 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 
-const navItems = [
-  { title: 'Dashboard', url: '/dashboard', icon: Home },
-  { title: 'Herb Batches', url: '/dashboard/batches', icon: Package },
-  { title: 'Laboratories', url: '/dashboard/laboratories', icon: FlaskConical },
-  { title: 'Manufacturers', url: '/dashboard/manufacturers', icon: Factory },
-  { title: 'Distributors', url: '/dashboard/distributors', icon: Truck },
-  { title: 'Retailers', url: '/dashboard/retailers', icon: Store },
-  { title: 'Analytics', url: '/dashboard/analytics', icon: LineChart },
-  { title: 'Settings', url: '/dashboard/settings', icon: Settings },
-]
+import { useTranslation } from 'react-i18next'
 
 export function AppSidebar() {
+  const { t } = useTranslation()
+
+  const navItems = [
+    { title: t('nav.dashboard'), url: '/dashboard', icon: Home },
+    { title: t('nav.batches'), url: '/dashboard/batches', icon: Package },
+    { title: t('nav.laboratories'), url: '/dashboard/laboratories', icon: FlaskConical },
+    { title: t('nav.manufacturers'), url: '/dashboard/manufacturers', icon: Factory },
+    { title: t('nav.distributors'), url: '/dashboard/distributors', icon: Truck },
+    { title: t('nav.retailers'), url: '/dashboard/retailers', icon: Store },
+    { title: t('nav.analytics'), url: '/dashboard/analytics', icon: LineChart },
+    { title: t('nav.settings'), url: '/dashboard/settings', icon: Settings },
+  ]
+
   return (
     <Sidebar>
       <SidebarHeader>
@@ -47,11 +51,11 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Menu</SidebarGroupLabel>
+          <SidebarGroupLabel>{t('nav.dashboard')}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.url}>
                   <Link href={item.url}>
                     <SidebarMenuButton>
                       <item.icon />

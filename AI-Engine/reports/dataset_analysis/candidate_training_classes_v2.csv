@@ -1,0 +1,181 @@
+class_id,canonical_species_name,scientific_name,total_images,source_datasets,approval_status,selection_status,selection_reason
+DRAVYA_0001,Murraya koenigii (Curry Leaf),Murraya koenigii,1397,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 1397 images across 3 dataset(s).
+DRAVYA_0002,Ocimum sanctum (Holy Basil/Tulsi),Ocimum sanctum,1306,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 1306 images across 3 dataset(s).
+DRAVYA_0003,Rosa spp. (Rose),Rosa spp.,1142,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 1142 images across 3 dataset(s).
+DRAVYA_0004,Solanum nigrum (Makoy/Black Nightshade),Solanum nigrum,1115,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 1115 images across 3 dataset(s).
+DRAVYA_0005,Mentha spp. (Mint),Mentha spp.,940,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 940 images across 3 dataset(s).
+DRAVYA_0006,Saraca asoca (Ashoka),Saraca asoca,894,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 894 images across 3 dataset(s).
+DRAVYA_0007,Plectranthus amboinicus (Doddapatre/Indian Borage),Plectranthus amboinicus,891,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 891 images across 2 dataset(s).
+DRAVYA_0008,Piper betle (Betel Leaf),Piper betle,851,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 851 images across 2 dataset(s).
+DRAVYA_0009,Lantana camara (Lantana),Lantana camara,821,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 821 images across 3 dataset(s).
+DRAVYA_0010,Psidium guajava (Guava),Psidium guajava,794,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 794 images across 3 dataset(s).
+DRAVYA_0011,Hibiscus rosa-sinensis (Hibiscus),Hibiscus rosa-sinensis,768,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 768 images across 3 dataset(s).
+DRAVYA_0012,Citrus limon (Lemon),Citrus limon,766,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 766 images across 3 dataset(s).
+DRAVYA_0013,Tinospora cordifolia (Giloy/Amrita),Tinospora cordifolia,665,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 665 images across 2 dataset(s).
+DRAVYA_0014,Bambusoideae (Bamboo),Bambusoideae,630,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 630 images across 3 dataset(s).
+DRAVYA_0015,Annona squamosa (Custard Apple),Annona squamosa,622,CIMPd,APPROVED,SELECTED,High-confidence botanical mapping with 622 images across 1 dataset(s).
+DRAVYA_0016,Azadirachta indica (Neem),Azadirachta indica,616,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 616 images across 2 dataset(s).
+DRAVYA_0017,Artocarpus heterophyllus (Jackfruit),Artocarpus heterophyllus,573,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 573 images across 3 dataset(s).
+DRAVYA_0018,Ricinus communis (Castor),Ricinus communis,572,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 572 images across 2 dataset(s).
+DRAVYA_0019,Pongamia pinnata (Honge/Karanja),Pongamia pinnata,572,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 572 images across 2 dataset(s).
+DRAVYA_0020,Mangifera indica (Mango),Mangifera indica,560,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 560 images across 2 dataset(s).
+DRAVYA_0021,Aegle marmelos (Bael),Aegle marmelos,559,CIMPd,APPROVED,SELECTED,High-confidence botanical mapping with 559 images across 1 dataset(s).
+DRAVYA_0022,Aloe vera,Aloe barbadensis,559,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 559 images across 2 dataset(s).
+DRAVYA_0023,Jasminum spp. (Jasmine),Jasminum spp.,543,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 543 images across 2 dataset(s).
+DRAVYA_0024,Carica papaya (Papaya),Carica papaya,520,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 520 images across 3 dataset(s).
+DRAVYA_0025,Calotropis gigantea (Crown Flower/Ekka),Calotropis gigantea,520,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 520 images across 2 dataset(s).
+DRAVYA_0026,Nyctanthes arbor-tristis (Harsingar/Parijat),Nyctanthes arbor-tristis,509,CIMPd,APPROVED,SELECTED,High-confidence botanical mapping with 509 images across 1 dataset(s).
+DRAVYA_0027,Bauhinia variegata (Kachnar),Bauhinia variegata,508,CIMPd,APPROVED,SELECTED,High-confidence botanical mapping with 508 images across 1 dataset(s).
+DRAVYA_0028,Bacopa monnieri (Brahmi),Bacopa monnieri,500,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 500 images across 2 dataset(s).
+DRAVYA_0029,Clerodendrum splendens,Clerodendrum splendens,492,CIMPd,APPROVED,SELECTED,High-confidence botanical mapping with 492 images across 1 dataset(s).
+DRAVYA_0030,Nerium oleander (Oleander),Nerium oleander,470,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 470 images across 2 dataset(s).
+DRAVYA_0031,Chamaecostus cuspidatus (Insulin Plant),Chamaecostus cuspidatus,470,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Taxonomy conflict or unresolved vernacular name requiring expert review.
+DRAVYA_0032,Salvia splendens (Scarlet Sage),Salvia splendens,462,CIMPd,APPROVED,SELECTED,High-confidence botanical mapping with 462 images across 1 dataset(s).
+DRAVYA_0033,Lawsonia inermis (Henna),Lawsonia inermis,453,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 453 images across 2 dataset(s).
+DRAVYA_0034,Punica granatum (Pomegranate),Punica granatum,446,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 446 images across 2 dataset(s).
+DRAVYA_0035,Phyllanthus emblica (Amla),Phyllanthus emblica,426,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 426 images across 2 dataset(s).
+DRAVYA_0036,Tropaeolum majus (Nasturtium),Tropaeolum majus,424,CIMPd,APPROVED,SELECTED,High-confidence botanical mapping with 424 images across 1 dataset(s).
+DRAVYA_0037,Basella alba (Malabar Spinach),Basella alba,395,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 395 images across 2 dataset(s).
+DRAVYA_0038,Manilkara zapota (Sapota/Chikoo),Manilkara zapota,380,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 380 images across 2 dataset(s).
+DRAVYA_0039,Tagetes spp. (Marigold),Tagetes spp.,372,"CIMPd, Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 372 images across 3 dataset(s).
+DRAVYA_0040,Cardiospermum halicacabum (Balloon Vine),Cardiospermum halicacabum,368,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 368 images across 2 dataset(s).
+DRAVYA_0041,Tamarindus indica (Tamarind),Tamarindus indica,352,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 352 images across 2 dataset(s).
+DRAVYA_0042,Coriandrum sativum (Coriander),Coriandrum sativum,350,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 350 images across 2 dataset(s).
+DRAVYA_0043,Catharanthus roseus (Sadabahar),Catharanthus roseus,323,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 323 images across 2 dataset(s).
+DRAVYA_0044,Cymbopogon citratus (Lemongrass),Cymbopogon citratus,308,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 308 images across 2 dataset(s).
+DRAVYA_0045,Withania somnifera (Ashwagandha),Withania somnifera,292,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 292 images across 2 dataset(s).
+DRAVYA_0046,Persea americana (Avocado),Persea americana,292,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 292 images across 2 dataset(s).
+DRAVYA_0047,Pelargonium spp. (Geranium),Pelargonium spp.,292,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 292 images across 2 dataset(s).
+DRAVYA_0048,Oxalis spp. (Wood Sorrel),Oxalis spp.,292,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 292 images across 2 dataset(s).
+DRAVYA_0049,Barleria (Barlaria),Barleria spp.,284,CIMPd,APPROVED,SELECTED,High-confidence botanical mapping with 284 images across 1 dataset(s).
+DRAVYA_0050,Euphorbia hirta (Asthma Weed),Euphorbia hirta,245,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 245 images across 2 dataset(s).
+DRAVYA_0051,Amaranthus viridis (Green Amaranth),Amaranthus viridis,245,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 245 images across 1 dataset(s).
+DRAVYA_0052,Palak(Spinach)-Spinacia Oleracea,Spinacia oleracea,233,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 233 images across 1 dataset(s).
+DRAVYA_0053,Annona squamosa (Custard Apple/Seethapala),Annona squamosa,228,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 228 images across 2 dataset(s).
+DRAVYA_0054,Nooni,Unknown,218,Kaggle,APPROVED,SELECTED,High-confidence botanical mapping with 218 images across 1 dataset(s).
+DRAVYA_0055,Nooni-Morinda Citrifolia,Morinda citrifolia,218,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 218 images across 1 dataset(s).
+DRAVYA_0056,Vigna / Phaseolus spp. (Beans),Vigna / Phaseolus spp.,194,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Taxonomy conflict or unresolved vernacular name requiring expert review.
+DRAVYA_0057,Moringa oleifera (Drumstick/Moringa),Moringa oleifera,189,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 189 images across 2 dataset(s).
+DRAVYA_0058,Malabar_Spinach-Basella Alba,Basella alba,185,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 185 images across 1 dataset(s).
+DRAVYA_0059,Tribulus terrestris (Gokhru),Tribulus terrestris,169,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 169 images across 1 dataset(s).
+DRAVYA_0060,Coffea spp. (Coffee),Coffea spp.,166,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 166 images across 2 dataset(s).
+DRAVYA_0061,Zingiber officinale (Ginger),Zingiber officinale,164,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 164 images across 2 dataset(s).
+DRAVYA_0062,Gomphrena globosa (Globe Amaranth),Gomphrena globosa,162,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 162 images across 2 dataset(s).
+DRAVYA_0063,Eucalyptus spp. (Eucalyptus),Eucalyptus spp.,160,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 160 images across 2 dataset(s).
+DRAVYA_0064,Sarcostemma acidum (Somlata),Sarcostemma acidum,159,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 159 images across 1 dataset(s).
+DRAVYA_0065,Grewia asiatica (Phalsa/Gasagase),Grewia asiatica,158,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 158 images across 2 dataset(s).
+DRAVYA_0066,Mentha piperita (Peppermint),Mentha piperita,154,Kaggle,APPROVED,SELECTED,High-confidence botanical mapping with 154 images across 1 dataset(s).
+DRAVYA_0067,Pepper-Piper Nigrum,Piper nigrum,154,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 154 images across 1 dataset(s).
+DRAVYA_0068,Erythrina variegata (Badipala),Erythrina variegata,152,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Taxonomy conflict or unresolved vernacular name requiring expert review.
+DRAVYA_0069,Graptophyllum pictum (Caricature Plant),Graptophyllum pictum,152,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Taxonomy conflict or unresolved vernacular name requiring expert review.
+DRAVYA_0070,Unresolved Kepala Leaf,Unknown,152,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Taxonomy conflict or unresolved vernacular name requiring expert review.
+DRAVYA_0071,Nagadali,Unknown,152,Kaggle,APPROVED,SELECTED,High-confidence botanical mapping with 152 images across 1 dataset(s).
+DRAVYA_0072,Nagadali_Ruta Graveolens,Ruta graveolens,152,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 152 images across 1 dataset(s).
+DRAVYA_0073,Unresolved Ganigale Leaf,Unknown,150,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Taxonomy conflict or unresolved vernacular name requiring expert review.
+DRAVYA_0074,Palak(Spinach),Unknown,149,Kaggle,APPROVED,SELECTED,High-confidence botanical mapping with 149 images across 1 dataset(s).
+DRAVYA_0075,Leucas aspera (Thumbe),Leucas aspera,148,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 148 images across 2 dataset(s).
+DRAVYA_0076,Eclipta prostrata (Bhringraj),Eclipta prostrata,146,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 146 images across 2 dataset(s).
+DRAVYA_0077,Brassica oleracea var. gongylodes (Kohlrabi),Brassica oleracea,146,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 146 images across 2 dataset(s).
+DRAVYA_0078,Padri,Unknown,146,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 146 images across 2 dataset(s).
+DRAVYA_0079,Nithyapushpa,Unknown,146,Kaggle,APPROVED,SELECTED,High-confidence botanical mapping with 146 images across 1 dataset(s).
+DRAVYA_0080,Pappaya,Unknown,146,Kaggle,APPROVED,SELECTED,High-confidence botanical mapping with 146 images across 1 dataset(s).
+DRAVYA_0081,Raktachandini,Unknown,146,Kaggle,APPROVED,SELECTED,High-confidence botanical mapping with 146 images across 1 dataset(s).
+DRAVYA_0082,Areca catechu (Betel Nut),Areca catechu,146,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 146 images across 1 dataset(s).
+DRAVYA_0083,Raktachandini_Pterocarpus Santalinus,Pterocarpus santalinus,146,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 146 images across 1 dataset(s).
+DRAVYA_0084,Capsicum spp. (Chilli),Capsicum spp.,138,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 138 images across 2 dataset(s).
+DRAVYA_0085,Colocasia esculenta (Taro),Colocasia esculenta,138,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 138 images across 2 dataset(s).
+DRAVYA_0086,Tecoma spp.,Tecoma spp.,138,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 138 images across 2 dataset(s).
+DRAVYA_0087,Unresolved Chakte Leaf,Unknown,136,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Taxonomy conflict or unresolved vernacular name requiring expert review.
+DRAVYA_0088,Ruta graveolens (Common Rue),Ruta graveolens,134,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 134 images across 2 dataset(s).
+DRAVYA_0089,Ocimum basilicum var. pilosum (Kamakasturi),Ocimum basilicum,134,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 134 images across 2 dataset(s).
+DRAVYA_0090,Unspecified Spinach Variety,Spinacia / Amaranthus spp.,134,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Taxonomy conflict or unresolved vernacular name requiring expert review.
+DRAVYA_0091,Cinnamomum camphora (Camphor Tree),Cinnamomum camphora,132,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 132 images across 2 dataset(s).
+DRAVYA_0092,Solanum lycopersicum (Tomato),Solanum lycopersicum,124,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 124 images across 2 dataset(s).
+DRAVYA_0093,Acalypha indica (Indian Copperleaf),Acalypha indica,124,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 124 images across 1 dataset(s).
+DRAVYA_0094,Ocimum basilicum (Sweet Basil),Ocimum basilicum,123,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 123 images across 1 dataset(s).
+DRAVYA_0095,Nerale,Unknown,122,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 122 images across 2 dataset(s).
+DRAVYA_0096,Magnolia champaca (Sampige),Magnolia champaca,122,"Hugging_Face, Kaggle",APPROVED,SELECTED,High-confidence botanical mapping with 122 images across 2 dataset(s).
+DRAVYA_0097,Physalis peruviana (Cape Gooseberry),Physalis peruviana,122,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 122 images across 1 dataset(s).
+DRAVYA_0098,Unresolved Kambajala Leaf,Unknown,118,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Taxonomy conflict or unresolved vernacular name requiring expert review.
+DRAVYA_0099,Trigonella foenum-graecum (Fenugreek),Trigonella foenum-graecum,116,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 116 images across 1 dataset(s).
+DRAVYA_0100,Urtica dioica (Stinging Nettle),Urtica dioica,106,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 106 images across 1 dataset(s).
+DRAVYA_0101,Parijatha-Nyctanthes Arbor-Tristis,Nyctanthes arbor,106,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 106 images across 1 dataset(s).
+DRAVYA_0102,Amaranthus titan (Giant Pigweed),Amaranthus titan,103,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 103 images across 1 dataset(s).
+DRAVYA_0103,Digera muricata (False Amaranth),Digera muricata,101,Hugging_Face,APPROVED,SELECTED,High-confidence botanical mapping with 101 images across 1 dataset(s).
+DRAVYA_0104,Citron Lime (Herelikai),Unknown,99,Kaggle,NEEDS_REVIEW,EXCLUDED,Insufficient image count (99 images < 100 minimum threshold).
+DRAVYA_0105,Citron Lime (Herelikai)-Citrus Medica (Citron) Or Citrus Aurantiifolia (Lime),Citrus medica,99,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (99 images < 100 minimum threshold).
+DRAVYA_0106,Clitoria ternatea (Butterfly Pea),Clitoria ternatea,98,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Insufficient image count (98 images < 100 minimum threshold).
+DRAVYA_0107,Unresolved Kasambruga Leaf,Unknown,96,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Taxonomy conflict or unresolved vernacular name requiring expert review.
+DRAVYA_0108,Onion,Unknown,92,Kaggle,NEEDS_REVIEW,EXCLUDED,Insufficient image count (92 images < 100 minimum threshold).
+DRAVYA_0109,Pumpkin,Unknown,92,Kaggle,NEEDS_REVIEW,EXCLUDED,Insufficient image count (92 images < 100 minimum threshold).
+DRAVYA_0110,Onion-Allium Cepa,Allium cepa,92,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (92 images < 100 minimum threshold).
+DRAVYA_0111,Pumpkin-Cucurbita Pepo,Cucurbita pepo,92,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (92 images < 100 minimum threshold).
+DRAVYA_0112,Nelavembu,Unknown,90,Kaggle,NEEDS_REVIEW,EXCLUDED,Insufficient image count (90 images < 100 minimum threshold).
+DRAVYA_0113,Nelavembu-Andrographis Paniculata,Andrographis paniculata,90,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (90 images < 100 minimum threshold).
+DRAVYA_0114,Amaranthus tricolor (Red Amaranth),Amaranthus tricolor,89,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (89 images < 100 minimum threshold).
+DRAVYA_0115,Acalypha reptans (Dwarf Copperleaf),Acalypha reptans,88,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (88 images < 100 minimum threshold).
+DRAVYA_0116,Hemidesmus indicus (Anantamul),Hemidesmus indicus,84,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (84 images < 100 minimum threshold).
+DRAVYA_0117,Lagos Spinach_Celosia Argentea,Celosia argentea,84,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (84 images < 100 minimum threshold).
+DRAVYA_0118,Celery_Apium Graveolens,Apium graveolens,82,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (82 images < 100 minimum threshold).
+DRAVYA_0119,Jatropha gossypiifolia (Bellyache Bush),Jatropha gossypiifolia,81,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (81 images < 100 minimum threshold).
+DRAVYA_0120,Mustard_Brassica Juncea,Brassica juncea,80,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (80 images < 100 minimum threshold).
+DRAVYA_0121,Malabar_Spinach,Unknown,79,Kaggle,NEEDS_REVIEW,EXCLUDED,Insufficient image count (79 images < 100 minimum threshold).
+DRAVYA_0122,Acalypha wilkesiana (Red Copperleaf),Acalypha wilkesiana,79,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (79 images < 100 minimum threshold).
+DRAVYA_0123,Curcuma longa (Turmeric),Curcuma longa,78,"Hugging_Face, Kaggle",NEEDS_REVIEW,EXCLUDED,Insufficient image count (78 images < 100 minimum threshold).
+DRAVYA_0124,Mountain Knotgrass_Aerva Lanata,Aerva lanata,78,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (78 images < 100 minimum threshold).
+DRAVYA_0125,Punarnava_Boerhavia Diffusa,Boerhavia diffusa,76,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (76 images < 100 minimum threshold).
+DRAVYA_0126,Pomoegranate,Unknown,75,Kaggle,NEEDS_REVIEW,EXCLUDED,Insufficient image count (75 images < 100 minimum threshold).
+DRAVYA_0127,Acorus calamus (Vacha/Sweet Flag),Acorus calamus,75,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (75 images < 100 minimum threshold).
+DRAVYA_0128,Carissa carandas (Karanda),Carissa carandas,74,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (74 images < 100 minimum threshold).
+DRAVYA_0129,Nalta Jute_Corchorus Olitorius,Corchorus olitorius,73,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (73 images < 100 minimum threshold).
+DRAVYA_0130,Mucuna pruriens (Kaunch/Velvet Bean),Mucuna pruriens,72,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (72 images < 100 minimum threshold).
+DRAVYA_0131,Purple Fruited Pea Eggplant_Solanum Trilobatum,Solanum trilobatum,70,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (70 images < 100 minimum threshold).
+DRAVYA_0132,Abutilon indicum (Country Mallow),Abutilon indicum,69,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (69 images < 100 minimum threshold).
+DRAVYA_0133,Andrographis paniculata (Kalmegh/Green Chireta),Andrographis paniculata,69,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (69 images < 100 minimum threshold).
+DRAVYA_0134,Lambs Quarters_Chenopodium Album,Chenopodium album,69,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (69 images < 100 minimum threshold).
+DRAVYA_0135,Panicled Foldwing_Dicliptera Paniculata,Dicliptera paniculata,68,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (68 images < 100 minimum threshold).
+DRAVYA_0136,Amaranthus tristis (Siru Keerai),Amaranthus tristis,68,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (68 images < 100 minimum threshold).
+DRAVYA_0137,Artemisia indica (Indian Wormwood),Artemisia indica,67,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (67 images < 100 minimum threshold).
+DRAVYA_0138,Parijatha,Unknown,66,Kaggle,NEEDS_REVIEW,EXCLUDED,Insufficient image count (66 images < 100 minimum threshold).
+DRAVYA_0139,Senna auriculata (Avaram),Senna auriculata,66,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (66 images < 100 minimum threshold).
+DRAVYA_0140,Cissus quadrangularis (Hadjod),Cissus quadrangularis,66,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (66 images < 100 minimum threshold).
+DRAVYA_0141,Ziziphus mauritiana (Indian Jujube/Ber),Ziziphus mauritiana,66,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (66 images < 100 minimum threshold).
+DRAVYA_0142,Rosary Pea_Abrus Precatorius,Abrus precatorius,66,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (66 images < 100 minimum threshold).
+DRAVYA_0143,Passiflora foetida (Stinking Passionflower),Passiflora foetida,66,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (66 images < 100 minimum threshold).
+DRAVYA_0144,Diodia teres (Shaggy Button Weed),Diodia teres,65,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (65 images < 100 minimum threshold).
+DRAVYA_0145,Centella asiatica (Gotu Kola/Indian Pennywort),Centella asiatica,64,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (64 images < 100 minimum threshold).
+DRAVYA_0146,Lettuce Tree_Pisonia Grandis,Pisonia grandis,64,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (64 images < 100 minimum threshold).
+DRAVYA_0147,Land Caltrops (Bindii)_Tribulus Cistoides,Tribulus cistoides,63,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (63 images < 100 minimum threshold).
+DRAVYA_0148,Peepal Tree_Ficus Religiosa,Ficus religiosa,63,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (63 images < 100 minimum threshold).
+DRAVYA_0149,Oleander_Nerium Oleander,Nerium oleander,62,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (62 images < 100 minimum threshold).
+DRAVYA_0150,Amaranthus dubius (Chinese Spinach),Amaranthus dubius,60,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (60 images < 100 minimum threshold).
+DRAVYA_0151,Tridax procumbens (Coatbuttons),Tridax procumbens,60,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (60 images < 100 minimum threshold).
+DRAVYA_0152,Sida rhombifolia (Common Wireweed),Sida rhombifolia,60,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (60 images < 100 minimum threshold).
+DRAVYA_0153,Kokilaksha_Asteracantha Longifolia,Asteracantha longifolia,59,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (59 images < 100 minimum threshold).
+DRAVYA_0154,Purple Tephrosia_Tephrosia Purpurea,Tephrosia purpurea,59,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (59 images < 100 minimum threshold).
+DRAVYA_0155,Commelina benghalensis (Dayflower),Commelina benghalensis,58,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (58 images < 100 minimum threshold).
+DRAVYA_0156,Santalum album (Sandalwood),Santalum album,58,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (58 images < 100 minimum threshold).
+DRAVYA_0157,Datura metel (Indian Thornapple),Datura metel,57,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (57 images < 100 minimum threshold).
+DRAVYA_0158,Marsilea minuta (Water Clover),Marsilea minuta,57,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (57 images < 100 minimum threshold).
+DRAVYA_0159,Cissus sicyoides (Trellis Vine),Cissus sicyoides,57,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (57 images < 100 minimum threshold).
+DRAVYA_0160,Tabernaemontana divaricata (Crape Jasmine),Tabernaemontana divaricata,56,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (56 images < 100 minimum threshold).
+DRAVYA_0161,Muntingia calabura (Jamaica Cherry),Muntingia calabura,56,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (56 images < 100 minimum threshold).
+DRAVYA_0162,Syzygium jambos (Rose Apple),Syzygium jambos,56,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (56 images < 100 minimum threshold).
+DRAVYA_0163,Mexican Prickly Poppy_Argemone Mexicana,Argemone mexicana,55,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (55 images < 100 minimum threshold).
+DRAVYA_0164,Cleome viscosa (Spiderwisp),Cleome viscosa,55,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (55 images < 100 minimum threshold).
+DRAVYA_0165,Ipomoea aquatica (Water Spinach),Ipomoea aquatica,55,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (55 images < 100 minimum threshold).
+DRAVYA_0166,Night Blooming Cereus_Epiphyllum Oxypetalum,Epiphyllum oxypetalum,54,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (54 images < 100 minimum threshold).
+DRAVYA_0167,Prickly Chaff Flower_Achyranthes Aspera,Achyranthes aspera,54,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (54 images < 100 minimum threshold).
+DRAVYA_0168,Hibiscus sabdariffa (Roselle/Gongura),Hibiscus sabdariffa,53,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (53 images < 100 minimum threshold).
+DRAVYA_0169,Madras Pea Pumpkin_Sesbania Grandiflora,Sesbania grandiflora,53,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (53 images < 100 minimum threshold).
+DRAVYA_0170,Senna alexandrina (Tinnevelly Senna),Senna alexandrina,53,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (53 images < 100 minimum threshold).
+DRAVYA_0171,Malabar_Nut,Unknown,51,Kaggle,NEEDS_REVIEW,EXCLUDED,Insufficient image count (51 images < 100 minimum threshold).
+DRAVYA_0172,Coccinia grandis (Ivy Gourd),Coccinia grandis,51,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (51 images < 100 minimum threshold).
+DRAVYA_0173,Malabar_Nut-Justicia Adhatoda,Justicia adhatoda,51,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (51 images < 100 minimum threshold).
+DRAVYA_0174,Rasna_Alpinia Galanga,Alpinia galanga,50,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (50 images < 100 minimum threshold).
+DRAVYA_0175,Ficus auriculata (Roxburgh Fig),Ficus auriculata,50,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (50 images < 100 minimum threshold).
+DRAVYA_0176,Pea-Pisum Sativum,Pisum sativum,47,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (47 images < 100 minimum threshold).
+DRAVYA_0177,Raddish,Unknown,40,Kaggle,NEEDS_REVIEW,EXCLUDED,Insufficient image count (40 images < 100 minimum threshold).
+DRAVYA_0178,Raddish-Raphanus Sativus,Raphanus sativus,40,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (40 images < 100 minimum threshold).
+DRAVYA_0179,Syzygium cumini (Jamun),Syzygium cumini,39,Hugging_Face,NEEDS_REVIEW,EXCLUDED,Insufficient image count (39 images < 100 minimum threshold).
+DRAVYA_0180,Unspecified Leaf Samples,Unknown,11,CIMPd,REJECTED,EXCLUDED,Non-plant / corrupt junk images folder.

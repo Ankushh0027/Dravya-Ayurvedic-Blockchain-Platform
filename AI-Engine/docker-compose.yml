@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  dravya-ai-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dravya-ai-engine
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+      - DRAVYA_CONFIG_PATH=/app/configs/config.yaml
+    volumes:
+      # Runtime volume mount for model checkpoints and active model pointer
+      - ./models:/app/models
+      # Runtime volume mount for generated model evaluation reports
+      - ./reports/model_evaluation:/app/reports/model_evaluation
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
