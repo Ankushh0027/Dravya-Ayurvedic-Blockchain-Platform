@@ -179,6 +179,34 @@ Returns system health and active model metadata.
 
 ---
 
+## Batch Organization & Traceability (Phase 2)
+
+The Dravya AI Engine extends species identification to support end-to-end production batch creation, farmer-wise & herb-wise aggregation, and blockchain-ready traceability records.
+
+### End-to-End Pipeline
+```text
+Image Input → PlantPredictor → Canonical Species & Confidence → Verification Status Check → Deterministic Batch ID → Aggregation & Traceability Payload
+```
+
+1. **Deterministic Batch ID Generation:**
+   - Format: `DRAVYA-<HERB_PREFIX>-<YYYYMMDD>-<SUFFIX>` (e.g. `DRAVYA-ASH-20260810-A1B2C3`).
+   - Uses SHA-256 digests over normalized herb species, farmer ID, harvest date, and quantity to ensure collision resistance and privacy (no PII inside the ID).
+2. **Confidence Thresholding:**
+   - Confidence $\ge 0.90$ $\rightarrow$ `AI_CONFIRMED`
+   - $0.70 \le \text{Confidence} < 0.90$ $\rightarrow$ `REVIEW_REQUIRED`
+   - Confidence $< 0.70$ $\rightarrow$ `LOW_CONFIDENCE`
+3. **Quantity Normalization:**
+   - Standardizes inputs across units (`kg`, `g`, `quintal`, `tonne`, `lbs`) into canonical kilogram representation (`kg`).
+4. **Batch & Inventory Endpoints:**
+   - `POST /batches/create-from-image`: Multipart image upload + farmer metadata $\rightarrow$ returns Batch record & blockchain-ready TraceabilityPayload.
+   - `POST /batches/create`: Create batch directly from metadata.
+   - `GET /batches/{batch_id}`: Retrieve batch details.
+   - `GET /batches/{batch_id}/traceability`: Returns tamper-evident JSON payload with SHA-256 content hash ready for blockchain posting.
+   - `GET /batches/summary/herb/{herb_name}` & `GET /batches/summary/farmer/{farmer_id}`: Herb-wise & Farmer-wise summary metrics.
+   - `GET /inventory/summary`: Total inventory weight, batch counts, and species breakdowns.
+
+---
+
 ## Local Setup & Commands
 
 ```powershell

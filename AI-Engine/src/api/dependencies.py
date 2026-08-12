@@ -123,3 +123,28 @@ def get_predictor_dependency() -> PlantPredictor:
             detail="Model unavailable: No active model version promoted or checkpoint missing.",
         )
     return predictor
+
+
+# Global singleton instances for Batch management
+from src.batch import BatchManager
+from src.services import BatchService
+
+_batch_manager_instance = BatchManager()
+_batch_service_instance = BatchService(batch_manager=_batch_manager_instance)
+
+
+def get_batch_manager_dependency() -> BatchManager:
+    """FastAPI dependency for accessing the BatchManager singleton repository."""
+    return _batch_manager_instance
+
+
+def get_batch_service_dependency() -> BatchService:
+    """
+    FastAPI dependency for accessing the BatchService.
+    Attaches current PlantPredictor instance to BatchService if available.
+    """
+    manager = get_predictor_manager()
+    predictor = manager.get_predictor()
+    if predictor:
+        _batch_service_instance.set_predictor(predictor)
+    return _batch_service_instance

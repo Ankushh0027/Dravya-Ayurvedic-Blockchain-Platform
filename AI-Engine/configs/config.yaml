@@ -43,5 +43,9 @@ api:
     - "image/webp"
     - "image/bmp"
 
-
-
+batch:
+  confidence_thresholds:
+    confirmed: 0.90
+    review_required: 0.70
+  default_quantity_unit: "kg"
+  id_prefix: "DRAVYA"
