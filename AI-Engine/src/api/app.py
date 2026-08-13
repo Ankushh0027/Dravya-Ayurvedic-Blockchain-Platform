@@ -1,7 +1,15 @@
+import os
 from fastapi import FastAPI, HTTPException, Request, status
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from src.api.routes import health_router, prediction_router, batch_router, inventory_router
+from src.api.routes import (
+    health_router,
+    prediction_router,
+    batch_router,
+    inventory_router,
+    chat_router,
+)
 from src.batch.exceptions import (
     BatchNotFoundError,
     InvalidBatchError,
@@ -37,11 +45,34 @@ def create_app() -> FastAPI:
         redoc_url="/redoc",
     )
 
+    # Configure CORS
+    default_origins = [
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:5173",
+    ]
+    configured_origins = api_cfg.get("cors_allowed_origins", default_origins)
+    env_origins = os.getenv("DRAVYA_CORS_ORIGINS") or os.getenv("CORS_ALLOWED_ORIGINS")
+    if env_origins:
+        configured_origins = [o.strip() for o in env_origins.split(",") if o.strip()]
+
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=configured_origins,
+        allow_credentials=True,
+        allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        allow_headers=["*"],
+    )
+
+
     # Include routes
     app.include_router(health_router)
     app.include_router(prediction_router)
     app.include_router(batch_router)
     app.include_router(inventory_router)
+    app.include_router(chat_router)
+
 
     @app.get("/", include_in_schema=False)
     async def root():

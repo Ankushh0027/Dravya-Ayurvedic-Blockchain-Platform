@@ -205,7 +205,47 @@ Image Input → PlantPredictor → Canonical Species & Confidence → Verificati
    - `GET /batches/summary/herb/{herb_name}` & `GET /batches/summary/farmer/{farmer_id}`: Herb-wise & Farmer-wise summary metrics.
    - `GET /inventory/summary`: Total inventory weight, batch counts, and species breakdowns.
 
+5. **Dravya AI Assistant (`POST /chat`):**
+   - Natural language interface supporting English, Hindi, and Hinglish queries.
+   - Decoupled LLM Tool Execution Architecture: LLM cannot query databases directly; communicates strictly through deterministic backend tools.
+   - **Supported Queries:**
+     - Herb inventory: `"Ashwagandha ki total quantity kitni hai?"`, `"How much Ashwagandha do we have?"`
+     - Herb batches: `"How many Ashwagandha batches are there?"`, `"Show me all batches of Ashwagandha."`
+     - Farmer inventory: `"F001 ke paas kya hai?"`, `"How much inventory does farmer F001 have?"`
+     - Batch details & verification: `"DRAVYA-ASH-20260810-346DA7 details"`, `"Is this batch AI verified?"`
+     - Traceability: `"Is batch ki traceability dikhao"`, `"Show me traceability information"`
+     - Total inventory: `"System me total kitni herbs hain?"`, `"Total inventory batao"`
+   - **No-Hallucination Policy:** Data quantities, farmer IDs, batch numbers, and hashes are retrieved strictly from backend tools. Zero invented numbers.
+   - **LLM Provider Configuration:** Environment variables `DRAVYA_LLM_PROVIDER`, `DRAVYA_LLM_API_KEY`, `DRAVYA_LLM_MODEL`. Graceful offline fallback via built-in `MockLLMProvider` if key is omitted.
+
+
+
 ---
+
+## Frontend Integration & API Readiness
+
+```
+Frontend Client (React / Next.js / TypeScript)
+                     ↓
+      FastAPI CORS Middleware (Allowed Origins)
+                     ↓
+              Batch Service Layer
+                     ↓
+      AI Engine / Batch Manager Repository
+                     ↓
+        Batch & Blockchain Traceability Data
+```
+
+- **Base URL (Local)**: `http://127.0.0.1:8000` or `http://localhost:8000`
+- **Swagger UI**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- **OpenAPI JSON Spec**: [http://127.0.0.1:8000/openapi.json](http://127.0.0.1:8000/openapi.json)
+- **CORS Allowed Origins**: `http://localhost:3000`, `http://localhost:5173` (Configurable via `DRAVYA_CORS_ORIGINS`).
+- **Complete Technical API Contract**: Refer to [docs/API_CONTRACT.md](docs/API_CONTRACT.md) for full endpoint specifications, required/optional fields, request/response models, and status codes.
+- **Frontend Integration Guide**: Refer to [docs/FRONTEND_INTEGRATION.md](docs/FRONTEND_INTEGRATION.md) for TypeScript interfaces, JavaScript `fetch` code snippets, and UI component data mapping guides.
+- **Schema Example JSONs**: Located in [docs/examples/](docs/examples/).
+
+---
+
 
 ## Local Setup & Commands
 

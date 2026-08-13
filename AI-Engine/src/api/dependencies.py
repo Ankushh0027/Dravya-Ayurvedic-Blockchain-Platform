@@ -148,3 +148,19 @@ def get_batch_service_dependency() -> BatchService:
     if predictor:
         _batch_service_instance.set_predictor(predictor)
     return _batch_service_instance
+
+
+from src.assistant import AssistantService, AssistantTools
+
+_assistant_tools_instance = AssistantTools(
+    batch_manager=_batch_manager_instance,
+    batch_service=_batch_service_instance,
+)
+_assistant_service_instance = AssistantService(tools=_assistant_tools_instance)
+
+
+def get_assistant_service_dependency() -> AssistantService:
+    """
+    FastAPI dependency for injecting AssistantService instance into chat endpoints.
+    """
+    return _assistant_service_instance
