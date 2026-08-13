@@ -26,6 +26,8 @@ import { toast } from 'sonner'
 import { Mail, Lock, EyeOff, Eye, Users, ShieldCheck, Sprout } from 'lucide-react'
 import { useState } from 'react'
 import Image from 'next/image'
+import api from '@/services/api/axios'
+import { getDashboardRoute } from '@/utils/routes'
 
 import { useTranslation } from 'react-i18next'
 
@@ -43,6 +45,7 @@ export function LoginForm() {
   const login = useAuthStore((state) => state.login)
   const router = useRouter()
   const [showPassword, setShowPassword] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -52,12 +55,37 @@ export function LoginForm() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // eslint-disable-next-line react-hooks/immutability
-    document.cookie = 'auth_token=mock_token; path=/'
-    login({ id: '1', name: 'Demo User', email: values.email, role: 'admin' })
-    toast.success(t('common.success'))
-    router.push('/dashboard')
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true)
+    try {
+      const response = await api.post('/auth/login', values)
+      
+      if (response.data?.success && response.data?.data) {
+        const { user, token } = response.data.data
+        
+        // Save token to localStorage for axios and cookie for middleware
+        localStorage.setItem('token', token)
+        // eslint-disable-next-line react-hooks/immutability
+        document.cookie = `auth_token=${token}; path=/; max-age=604800; samesite=lax`
+        
+        // Update auth store
+        login(user)
+        toast.success(t('common.success') || 'Login successful')
+        
+        // Redirect based on role
+        const dashboardUrl = getDashboardRoute(user.role)
+        router.push(dashboardUrl)
+      } else {
+        toast.error('Unexpected response format')
+      }
+    } catch (error: unknown) {
+      console.error('Login error:', error)
+      const err = error as { response?: { data?: { message?: string } } }
+      const message = err.response?.data?.message || 'Failed to login'
+      toast.error(message)
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -93,7 +121,7 @@ export function LoginForm() {
                           <Mail className="absolute left-3.5 top-3 h-4 w-4 text-slate-400" />
                           <Input
                             placeholder={t('auth.emailPlaceholder')}
-                            className="pl-10 h-11 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-base shadow-sm"
+                            className="pl-10 h-11 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-base text-slate-900 shadow-sm"
                             {...field}
                           />
                         </div>
@@ -116,7 +144,7 @@ export function LoginForm() {
                           <Input
                             type={showPassword ? 'text' : 'password'}
                             placeholder={t('auth.passwordPlaceholder')}
-                            className="pl-10 pr-10 h-11 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-base shadow-sm"
+                            className="pl-10 pr-10 h-11 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-base text-slate-900 shadow-sm"
                             {...field}
                           />
                           <button
@@ -160,9 +188,10 @@ export function LoginForm() {
 
                 <Button
                   type="submit"
-                  className="w-full h-12 rounded-xl text-[16px] font-semibold bg-[#184E48] hover:bg-[#184E48]/90 text-white shadow-[0_4px_14px_0_rgb(24,78,72,0.2)] hover:shadow-[0_6px_20px_rgb(24,78,72,0.23)] transition-all active:scale-[0.98]"
+                  disabled={isLoading}
+                  className="w-full h-12 rounded-xl text-[16px] font-semibold bg-[#184E48] hover:bg-[#184E48]/90 text-white shadow-[0_4px_14px_0_rgb(24,78,72,0.2)] hover:shadow-[0_6px_20px_rgb(24,78,72,0.23)] transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  {t('auth.signIn')}
+                  {isLoading ? 'Signing in...' : t('auth.signIn')}
                 </Button>
 
               </form>

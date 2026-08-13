@@ -157,7 +157,7 @@ export default function VerifyPage() {
                 value={batchId}
                 onChange={(e) => setBatchId(e.target.value)}
                 placeholder={t('verify.inputPlaceholder')}
-                className="bg-white/80 border-slate-200 text-slate-900 placeholder:text-slate-400 h-12 rounded-xl shadow-sm focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] text-base"
+                className="bg-white/80 !border !border-black text-slate-900 placeholder:text-slate-400 h-12 rounded-xl shadow-sm focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] text-base"
               />
               <Button className="h-12 px-8 bg-[#184E48] hover:bg-[#184E48]/90 text-white rounded-xl shadow-md transition-all active:scale-[0.98] font-semibold text-base shrink-0">
                 <Search className="h-4 w-4 mr-2" />
@@ -174,7 +174,7 @@ export default function VerifyPage() {
             <Button
               onClick={startScan}
               variant="outline"
-              className="h-12 w-full rounded-xl border-slate-200 bg-white hover:bg-slate-50 text-slate-700 shadow-sm transition-all active:scale-[0.98] font-semibold text-base"
+              className="h-12 w-full rounded-xl !border !border-black bg-white hover:bg-slate-50 text-slate-700 shadow-sm transition-all active:scale-[0.98] font-semibold text-base"
             >
               <ScanLine className="h-5 w-5 mr-2 text-[#184E48]" />
               {t('verify.scanQr')}

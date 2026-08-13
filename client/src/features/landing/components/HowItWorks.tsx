@@ -16,8 +16,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel"
 
@@ -75,6 +73,7 @@ export function HowItWorks() {
   React.useEffect(() => {
     if (!api) return
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCurrent(api.selectedScrollSnap() + 1)
 
     api.on("select", () => {
@@ -188,12 +187,21 @@ export function HowItWorks() {
               })}
             </CarouselContent>
 
-            <CarouselPrevious className="hidden md:flex -left-6 lg:-left-12 bg-white text-[#184E48] border-[#184E48]/30 hover:bg-[#184E48] hover:text-white shadow-lg w-11 h-11" />
-            <CarouselNext className="hidden md:flex -right-6 lg:-right-12 bg-white text-[#184E48] border-[#184E48]/30 hover:bg-[#184E48] hover:text-white shadow-lg w-11 h-11" />
           </Carousel>
 
-          {/* Carousel Custom Dots & Pagination (Set to exactly 3 dots) */}
-
+          {/* Carousel Custom Dots & Pagination */}
+          <div className="flex justify-center gap-2 mt-8">
+            {steps.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  current === index + 1 ? 'bg-[#184E48] w-8' : 'bg-[#184E48]/20 w-2 hover:bg-[#184E48]/40'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Bottom CTA Banner */}

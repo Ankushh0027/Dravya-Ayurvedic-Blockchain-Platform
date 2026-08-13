@@ -19,9 +19,9 @@ export function ProducerSidebar() {
   const { t } = useTranslation()
 
   const navItems = [
-    { title: t('nav.dashboard'), url: '/dashboard/producer', icon: Home },
-    { title: t('nav.myBatches'), url: '/dashboard/producer/batches', icon: Package },
-    { title: t('nav.registerBatch'), url: '/dashboard/producer/register', icon: Sprout },
+    { title: t('nav.dashboard'), url: '/producer/dashboard', icon: Home },
+    { title: t('nav.myBatches'), url: '/producer/batches', icon: Package },
+    { title: t('nav.registerBatch'), url: '/producer/batches/create', icon: Sprout },
   ]
 
   return (

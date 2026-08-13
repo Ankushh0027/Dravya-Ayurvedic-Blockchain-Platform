@@ -71,7 +71,7 @@ export default function RegisterPage() {
         </nav>
       </div>
 
-      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-140px)] relative z-10 w-full mx-auto px-6 py-12">
+      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-140px)] relative z-10 w-full mx-auto px-6 py-6">
         <RegisterForm />
       </div>
 
