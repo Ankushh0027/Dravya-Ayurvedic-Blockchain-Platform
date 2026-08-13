@@ -271,9 +271,4 @@ export function RegisterForm() {
       </Card>
     </div>
   )
-}
-
-
-)
-
-}
+}
