@@ -1,3 +1,4 @@
+'use client'
 import { LandingNavbar } from '@/features/landing/components/LandingNavbar'
 import { Footer } from '@/features/landing/components/Footer'
 import { FloatingLeaf } from '@/features/landing/components/FloatingLeaf'
@@ -22,28 +23,36 @@ import { TeamCarousel } from '@/features/landing/components/teamScroll'
 const timeline = [
   {
     id: 1,
-    icon: <Lightbulb/>,
+    number: '01',
+    icon: Lightbulb,
     title: 'The Idea',
     desc: 'Noticed how often ayurvedic products like Adivasi Oil were being sold as counterfeit, and realized traceability across the Ayurvedic supply chain was almost non-existent.',
+    accent: 'from-emerald-500/20 to-teal-500/10',
   },
   {
     id: 2,
-    icon: <Code2/>,
+    number: '02',
+    icon: Code2,
     title: 'Development Begins',
     desc: 'Started building Dravya, referencing frameworks like Anvesha and Ministry of AYUSH guidelines to shape the traceability model.',
+    accent: 'from-cyan-500/20 to-blue-500/10',
   },
   {
     id: 3,
-    icon:<Shrub/> ,
+    number: '03',
+    icon: Shrub,
     title: 'Scale & Go Live',
-  desc: 'Expanding to more producers, manufacturers, and labs nationwide, while integrating AI — including a chatbot assistant — to make the platform more interactive and accessible.',
+    desc: 'Expanding to more producers, manufacturers, and labs nationwide, while integrating AI — including a chatbot assistant — to make the platform more interactive and accessible.',
+    accent: 'from-violet-500/20 to-purple-500/10',
   },
-   {
+  {
     id: 4,
-    icon:<Sparkle/> ,
-    title: 'Stay tuned for more features!'
+    number: '04',
+    icon: Sparkle,
+    title: 'Future Horizons',
+    desc: 'We are constantly adding new AI capabilities, laboratory integrations, and enhanced blockchain auditing tools to Dravya. Stay tuned for more features!',
+    accent: 'from-amber-500/20 to-orange-500/10',
   },
- 
 ]
 
 export default function AboutPage() {
@@ -150,11 +159,11 @@ export default function AboutPage() {
       </section>
 
       
+      {/* Timeline Section */}
       <section className="py-20 lg:py-28 bg-white max-w-5xl mx-auto px-6 w-full">
         <div className="text-center mb-16">
-         
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1e293b] font-serif">
-            How we got here
+          <h2 className="text-4xl md:text-5xl font-bold text-[#184E48] font-serif">
+            How We Got Here
           </h2>
           <p className="text-slate-600 mt-4 text-base max-w-lg mx-auto font-medium">
             Building the infrastructure for authentic, tamper-proof herbal medicine.
@@ -162,20 +171,41 @@ export default function AboutPage() {
         </div>
 
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#184E48]/20" />
-          <div className="space-y-10">
-            {timeline.map((m) => (
-              <div key={m.id} className="flex gap-8 items-start relative group">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#184E48] flex items-center justify-center text-white font-bold text-base z-10 shadow-lg shadow-[#184E48]/30 group-hover:scale-110 transition-transform duration-300">
-                  {m.icon}
+          {/* Vertical connector line */}
+          <div className="hidden lg:block absolute left-[2.75rem] top-8 bottom-8 w-px bg-gradient-to-b from-[#184E48]/30 via-[#184E48]/60 to-[#184E48]/30" />
+
+          <div className="space-y-6 lg:space-y-8">
+            {timeline.map((m) => {
+              const Icon = m.icon
+              return (
+                <div
+                  key={m.id}
+                  className="group relative flex flex-col lg:flex-row gap-6 lg:gap-8"
+                >
+                  {/* Left side: icon + number */}
+                  <div className="flex-shrink-0 flex lg:flex-col items-center lg:items-center gap-4 lg:gap-2 lg:w-[5.5rem]">
+                    <div className="w-14 h-14 lg:w-[5.5rem] lg:h-14 rounded-2xl bg-gradient-to-br from-[#184E48] to-[#0f3530] flex items-center justify-center shadow-xl shadow-[#184E48]/20 group-hover:scale-105 group-hover:shadow-[#184E48]/40 transition-all duration-300 flex-shrink-0 lg:ml-1">
+                      <Icon className="w-7 h-7 text-white" />
+                    </div>
+                    <span className="text-2xl lg:text-3xl font-black text-[#184E48]/20 font-serif lg:ml-2 lg:mt-1 select-none">
+                      {m.number}
+                    </span>
+                  </div>
+
+                  {/* Card with semicircle accent corner */}
+                  <div className="flex-1 bg-white border border-slate-200/80 rounded-3xl p-7 lg:p-8 hover:shadow-2xl hover:shadow-[#184E48]/8 hover:border-[#184E48]/20 transition-all duration-500 relative overflow-hidden">
+                    <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl ${m.accent} rounded-bl-full opacity-60 pointer-events-none`} />
+
+                    <div className="relative z-10">
+                      <h3 className="text-2xl font-bold text-[#184E48] font-serif mb-3">{m.title}</h3>
+                      <p className="text-slate-600 leading-relaxed font-medium text-base">
+                        {m.desc}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="bg-white rounded-2xl p-7 shadow-md border border-[#184E48] flex-1 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
-                  <h3 className="text-xl font-bold text-[#1e293b] mb-2 font-serif">{m.title}</h3>
-                  <p className="text-slate-600 leading-relaxed font-medium">{m.desc}</p>
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -189,42 +219,7 @@ export default function AboutPage() {
         
       </section>
 
-      {/* Bottom CTA Banner - Sleek Forest Green Card Container */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto bg-[#184E48] rounded-[2.5rem] p-10 lg:p-16 text-center relative overflow-hidden shadow-2xl shadow-[#184E48]/25 text-white">
-          {/* Background Leaf Accents */}
-          <div className="absolute -top-10 -right-10 w-[160px] pointer-events-none opacity-20 text-white">
-            <FloatingLeaf className="w-full h-auto" rotate={45} />
-          </div>
-          <div className="absolute -bottom-10 -left-10 w-[140px] pointer-events-none opacity-20 text-white">
-            <FloatingLeaf className="w-full h-auto" rotate={-120} />
-          </div>
-
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-6 backdrop-blur-md border border-white/20">
-              <Award className="w-7 h-7 text-teal-200" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold font-serif mb-4 leading-tight">
-              Join the movement for authentic Ayurveda
-            </h2>
-            <p className="text-slate-200 text-base md:text-lg mb-8 leading-relaxed">
-              Whether you're a farmer, manufacturer, lab, or retailer — Dravya has a place for you in the transparent supply chain.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <Button className="w-full sm:w-auto bg-white text-[#184E48] hover:bg-slate-100 font-bold rounded-xl px-8 py-6 text-base shadow-lg hover:-translate-y-0.5 transition-all">
-                  Get in Touch
-                </Button>
-              </Link>
-              <Link href="/features">
-                <Button variant="outline" className="w-full sm:w-auto border-white/30 text-white bg-white/10 hover:bg-white/20 rounded-xl px-8 py-6 text-base font-semibold backdrop-blur-sm">
-                  See Features
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       <Footer className="bg-[#184E48]" />
     </div>

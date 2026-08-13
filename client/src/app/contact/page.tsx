@@ -13,6 +13,7 @@ import {
   Clock,
   Building2,
   ArrowRight,
+  Award,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useState } from 'react'
@@ -31,12 +32,12 @@ const contactInfo = [
     detail: '+91 98765 43210',
     sub: 'Mon–Sat, 9am to 6pm IST',
   },
-  {
-    icon: MapPin,
-    title: 'Office',
-    detail: 'Bangalore, Karnataka',
-    sub: 'India — 560001',
-  },
+{
+  icon: MapPin,
+  title: 'Campus',
+  detail: 'Galgotias College, Greater Noida',
+  sub: 'Uttar Pradesh — 203201',
+},
   {
     icon: Clock,
     title: 'Support Hours',
@@ -102,11 +103,7 @@ export default function ContactPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#184E48]/10 text-[#184E48] text-sm font-semibold px-4 py-2 rounded-full mb-6 border border-[#184E48]/20">
-            <MessageSquare className="w-4 h-4 text-[#184E48]" />
-            Get in Touch
-          </div>
+         
 
           {/* Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-[4.75rem] font-bold tracking-tight text-[#1e293b] leading-[1.08] font-serif mb-6">
@@ -123,15 +120,13 @@ export default function ContactPage() {
       </section>
 
       {/* Main Contact Grid Section - White Background */}
-      <section className="py-12 lg:py-20 max-w-7xl mx-auto px-6 w-full">
+      <section className=" max-w-7xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-5 gap-12 items-start">
 
           {/* Left — Info cards */}
           <div className="lg:col-span-2 flex flex-col gap-5">
             <div>
-              <span className="text-[#184E48] font-bold text-xs uppercase tracking-widest bg-[#184E48]/10 px-3.5 py-1.5 rounded-full inline-block mb-3">
-                Contact Info
-              </span>
+             
               <h2 className="text-3xl font-bold text-[#1e293b] font-serif mt-1 mb-2">Let's connect</h2>
               <p className="text-slate-600 leading-relaxed text-sm font-medium">
                 Our team is ready to help you get onboarded, answer questions, or explore partnership opportunities.
@@ -154,14 +149,7 @@ export default function ContactPage() {
               </div>
             ))}
 
-            {/* Office badge */}
-            <div className="flex items-center gap-4 mt-2 bg-[#184E48] rounded-2xl p-6 shadow-lg shadow-[#184E48]/20 text-white relative overflow-hidden">
-              <Building2 className="w-7 h-7 text-teal-300 flex-shrink-0" />
-              <div>
-                <p className="text-white font-bold text-sm font-serif">Registered in India</p>
-                <p className="text-slate-200 text-xs mt-0.5 font-medium">DPIIT Recognized Startup · AYUSH Partner</p>
-              </div>
-            </div>
+       
           </div>
 
           {/* Right — Form */}
@@ -169,7 +157,7 @@ export default function ContactPage() {
             {submitted ? (
               <div className="flex flex-col items-center justify-center text-center py-20 px-8 bg-[#E1E9E1]/30 border border-[#184E48]/20 rounded-3xl h-full shadow-sm">
                 <div className="w-20 h-20 rounded-full bg-[#184E48] flex items-center justify-center mb-6 shadow-xl shadow-[#184E48]/30">
-                  <Sprout className="w-10 h-10 text-white" />
+                  <img src="logo-out.png" className="rounded-full object-cover object-center text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-[#1e293b] font-serif mb-3">Message Sent!</h3>
                 <p className="text-slate-600 max-w-sm leading-relaxed font-medium">
@@ -278,49 +266,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map-style footprint banner - Soft Herbal Tinted Background */}
-      <section className="py-16 bg-[#E1E9E1]/30 border-y border-[#184E48]/10">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-slate-600 text-base font-medium">
-            🌿 Headquartered in Bangalore · Serving producers across{' '}
-            <span className="text-[#184E48] font-bold">18 Indian states</span>
-          </p>
-        </div>
-      </section>
 
-      {/* Bottom CTA Banner - Sleek Forest Green Card Container */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto bg-[#184E48] rounded-[2.5rem] p-10 lg:p-16 text-center relative overflow-hidden shadow-2xl shadow-[#184E48]/25 text-white">
-          {/* Background Leaf Accents */}
-          <div className="absolute -top-10 -right-10 w-[160px] pointer-events-none opacity-20 text-white">
-            <FloatingLeaf className="w-full h-auto" rotate={45} />
-          </div>
-          <div className="absolute -bottom-10 -left-10 w-[140px] pointer-events-none opacity-20 text-white">
-            <FloatingLeaf className="w-full h-auto" rotate={-120} />
-          </div>
-
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold font-serif mb-4 leading-tight">
-              Empower your Ayurvedic brand today
-            </h2>
-            <p className="text-slate-200 text-base md:text-lg mb-8 leading-relaxed">
-              Connect with our team to digitize your supply chain with blockchain immutability and AI verification.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/verify">
-                <Button className="w-full sm:w-auto bg-white text-[#184E48] hover:bg-slate-100 font-bold rounded-xl px-8 py-6 text-base shadow-lg hover:-translate-y-0.5 transition-all gap-2">
-                  Start Verifying <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
-              <Link href="/features">
-                <Button variant="outline" className="w-full sm:w-auto border-white/30 text-white bg-white/10 hover:bg-white/20 rounded-xl px-8 py-6 text-base font-semibold backdrop-blur-sm">
-                  Explore Features
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       <Footer className="bg-[#184E48]" />
     </div>

@@ -17,7 +17,7 @@ export function DashboardCharts() {
   const { t } = useTranslation()
 
   return (
-    <Card className="col-span-4">
+    <Card className="col-span-4 bg-[#184E48]">
       <CardHeader>
         <CardTitle>{t('dashboard.overview')}</CardTitle>
         <CardDescription>{t('dashboard.monthlyProcessed')}</CardDescription>

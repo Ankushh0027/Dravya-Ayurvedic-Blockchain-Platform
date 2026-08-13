@@ -1,5 +1,6 @@
 import { Sprout, Mail } from 'lucide-react'
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 
 const Twitter = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -57,11 +58,11 @@ const Github = (props: React.SVGProps<SVGSVGElement>) => (
 
 import { useTranslation } from 'react-i18next'
 
-export function Footer() {
+export function Footer({ className }: { className?: string }) {
   const { t } = useTranslation()
 
   return (
-    <footer className="w-full bg-[#184E48] text-slate-200 py-16 lg:py-20 relative z-20">
+    <footer className={cn('w-full bg-[#184E48] text-slate-200 py-16 lg:py-20 relative z-20', className)}>
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
           <div className="lg:col-span-2 space-y-6">

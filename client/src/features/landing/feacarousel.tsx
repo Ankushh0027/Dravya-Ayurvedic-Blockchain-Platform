@@ -24,7 +24,7 @@ import {
 
 const features = [
   { icon: ShieldCheck, title: "Traceability", desc: "End-to-End verified" },
-  { icon: FlaskConical, title: "Quality", desc: "100% lab assured" },
+  { icon: FlaskConical, title: "Quality", desc: "Lab assured quality" },
   { icon: LinkIcon, title: "Security", desc: "Tamper-proof records" },
   { icon: Leaf, title: "Sourcing", desc: "Farm-verified origin" },
   { icon: Sprout, title: "Sustainability", desc: "Wild-harvest compliant" },
