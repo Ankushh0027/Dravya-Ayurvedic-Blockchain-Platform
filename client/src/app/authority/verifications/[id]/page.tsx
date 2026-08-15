@@ -140,7 +140,8 @@ export default function AuthorityVerificationDetailsPage() {
     return <ErrorState message={error || 'Verification not found'} onRetry={fetchVerification} />
   }
 
-  const glassCard = "bg-white/70 backdrop-blur-xl border border-white/60 shadow-[0_8px_40px_rgb(0,0,0,0.04)] rounded-[24px]"
+  const glassCard = "bg-white/80 backdrop-blur-xl border border-white/60 shadow-xl rounded-[24px] transition-all duration-300 hover:shadow-2xl hover:border-white/80"
+  const inputStyle = "bg-white/50 border-white/60 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:ring-[#184E48]/20 focus:border-[#184E48]/30 backdrop-blur-sm transition-all duration-300 rounded-xl"
   const isCompleted = verification.status === 'COMPLETED'
   const isApproved = verification.decision === 'APPROVED'
 
@@ -151,21 +152,32 @@ export default function AuthorityVerificationDetailsPage() {
         Back to Verifications
       </Link>
 
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-        <div>
-          <h1 className="text-4xl font-bold tracking-tight text-[#1e293b] font-serif flex items-center gap-3 mb-2">
-            <ShieldCheck className="w-10 h-10 text-[#184E48]" />
-            Verification Assessment
-          </h1>
-          <p className="text-[17px] text-slate-600 font-medium">Review producer details and submit on-ground verification.</p>
-        </div>
+      {/* Hero Section */}
+      <div className="relative rounded-[24px] overflow-hidden bg-gradient-to-br from-[#184E48] to-[#113834] p-8 md:p-10 shadow-xl border border-white/10 mt-4">
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-teal-500/10 rounded-full blur-[60px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-emerald-500/10 rounded-full blur-[50px] pointer-events-none translate-y-1/3 -translate-x-1/4" />
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay" />
         
-        {isCompleted && (
-          <div className={`px-4 py-2 rounded-xl border flex items-center gap-2 font-semibold ${isApproved ? 'bg-green-50 text-green-700 border-green-200' : 'bg-red-50 text-red-700 border-red-200'}`}>
-            {isApproved ? <CheckCircle2 className="w-5 h-5" /> : <XCircle className="w-5 h-5" />}
-            {isApproved ? 'VERIFIED' : 'REJECTED'}
+        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/20">
+                <ShieldCheck className="w-6 h-6 text-emerald-300" />
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white font-serif">Verification Assessment</h1>
+            </div>
+            <p className="text-emerald-50/80 font-medium leading-relaxed">
+              Review producer details and submit your official on-ground verification report.
+            </p>
           </div>
-        )}
+          
+          {isCompleted && (
+            <div className={`px-6 py-3 rounded-2xl border flex items-center gap-3 font-bold shadow-lg backdrop-blur-md ${isApproved ? 'bg-emerald-500/20 text-emerald-100 border-emerald-500/30' : 'bg-red-500/20 text-red-100 border-red-500/30'}`}>
+              {isApproved ? <CheckCircle2 className="w-6 h-6" /> : <XCircle className="w-6 h-6" />}
+              {isApproved ? 'OFFICIALLY VERIFIED' : 'REJECTED'}
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -268,14 +280,29 @@ export default function AuthorityVerificationDetailsPage() {
                     { id: 'location', label: 'Location Verified', state: locationVerified, setter: setLocationVerified },
                     { id: 'cultivation', label: 'Cultivation Verified', state: cultivationVerified, setter: setCultivationVerified },
                   ].map(item => (
-                    <div key={item.id} className="flex items-center space-x-3 p-3 rounded-xl border border-slate-100 bg-slate-50 hover:bg-slate-100/80 transition-colors">
+                    <div 
+                      key={item.id} 
+                      className={`flex items-center space-x-4 p-4 rounded-2xl border transition-all duration-300 ${
+                        item.state 
+                          ? 'bg-emerald-50/80 border-emerald-200/60 shadow-sm' 
+                          : 'bg-white/60 border-slate-200 hover:bg-white/90 hover:shadow-md'
+                      }`}
+                    >
+                      <div className={`flex-shrink-0 w-6 h-6 rounded-md flex items-center justify-center transition-colors duration-300 ${
+                        item.state ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-transparent'
+                      }`}>
+                        <CheckCircle2 className="w-4 h-4" />
+                      </div>
                       <Checkbox 
                         id={item.id} 
                         checked={item.state} 
                         onCheckedChange={(c) => item.setter(c as boolean)} 
                         disabled={isCompleted}
+                        className="hidden"
                       />
-                      <label htmlFor={item.id} className="text-sm font-semibold text-slate-700 cursor-pointer flex-1">
+                      <label htmlFor={item.id} className={`text-[15px] font-bold cursor-pointer flex-1 transition-colors duration-300 ${
+                        item.state ? 'text-emerald-900' : 'text-slate-600'
+                      }`}>
                         {item.label}
                       </label>
                     </div>
@@ -293,7 +320,7 @@ export default function AuthorityVerificationDetailsPage() {
                       value={inspectionDate} 
                       onChange={e => setInspectionDate(e.target.value)} 
                       disabled={isCompleted}
-                      className="bg-white"
+                      className={inputStyle}
                     />
                   </div>
                   <div className="space-y-2">
@@ -307,7 +334,7 @@ export default function AuthorityVerificationDetailsPage() {
                       value={latitude} 
                       onChange={e => setLatitude(e.target.value === '' ? '' : Number(e.target.value))} 
                       disabled={isCompleted}
-                      className="bg-white"
+                      className={inputStyle}
                     />
                   </div>
                   <div className="space-y-2">
@@ -321,7 +348,7 @@ export default function AuthorityVerificationDetailsPage() {
                       value={longitude} 
                       onChange={e => setLongitude(e.target.value === '' ? '' : Number(e.target.value))} 
                       disabled={isCompleted}
-                      className="bg-white"
+                      className={inputStyle}
                     />
                   </div>
                 </div>
@@ -334,7 +361,7 @@ export default function AuthorityVerificationDetailsPage() {
                   value={observations}
                   onChange={e => setObservations(e.target.value)}
                   disabled={isCompleted}
-                  className="min-h-[100px] bg-white"
+                  className={`min-h-[120px] !border-black ${inputStyle}`}
                 />
               </div>
               
