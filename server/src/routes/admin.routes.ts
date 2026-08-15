@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { assignVerificationAuthority, assignLotInspection, assignLabTest, assignDistributor } from '../controllers/admin.controller'
+import { assignVerificationAuthority, assignLotInspection, assignLabTest, assignDistributor, getPendingVerifications, getVerificationAuthorities } from '../controllers/admin.controller'
 import { getAuditLogs, getAuditLogById } from '../controllers/audit.controller'
 import { authenticate } from '../middleware/auth.middleware'
 import { authorize } from '../middleware/rbac.middleware'
@@ -10,6 +10,8 @@ const router = Router()
 router.use(authenticate)
 router.use(authorize('ADMIN'))
 
+router.get('/verifications', getPendingVerifications)
+router.get('/authorities', getVerificationAuthorities)
 router.post('/verifications/:id/assign', assignVerificationAuthority)
 router.post('/inspections/:id/assign', assignLotInspection)
 router.post('/assign-lab-test', assignLabTest)
