@@ -180,7 +180,7 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
 
             <div className="flex space-x-4">
               <FormField
-                control={form.control}
+                control={form.control as any}
                 name="landSize"
                 render={({ field }) => (
                   <FormItem className="flex-1">
@@ -194,7 +194,7 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
               />
               
               <FormField
-                control={form.control}
+                control={form.control as any}
                 name="landSizeUnit"
                 render={({ field }) => (
                   <FormItem className="w-1/3">

@@ -8,11 +8,15 @@ import { ApiResponse } from '@/types/api'
 
 export const adminApi = {
   // Verifications
-  getPendingVerifications: () => 
-    api.get<ApiResponse<{ verifications: AdminVerification[] }>>('/admin/verifications'),
+  getPendingVerifications: async () => {
+    const response = await api.get<ApiResponse<{ verifications: AdminVerification[] }>>('/admin/verifications')
+    return response.data.data as { verifications: AdminVerification[] }
+  },
 
-  getVerificationAuthorities: () => 
-    api.get<ApiResponse<{ authorities: VerificationAuthority[] }>>('/admin/authorities'),
+  getVerificationAuthorities: async () => {
+    const response = await api.get<ApiResponse<{ authorities: VerificationAuthority[] }>>('/admin/authorities')
+    return response.data.data as { authorities: VerificationAuthority[] }
+  },
 
   assignVerificationAuthority: (id: string, payload: AssignVerificationPayload) => 
     api.post<ApiResponse<{ verification: AdminVerification }>>(`/admin/verifications/${id}/assign`, payload),
