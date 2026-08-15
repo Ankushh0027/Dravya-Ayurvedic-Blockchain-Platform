@@ -1,0 +1,21 @@
+{
+  "batch_id": "DRAVYA-ASH-20260810-346DA7",
+  "herb_species": "Ashwagandha",
+  "canonical_species": "Ashwagandha",
+  "scientific_name": "Withania somnifera",
+  "farmer_id": "F001",
+  "farmer_name": "Ramesh Kumar",
+  "quantity": 150.0,
+  "quantity_unit": "kg",
+  "original_quantity": 150.0,
+  "original_unit": "kg",
+  "harvest_date": "2026-08-10",
+  "creation_timestamp": "2026-08-10T10:30:00.000000+00:00",
+  "source": "MANUAL",
+  "ai_prediction": null,
+  "verification_status": "AI_PREDICTED",
+  "metadata": {
+    "moisture_content": "8.5%",
+    "location": "Madhya Pradesh, India"
+  }
+}
