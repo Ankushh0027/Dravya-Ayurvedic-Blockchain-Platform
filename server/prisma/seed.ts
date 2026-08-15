@@ -70,6 +70,66 @@ async function main() {
     console.log(`   ID:       ${va.id}`)
   }
 
+  // ─── Create initial PRODUCER account ───────────────────
+  const prodEmail = 'producer@dravya.in'
+  const prodPassword = 'Prod@1234'
+  const existingProd = await prisma.user.findUnique({ where: { email: prodEmail } })
+  if (!existingProd) {
+    const salt = await bcrypt.genSalt(12)
+    const hashedPassword = await bcrypt.hash(prodPassword, salt)
+    const prod = await prisma.user.create({
+      data: {
+        name: 'Green Valley Farms',
+        email: prodEmail,
+        password: hashedPassword,
+        role: 'PRODUCER',
+        organization: 'Green Valley Farms',
+        isActive: true,
+      },
+    })
+    console.log(`✅ Producer user created: ${prodEmail} / ${prodPassword}`)
+  }
+
+  // ─── Create initial LAB account ────────────────────────
+  const labEmail = 'lab@dravya.in'
+  const labPassword = 'Lab@1234'
+  const existingLab = await prisma.user.findUnique({ where: { email: labEmail } })
+  if (!existingLab) {
+    const salt = await bcrypt.genSalt(12)
+    const hashedPassword = await bcrypt.hash(labPassword, salt)
+    const lab = await prisma.user.create({
+      data: {
+        name: 'AYUSH Testing Lab',
+        email: labEmail,
+        password: hashedPassword,
+        role: 'LAB',
+        organization: 'AYUSH Certified Lab',
+        isActive: true,
+      },
+    })
+    console.log(`✅ Lab user created: ${labEmail} / ${labPassword}`)
+  }
+
+  // ─── Create initial DISTRIBUTOR account ────────────────
+  const distEmail = 'distributor@dravya.in'
+  const distPassword = 'Dist@1234'
+  const existingDist = await prisma.user.findUnique({ where: { email: distEmail } })
+  if (!existingDist) {
+    const salt = await bcrypt.genSalt(12)
+    const hashedPassword = await bcrypt.hash(distPassword, salt)
+    const dist = await prisma.user.create({
+      data: {
+        name: 'National Distributors',
+        email: distEmail,
+        password: hashedPassword,
+        role: 'DISTRIBUTOR',
+        organization: 'National Logistics',
+        isActive: true,
+      },
+    })
+    console.log(`✅ Distributor user created: ${distEmail} / ${distPassword}`)
+  }
+
   // ─── Create Herb Catalog ────────────────────────────────
   const herbs = [
     {
@@ -114,6 +174,48 @@ async function main() {
       description: 'Contains curcumin, a potent anti-inflammatory compound.',
       medicinalUse: 'Inflammation, joint health, digestion.',
     },
+    {
+      commonName: 'Ginger',
+      botanicalName: 'Zingiber officinale',
+      family: 'Zingiberaceae',
+      description: 'A popular spice with powerful anti-nausea and anti-inflammatory effects.',
+      medicinalUse: 'Digestion, nausea, cold and flu relief.',
+    },
+    {
+      commonName: 'Amla',
+      botanicalName: 'Phyllanthus emblica',
+      family: 'Phyllanthaceae',
+      description: 'Indian Gooseberry, exceptionally rich in Vitamin C and antioxidants.',
+      medicinalUse: 'Immunity, hair and skin health, digestion.',
+    },
+    {
+      commonName: 'Giloy',
+      botanicalName: 'Tinospora cordifolia',
+      family: 'Menispermaceae',
+      description: 'An essential herb in Ayurveda known as the "root of immortality".',
+      medicinalUse: 'Fever, immunity booster, digestion.',
+    },
+    {
+      commonName: 'Aloe Vera',
+      botanicalName: 'Aloe barbadensis',
+      family: 'Asphodelaceae',
+      description: 'A succulent plant species widely used for soothing skin and digestion.',
+      medicinalUse: 'Skin burns, digestion, hydration.',
+    },
+    {
+      commonName: 'Mulethi',
+      botanicalName: 'Glycyrrhiza glabra',
+      family: 'Fabaceae',
+      description: 'Licorice root, traditionally used to soothe sore throats and digestive issues.',
+      medicinalUse: 'Cough, sore throat, acidity.',
+    },
+    {
+      commonName: 'Haritaki',
+      botanicalName: 'Terminalia chebula',
+      family: 'Combretaceae',
+      description: 'A key ingredient in Triphala, highly regarded for digestive support.',
+      medicinalUse: 'Detoxification, digestion, wound healing.',
+    }
   ]
 
   let seededHerbsCount = 0

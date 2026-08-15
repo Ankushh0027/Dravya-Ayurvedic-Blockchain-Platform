@@ -129,7 +129,7 @@ export function RegisterForm() {
       {/* Decorative background blur */}
       <div className="absolute -inset-1 bg-gradient-to-r from-[#184E48]/20 to-primary/20 rounded-[32px] blur-xl opacity-50 group-hover:opacity-70 transition duration-1000 group-hover:duration-300"></div>
 
-      <Card className="relative bg-white/90 backdrop-blur-xl border border-slate-100 shadow-[0_8px_40px_rgb(0,0,0,0.06)] rounded-[24px] overflow-hidden p-6 sm:p-8">
+      <Card className="relative bg-white/90 backdrop-blur-xl border border-black shadow-[0_8px_40px_rgb(0,0,0,0.06)] rounded-[24px] overflow-hidden p-6 sm:p-8">
         <div className="flex flex-col items-center text-center mb-6">
           <div className="h-12 w-12 p-2 bg-[#184E48]/10 rounded-2xl text-[#184E48] mb-2 shadow-sm border border-[#184E48]/10 flex items-center justify-center">
             <UserRoundPen className='h-full w-full' />

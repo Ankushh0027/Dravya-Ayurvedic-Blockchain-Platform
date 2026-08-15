@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { toast } from 'sonner'
 import { CheckCircle2, AlertCircle, Clock, FileWarning, ShieldCheck } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 
 export default function ProducerVerificationPage() {
@@ -111,35 +112,135 @@ export default function ProducerVerificationPage() {
 
   return (
     <div className="max-w-[1400px] mx-auto p-6 md:p-10 space-y-8 relative">
-      <div className="border-b border-slate-200/50 pb-6">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-[#1e293b] font-serif mb-2">Verification</h1>
-        <p className="text-[17px] text-slate-600 font-medium">Manage your official verification status required for batch submission.</p>
+      <div className="border-b border-slate-200/50 pb-6 flex justify-between items-end">
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-[#1e293b] font-serif mb-2">Verification</h1>
+          <p className="text-[17px] text-slate-600 font-medium">Manage your official verification status required for batch submission.</p>
+        </div>
+        {status === 'VERIFIED' && (
+           <div className="hidden md:flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full font-bold border border-emerald-100">
+             <CheckCircle2 className="w-5 h-5" />
+             Fully Verified
+           </div>
+        )}
       </div>
 
-      <div className="max-w-3xl mx-auto pt-4">
-        <Card className={`${glassCard}`}>
-          {/* Decorative Glow */}
-          <div className={`absolute top-0 right-0 w-[400px] h-[400px] ${display.glow} rounded-full blur-[80px] pointer-events-none`} />
-          
-          <CardContent className="flex flex-col items-center justify-center p-12 md:p-16 text-center relative z-10">
-            <div className={`w-28 h-28 ${display.iconBg} rounded-full flex items-center justify-center mb-8 shadow-sm`}>
-              {display.icon}
-            </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-4">
+        
+        {/* Left Column - Main Status & Details */}
+        <div className="lg:col-span-2 space-y-8">
+          <Card className={`${glassCard}`}>
+            {/* Decorative Glow */}
+            <div className={`absolute top-0 right-0 w-[400px] h-[400px] ${display.glow} rounded-full blur-[80px] pointer-events-none`} />
             
-            <h2 className="text-3xl font-bold font-serif text-[#1e293b] mb-4">{display.title}</h2>
-            <p className="text-[16px] text-slate-600 max-w-md mx-auto leading-relaxed">{display.description}</p>
-            
-            {canRequest && (
-              <Button 
-                onClick={handleRequestVerification}
-                disabled={isRequesting}
-                className="mt-10 bg-[#184E48] hover:bg-[#184E48]/90 text-white rounded-xl shadow-[0_8px_30px_rgb(24,78,72,0.2)] hover:shadow-[0_8px_30px_rgb(24,78,72,0.3)] hover:-translate-y-0.5 transition-all duration-300 px-8 py-6 text-[16px] font-bold min-w-[240px]"
-              >
-                {isRequesting ? 'Requesting...' : 'Request Verification'}
-              </Button>
-            )}
-          </CardContent>
-        </Card>
+            <CardContent className="flex flex-col items-center justify-center p-10 md:p-14 text-center relative z-10">
+              <div className={`w-28 h-28 ${display.iconBg} rounded-full flex items-center justify-center mb-6 shadow-sm ring-8 ring-white`}>
+                {display.icon}
+              </div>
+              
+              <h2 className="text-3xl font-bold font-serif text-[#1e293b] mb-4">{display.title}</h2>
+              <p className="text-[16px] text-slate-600 max-w-lg mx-auto leading-relaxed">{display.description}</p>
+              
+              {canRequest && (
+                <Button 
+                  onClick={handleRequestVerification}
+                  disabled={isRequesting}
+                  className="mt-8 bg-[#184E48] hover:bg-[#184E48]/90 text-white rounded-xl shadow-[0_8px_30px_rgb(24,78,72,0.2)] hover:shadow-[0_8px_30px_rgb(24,78,72,0.3)] hover:-translate-y-0.5 transition-all duration-300 px-8 py-6 text-[16px] font-bold min-w-[240px]"
+                >
+                  {isRequesting ? 'Requesting...' : 'Request Verification'}
+                </Button>
+              )}
+            </CardContent>
+          </Card>
+
+          {profile && (
+            <Card className={`${glassCard}`}>
+              <CardHeader className="border-b border-slate-100 bg-slate-50/50 pb-4">
+                <CardTitle className="text-lg font-bold text-[#1e293b]">Farm Snapshot</CardTitle>
+                <CardDescription>Details associated with your verification profile.</CardDescription>
+              </CardHeader>
+              <CardContent className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                   <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Farm Name</p>
+                   <p className="text-[15px] font-semibold text-slate-800">{profile.farmName}</p>
+                </div>
+                <div>
+                   <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Location</p>
+                   <p className="text-[15px] font-semibold text-slate-800">{profile.district}, {profile.state}</p>
+                </div>
+                <div>
+                   <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Land Size</p>
+                   <p className="text-[15px] font-semibold text-slate-800">{profile.landSize} {profile.landSizeUnit}</p>
+                </div>
+                <div>
+                   <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Status</p>
+                   <Badge variant="outline" className="font-bold border-slate-200 text-slate-600 bg-slate-50">{profile.verificationStatus}</Badge>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+        </div>
+
+        {/* Right Column - Steps & Info */}
+        <div className="space-y-8">
+          <Card className={`${glassCard}`}>
+            <CardHeader className="border-b border-slate-100 bg-slate-50/50 pb-4">
+              <CardTitle className="text-lg font-bold text-[#1e293b]">Verification Process</CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
+              <div className="relative pl-6 border-l-2 border-slate-200 space-y-8">
+                
+                <div className="relative">
+                  <span className="absolute -left-[35px] flex items-center justify-center w-6 h-6 rounded-full bg-emerald-500 ring-4 ring-white">
+                    <CheckCircle2 className="w-4 h-4 text-white" />
+                  </span>
+                  <h3 className="font-bold text-slate-800 text-sm">1. Complete Profile</h3>
+                  <p className="text-xs text-slate-500 mt-1">Farm and location details submitted.</p>
+                </div>
+
+                <div className="relative">
+                  <span className={`absolute -left-[35px] flex items-center justify-center w-6 h-6 rounded-full ring-4 ring-white ${status !== 'PENDING' ? 'bg-emerald-500' : 'bg-slate-200'}`}>
+                    {status !== 'PENDING' ? <CheckCircle2 className="w-4 h-4 text-white" /> : <span className="w-2 h-2 bg-slate-400 rounded-full" />}
+                  </span>
+                  <h3 className={`font-bold text-sm ${status !== 'PENDING' ? 'text-slate-800' : 'text-slate-500'}`}>2. Request Verification</h3>
+                  <p className="text-xs text-slate-500 mt-1">Submit request to the authority.</p>
+                </div>
+
+                <div className="relative">
+                  <span className={`absolute -left-[35px] flex items-center justify-center w-6 h-6 rounded-full ring-4 ring-white ${status === 'VERIFIED' ? 'bg-emerald-500' : (status === 'UNDER_REVIEW' ? 'bg-blue-500' : 'bg-slate-200')}`}>
+                    {status === 'VERIFIED' ? <CheckCircle2 className="w-4 h-4 text-white" /> : (status === 'UNDER_REVIEW' ? <Clock className="w-3 h-3 text-white" /> : <span className="w-2 h-2 bg-slate-400 rounded-full" />)}
+                  </span>
+                  <h3 className={`font-bold text-sm ${status === 'VERIFIED' || status === 'UNDER_REVIEW' ? 'text-slate-800' : 'text-slate-500'}`}>3. Authority Review</h3>
+                  <p className="text-xs text-slate-500 mt-1">Document and background checks.</p>
+                </div>
+
+                <div className="relative">
+                  <span className={`absolute -left-[35px] flex items-center justify-center w-6 h-6 rounded-full ring-4 ring-white ${status === 'VERIFIED' ? 'bg-emerald-500' : 'bg-slate-200'}`}>
+                    {status === 'VERIFIED' ? <ShieldCheck className="w-4 h-4 text-white" /> : <span className="w-2 h-2 bg-slate-400 rounded-full" />}
+                  </span>
+                  <h3 className={`font-bold text-sm ${status === 'VERIFIED' ? 'text-slate-800' : 'text-slate-500'}`}>4. Officially Verified</h3>
+                  <p className="text-xs text-slate-500 mt-1">Access to submit network batches.</p>
+                </div>
+
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-[#184E48]/5 border-[#184E48]/10 shadow-none rounded-[24px]">
+             <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-[#184E48]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <AlertCircle className="w-6 h-6 text-[#184E48]" />
+                </div>
+                <h4 className="font-bold text-[#184E48] mb-2">Need Assistance?</h4>
+                <p className="text-sm text-[#184E48]/80 leading-relaxed mb-5">
+                  If your verification is taking longer than 3-5 business days, please contact the support desk.
+                </p>
+                <Button variant="outline" className="w-full border-[#184E48]/20 text-[#184E48] hover:bg-[#184E48]/10 rounded-xl font-semibold">
+                  Contact Support
+                </Button>
+             </CardContent>
+          </Card>
+        </div>
       </div>
     </div>
   )

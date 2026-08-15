@@ -3,16 +3,6 @@ import { initReactI18next } from 'react-i18next'
 import en from './locales/en.json'
 import hi from './locales/hi.json'
 
-const getInitialLanguage = (): string => {
-  if (typeof window !== 'undefined') {
-    const saved = localStorage.getItem('dravya-language')
-    if (saved === 'hi' || saved === 'en') {
-      return saved
-    }
-  }
-  return 'en'
-}
-
 if (!i18n.isInitialized) {
   i18n
     .use(initReactI18next)
@@ -21,7 +11,7 @@ if (!i18n.isInitialized) {
         en: { translation: en },
         hi: { translation: hi },
       },
-      lng: getInitialLanguage(),
+      lng: 'en', // Always initialize with 'en' to match server SSR and prevent hydration mismatch
       fallbackLng: 'en',
       interpolation: {
         escapeValue: false,
@@ -33,6 +23,14 @@ if (!i18n.isInitialized) {
 }
 
 if (typeof window !== 'undefined') {
+  const saved = localStorage.getItem('dravya-language')
+  if (saved && saved !== 'en' && i18n.language !== saved) {
+    // Defer the language change until after initial hydration
+    setTimeout(() => {
+      i18n.changeLanguage(saved)
+    }, 0)
+  }
+
   i18n.on('languageChanged', (lng) => {
     localStorage.setItem('dravya-language', lng)
   })

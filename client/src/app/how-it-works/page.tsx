@@ -240,7 +240,7 @@ function RoleSelector() {
 
         <div
           key={activeRole}
-          className="group relative rounded-3xl bg-white border border-[#184E48]/15 shadow-md shadow-[#184E48]/[0.05] hover:border-[#184E48]/40 hover:shadow-2xl hover:shadow-[#184E48]/15 transition-all duration-500 overflow-hidden"
+          className="group relative rounded-3xl bg-white border border-black shadow-md shadow-[#184E48]/[0.05] hover:border-black hover:shadow-2xl hover:shadow-[#184E48]/15 transition-all duration-500 overflow-hidden"
           style={{ animation: 'roleFadeIn 0.38s cubic-bezier(0.22,1,0.36,1)' }}
         >
           <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#184E48] opacity-100 transition-opacity duration-500" />
@@ -320,7 +320,7 @@ function RoleSelector() {
 export default function HowItWorksPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white relative font-sans overflow-x-hidden">
-      <LandingNavbar className="bg-[#184E48]" />
+      <LandingNavbar />
 
       {/* Hero Section — White bg */}
       <section className="relative flex flex-col justify-center items-center px-6 lg:px-24 py-16 lg:py-24 z-10 w-full max-w-[1600px] mx-auto text-center">
@@ -390,7 +390,7 @@ export default function HowItWorksPage() {
                     </div>
 
                     {/* Card */}
-                    <div className="flex-1 bg-white border border-slate-200/80 rounded-3xl p-7 lg:p-8 hover:shadow-2xl hover:shadow-[#184E48]/8 hover:border-[#184E48]/20 transition-all duration-500 relative overflow-hidden">
+                    <div className="flex-1 bg-white border border-black rounded-3xl p-7 lg:p-8 hover:shadow-2xl hover:shadow-[#184E48]/8 hover:border-black transition-all duration-500 relative overflow-hidden">
                       {/* Accent gradient corner */}
                       <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl ${step.accent} rounded-bl-full opacity-60 pointer-events-none`} />
 

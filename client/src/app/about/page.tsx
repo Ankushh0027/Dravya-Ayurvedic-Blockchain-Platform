@@ -19,6 +19,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ContactPreviewCard } from '@/components/shared/contapre'
 import { TeamCarousel } from '@/features/landing/components/teamScroll'
+import { useTranslation } from 'react-i18next'
 
 const timeline = [
   {
@@ -56,9 +57,11 @@ const timeline = [
 ]
 
 export default function AboutPage() {
+  const { t } = useTranslation()
+
   return (
     <div className="min-h-screen flex flex-col bg-white relative font-sans overflow-x-hidden">
-      <LandingNavbar className="bg-[#184E48]" />
+      <LandingNavbar />
 
       {/* Hero Section - Matching Home Page Light Style */}
       <section className="relative flex-1 flex flex-col justify-center items-center px-6 lg:px-24 py-16 lg:py-24 relative z-10 w-full max-w-[1600px] mx-auto text-center">
@@ -86,15 +89,13 @@ export default function AboutPage() {
 
           {/* Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-[4.75rem] font-bold tracking-tight text-[#1e293b] leading-[1.08] font-serif mb-6">
-            Ayurveda Deserves
-            <span className="block text-[#184E48] mt-2">Proof, Not Promises.</span>
+            {t('about.titleMain')}
+            <span className="block text-[#184E48] mt-2">{t('about.titleSub')}</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-[17px] md:text-[19px] lg:text-[20px] text-slate-600 leading-relaxed font-medium max-w-2xl mx-auto mb-10">
-            Ayurvedic medicine runs on trust — but trust without proof is just a promise. Dravya
-  makes that proof possible, tracking every herb from the soil it grew in to the shelf
-  it reaches.
+            {t('about.subtitle')}
           </p>
 
           {/* Action CTAs */}
@@ -104,18 +105,18 @@ export default function AboutPage() {
                 size="lg"
                 className="bg-[#184E48] hover:bg-[#184E48]/90 text-white rounded-xl px-8 py-6 text-[16px] font-semibold shadow-[0_8px_30px_rgb(24,78,72,0.2)] hover:shadow-[0_8px_30px_rgb(24,78,72,0.3)] hover:-translate-y-0.5 transition-all duration-300 group flex items-center justify-center gap-2"
               >
-                Explore Features
+                {t('about.exploreFeatures')}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link href="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-[#184E48] bg-white hover:bg-slate-50 text-[#184E48] rounded-xl px-8 py-6 text-[16px] font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
-              >
-                Get in Touch
-              </Button>
+            <Button
+  size="lg"
+  variant="outline"
+  className="!border-black !border-[1px] !border-solid bg-white text-[#184E48] hover:bg-slate-50 rounded-xl px-8 py-6 text-[16px] font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+>
+  {t('about.getInTouch')}
+</Button>
             </Link>
           </div>
         </div>
@@ -134,20 +135,17 @@ export default function AboutPage() {
       <div>
  
   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1e293b] font-serif mt-2 mb-6 leading-tight">
-    Bringing transparency to Ayurveda
+    {t('about.bringingTransparency')}
   </h2>
   <p className="text-slate-600 text-lg leading-relaxed mb-6 font-medium">
-    Adulteration, mislabeling, and counterfeit herbs quietly erode trust in Ayurvedic
-    medicine. Dravya exists to close that gap — connecting ancient wisdom with modern
-    accountability.
+    {t('about.bringingTransparencyDesc1')}
   </p>
   <p className="text-slate-600 text-lg leading-relaxed mb-8 font-medium">
-    We combine blockchain immutability with AI-powered verification to create an unbroken,
-    tamper-proof record — from farm to pharmacy.
+    {t('about.bringingTransparencyDesc2')}
   </p>
   <Link href="/features">
     <Button className="bg-[#184E48] hover:bg-[#184E48]/90 text-white rounded-xl px-7 py-6 text-[15px] font-semibold gap-2 flex items-center shadow-md shadow-[#184E48]/20 hover:-translate-y-0.5 transition-all">
-      Explore Platform Capabilities <ArrowRight className="w-4 h-4" />
+      {t('about.exploreCapabilities')} <ArrowRight className="w-4 h-4" />
     </Button>
   </Link>
 </div>
@@ -163,10 +161,10 @@ export default function AboutPage() {
       <section className="py-20 lg:py-28 bg-white max-w-5xl mx-auto px-6 w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#184E48] font-serif">
-            How We Got Here
+            {t('about.howWeGotHere')}
           </h2>
           <p className="text-slate-600 mt-4 text-base max-w-lg mx-auto font-medium">
-            Building the infrastructure for authentic, tamper-proof herbal medicine.
+            {t('about.howWeGotHereSub')}
           </p>
         </div>
 
@@ -193,7 +191,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Card with semicircle accent corner */}
-                  <div className="flex-1 bg-white border border-slate-200/80 rounded-3xl p-7 lg:p-8 hover:shadow-2xl hover:shadow-[#184E48]/8 hover:border-[#184E48]/20 transition-all duration-500 relative overflow-hidden">
+                    <div className="flex-1 bg-white border border-black rounded-3xl p-7 lg:p-8 hover:shadow-2xl hover:shadow-[#184E48]/8 hover:border-black transition-all duration-500 relative overflow-hidden">
                     <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl ${m.accent} rounded-bl-full opacity-60 pointer-events-none`} />
 
                     <div className="relative z-10">

@@ -12,15 +12,44 @@ import { FloatingLeaf } from '@/features/landing/components/FloatingLeaf'
 import jsQR from 'jsqr'
 import { useTranslation } from 'react-i18next'
 import { LanguageSelector } from '@/components/shared/LanguageSelector'
+import { publicApi, PublicVerificationResponse } from '@/services/api/public'
+import { toast } from 'sonner'
+import { Loader2 } from 'lucide-react'
 
 export default function VerifyPage() {
   const { t } = useTranslation()
   const [scanning, setScanning] = useState(false)
   const [batchId, setBatchId] = useState('')
+  const [isVerifying, setIsVerifying] = useState(false)
+  const [verificationResult, setVerificationResult] = useState<PublicVerificationResponse | null>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const streamRef = useRef<MediaStream | null>(null)
   const rafRef = useRef<number | null>(null)
+
+  const handleVerify = async (codeToVerify: string = batchId) => {
+    if (!codeToVerify.trim()) {
+      toast.error('Please enter a verification code')
+      return
+    }
+
+    try {
+      setIsVerifying(true)
+      setVerificationResult(null)
+      const data = await publicApi.verifyQR(codeToVerify)
+      setVerificationResult(data)
+      if (data.verified) {
+        toast.success('Product verified successfully')
+      } else {
+        toast.error(data.message || 'Verification failed')
+      }
+    } catch (error: any) {
+      console.error('Verification error:', error)
+      toast.error(error.response?.data?.message || 'Failed to verify product')
+    } finally {
+      setIsVerifying(false)
+    }
+  }
 
   const startScan = async () => {
     setScanning(true)
@@ -61,6 +90,7 @@ export default function VerifyPage() {
         if (code) {
           setBatchId(code.data)
           stopScan()
+          handleVerify(code.data)
           return
         }
       }
@@ -159,8 +189,12 @@ export default function VerifyPage() {
                 placeholder={t('verify.inputPlaceholder')}
                 className="bg-white/80 !border !border-black text-slate-900 placeholder:text-slate-400 h-12 rounded-xl shadow-sm focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] text-base"
               />
-              <Button className="h-12 px-8 bg-[#184E48] hover:bg-[#184E48]/90 text-white rounded-xl shadow-md transition-all active:scale-[0.98] font-semibold text-base shrink-0">
-                <Search className="h-4 w-4 mr-2" />
+              <Button 
+                onClick={() => handleVerify()}
+                disabled={isVerifying}
+                className="h-12 px-8 bg-[#184E48] hover:bg-[#184E48]/90 text-white rounded-xl shadow-md transition-all active:scale-[0.98] font-semibold text-base shrink-0"
+              >
+                {isVerifying ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : <Search className="h-4 w-4 mr-2" />}
                 {t('verify.verifyBtn')}
               </Button>
             </div>
@@ -182,17 +216,95 @@ export default function VerifyPage() {
           </div>
         </div>
 
-        <div className="w-full mt-10 p-6 bg-[#184E48] rounded-2xl text-left flex gap-4 shadow-xl border border-white/10">
-          <div className="h-10 w-10 shrink-0 bg-white/10 rounded-full flex items-center justify-center">
-            <ShieldCheck className="h-5 w-5 text-teal-200" />
+        {verificationResult ? (
+          <div className="w-full mt-10 text-left bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+            <div className={`p-6 border-b ${verificationResult.verified ? 'bg-green-50 border-green-100' : 'bg-red-50 border-red-100'}`}>
+              <div className="flex items-center gap-4">
+                <div className={`h-12 w-12 rounded-full flex items-center justify-center shrink-0 ${verificationResult.verified ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'}`}>
+                  {verificationResult.verified ? <ShieldCheck className="h-6 w-6" /> : <X className="h-6 w-6" />}
+                </div>
+                <div>
+                  <h2 className={`text-xl font-bold ${verificationResult.verified ? 'text-green-800' : 'text-red-800'}`}>
+                    {verificationResult.verified ? 'Verified Authentic' : 'Verification Failed'}
+                  </h2>
+                  <p className={`text-sm mt-1 ${verificationResult.verified ? 'text-green-600' : 'text-red-600'}`}>
+                    {verificationResult.message || (verificationResult.verified ? 'This product is authentic and fully traceable.' : 'This product could not be verified.')}
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {verificationResult.verified && verificationResult.product && (
+              <div className="p-6">
+                <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Product Details</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-xs text-slate-500 font-medium">Herb</p>
+                    <p className="text-sm font-semibold text-slate-900">{verificationResult.product.herb}</p>
+                    <p className="text-xs text-slate-500 italic">{verificationResult.product.botanicalName}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 font-medium">Batch Number</p>
+                    <p className="text-sm font-semibold text-slate-900">{verificationResult.product.batchNumber}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 font-medium">Harvest Date</p>
+                    <p className="text-sm font-semibold text-slate-900">{verificationResult.product.harvestDate}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 font-medium">Producer</p>
+                    <p className="text-sm font-semibold text-slate-900">{verificationResult.producer?.name}</p>
+                    <p className="text-xs text-slate-500">{verificationResult.producer?.district}, {verificationResult.producer?.state}</p>
+                  </div>
+                </div>
+
+                {verificationResult.timeline && verificationResult.timeline.length > 0 && (
+                  <>
+                    <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mt-8 mb-4">Traceability Timeline</h3>
+                    <div className="space-y-4 relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
+                      {verificationResult.timeline.map((item, idx) => (
+                        <div key={idx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                          <div className="flex items-center justify-center w-5 h-5 rounded-full border border-white bg-green-500 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow" />
+                          <div className="w-[calc(100%-2.5rem)] md:w-[calc(50%-1.5rem)] p-3 rounded-xl border border-slate-200 bg-white shadow-sm">
+                            <div className="flex items-center justify-between mb-1">
+                              <span className="font-bold text-slate-800 text-sm">{item.label}</span>
+                              <span className="text-xs font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded-full">{item.status}</span>
+                            </div>
+                            <div className="text-xs text-slate-500">{item.date}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+                
+                {verificationResult.blockchain && (
+                  <div className="mt-8 p-4 bg-slate-50 rounded-xl border border-slate-200 text-center">
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <ShieldCheck className="h-5 w-5 text-[#184E48]" />
+                      <span className="font-bold text-slate-800">Blockchain Secured</span>
+                    </div>
+                    <p className="text-xs text-slate-500">
+                      This product's lifecycle data has been irreversibly anchored to {verificationResult.blockchain.details?.network || 'the blockchain'}. Data integrity verified.
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
-          <div>
-            <h3 className="font-bold text-white text-sm mb-1">{t('verify.howItWorksTitle')}</h3>
-            <p className="text-sm text-slate-200 leading-relaxed">
-              {t('verify.howItWorksDesc')}
-            </p>
+        ) : (
+          <div className="w-full mt-10 p-6 bg-[#184E48] rounded-2xl text-left flex gap-4 shadow-xl border border-white/10">
+            <div className="h-10 w-10 shrink-0 bg-white/10 rounded-full flex items-center justify-center">
+              <ShieldCheck className="h-5 w-5 text-teal-200" />
+            </div>
+            <div>
+              <h3 className="font-bold text-white text-sm mb-1">{t('verify.howItWorksTitle')}</h3>
+              <p className="text-sm text-slate-200 leading-relaxed">
+                {t('verify.howItWorksDesc')}
+              </p>
+            </div>
           </div>
-        </div>
+        )}
       </div>
       {scanning && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/80 px-6">

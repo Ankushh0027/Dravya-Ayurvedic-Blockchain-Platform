@@ -43,7 +43,7 @@ export default function LabDashboard() {
     return <ErrorState message={error || 'Dashboard data unavailable'} onRetry={fetchDashboard} />
   }
 
-  const glassCard = "bg-white/70 backdrop-blur-xl border border-white/60 shadow-[0_8px_40px_rgb(0,0,0,0.04)] rounded-[24px] hover:shadow-[0_12px_50px_rgb(0,0,0,0.08)] transition-all duration-500 overflow-hidden relative"
+  const glassCard = "bg-white/70 backdrop-blur-xl !border !border-black shadow-[0_8px_40px_rgb(0,0,0,0.04)] rounded-[24px] hover:shadow-[0_12px_50px_rgb(0,0,0,0.08)] transition-all duration-500 overflow-hidden relative"
 
   return (
     <div className="max-w-[1400px] mx-auto p-6 md:p-10 space-y-10">
@@ -56,7 +56,7 @@ export default function LabDashboard() {
         </div>
         <div className="flex flex-wrap gap-4">
           <Link href="/lab/tests">
-            <Button variant="outline" className="border-[#184E48]/20 bg-white hover:bg-slate-50 text-[#184E48] rounded-xl px-6 py-6 text-[15px] font-bold shadow-sm transition-all duration-300">
+            <Button variant="outline" className="!border !border-black bg-white hover:bg-slate-50 text-[#184E48] rounded-xl px-6 py-6 text-[15px] font-bold shadow-sm transition-all duration-300">
               <FlaskConical className="w-4 h-4 mr-2" />
               Test Queue
             </Button>
@@ -191,7 +191,7 @@ export default function LabDashboard() {
           </CardHeader>
           <CardContent className="space-y-3">
             <Link href="/lab/tests" className="block">
-              <div className="flex items-center gap-4 p-4 rounded-2xl hover:bg-white border border-transparent hover:border-slate-100 hover:shadow-md transition-all duration-300 group cursor-pointer">
+              <div className="flex items-center gap-4 p-4 rounded-2xl hover:bg-white !border !border-black hover:shadow-md transition-all duration-300 group cursor-pointer">
                 <div className="w-12 h-12 rounded-2xl bg-blue-50 group-hover:bg-blue-100 flex items-center justify-center transition-colors">
                   <FlaskConical className="w-6 h-6 text-blue-600" />
                 </div>

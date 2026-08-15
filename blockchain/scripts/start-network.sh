@@ -28,17 +28,28 @@ echo "Bringing down any existing network..."
 echo "Starting network with CAs (Org1, Org2)..."
 ./network.sh up createChannel -c $CHANNEL_NAME -ca
 
-echo "Deploying chaincode..."
+echo "Adding Org3 to the network..."
+pushd addOrg3
+./addOrg3.sh up -c $CHANNEL_NAME -ca
+popd
+
+echo "Deploying chaincode for 3 Orgs..."
 # We must install dependencies in chaincode before deployment
 echo "Installing chaincode dependencies..."
 pushd $CHAINCODE_PATH
 npm install
 npm run build
+rm -rf node_modules
 popd
 
-./network.sh deployCC -ccn $CHAINCODE_NAME -ccp $CHAINCODE_PATH -ccl $CHAINCODE_LANG -c $CHANNEL_NAME
+# Export Fabric binaries path
+export PATH=${PWD}/../bin:$PATH
+export FABRIC_CFG_PATH=${PWD}/../config/
+
+# Use our custom 3Org script with 3-org AND policy
+../../scripts/deployCCAAS3Orgs.sh $CHANNEL_NAME $CHAINCODE_NAME $CHAINCODE_PATH true 1.0 1 "NA" "AND('Org1MSP.peer','Org2MSP.peer','Org3MSP.peer')" "NA" 3 5 false
 
 echo "=========================================================="
 echo "Network started and chaincode deployed!"
-echo "Org1 (Dravya Admin / Govt Authority) and Org2 (Laboratory) are ready."
+echo "Org1 (Govt Authority), Org2 (Laboratory), and Org3 (Dravya Platform) are ready."
 echo "=========================================================="

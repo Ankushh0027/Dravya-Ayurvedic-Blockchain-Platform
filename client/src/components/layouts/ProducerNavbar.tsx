@@ -5,6 +5,7 @@ import { LogOut, LayoutDashboard, Package, Leaf, ShieldCheck, User } from 'lucid
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { LanguageSelector } from '@/components/shared/LanguageSelector'
+import { NotificationBell } from '@/components/shared/NotificationBell'
 import { useAuthStore } from '@/store/authStore'
 import { useRouter, usePathname } from 'next/navigation'
 
@@ -17,10 +18,6 @@ export function ProducerNavbar() {
 
   const handleLogout = () => {
     logout()
-    localStorage.removeItem('token')
-    localStorage.removeItem('auth_token')
-    document.cookie = 'auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
-    router.push('/')
   }
 
   const isActive = (path: string) => pathname.startsWith(path)
@@ -88,6 +85,9 @@ export function ProducerNavbar() {
 
         {/* Right Section */}
         <div className="flex items-center gap-3">
+          <div className="hidden sm:block">
+            <NotificationBell />
+          </div>
           <div className="hidden sm:block">
             <LanguageSelector variant="navbar" />
           </div>

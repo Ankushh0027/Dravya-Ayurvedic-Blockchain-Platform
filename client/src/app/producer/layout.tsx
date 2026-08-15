@@ -7,7 +7,7 @@ export default function ProducerLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col relative font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col relative font-sans overflow-x-hidden">
       {/* Background Watermark / Glows to match landing page */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* Subtle Watermark */}

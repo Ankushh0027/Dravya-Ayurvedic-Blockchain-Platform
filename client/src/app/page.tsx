@@ -8,6 +8,7 @@ import { Footer } from '@/features/landing/components/Footer'
 import { LoginForm } from '@/features/auth/components/LoginForm'
 import { LeafSprig } from '@/features/landing/components/LeafSprig'
 import { FloatingLeaf } from '@/features/landing/components/FloatingLeaf'
+import { VeinMapJourney } from '@/features/landing/components/VeinMapJourney'
 import { Button } from '@/components/ui/button'
 import {
   ShieldCheck,
@@ -122,7 +123,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="outline"
-                 className="w-full sm:w-auto !border !border-black bg-white hover:bg-slate-50 text-[#184E48] rounded-xl px-8 py-6 text-[16px] font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                  className="w-full sm:w-auto !border !border-black bg-white hover:bg-slate-50 text-[#184E48] rounded-xl px-8 py-6 text-[16px] font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                 >
                   {t('landing.getStarted')}
                 </Button>
@@ -277,11 +278,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works Section (Warmer White --ww background) */}
-      <HowItWorks />
+      {/* Supply Chain Map Section */}
+      <VeinMapJourney />
 
       {/* AI Verification Section (Pure White background) */}
       <AIVerification />
+
+      {/* How It Works Section (Warmer White --ww background) */}
+      <HowItWorks />
 
       <Footer />
     </div>

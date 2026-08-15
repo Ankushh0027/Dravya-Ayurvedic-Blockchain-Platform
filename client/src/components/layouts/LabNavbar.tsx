@@ -5,6 +5,7 @@ import { LogOut, LayoutDashboard, FlaskConical } from 'lucide-react'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { LanguageSelector } from '@/components/shared/LanguageSelector'
+import { NotificationBell } from '@/components/shared/NotificationBell'
 import { useAuthStore } from '@/store/authStore'
 import { useRouter, usePathname } from 'next/navigation'
 
@@ -17,10 +18,6 @@ export function LabNavbar() {
 
   const handleLogout = () => {
     logout()
-    localStorage.removeItem('token')
-    localStorage.removeItem('auth_token')
-    document.cookie = 'auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
-    router.push('/')
   }
 
   const isActive = (path: string) => pathname.startsWith(path)
@@ -71,6 +68,9 @@ export function LabNavbar() {
         {/* Right Section */}
         <div className="flex items-center gap-3">
           <div className="hidden sm:block">
+            <NotificationBell />
+          </div>
+          <div className="hidden sm:block">
             <LanguageSelector variant="navbar" />
           </div>
           
@@ -79,7 +79,7 @@ export function LabNavbar() {
           <div className="flex items-center gap-3">
             <div className="hidden md:flex flex-col items-end mr-2">
               <span className="text-sm font-bold text-white leading-tight">{user?.name}</span>
-              <span className="text-[10px] text-teal-200 font-medium uppercase tracking-wider">Lab User</span>
+              <span className="text-[10px] text-teal-200 font-medium uppercase tracking-wider">{user?.role}</span>
             </div>
             
             <Button

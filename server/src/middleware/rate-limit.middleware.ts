@@ -1,5 +1,10 @@
 import rateLimit from 'express-rate-limit'
 
+const skipLocalhost = (req: any) => {
+  const ip = req.ip || req.connection.remoteAddress;
+  return ip === '127.0.0.1' || ip === '::1' || ip === '::ffff:127.0.0.1';
+};
+
 // Global API rate limiter
 export const globalLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -10,6 +15,7 @@ export const globalLimiter = rateLimit({
   },
   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+  skip: skipLocalhost,
 })
 
 // Specific stricter limiter for Auth routes
@@ -22,6 +28,7 @@ export const authLimiter = rateLimit({
   },
   standardHeaders: true,
   legacyHeaders: false,
+  skip: skipLocalhost,
 })
 
 // Specific limiter for Public QR routes to prevent scraping
@@ -34,4 +41,5 @@ export const publicLimiter = rateLimit({
   },
   standardHeaders: true,
   legacyHeaders: false,
+  skip: skipLocalhost,
 })

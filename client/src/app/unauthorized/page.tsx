@@ -11,10 +11,7 @@ export default function UnauthorizedPage() {
   const logout = useAuthStore((state) => state.logout)
 
   const handleLogout = () => {
-    document.cookie = 'auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
-    localStorage.removeItem('token')
     logout()
-    router.push('/login')
   }
 
   const goHome = () => {

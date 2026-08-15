@@ -60,7 +60,7 @@ export class QRService {
     const isInspectionApproved = latestInspection && latestInspection.status === 'APPROVED';
     const latestTest = batch.qualityTests[0];
     const isTestPassed = latestTest && latestTest.status === 'COMPLETED' && latestTest.overallResult === 'PASS';
-    const isBatchQualityApproved = batch.status === 'QUALITY_APPROVED';
+    const isBatchQualityApproved = ['QUALITY_APPROVED', 'IN_TRANSIT', 'DELIVERED'].includes(batch.status);
 
     if (!isProducerApproved || !isInspectionApproved || !isTestPassed || !isBatchQualityApproved) {
       throw new Error('Batch is not eligible for public QR generation. All verification and quality steps must be successfully completed.');

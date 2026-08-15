@@ -7,9 +7,9 @@ const api = axios.create({
   },
 })
 
+// Request interceptor — attach JWT token
 api.interceptors.request.use(
   (config) => {
-    // Dummy JWT token injection
     const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null
     if (token) {
       config.headers.Authorization = `Bearer ${token}`
@@ -19,10 +19,27 @@ api.interceptors.request.use(
   (error) => Promise.reject(error),
 )
 
+// Response interceptor — handle 401 globally
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    // Handle global errors here (e.g., 401 unauthenticated redirects)
+    if (error.response?.status === 401) {
+      // Token expired or invalid — clear auth state and redirect
+      if (typeof window !== 'undefined') {
+        // Only redirect if not already on a public page or login
+        const isAuthRoute = window.location.pathname === '/' ||
+          window.location.pathname.startsWith('/login') ||
+          window.location.pathname.startsWith('/register') ||
+          window.location.pathname.startsWith('/verify')
+
+        if (!isAuthRoute) {
+          localStorage.removeItem('token')
+          localStorage.removeItem('auth_token')
+          document.cookie = 'auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+          window.location.href = '/'
+        }
+      }
+    }
     return Promise.reject(error)
   },
 )

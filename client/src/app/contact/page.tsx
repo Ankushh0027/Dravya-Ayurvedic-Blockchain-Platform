@@ -16,8 +16,9 @@ import {
   Award,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { useState } from 'react'
 import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
+import { useState } from 'react'
 
 const contactInfo = [
   {
@@ -58,6 +59,7 @@ const roles = [
 ]
 
 export default function ContactPage() {
+  const { t } = useTranslation()
   const [submitted, setSubmitted] = useState(false)
   const [form, setForm] = useState({
     name: '',
@@ -79,7 +81,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white relative font-sans overflow-x-hidden">
-      <LandingNavbar className="bg-[#184E48]" />
+      <LandingNavbar />
 
       {/* Hero Section - Matching Home Page Light Style */}
       <section className="relative flex-1 flex flex-col justify-center items-center px-6 lg:px-24 py-16 lg:py-24 relative z-10 w-full max-w-[1600px] mx-auto text-center">
@@ -107,14 +109,13 @@ export default function ContactPage() {
 
           {/* Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-[4.75rem] font-bold tracking-tight text-[#1e293b] leading-[1.08] font-serif mb-6">
-            We'd love to
-            <span className="block text-[#184E48] mt-2">hear from you.</span>
+            {t('contact.titleMain')}
+            <span className="block text-[#184E48] mt-2">{t('contact.titleSub')}</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-[17px] md:text-[19px] lg:text-[20px] text-slate-600 leading-relaxed font-medium max-w-xl mx-auto mb-6">
-            Whether you're a farmer, lab, manufacturer, or just curious about Dravya — reach out and
-            let's start a conversation.
+            {t('contact.subtitle')}
           </p>
         </div>
       </section>
@@ -126,17 +127,16 @@ export default function ContactPage() {
           {/* Left — Info cards */}
           <div className="lg:col-span-2 flex flex-col gap-5">
             <div>
-             
-              <h2 className="text-3xl font-bold text-[#1e293b] font-serif mt-1 mb-2">Let's connect</h2>
+              <h2 className="text-3xl font-bold text-[#1e293b] font-serif mt-1 mb-2">{t('contact.letsConnect')}</h2>
               <p className="text-slate-600 leading-relaxed text-sm font-medium">
-                Our team is ready to help you get onboarded, answer questions, or explore partnership opportunities.
+                {t('contact.letsConnectSub')}
               </p>
             </div>
 
             {contactInfo.map(({ icon: Icon, title, detail, sub }) => (
               <div
                 key={title}
-                className="flex items-start gap-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:shadow-[#184E48]/8 hover:border-[#184E48]/20 hover:-translate-y-0.5 transition-all duration-300"
+                className="flex items-start gap-4 bg-white border border-black rounded-2xl p-5 shadow-sm hover:shadow-xl hover:shadow-[#184E48]/8 hover:border-black hover:-translate-y-0.5 transition-all duration-300"
               >
                 <div className="w-11 h-11 flex-shrink-0 rounded-xl bg-[#184E48] flex items-center justify-center shadow-md shadow-[#184E48]/20">
                   <Icon className="w-5 h-5 text-white" />
@@ -159,31 +159,31 @@ export default function ContactPage() {
                 <div className="w-20 h-20 rounded-full bg-[#184E48] flex items-center justify-center mb-6 shadow-xl shadow-[#184E48]/30">
                   <img src="logo-out.png" className="rounded-full object-cover object-center text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-[#1e293b] font-serif mb-3">Message Sent!</h3>
+                <h3 className="text-3xl font-bold text-[#1e293b] font-serif mb-3">{t('contact.messageSent')}</h3>
                 <p className="text-slate-600 max-w-sm leading-relaxed font-medium">
-                  Thank you for reaching out. Our team will get back to you within 24 hours.
+                  {t('contact.messageSentDesc')}
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setForm({ name: '', email: '', role: '', message: '' }) }}
                   className="mt-8 text-[#184E48] font-bold underline underline-offset-4 text-sm hover:opacity-80 transition-opacity"
                 >
-                  Send another message
+                  {t('contact.sendAnother')}
                 </button>
               </div>
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-white border border-slate-100 rounded-3xl p-8 lg:p-10 shadow-lg shadow-slate-100 space-y-6"
+                className="bg-white border border-black rounded-3xl p-8 lg:p-10 shadow-lg shadow-slate-100 space-y-6"
               >
                 <div>
-                  <h3 className="text-2xl font-bold text-[#1e293b] font-serif mb-1">Send us a message</h3>
-                  <p className="text-slate-500 text-sm font-medium">Fill in the form and we'll get back to you shortly.</p>
+                  <h3 className="text-2xl font-bold text-[#1e293b] font-serif mb-1">{t('contact.sendUsMessage')}</h3>
+                  <p className="text-slate-500 text-sm font-medium">{t('contact.sendUsMessageSub')}</p>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="flex flex-col gap-2">
                     <label className="text-sm font-bold text-slate-700" htmlFor="name">
-                      Full Name <span className="text-red-400">*</span>
+                      {t('contact.fullName')} <span className="text-red-400">*</span>
                     </label>
                     <input
                       id="name"
@@ -198,7 +198,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-sm font-bold text-slate-700" htmlFor="email">
-                      Email Address <span className="text-red-400">*</span>
+                      {t('contact.emailAddress')} <span className="text-red-400">*</span>
                     </label>
                     <input
                       id="email"
@@ -215,7 +215,7 @@ export default function ContactPage() {
 
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-bold text-slate-700" htmlFor="role">
-                    I am a... <span className="text-red-400">*</span>
+                    {t('contact.iAmA')} <span className="text-red-400">*</span>
                   </label>
                   <select
                     id="role"
@@ -234,7 +234,7 @@ export default function ContactPage() {
 
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-bold text-slate-700" htmlFor="message">
-                    Message <span className="text-red-400">*</span>
+                    {t('contact.message')} <span className="text-red-400">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -253,12 +253,12 @@ export default function ContactPage() {
                   className="w-full bg-[#184E48] hover:bg-[#184E48]/90 text-white rounded-xl py-6 text-base font-semibold gap-2 shadow-lg shadow-[#184E48]/20 hover:shadow-[#184E48]/30 hover:-translate-y-0.5 transition-all duration-300"
                 >
                   <Send className="w-4 h-4" />
-                  Send Message
+                  {t('contact.sendMessage')}
                 </Button>
 
                 <p className="text-center text-xs text-slate-400 font-medium">
-                  By submitting, you agree to our{' '}
-                  <a href="#" className="text-[#184E48] underline underline-offset-2">Privacy Policy</a>.
+                  {t('contact.bySubmitting')} {' '}
+                  <a href="#" className="text-[#184E48] underline underline-offset-2">{t('contact.privacyPolicy')}</a>.
                 </p>
               </form>
             )}

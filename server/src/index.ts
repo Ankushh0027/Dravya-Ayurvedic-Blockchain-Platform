@@ -58,6 +58,7 @@ app.get('/api/health', (_req, res) => {
 
 import publicRoutes from './routes/public.routes'
 
+// Apply rate limiting to auth routes
 app.use('/api/auth', authLimiter, authRoutes)
 app.use('/api/producers', producerRoutes)
 app.use('/api/herbs', herbRoutes)

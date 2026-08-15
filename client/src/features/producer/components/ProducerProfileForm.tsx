@@ -69,7 +69,7 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
 
   const isReadOnly = initialData?.verificationStatus === 'VERIFIED' || initialData?.verificationStatus === 'UNDER_REVIEW'
 
-  const inputStyles = "px-4 h-12 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm"
+  const inputStyles = "px-4 h-12 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm text-slate-900"
   const labelStyles = "text-slate-700 font-semibold text-sm ml-1"
 
   return (
@@ -209,7 +209,7 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
             </div>
 
             <FormField
-              control={form.control}
+              control={form.control as any}
               name="latitude"
               render={({ field }) => (
                 <FormItem>
@@ -223,7 +223,7 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
             />
 
             <FormField
-              control={form.control}
+              control={form.control as any}
               name="longitude"
               render={({ field }) => (
                 <FormItem>

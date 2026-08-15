@@ -21,6 +21,7 @@ import {
   ClipboardList,
   TestTube,
 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const mainFeatures = [
   {
@@ -91,9 +92,10 @@ const additionalFeatures = [
 ]
 
 export default function FeaturesPage() {
+  const { t } = useTranslation()
   return (
     <div className="min-h-screen flex flex-col bg-white relative font-sans overflow-x-hidden">
-      <LandingNavbar className="bg-[#184E48]" />
+      <LandingNavbar />
 
       {/* Hero Section */}
       <section className="relative flex-1 flex flex-col justify-center items-center px-6 lg:px-24 py-16 lg:py-20 relative z-10 w-full max-w-[1600px] mx-auto text-center">
@@ -119,18 +121,17 @@ export default function FeaturesPage() {
         <div className="relative z-10 max-w-5xl mx-auto">
           {/* Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-[4.75rem] font-bold tracking-tight text-[#1e293b] leading-[1.08] font-serif mb-6">
-            Everything you need for
-            <span className="block text-[#184E48] mt-2">radical transparency.</span>
+            {t('features.titleMain')}
+            <span className="block text-[#184E48] mt-2">{t('features.titleSub')}</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-[17px] md:text-[19px] lg:text-[20px] text-slate-600 leading-relaxed font-medium max-w-3xl mx-auto mb-10">
-            Dravya brings together AI, blockchain, and real-time data to give every stakeholder
-            in the Ayurvedic supply chain complete visibility and control.
+            {t('features.subtitle')}
           </p>
 
           {/* Hero Scanner Featured Card */}
-          <div className="mt-6 max-w-4xl mx-auto bg-white border border-[#184E48]/30 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row gap-6 hover:scale-[1.02] transition-all duration-300 lg:gap-8 items-center text-left shadow-sm">
+          <div className="mt-6 max-w-4xl mx-auto bg-white border border-black rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row gap-6 hover:scale-[1.02] transition-all duration-300 lg:gap-8 items-center text-left shadow-sm">
             {/* Animated Dark Scanner Visual */}
             <div className="w-full md:w-72 h-64 bg-[#0c2e2a] rounded-2xl relative flex flex-col items-center justify-between p-4 flex-shrink-0 overflow-hidden border border-[#184E48]/40 shadow-inner">
               {/* Animated Scan Line */}
@@ -176,11 +177,11 @@ export default function FeaturesPage() {
             
 
               <h3 className="text-2xl md:text-3xl font-bold font-serif text-slate-900 mb-3 leading-snug">
-                Every batch, authenticated before it moves
+                {t('features.scannerTitle')}
               </h3>
 
               <p className="text-slate-600 text-sm md:text-base leading-relaxed font-medium mb-3">
-                Computer vision flags species mismatches and contaminants in seconds, before a batch is passed downstream.
+                {t('features.scannerDesc')}
               </p>
 
               <p className="text-[11px] font-mono text-slate-400 mb-5 leading-relaxed">
@@ -211,10 +212,10 @@ export default function FeaturesPage() {
       <section className="py-20 lg:py-24 max-w-7xl mx-auto px-6 w-full">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1e293b] font-serif">
-            Built for every link in the chain
+            {t('features.builtForEveryLink')}
           </h2>
           <p className="text-slate-600 mt-4 max-w-xl mx-auto text-base font-medium">
-            Seamlessly integrating AI computer vision with decentralized blockchain record-keeping.
+            {t('features.builtForEveryLinkSub')}
           </p>
         </div>
 
@@ -225,7 +226,7 @@ export default function FeaturesPage() {
             return (
               <div
                 key={feature.title}
-                className={`group flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10 items-center bg-white border border-[#184E48]/20 rounded-3xl p-8 lg:p-12 hover:shadow-2xl hover:shadow-[#184E48]/8 hover:border-[#184E48]/20 transition-all duration-500`}
+                className={`group flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10 items-center bg-white border border-black rounded-3xl p-8 lg:p-12 hover:shadow-2xl hover:shadow-[#184E48]/8 hover:border-black transition-all duration-500`}
               >
                 {/* Icon Side */}
                 <div className="flex-shrink-0 flex flex-col items-center gap-4 w-full lg:w-64">
@@ -261,10 +262,10 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1e293b] font-serif">
-              Everything else that matters
+              {t('features.everythingElse')}
             </h2>
             <p className="text-slate-600 mt-4 max-w-xl mx-auto text-base font-medium">
-              Enterprise-grade tools designed for speed, security, and effortless adoption.
+              {t('features.everythingElseSub')}
             </p>
           </div>
 
@@ -272,7 +273,7 @@ export default function FeaturesPage() {
             {additionalFeatures.map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="bg-white rounded-3xl p-7 border border-slate-100 hover:border-[#184E48]/20 hover:shadow-xl hover:shadow-[#184E48]/8 hover:-translate-y-1.5 transition-all duration-300 group cursor-default"
+                className="bg-white rounded-3xl p-7 border border-black hover:border-black hover:shadow-xl hover:shadow-[#184E48]/8 hover:-translate-y-1.5 transition-all duration-300 group cursor-default"
               >
                 <div className="w-12 h-12 rounded-2xl bg-[#184E48]/10 flex items-center justify-center mb-5 group-hover:bg-[#184E48] transition-colors duration-300">
                   <Icon className="w-6 h-6 text-[#184E48] group-hover:text-white transition-colors duration-300" />

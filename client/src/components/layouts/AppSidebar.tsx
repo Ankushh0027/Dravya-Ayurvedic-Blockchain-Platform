@@ -25,6 +25,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useAuthStore } from '@/store/authStore'
 import { useTranslation } from 'react-i18next'
+import { NotificationBell } from '@/components/shared/NotificationBell'
 
 export function AppSidebar() {
   const { t } = useTranslation()
@@ -32,15 +33,7 @@ export function AppSidebar() {
   const logout = useAuthStore(state => state.logout)
 
   const handleLogout = () => {
-    // Clear Zustand store
     logout()
-    // Clear localStorage
-    localStorage.removeItem('token')
-    localStorage.removeItem('auth_token')
-    // Clear cookies
-    document.cookie = 'auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
-    // Redirect to home
-    router.push('/')
   }
 
   const navItems = [
@@ -84,6 +77,9 @@ export function AppSidebar() {
       
       <SidebarFooter>
         <SidebarMenu>
+          <SidebarMenuItem className="flex justify-center py-2">
+            <NotificationBell />
+          </SidebarMenuItem>
           <SidebarMenuItem>
             <SidebarMenuButton onClick={handleLogout} className="text-red-500 hover:text-red-600 hover:bg-red-50 font-medium">
               <LogOut className="w-4 h-4 mr-2" />

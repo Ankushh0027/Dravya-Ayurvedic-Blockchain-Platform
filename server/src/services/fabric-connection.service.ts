@@ -12,28 +12,33 @@ export class FabricConnectionService {
   // Hardcoded for the local test-network prototype. In production, these would be in env vars.
   private static readonly mspIdOrg1 = 'Org1MSP';
   private static readonly mspIdOrg2 = 'Org2MSP';
+  private static readonly mspIdOrg3 = 'Org3MSP';
   
-  private static readonly networkDir = path.resolve(__dirname, '../../../../blockchain/fabric-samples/test-network');
+  private static readonly networkDir = path.resolve(__dirname, '../../../blockchain/fabric-samples/test-network');
 
   /**
    * Determine the Fabric Organization based on the Application Role.
    */
   public static getOrgForRole(role: Role): string {
     switch (role) {
-      case Role.ADMIN:
       case Role.VERIFICATION_AUTHORITY:
-      case Role.PRODUCER: // Producers might just use Org1 as a client in this prototype
         return 'org1.example.com';
       case Role.LAB:
         return 'org2.example.com';
+      case Role.ADMIN:
+      case Role.PRODUCER:
+      case Role.DISTRIBUTOR:
+        return 'org3.example.com';
       default:
-        return 'org1.example.com';
+        return 'org3.example.com'; // Default to platform
     }
   }
 
   public static getMspIdForRole(role: Role): string {
     const org = this.getOrgForRole(role);
-    return org === 'org1.example.com' ? this.mspIdOrg1 : this.mspIdOrg2;
+    if (org === 'org1.example.com') return this.mspIdOrg1;
+    if (org === 'org2.example.com') return this.mspIdOrg2;
+    return this.mspIdOrg3;
   }
 
   private static async newGrpcConnection(org: string): Promise<grpc.Client> {
@@ -42,6 +47,9 @@ export class FabricConnectionService {
     if (org === 'org2.example.com') {
       peerEndpoint = 'localhost:9051';
       peerHostAlias = 'peer0.org2.example.com';
+    } else if (org === 'org3.example.com') {
+      peerEndpoint = 'localhost:11051';
+      peerHostAlias = 'peer0.org3.example.com';
     }
 
     const tlsCertPath = path.join(
@@ -64,7 +72,10 @@ export class FabricConnectionService {
     const files = await fs.readdir(certPath);
     const cert = await fs.readFile(path.join(certPath, files[0]));
     
-    const mspId = org === 'org1.example.com' ? this.mspIdOrg1 : this.mspIdOrg2;
+    let mspId = this.mspIdOrg1;
+    if (org === 'org2.example.com') mspId = this.mspIdOrg2;
+    if (org === 'org3.example.com') mspId = this.mspIdOrg3;
+    
     return { mspId, credentials: cert };
   }
 

@@ -10,10 +10,7 @@ export default function AdminDashboard() {
   const router = useRouter()
 
   const handleLogout = () => {
-    document.cookie = 'auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
-    localStorage.removeItem('token')
     logout()
-    router.push('/login')
   }
 
   return (

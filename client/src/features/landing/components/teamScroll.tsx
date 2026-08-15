@@ -5,32 +5,37 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from '@/components/ui/carousel'
 import { LeafSprig } from './LeafSprig'
+import Image from 'next/image'
 
 const team = [
-  { name: 'Anubhav Dwivedi', role: 'Team Lead & Backend Developer', bio: 'Leads the team and architects the core backend systems powering Dravya.' },
-  { name: 'Ankush Gangwar', role: 'AI/ML Engineer', bio: 'Works on the AI models used for herb authentication and quality verification.' },
-  { name: 'Anshuman Sabat', role: 'Frontend Developer', bio: 'Designs and builds the user-facing platform, from landing pages to the verification flow.' },
-  { name: 'Gopal Shrivastav', role: 'Frontend Developer', bio: 'Builds and polishes the UI components across the Dravya platform.' },
-  { name: 'Aradhya Singh', role: 'Research & Documentation', bio: 'Handles research on Ayurvedic standards and documents the framework behind Dravya.' },
-  { name: 'Shubhi Tiwari', role: 'Frontend Developer', bio: 'Works on the interface and user experience across key pages of the platform.' },
+  { name: 'Anubhav Dwivedi', role: 'Team Lead & Backend Developer', bio: 'Leads the team and architects the core backend systems powering Dravya.', image: '/assets/team/Anubhav.png', position: 'object-top' },
+  { name: 'Ankush Gangwar', role: 'AI/ML Engineer', bio: 'Works on the AI models used for herb authentication and quality verification.', image: '/assets/team/Ankush.jpeg', position: 'object-center' },
+  { name: 'Anshuman Sabat', role: 'Frontend Developer', bio: 'Designs and builds the user-facing platform, from landing pages to the verification flow.', image: '/assets/team/Anshuman.jpeg', position: 'object-top' },
+  { name: 'Gopal Shrivastav', role: 'Frontend Developer', bio: 'Builds and polishes the UI components across the Dravya platform.', image: '/assets/team/Gopal.jpeg', position: 'object-center' },
+  { name: 'Aradhya Singh', role: 'Research & Documentation', bio: 'Handles research on Ayurvedic standards and documents the framework behind Dravya.', image: '/assets/team/Aradhya.jpeg', position: 'object-top' },
+  { name: 'Shubhi Tiwari', role: 'Frontend Developer', bio: 'Works on the interface and user experience across key pages of the platform.', image: '/assets/team/Shubhi.jpeg', position: 'object-center' },
 ]
 
 export function TeamCarousel() {
   const [api, setApi] = React.useState<CarouselApi>()
   const [current, setCurrent] = React.useState(0)
+  const [count, setCount] = React.useState(0)
 
   React.useEffect(() => {
     if (!api) return
 
+    setCount(api.scrollSnapList().length)
     setCurrent(api.selectedScrollSnap() + 1)
 
     api.on('select', () => {
       setCurrent(api.selectedScrollSnap() + 1)
+    })
+
+    api.on('reInit', () => {
+      setCount(api.scrollSnapList().length)
     })
 
     const interval = setInterval(() => {
@@ -61,7 +66,7 @@ export function TeamCarousel() {
         {/* Header Tag & Section Title */}
         <div className="mx-auto max-w-3xl text-center mb-12 lg:mb-16">
           <h2 className="text-4xl font-serif font-extrabold tracking-tight text-slate-900 md:text-5xl lg:text-6xl mb-6 leading-[1.15]">
-            People Behind{' '}
+            Team Behind{' '}
             <span className="text-[#184E48] relative whitespace-nowrap">
               Dravya.
               <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#184E48]/30" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -71,7 +76,7 @@ export function TeamCarousel() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-slate-600 font-medium">
-            A multidisciplinary team of technologists, scientists, and supply chain experts united by purpose.
+            A dedicated team of software developers, AI engineers, and researchers building the digital infrastructure for authentic Ayurveda.
           </p>
         </div>
 
@@ -109,8 +114,12 @@ export function TeamCarousel() {
                         </span>
                       </div>
 
-                      <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#184E48] text-white shadow-lg shadow-[#184E48]/25 group-hover:bg-white group-hover:text-[#184E48] group-hover:border-2 group-hover:border-[#184E48] transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 font-bold text-2xl font-serif">
-                        {member.name.charAt(0)}
+                      <div className="mb-6 relative inline-flex h-28 w-28 shrink-0 items-center justify-center rounded-3xl bg-[#184E48] text-white shadow-lg shadow-[#184E48]/25 group-hover:bg-white group-hover:text-[#184E48] group-hover:border-2 group-hover:border-[#184E48] transform group-hover:scale-105 group-hover:rotate-2 transition-all duration-500 font-bold text-4xl font-serif overflow-hidden">
+                        {member.image ? (
+                          <Image src={member.image} alt={member.name} fill className={`object-cover ${member.position}`} />
+                        ) : (
+                          member.name.charAt(0)
+                        )}
                       </div>
 
                       <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#184E48] transition-colors duration-300 mb-1">
@@ -135,8 +144,21 @@ export function TeamCarousel() {
               ))}
             </CarouselContent>
 
-            <CarouselPrevious className="hidden md:flex -left-6 lg:-left-12 bg-white text-[#184E48] border-[#184E48]/30 hover:bg-[#184E48] hover:text-white shadow-lg w-11 h-11" />
-            <CarouselNext className="hidden md:flex -right-6 lg:-right-12 bg-white text-[#184E48] border-[#184E48]/30 hover:bg-[#184E48] hover:text-white shadow-lg w-11 h-11" />
+            {/* Dots */}
+            <div className="mt-8 flex justify-center gap-2">
+              {Array.from({ length: count }).map((_, index) => (
+                <button
+                  key={index}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    current === index + 1
+                      ? 'w-8 bg-[#184E48]'
+                      : 'w-2.5 bg-[#184E48]/30 hover:bg-[#184E48]/50'
+                  }`}
+                  onClick={() => api?.scrollTo(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </Carousel>
         </div>
       </div>
