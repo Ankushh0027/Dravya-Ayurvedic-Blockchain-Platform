@@ -1,9 +1,16 @@
 'use client'
 
 import { useTranslation } from 'react-i18next'
-import { ChevronDown, Globe } from 'lucide-react'
+import { Globe } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import '@/i18n/i18n'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 interface LanguageSelectorProps {
   variant?: 'navbar' | 'dashboard' | 'default'
@@ -15,47 +22,55 @@ export function LanguageSelector({ variant = 'navbar', className = '' }: Languag
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true)
   }, [])
 
   const currentLanguage = i18n.language?.startsWith('hi') ? 'hi' : 'en'
 
-  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLang = e.target.value
+  const handleLanguageChange = (newLang: string) => {
+    if (!newLang) return
     i18n.changeLanguage(newLang)
     if (typeof window !== 'undefined') {
       localStorage.setItem('dravya-language', newLang)
     }
   }
 
-  const baseStyles =
-    'relative inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-semibold transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-teal-400'
-
-  const variantStyles =
+  const triggerStyles =
     variant === 'dashboard'
-      ? 'border border-slate-200 dark:border-slate-800 bg-background text-foreground hover:bg-slate-100 dark:hover:bg-slate-800'
-      : 'border border-white/20 bg-white/5 text-white hover:bg-white/10'
+      ? 'h-9 min-w-[130px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-3 py-1.5 text-sm font-semibold text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800 shadow-sm focus:ring-2 focus:ring-[#184E48]/30'
+      : 'h-9 min-w-[132px] justify-between gap-2 rounded-full border border-white/25 bg-white/10 px-3.5 py-1.5 text-sm font-semibold text-white backdrop-blur-md shadow-sm hover:bg-white/15 hover:border-white/40 focus:ring-2 focus:ring-emerald-300/40 transition-all duration-200 cursor-pointer'
 
   return (
-    <div className={`relative inline-flex items-center ${className}`}>
-      <div className={`${baseStyles} ${variantStyles}`}>
-        <Globe className="w-4 h-4 text-teal-200 shrink-0" />
-        <select
-          value={mounted ? currentLanguage : 'en'}
-          onChange={handleLanguageChange}
-          aria-label="Select Language / भाषा चुनें"
-          className="appearance-none bg-transparent pr-5 font-semibold text-inherit cursor-pointer focus:outline-none"
+    <div className={className}>
+      <Select
+        value={mounted ? currentLanguage : 'en'}
+        onValueChange={handleLanguageChange}
+      >
+        <SelectTrigger className={triggerStyles}>
+          <Globe className="h-3.5 w-3.5 shrink-0 text-emerald-200" strokeWidth={2.2} />
+          <SelectValue placeholder="Language" />
+        </SelectTrigger>
+        <SelectContent
+          side="bottom"
+          align="end"
+          sideOffset={8}
+          alignItemWithTrigger={false}
+          className="z-[100] min-w-[150px] rounded-2xl border border-[#184E48]/20 bg-white p-1.5 shadow-[0_12px_30px_-4px_rgba(24,78,72,0.25),0_4px_12px_-2px_rgba(0,0,0,0.08)]"
         >
-          <option value="en" className="bg-[#184E48] text-white">
-            English
-          </option>
-          <option value="hi" className="bg-[#184E48] text-white">
-            हिन्दी
-          </option>
-        </select>
-        <ChevronDown className="w-4 h-4 text-slate-300 pointer-events-none absolute right-2.5 shrink-0" />
-      </div>
+          <SelectItem
+            value="en"
+            className="rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 hover:text-white hover:bg-[#184E48] focus:bg-[#184E48] focus:text-white data-[highlighted]:bg-[#184E48] data-[highlighted]:text-white data-[highlighted]:*:text-white cursor-pointer transition-all duration-150 data-[state=checked]:bg-[#184E48]/10 data-[state=checked]:text-[#184E48] data-[state=checked]:font-bold"
+          >
+            🇬🇧 English
+          </SelectItem>
+          <SelectItem
+            value="hi"
+            className="rounded-xl px-3 py-2 text-sm font-semibold text-slate-700 hover:text-white hover:bg-[#184E48] focus:bg-[#184E48] focus:text-white data-[highlighted]:bg-[#184E48] data-[highlighted]:text-white data-[highlighted]:*:text-white cursor-pointer transition-all duration-150 data-[state=checked]:bg-[#184E48]/10 data-[state=checked]:text-[#184E48] data-[state=checked]:font-bold"
+          >
+            🇮🇳 हिन्दी
+          </SelectItem>
+        </SelectContent>
+      </Select>
     </div>
   )
 }
