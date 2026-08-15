@@ -280,12 +280,12 @@ export default function HomePage() {
 
       {/* Supply Chain Map Section */}
       <VeinMapJourney />
-
+         <HowItWorks/>
       {/* AI Verification Section (Pure White background) */}
       <AIVerification />
 
       {/* How It Works Section (Warmer White --ww background) */}
-      <StepShowcaseCarousel />
+   
 
       <Footer />
     </div>

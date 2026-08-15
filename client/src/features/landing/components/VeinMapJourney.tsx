@@ -259,9 +259,7 @@ export function VeinMapJourney() {
 
                 {/* Icon & Title */}
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[#184E48] text-white flex items-center justify-center shadow-lg shadow-[#184E48]/20">
-                    <StepIcon className="w-7 h-7" strokeWidth={2} />
-                  </div>
+                  
                   <div className="flex-1 min-w-0">
                     <h4 className="text-xl md:text-2xl font-bold font-serif text-slate-900 mb-1 leading-tight">
                       {currentStep.title}
