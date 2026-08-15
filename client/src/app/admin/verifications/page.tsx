@@ -68,9 +68,22 @@ export default function AdminVerificationsPage() {
 
   return (
     <div className="max-w-[1400px] mx-auto p-6 md:p-10 space-y-8">
-      <div className="border-b border-slate-200/50 pb-6">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-[#1e293b] font-serif mb-2">Verification Queue</h1>
-        <p className="text-[17px] text-slate-600 font-medium">Assign pending producer verification requests to active authorities.</p>
+      {/* Hero Section */}
+      <div className="relative rounded-[24px] overflow-hidden bg-gradient-to-br from-[#184E48] to-[#113834] p-8 md:p-10 shadow-xl border border-white/10">
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-teal-500/10 rounded-full blur-[60px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay" />
+        
+        <div className="relative z-10 max-w-2xl">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/20">
+              <ShieldCheck className="w-6 h-6 text-emerald-300" />
+            </div>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-white font-serif">Verification Queue</h1>
+          </div>
+          <p className="text-emerald-50/80 font-medium leading-relaxed">
+            Review pending producer verifications and assign them to authorized government verifiers for field inspection and approval.
+          </p>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 gap-6 pt-4">
@@ -144,7 +157,7 @@ export default function AdminVerificationsPage() {
 
                     <div className="space-y-4">
                       <select 
-                        className="w-full flex h-12 w-full items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#184E48] focus:border-transparent font-medium shadow-sm appearance-none"
+                        className="w-full flex h-12 items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#184E48] focus:border-transparent font-medium shadow-sm appearance-none cursor-pointer"
                         value={selectedAuthorities[verification.id] || ''}
                         onChange={(e) => handleSelectAuthority(verification.id, e.target.value)}
                         disabled={assigningId === verification.id}
@@ -160,7 +173,7 @@ export default function AdminVerificationsPage() {
                       <Button 
                         onClick={() => handleAssign(verification.id)}
                         disabled={!selectedAuthorities[verification.id] || assigningId === verification.id}
-                        className="w-full bg-[#184E48] hover:bg-[#184E48]/90 text-white rounded-xl shadow-md px-6 py-6 text-[15px] font-bold transition-all duration-300 flex justify-between items-center group"
+                        className="w-full bg-[#184E48] hover:bg-[#184E48]/90 text-white rounded-xl shadow-md px-6 py-6 text-[15px] font-bold transition-all duration-300 flex justify-between items-center group disabled:opacity-100 disabled:cursor-not-allowed disabled:hover:bg-[#184E48] disabled:hover:translate-x-0"
                       >
                         {assigningId === verification.id ? 'Assigning...' : (verification.authority ? 'Reassign Authority' : 'Assign Authority')}
                         <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
