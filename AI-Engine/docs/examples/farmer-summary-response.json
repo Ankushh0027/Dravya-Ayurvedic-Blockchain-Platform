@@ -1,0 +1,13 @@
+{
+  "farmer_id": "F001",
+  "farmer_name": "Ramesh Kumar",
+  "total_batches": 4,
+  "total_quantity": 620.0,
+  "quantity_unit": "kg",
+  "herbs_supplied": ["Ashwagandha", "Tulsi", "Shatavari"],
+  "batches_by_herb": {
+    "Ashwagandha": ["DRAVYA-ASH-20260810-346DA7", "DRAVYA-ASH-20260811-129FB0"],
+    "Tulsi": ["DRAVYA-TUL-20260809-551AC4"],
+    "Shatavari": ["DRAVYA-SHA-20260808-882DE9"]
+  }
+}
