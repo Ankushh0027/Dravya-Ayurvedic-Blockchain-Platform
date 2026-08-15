@@ -181,7 +181,7 @@ export function StepShowcaseCarousel() {
                       <div className="relative z-10">
                         {/* Hover indicator (visible when not hovered) */}
                         <div className="flex items-center justify-between text-xs text-white/60 group-hover:opacity-0 group-hover:pointer-events-none transition-opacity duration-300">
-                          <span className="font-medium tracking-wide">Hover for details</span>
+                          <span className="font-medium tracking-wide">{t('landing.hoverForDetails')}</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </div>
 

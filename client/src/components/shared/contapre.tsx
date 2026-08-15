@@ -9,24 +9,26 @@ import {
   MessageScrollerProvider,
   MessageScrollerViewport,
 } from '@/components/ui/message-scroller'
-
-const messages = [
-  { id: '1', role: 'contact', text: "Buyers keep rejecting my herbs, calling them fake." },
-  { id: '2', role: 'contact', text: "I have no way to prove they're genuine." },
-  { id: '3', role: 'contact', text: "Middlemen take most of the profit anyway." },
-  { id: '4', role: 'contact', text: "Years of honest farming, and still no one trusts me." },
-  { id: '5', role: 'contact', text: "I don't even know where my herbs end up after I sell them." },
-  { id: '6', role: 'user', text: "That changes today." },
-  { id: '7', role: 'user', text: "With Dravya, every batch you sell gets a digital record." },
-  { id: '8', role: 'user', text: "From your farm, to the lab, to the shelf — all tracked." },
-  { id: '9', role: 'contact', text: "So buyers can actually verify it's mine?" },
-  { id: '10', role: 'user', text: "Exactly. Your herbs finally speak for themselves." },
-]
+import { useTranslation } from 'react-i18next'
 
 export function ContactPreviewCard({ className, headerClassName }: { className?: string; headerClassName?: string }) {
+  const { t } = useTranslation()
   const [count, setCount] = useState(1)
   const [isVisible, setIsVisible] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)
+
+  const messages = [
+    { id: '1', role: 'contact', text: t('about.chat.msg1') },
+    { id: '2', role: 'contact', text: t('about.chat.msg2') },
+    { id: '3', role: 'contact', text: t('about.chat.msg3') },
+    { id: '4', role: 'contact', text: t('about.chat.msg4') },
+    { id: '5', role: 'contact', text: t('about.chat.msg5') },
+    { id: '6', role: 'user', text: t('about.chat.msg6') },
+    { id: '7', role: 'user', text: t('about.chat.msg7') },
+    { id: '8', role: 'user', text: t('about.chat.msg8') },
+    { id: '9', role: 'contact', text: t('about.chat.msg9') },
+    { id: '10', role: 'user', text: t('about.chat.msg10') },
+  ]
 
   useEffect(() => {
     const element = cardRef.current
@@ -62,7 +64,7 @@ export function ContactPreviewCard({ className, headerClassName }: { className?:
       const timer = setTimeout(() => setCount(1), 3500)
       return () => clearTimeout(timer)
     }
-  }, [count, isVisible])
+  }, [count, isVisible, messages.length])
 
   return (
     <div
@@ -74,8 +76,8 @@ export function ContactPreviewCard({ className, headerClassName }: { className?:
           F
         </div>
         <div>
-          <p className="text-sm font-semibold leading-none">Farmer</p>
-          <p className="text-xs text-white/70 mt-1">Online</p>
+          <p className="text-sm font-semibold leading-none">{t('about.chat.roleFarmer')}</p>
+          <p className="text-xs text-white/70 mt-1">{t('about.chat.online')}</p>
         </div>
       </div>
 
