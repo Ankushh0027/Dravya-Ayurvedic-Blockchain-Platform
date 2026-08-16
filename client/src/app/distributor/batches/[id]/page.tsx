@@ -10,7 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { ArrowLeft, Package, MapPin, ClipboardList, CheckCircle2, Truck, Navigation, CalendarClock, Map, Send, FileText } from 'lucide-react'
+import { ArrowLeft, Package, MapPin, ClipboardList, CheckCircle2, Truck, Navigation, CalendarClock, Map, Send, FileText, Clock } from 'lucide-react'
 import Link from 'next/link'
 import { format } from 'date-fns'
 import { useAuthStore } from '@/store/authStore'
@@ -72,13 +72,13 @@ export default function DistributorBatchDetails() {
         // Find received event to prefill dispatch
         const rxEvent = sortedEvents.find(e => e.action === 'BATCH_RECEIVED')
         if (rxEvent && rxEvent.quantity) {
-          setFormData(prev => ({ ...prev, quantity: rxEvent.quantity.toString(), unit: rxEvent.unit || 'KG' }))
+          setFormData(prev => ({ ...prev, quantity: rxEvent.quantity!.toString(), unit: rxEvent.unit || 'KG' }))
         }
       } else if (foundAssignment.status === 'ACCEPTED' && foundAssignment.batch.status === 'IN_TRANSIT') {
         // Find dispatched event to prefill delivery
         const txEvent = sortedEvents.find(e => e.action === 'BATCH_DISPATCHED')
         if (txEvent && txEvent.quantity) {
-          setFormData(prev => ({ ...prev, quantity: txEvent.quantity.toString(), unit: txEvent.unit || 'KG' }))
+          setFormData(prev => ({ ...prev, quantity: txEvent.quantity!.toString(), unit: txEvent.unit || 'KG' }))
         }
       }
       

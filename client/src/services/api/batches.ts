@@ -1,9 +1,16 @@
 import api from './axios'
 import { ApiResponse, PaginatedData } from '@/types/api'
-import { Batch, BatchTimelineResponse, CreateBatchPayload } from '@/types/batch'
+import { Batch, BatchTimelineResponse, CreateBatchPayload, LotInspectionRequest } from '@/types/batch'
+
+interface BatchPagination {
+  page: number
+  limit: number
+  total: number
+  totalPages: number
+}
 
 export const BatchService = {
-  async getBatches(params?: { page?: number; limit?: number; status?: string }): Promise<{ batches: Batch[]; pagination: any }> {
+  async getBatches(params?: { page?: number; limit?: number; status?: string }): Promise<{ batches: Batch[]; pagination: BatchPagination | undefined }> {
     const response = await api.get<ApiResponse<PaginatedData<Batch>>>('/batches', { params })
     return {
       batches: response.data.data!.batches || [],
@@ -36,8 +43,8 @@ export const BatchService = {
     return response.data.data!.batch
   },
 
-  async requestInspection(id: string): Promise<{ status: string }> {
-    const response = await api.post<ApiResponse<{ status: string }>>(`/batches/${id}/inspection/request`)
-    return response.data.data!
+  async requestInspection(id: string): Promise<LotInspectionRequest> {
+    const response = await api.post<ApiResponse<{ inspection: LotInspectionRequest }>>(`/batches/${id}/inspection/request`)
+    return response.data.data!.inspection
   },
 }

@@ -4,6 +4,7 @@ import { sendSuccess, sendError } from '../lib/response'
 import { AuthenticatedRequest } from '../middleware/auth.middleware'
 import { NotificationService } from '../services/notification.service'
 import { AuditService } from '../services/audit.service'
+import { assignLabSchema, assignDistributorSchema } from '../lib/validators'
 
 export async function getPendingVerifications(req: AuthenticatedRequest, res: Response): Promise<void> {
   try {
@@ -35,6 +36,71 @@ export async function getVerificationAuthorities(req: AuthenticatedRequest, res:
     sendSuccess(res, 'Verification authorities retrieved successfully.', { authorities })
   } catch (error) {
     console.error('Get verification authorities error:', error)
+    sendError(res, 'Internal server error.', 500)
+  }
+}
+
+/**
+ * Batches become eligible for laboratory assignment only after their lot
+ * inspection has been approved. `READY_FOR_LAB` remains the batch's workflow
+ * state until the lab completes the test; the QualityTest records assignment
+ * and execution state.
+ */
+export async function getPendingLabAssignments(req: AuthenticatedRequest, res: Response): Promise<void> {
+  try {
+    const batches = await prisma.batch.findMany({
+      where: {
+        status: 'READY_FOR_LAB',
+        qualityTests: { none: { status: { not: 'COMPLETED' } } },
+      },
+      orderBy: { updatedAt: 'desc' },
+      include: {
+        herb: { select: { commonName: true } },
+        producerProfile: { select: { farmName: true } },
+      },
+    })
+
+    sendSuccess(res, 'Pending laboratory assignments retrieved successfully.', { batches })
+  } catch (error) {
+    console.error('Get pending laboratory assignments error:', error)
+    sendError(res, 'Internal server error.', 500)
+  }
+}
+
+export async function getLaboratories(req: AuthenticatedRequest, res: Response): Promise<void> {
+  try {
+    const laboratories = await prisma.user.findMany({
+      where: { role: 'LAB', isActive: true },
+      select: { id: true, name: true, email: true, organization: true },
+      orderBy: { name: 'asc' },
+    })
+
+    sendSuccess(res, 'Active laboratories retrieved successfully.', { laboratories })
+  } catch (error) {
+    console.error('Get laboratories error:', error)
+    sendError(res, 'Internal server error.', 500)
+  }
+}
+
+export async function getPendingLotInspections(req: AuthenticatedRequest, res: Response): Promise<void> {
+  try {
+    const inspections = await prisma.batchInspection.findMany({
+      where: { status: { in: ['PENDING', 'UNDER_INSPECTION'] } },
+      orderBy: { createdAt: 'desc' },
+      include: {
+        batch: {
+          include: {
+            herb: { select: { commonName: true } },
+            producerProfile: { select: { farmName: true } },
+          },
+        },
+        authority: { select: { id: true, name: true, email: true, organization: true } },
+      },
+    })
+
+    sendSuccess(res, 'Pending lot inspections retrieved successfully.', { inspections })
+  } catch (error) {
+    console.error('Get pending lot inspections error:', error)
     sendError(res, 'Internal server error.', 500)
   }
 }
@@ -123,12 +189,15 @@ export async function assignLotInspection(req: AuthenticatedRequest, res: Respon
 export async function assignLabTest(req: AuthenticatedRequest, res: Response): Promise<void> {
   try {
     const adminId = req.user!.id
-    const { batchId, labId } = req.body
-
-    if (!batchId || !labId) {
-      sendError(res, 'batchId and labId are required.', 400)
+    const parsed = assignLabSchema.safeParse({
+      ...req.body,
+      batchId: req.params.id ?? req.body.batchId,
+    })
+    if (!parsed.success) {
+      sendError(res, parsed.error.errors[0].message, 400)
       return
     }
+    const { batchId, labId } = parsed.data
 
     const batch = await prisma.batch.findUnique({
       where: { id: batchId },
@@ -251,7 +320,6 @@ export async function revokeBatchQR(req: AuthenticatedRequest, res: Response): P
 }
 
 import { SupplyChainService } from '../services/supply-chain.service'
-import { assignDistributorSchema } from '../lib/validators'
 
 export async function assignDistributor(req: AuthenticatedRequest, res: Response): Promise<void> {
   try {

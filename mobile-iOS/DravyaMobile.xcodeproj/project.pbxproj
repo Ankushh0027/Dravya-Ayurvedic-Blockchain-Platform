@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C31C16496A94F3A9048C39 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593DAC6F233FCA28E41DA28 /* AuthService.swift */; };
+		0532BC7A392A80F9D023536C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E09CED2C66EAD06A8C8FBF /* APIClient.swift */; };
+		2B025590F614EC4EFF738509 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2475EBB9C4778EF6D78489A /* RootView.swift */; };
+		4237DDC7D67F531E67E25E24 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B64BFAEDE348D40E549AE /* APIError.swift */; };
+		519AA36DF795BAD8D8F9368C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76752FBCA5C84F294A2E102A /* SplashView.swift */; };
+		6A23643228FE1C60A1AFAB56 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E623960863DFF6966A06711E /* APIConfiguration.swift */; };
+		8967533D6677B4444DCCB2BF /* DravyaMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FA8FA879B899B820A24B0D /* DravyaMobileApp.swift */; };
+		92771D8B735E1CA34309E80A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5E0285E39B1DCECE80F1E /* AuthManager.swift */; };
+		9F23C9AF4F4327E3D3BDFC19 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B1033DBFE93FC4976D87B /* APIResponse.swift */; };
+		AF610C1032FAED4C5EAE1580 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F2DE742CA2402E75F7451 /* AppTheme.swift */; };
+		C6EF1D98DB2B2F079B09AA6F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6FE3A4E9117F8947EE845 /* RegistrationView.swift */; };
+		D0BD4714DF479E64A562B7B2 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246121E1BBB1DEFFBC9DE58 /* KeychainManager.swift */; };
+		D210F1C2F91F57B9981C92D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBA004338B78CC58F6BFDCD /* User.swift */; };
+		D22051CBCD95973CB7012B60 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4595B22BDD026E1569C0BAA /* LoginView.swift */; };
+		E9BBBBAF975D03823703FE6B /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48BB5EA5B9BE56D4E906BE /* AuthTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		131BAEE924A6DB9ACD862305 /* DravyaMobile.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DravyaMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		411E5BB8C6A50CB456697461 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		414B64BFAEDE348D40E549AE /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		5593DAC6F233FCA28E41DA28 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		656F2DE742CA2402E75F7451 /* AppTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppTheme.swift; path = DravyaMobile/Core/Theme/AppTheme.swift; sourceTree = "<group>"; };
+		76752FBCA5C84F294A2E102A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		93FA8FA879B899B820A24B0D /* DravyaMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DravyaMobileApp.swift; sourceTree = "<group>"; };
+		A4595B22BDD026E1569C0BAA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ACB5E0285E39B1DCECE80F1E /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		AE48BB5EA5B9BE56D4E906BE /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
+		B9E09CED2C66EAD06A8C8FBF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C246121E1BBB1DEFFBC9DE58 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		D4D6FE3A4E9117F8947EE845 /* RegistrationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegistrationView.swift; path = DravyaMobile/Features/Auth/RegistrationView.swift; sourceTree = "<group>"; };
+		E2475EBB9C4778EF6D78489A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		E623960863DFF6966A06711E /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		FC4B1033DBFE93FC4976D87B /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		FDBA004338B78CC58F6BFDCD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		064E713B459FD789FBA36970 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5593DAC6F233FCA28E41DA28 /* AuthService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		073C88C304F237840846FB32 = {
+			isa = PBXGroup;
+			children = (
+				A9D784F6B6A79BCAE6575EAE /* DravyaMobile */,
+				2D9456650E8615931759CA98 /* Products */,
+				D4D6FE3A4E9117F8947EE845 /* RegistrationView.swift */,
+				656F2DE742CA2402E75F7451 /* AppTheme.swift */,
+			);
+			sourceTree = "<group>";
+		};
+		20E7D8F247B30409FD94F116 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5EF8FF37A1608FAF1BD43E8 /* Config */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2D9456650E8615931759CA98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				131BAEE924A6DB9ACD862305 /* DravyaMobile.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31515E9669F5AC7DFD161F3E /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				ACB5E0285E39B1DCECE80F1E /* AuthManager.swift */,
+				C246121E1BBB1DEFFBC9DE58 /* KeychainManager.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		3A43B33100F1C44FE3EF44F7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				93FA8FA879B899B820A24B0D /* DravyaMobileApp.swift */,
+				E2475EBB9C4778EF6D78489A /* RootView.swift */,
+				76752FBCA5C84F294A2E102A /* SplashView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		54AAFECA1D9A8AE69792D592 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A4595B22BDD026E1569C0BAA /* LoginView.swift */,
+				5ED2B0BB27994DF5ABEC72BE /* Components */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		5ED2B0BB27994DF5ABEC72BE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AE48BB5EA5B9BE56D4E906BE /* AuthTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		813FEF71D4927C746E85B771 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC4B1033DBFE93FC4976D87B /* APIResponse.swift */,
+				FDBA004338B78CC58F6BFDCD /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A5EF8FF37A1608FAF1BD43E8 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				411E5BB8C6A50CB456697461 /* Development.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		A9D784F6B6A79BCAE6575EAE /* DravyaMobile */ = {
+			isa = PBXGroup;
+			children = (
+				3A43B33100F1C44FE3EF44F7 /* App */,
+				D74BAD216B3FAD2F55F9D95F /* Core */,
+				CBE781987DEFF9F038BDA24A /* Features */,
+				813FEF71D4927C746E85B771 /* Models */,
+				20E7D8F247B30409FD94F116 /* Resources */,
+				F1DB79BC2C8863E510B4132E /* Services */,
+			);
+			path = DravyaMobile;
+			sourceTree = "<group>";
+		};
+		C2752F840FCE79D4DC899494 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B9E09CED2C66EAD06A8C8FBF /* APIClient.swift */,
+				E623960863DFF6966A06711E /* APIConfiguration.swift */,
+				414B64BFAEDE348D40E549AE /* APIError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CBE781987DEFF9F038BDA24A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				54AAFECA1D9A8AE69792D592 /* Auth */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D74BAD216B3FAD2F55F9D95F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				31515E9669F5AC7DFD161F3E /* Authentication */,
+				C2752F840FCE79D4DC899494 /* Networking */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F1DB79BC2C8863E510B4132E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				064E713B459FD789FBA36970 /* API */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4A9C0D7450E69067572856B /* DravyaMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C91656762542AE968EF1AC93 /* Build configuration list for PBXNativeTarget "DravyaMobile" */;
+			buildPhases = (
+				D8D0D73F7BF7D4C56188A3FF /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DravyaMobile;
+			productName = DravyaMobile;
+			productReference = 131BAEE924A6DB9ACD862305 /* DravyaMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DA55F074F6EC6AF27284D1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 650E5BC51711025E16ABA9C8 /* Build configuration list for PBXProject "DravyaMobile" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 073C88C304F237840846FB32;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2D9456650E8615931759CA98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4A9C0D7450E69067572856B /* DravyaMobile */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8D0D73F7BF7D4C56188A3FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0532BC7A392A80F9D023536C /* APIClient.swift in Sources */,
+				6A23643228FE1C60A1AFAB56 /* APIConfiguration.swift in Sources */,
+				4237DDC7D67F531E67E25E24 /* APIError.swift in Sources */,
+				9F23C9AF4F4327E3D3BDFC19 /* APIResponse.swift in Sources */,
+				92771D8B735E1CA34309E80A /* AuthManager.swift in Sources */,
+				00C31C16496A94F3A9048C39 /* AuthService.swift in Sources */,
+				E9BBBBAF975D03823703FE6B /* AuthTextField.swift in Sources */,
+				8967533D6677B4444DCCB2BF /* DravyaMobileApp.swift in Sources */,
+				D0BD4714DF479E64A562B7B2 /* KeychainManager.swift in Sources */,
+				D22051CBCD95973CB7012B60 /* LoginView.swift in Sources */,
+				2B025590F614EC4EFF738509 /* RootView.swift in Sources */,
+				519AA36DF795BAD8D8F9368C /* SplashView.swift in Sources */,
+				D210F1C2F91F57B9981C92D9 /* User.swift in Sources */,
+				C6EF1D98DB2B2F079B09AA6F /* RegistrationView.swift in Sources */,
+				AF610C1032FAED4C5EAE1580 /* AppTheme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7210A712BD39FD45B1705ECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A6D703D6B8CEE4180113FEB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C05900AC70632D0E56911AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 411E5BB8C6A50CB456697461 /* Development.xcconfig */;
+			buildSettings = {
+				API_BASE_URL = "http://localhost:8000/api";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dravya.DravyaMobile;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE74A541FBE3D7569EF39079 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				API_BASE_URL = "https://api.dravya.in/api";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dravya.DravyaMobile;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		650E5BC51711025E16ABA9C8 /* Build configuration list for PBXProject "DravyaMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7210A712BD39FD45B1705ECB /* Debug */,
+				A6D703D6B8CEE4180113FEB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C91656762542AE968EF1AC93 /* Build configuration list for PBXNativeTarget "DravyaMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05900AC70632D0E56911AAE /* Debug */,
+				DE74A541FBE3D7569EF39079 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DA55F074F6EC6AF27284D1D /* Project object */;
+}

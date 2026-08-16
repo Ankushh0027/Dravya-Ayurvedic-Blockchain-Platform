@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import { BatchService } from '@/services/api/batches'
 import { useApi } from '@/hooks/useApi'
 import { LoadingState } from '@/components/shared/LoadingState'
@@ -24,7 +24,6 @@ import {
 
 export default function BatchDetailsPage() {
   const params = useParams()
-  const router = useRouter()
   const batchId = params.id as string
 
   const { data: batch, isLoading, error, execute: fetchBatch } = useApi(BatchService.getBatchById)
@@ -75,7 +74,7 @@ export default function BatchDetailsPage() {
 
   const canEdit = batch.status === 'DRAFT'
   const canSubmit = batch.status === 'DRAFT'
-  const canRequestInspection = batch.status === 'SUBMITTED' // Or whichever statuses backend allows
+  const canRequestInspection = batch.status === 'PENDING_VERIFICATION'
 
   const glassCard = "bg-white/80 backdrop-blur-xl border border-white/60 shadow-[0_8px_40px_rgb(0,0,0,0.04)] rounded-[24px]"
 

@@ -1,0 +1,28 @@
+name: DravyaMobile
+options:
+  bundleIdPrefix: com.dravya
+  deploymentTarget:
+    iOS: 17.0
+targets:
+  DravyaMobile:
+    type: application
+    platform: iOS
+    sources:
+      - path: DravyaMobile
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        SWIFT_VERSION: 5.9
+        TARGETED_DEVICE_FAMILY: 1,2
+      configs:
+        Debug:
+          API_BASE_URL: "http://localhost:8000/api"
+        Release:
+          API_BASE_URL: "https://api.dravya.in/api"
+    configFiles:
+      Debug: DravyaMobile/Resources/Config/Development.xcconfig
