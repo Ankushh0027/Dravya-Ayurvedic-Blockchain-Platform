@@ -129,20 +129,30 @@ class ModelVersionManager:
         pointer_data = {
             "active_version": version,
             "promoted_at": datetime.now(timezone.utc).isoformat(),
-            "models_dir": str(self.models_dir),
+            "models_dir": "models",
         }
         atomic_json_write(self.active_pointer_file, pointer_data)
         return version
 
     def get_active_version(self) -> Optional[str]:
+        # 1. Environment variable override
+        env_ver = os.getenv("DRAVYA_ACTIVE_MODEL_VERSION") or os.getenv("DRAVYA_MODEL_VERSION")
+        if env_ver and env_ver.strip():
+            return env_ver.strip()
+
+        # 2. active_model.json pointer file
         if self.active_pointer_file.exists():
             try:
                 with open(self.active_pointer_file, "r", encoding="utf-8") as f:
                     data = json.load(f)
-                    return data.get("active_version")
+                    val = data.get("active_version")
+                    if val and str(val).strip():
+                        return str(val).strip()
             except Exception:
                 pass
+
         return None
+
 
     def rollback(self, target_version: str) -> str:
         """

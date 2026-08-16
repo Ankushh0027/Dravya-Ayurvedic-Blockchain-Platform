@@ -42,7 +42,8 @@ __pycache__/
 AI-Engine/data/
 AI-Engine/scratch/
 *.pt
-*.pth
 *.ckpt
 *.onnx
 *.safetensors
+!AI-Engine/models/v1-kaggle/
+!AI-Engine/models/active_model.json

@@ -30,14 +30,16 @@ datasets/final/*
 !datasets/final/.gitkeep
 
 # Model Checkpoints & Deep Learning Weights
-models/*
-!models/.gitkeep
-!models/active_model.json
+models/runs/
+models/*.tmp
 *.pt
-*.pth
 *.ckpt
 *.onnx
 *.safetensors
+!models/v1-kaggle/
+!models/active_model.json
+!models/.gitkeep
+
 
 # Scratch & Temporary Files
 scratch/
