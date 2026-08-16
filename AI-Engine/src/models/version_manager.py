@@ -17,12 +17,17 @@ class ModelVersionManager:
 
     def __init__(self, models_dir: Optional[Union[str, Path]] = None):
         if models_dir:
-            self.models_dir = Path(models_dir)
+            p = Path(models_dir)
+            if not p.is_absolute():
+                self.models_dir = (get_project_root() / p).resolve()
+            else:
+                self.models_dir = p.resolve()
         else:
             self.models_dir = get_models_dir().resolve()
 
         self.models_dir.mkdir(parents=True, exist_ok=True)
         self.active_pointer_file = self.models_dir / "active_model.json"
+
 
     def get_version_dir(self, version: str) -> Path:
         return self.models_dir / version
