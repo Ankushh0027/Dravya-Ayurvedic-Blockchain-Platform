@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { LandingNavbar } from '@/features/landing/components/LandingNavbar'
 import { Footer } from '@/features/landing/components/Footer'
-import { HowItWorks } from '@/features/landing/components/HowItWorks'
 import { FloatingLeaf } from '@/features/landing/components/FloatingLeaf'
 import { VeinMapJourney } from '@/features/landing/components/VeinMapJourney'
 import {
@@ -33,170 +32,76 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-
-const detailedSteps = [
-  {
-    icon: UserCheck,
-    number: '01',
-    title: 'Role Selection & Login',
-    subtitle: 'Multi-Role Stakeholder Portal',
-    description:
-      'Any user accessing Dravya selects their specific role: Farmer, Distributor, Manufacturer, Verification Officer, or Consumer. Role-gated dashboards ensure each stakeholder accesses customized smart contract actions and verified access levels.',
-    details: [
-      'Role selection upon portal login (Farmer, Manufacturer, Distributor, Officer)',
-      'Secure wallet & identity key creation',
-      'Role-based access control (RBAC) for smart contracts',
-      'Unified single sign-on with cryptographic verification',
-    ],
-    accent: 'from-emerald-500/20 to-teal-500/10',
-  },
-  {
-    icon: QrCode,
-    number: '02',
-    title: 'Batch Creation & QR Match Verification',
-    subtitle: 'Digital Genesis & Custody Transfer',
-    description:
-      'The farmer/collector registers a batch with farm GPS, species name, and harvest date. Dravya generates a unique batch QR code. At every custody transfer (Farmer → Distributor → Manufacturer), scanning the QR code instantly verifies if it is the exact registered batch.',
-    details: [
-      'GPS-tagged origin logging & digital batch minting',
-      'Unique tamper-proof QR code generated for every batch',
-      'Instant mobile QR scan to confirm batch identity on transfer',
-      'Prevents batch substitution or counterfeiting',
-    ],
-    accent: 'from-cyan-500/20 to-blue-500/10',
-  },
-  {
-    icon: BrainCircuit,
-    number: '03',
-    title: 'AI Species & Quality Prediction',
-    subtitle: 'ML Botanical Authenticity Engine',
-    description:
-      'Before processing, raw herb samples are scanned by Dravya AI models. Computer vision and predictive analysis evaluate species purity, moisture levels, active compounds (e.g. Withanolides in Ashwagandha), and detect potential adulteration.',
-    details: [
-      'AI species prediction & visual purity check',
-      'Active phytochemical compound estimation',
-      'Automated adulteration detection alerts',
-      'Instant confidence score stored alongside lab results',
-    ],
-    accent: 'from-violet-500/20 to-purple-500/10',
-  },
-  {
-    icon: Landmark,
-    number: '04',
-    title: 'Verification Officers (At Scale)',
-    subtitle: 'Institutional & Government Audit Portal',
-    description:
-      'As Dravya expands to nationwide scale, certified AYUSH & Government Verification Officers log into specialized auditor dashboards. Officers inspect physical inventory, validate lab reports, and anchor digital verification sign-offs on the blockchain.',
-    details: [
-      'Dedicated Verification Officer login portal',
-      'Institutional AYUSH compliance audit workflows',
-      'Multi-signature on-chain verification stamps',
-      'Nationwide scalable regulatory oversight',
-    ],
-    accent: 'from-amber-500/20 to-orange-500/10',
-  },
-  {
-    icon: Package,
-    number: '05',
-    title: 'Manufacturer & Logistics Ledger',
-    subtitle: 'Immutable Processing & Custodial Trail',
-    description:
-      'Manufacturers accept verified batches and log processing parameters (temperature, extract ratio, batch splitting). Distributors update transit timestamps and environmental logs on the immutable blockchain ledger.',
-    details: [
-      'Unbroken chain of custody from farm to factory',
-      'Environmental & temperature tracking integration',
-      'Batch splitting & formulation lineage',
-      'Tamper-proof blockchain transaction records',
-    ],
-    accent: 'from-rose-500/20 to-pink-500/10',
-  },
-  {
-    icon: Star,
-    number: '06',
-    title: 'Consumer Scan & Batch Rating System',
-    subtitle: 'Public Transparency & Supplier Scores',
-    description:
-      'End consumers scan the QR code on the final packaging to view the complete journey map. Consumers can leave reviews and star ratings tied directly to that batch number, providing transparent public feedback on seller quality.',
-    details: [
-      'Instant consumer QR scan for complete origin map',
-      'Batch-specific rating & review desk for consumers',
-      'Transparent seller quality score based on verified batch reviews',
-      'Builds market credibility for authentic Ayurvedic producers',
-    ],
-    accent: 'from-lime-500/20 to-green-500/10',
-  },
-]
-
-const roleData = [
-  {
-    id: 'farmer',
-    label: 'Farmer',
-    icon: Sprout,
-    headline: 'Your harvest earns the trust it deserves',
-    tagline: 'From your field to the blockchain — every harvest verified.',
-    description:
-      'Dravya gives farmers a powerful digital identity for every herb batch they grow. Register your farm, log harvest details with GPS coordinates, and mint a tamper-proof QR code. Buyers instantly know your batch is genuine — and your reputation grows with every verified delivery.',
-    steps: [
-      { icon: Sprout,     title: 'Register Your Farm & Batch',      desc: 'Log your farm GPS location, herb species, harvest date and quantity. Dravya mints a unique on-chain batch record.' },
-      { icon: QrCode,     title: 'Receive Your Batch QR Code',      desc: 'A tamper-proof QR code is generated for your batch — the digital passport that travels with your herbs.' },
-      { icon: TrendingUp, title: 'Build Your Verified Reputation',   desc: 'Every successful delivery earns you a public quality score. Buyers prefer farmers with verified, rated batches.' },
-      { icon: BarChart3,  title: 'Track Batch Journey in Real-Time', desc: 'See exactly where your batch is — from your farm to the manufacturer — with full custody transfer logs.' },
-    ],
-    badge: 'Farmer Portal',
-  },
-  {
-    id: 'manufacturer',
-    label: 'Manufacturer',
-    icon: Factory,
-    headline: 'Guarantee the purity of what you manufacture',
-    tagline: 'Process with confidence. Every input verified before it enters your facility.',
-    description:
-      "Manufacturers receive blockchain-verified herb batches and log every processing step — from extraction ratios to environmental conditions. Dravya's AI pre-screens incoming raw material quality so you only work with authenticated inputs, protecting your brand and compliance record.",
-    steps: [
-      { icon: ScanLine,     title: 'Scan & Accept Incoming Batches', desc: "Scan the farmer's QR code to instantly verify batch origin, AI quality score, and chain of custody before accepting." },
-      { icon: BrainCircuit, title: 'AI Quality Pre-Check',            desc: 'Dravya AI models run species purity and compound analysis on incoming batches, flagging adulterated or substandard inputs.' },
-      { icon: FileText,     title: 'Log Processing Parameters',       desc: 'Record extraction ratios, temperature, formulation details and batch splits — every parameter anchored immutably on-chain.' },
-      { icon: Package,      title: 'Mint Final Product QR',           desc: 'Generate a final product QR linking finished goods back to the verified raw input batch for end-to-end traceability.' },
-    ],
-    badge: 'Manufacturer Portal',
-  },
-  {
-    id: 'lab',
-    label: 'Lab',
-    icon: FlaskConical,
-    headline: 'Turn your lab reports into on-chain evidence',
-    tagline: 'Your analysis anchors scientific truth on an immutable ledger.',
-    description:
-      'Accredited laboratories connect directly to Dravya to upload certified test results — phytochemical profiles, heavy metal panels, microbial counts — tied to a specific batch hash. Lab findings are immutably stored and instantly accessible to manufacturers, officers, and consumers.',
-    steps: [
-      { icon: FlaskConical, title: 'Receive Batch Sample Request',      desc: 'Dravya flags incoming batches requiring lab analysis. Labs receive sample metadata and batch QR hash for traceability.' },
-      { icon: Search,       title: 'Run Certified Analysis',             desc: 'Conduct phytochemical, microbial, and heavy metal tests. Upload results with your accreditation certificate reference.' },
-      { icon: FileText,     title: 'Anchor Report On-Chain',             desc: 'Your signed lab report is hashed and anchored on the blockchain alongside the batch record — tamper-proof and timestamped.' },
-      { icon: CheckCircle2, title: 'Enable Downstream Verification',     desc: 'Manufacturers, verification officers, and consumers can instantly verify your lab report is genuine and unaltered.' },
-    ],
-    badge: 'Lab Portal',
-  },
-  {
-    id: 'authority',
-    label: 'Verification Authority',
-    icon: BadgeCheck,
-    headline: 'Anchor regulatory trust directly on the blockchain',
-    tagline: 'Audit with confidence. Sign with authority. Enforce at scale.',
-    description:
-      'Certified AYUSH & Government Verification Officers get a dedicated auditor portal. Review physical inventory, validate laboratory reports, and stamp multi-signature digital approvals on-chain. Every officer action is immutably recorded, creating a nationwide, tamper-proof compliance trail.',
-    steps: [
-      { icon: Search,         title: 'Access Dedicated Auditor Dashboard', desc: 'View all pending batch verifications across registered farmers and manufacturers in your jurisdiction.' },
-      { icon: ClipboardCheck, title: 'Inspect & Validate Lab Reports',      desc: 'Cross-reference physical inventory with AI predictions and submitted lab reports before issuing a compliance clearance.' },
-      { icon: Lock,           title: 'Stamp Multi-Sig On-Chain Approval',   desc: 'Issue your cryptographic verification signature — anchored on-chain, visible to all downstream stakeholders.' },
-      { icon: Landmark,       title: 'Nationwide Scalable Oversight',        desc: 'Monitor regulatory compliance across thousands of batches in real-time with AYUSH-grade audit trails.' },
-    ],
-    badge: 'Officer Portal',
-  },
-]
+import { useTranslation } from 'react-i18next'
 
 function RoleSelector() {
+  const { t } = useTranslation()
   const [activeRole, setActiveRole] = useState('farmer')
-  const role = roleData.find((r) => r.id === activeRole)!
+
+  const roleData = [
+    {
+      id: 'farmer',
+      label: t('howItWorks.roles.farmer.label'),
+      icon: Sprout,
+      headline: t('howItWorks.roles.farmer.headline'),
+      tagline: t('howItWorks.roles.farmer.tagline'),
+      description: t('howItWorks.roles.farmer.description'),
+      steps: [
+        { icon: Sprout,     title: t('howItWorks.roles.farmer.step1Title'), desc: t('howItWorks.roles.farmer.step1Desc') },
+        { icon: QrCode,     title: t('howItWorks.roles.farmer.step2Title'), desc: t('howItWorks.roles.farmer.step2Desc') },
+        { icon: TrendingUp, title: t('howItWorks.roles.farmer.step3Title'), desc: t('howItWorks.roles.farmer.step3Desc') },
+        { icon: BarChart3,  title: t('howItWorks.roles.farmer.step4Title'), desc: t('howItWorks.roles.farmer.step4Desc') },
+      ],
+      badge: t('howItWorks.roles.farmer.badge'),
+    },
+    {
+      id: 'manufacturer',
+      label: t('howItWorks.roles.manufacturer.label'),
+      icon: Factory,
+      headline: t('howItWorks.roles.manufacturer.headline'),
+      tagline: t('howItWorks.roles.manufacturer.tagline'),
+      description: t('howItWorks.roles.manufacturer.description'),
+      steps: [
+        { icon: ScanLine,     title: t('howItWorks.roles.manufacturer.step1Title'), desc: t('howItWorks.roles.manufacturer.step1Desc') },
+        { icon: BrainCircuit, title: t('howItWorks.roles.manufacturer.step2Title'), desc: t('howItWorks.roles.manufacturer.step2Desc') },
+        { icon: FileText,     title: t('howItWorks.roles.manufacturer.step3Title'), desc: t('howItWorks.roles.manufacturer.step3Desc') },
+        { icon: Package,      title: t('howItWorks.roles.manufacturer.step4Title'), desc: t('howItWorks.roles.manufacturer.step4Desc') },
+      ],
+      badge: t('howItWorks.roles.manufacturer.badge'),
+    },
+    {
+      id: 'lab',
+      label: t('howItWorks.roles.lab.label'),
+      icon: FlaskConical,
+      headline: t('howItWorks.roles.lab.headline'),
+      tagline: t('howItWorks.roles.lab.tagline'),
+      description: t('howItWorks.roles.lab.description'),
+      steps: [
+        { icon: FlaskConical, title: t('howItWorks.roles.lab.step1Title'), desc: t('howItWorks.roles.lab.step1Desc') },
+        { icon: Search,       title: t('howItWorks.roles.lab.step2Title'), desc: t('howItWorks.roles.lab.step2Desc') },
+        { icon: FileText,     title: t('howItWorks.roles.lab.step3Title'), desc: t('howItWorks.roles.lab.step3Desc') },
+        { icon: CheckCircle2, title: t('howItWorks.roles.lab.step4Title'), desc: t('howItWorks.roles.lab.step4Desc') },
+      ],
+      badge: t('howItWorks.roles.lab.badge'),
+    },
+    {
+      id: 'authority',
+      label: t('howItWorks.roles.authority.label'),
+      icon: BadgeCheck,
+      headline: t('howItWorks.roles.authority.headline'),
+      tagline: t('howItWorks.roles.authority.tagline'),
+      description: t('howItWorks.roles.authority.description'),
+      steps: [
+        { icon: Search,         title: t('howItWorks.roles.authority.step1Title'), desc: t('howItWorks.roles.authority.step1Desc') },
+        { icon: ClipboardCheck, title: t('howItWorks.roles.authority.step2Title'), desc: t('howItWorks.roles.authority.step2Desc') },
+        { icon: Lock,           title: t('howItWorks.roles.authority.step3Title'), desc: t('howItWorks.roles.authority.step3Desc') },
+        { icon: Landmark,       title: t('howItWorks.roles.authority.step4Title'), desc: t('howItWorks.roles.authority.step4Desc') },
+      ],
+      badge: t('howItWorks.roles.authority.badge'),
+    },
+  ]
+
+  const role = roleData.find((r) => r.id === activeRole) || roleData[0]
   const Icon = role.icon
 
   return (
@@ -206,13 +111,12 @@ function RoleSelector() {
 
       <div className="max-w-5xl mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
-          
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold font-serif text-slate-900 leading-tight">
-            See how Dravya works{' '}
-            <span className="text-[#184E48]">for you</span>
+            {t('howItWorks.rolesTitle')}{' '}
+            <span className="text-[#184E48]">{t('howItWorks.rolesTitleHighlight')}</span>
           </h2>
           <p className="mt-4 text-slate-600 text-base max-w-xl mx-auto font-medium">
-            Select your role to see a tailored walkthrough of your Dravya experience.
+            {t('howItWorks.rolesSubtitle')}
           </p>
         </div>
 
@@ -296,7 +200,7 @@ function RoleSelector() {
               </p>
               <Link href="/register">
                 <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-[#184E48] shadow shadow-[#184E48]/25 hover:shadow-lg hover:shadow-[#184E48]/30 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer">
-                  Get Started as {role.label}
+                  {t('howItWorks.getStartedAs')} {role.label}
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
@@ -318,6 +222,95 @@ function RoleSelector() {
 }
 
 export default function HowItWorksPage() {
+  const { t } = useTranslation()
+
+  const detailedSteps = [
+    {
+      icon: UserCheck,
+      number: '01',
+      title: t('howItWorks.workflow.step1Title'),
+      subtitle: t('howItWorks.workflow.step1Sub'),
+      description: t('howItWorks.workflow.step1Desc'),
+      details: [
+        t('howItWorks.workflow.step1D1'),
+        t('howItWorks.workflow.step1D2'),
+        t('howItWorks.workflow.step1D3'),
+        t('howItWorks.workflow.step1D4'),
+      ],
+      accent: 'from-emerald-500/20 to-teal-500/10',
+    },
+    {
+      icon: QrCode,
+      number: '02',
+      title: t('howItWorks.workflow.step2Title'),
+      subtitle: t('howItWorks.workflow.step2Sub'),
+      description: t('howItWorks.workflow.step2Desc'),
+      details: [
+        t('howItWorks.workflow.step2D1'),
+        t('howItWorks.workflow.step2D2'),
+        t('howItWorks.workflow.step2D3'),
+        t('howItWorks.workflow.step2D4'),
+      ],
+      accent: 'from-cyan-500/20 to-blue-500/10',
+    },
+    {
+      icon: BrainCircuit,
+      number: '03',
+      title: t('howItWorks.workflow.step3Title'),
+      subtitle: t('howItWorks.workflow.step3Sub'),
+      description: t('howItWorks.workflow.step3Desc'),
+      details: [
+        t('howItWorks.workflow.step3D1'),
+        t('howItWorks.workflow.step3D2'),
+        t('howItWorks.workflow.step3D3'),
+        t('howItWorks.workflow.step3D4'),
+      ],
+      accent: 'from-violet-500/20 to-purple-500/10',
+    },
+    {
+      icon: Landmark,
+      number: '04',
+      title: t('howItWorks.workflow.step4Title'),
+      subtitle: t('howItWorks.workflow.step4Sub'),
+      description: t('howItWorks.workflow.step4Desc'),
+      details: [
+        t('howItWorks.workflow.step4D1'),
+        t('howItWorks.workflow.step4D2'),
+        t('howItWorks.workflow.step4D3'),
+        t('howItWorks.workflow.step4D4'),
+      ],
+      accent: 'from-amber-500/20 to-orange-500/10',
+    },
+    {
+      icon: Package,
+      number: '05',
+      title: t('howItWorks.workflow.step5Title'),
+      subtitle: t('howItWorks.workflow.step5Sub'),
+      description: t('howItWorks.workflow.step5Desc'),
+      details: [
+        t('howItWorks.workflow.step5D1'),
+        t('howItWorks.workflow.step5D2'),
+        t('howItWorks.workflow.step5D3'),
+        t('howItWorks.workflow.step5D4'),
+      ],
+      accent: 'from-rose-500/20 to-pink-500/10',
+    },
+    {
+      icon: Star,
+      number: '06',
+      title: t('howItWorks.workflow.step6Title'),
+      subtitle: t('howItWorks.workflow.step6Sub'),
+      description: t('howItWorks.workflow.step6Desc'),
+      details: [
+        t('howItWorks.workflow.step6D1'),
+        t('howItWorks.workflow.step6D2'),
+        t('howItWorks.workflow.step6D3'),
+        t('howItWorks.workflow.step6D4'),
+      ],
+      accent: 'from-lime-500/20 to-green-500/10',
+    },
+  ]
+
   return (
     <div className="min-h-screen flex flex-col bg-white relative font-sans overflow-x-hidden">
       <LandingNavbar />
@@ -334,12 +327,12 @@ export default function HowItWorksPage() {
 
         <div className="relative z-10 max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-[4.5rem] font-bold tracking-tight text-[#1e293b] leading-[1.08] font-serif mb-6">
-            Transparency, Built Into
-            <span className="block text-[#184E48] mt-2">Every Batch.</span>
+            {t('howItWorks.heroTitle')}
+            <span className="block text-[#184E48] mt-2">{t('howItWorks.heroTitleSub')}</span>
           </h1>
 
           <p className="text-[17px] md:text-[19px] lg:text-[20px] text-slate-600 leading-relaxed font-medium max-w-3xl mx-auto mb-8">
-            Learn how Dravya empowers Farmers, Distributors, Manufacturers, Verification Officers, and Consumers with role-based access, QR batch verification, AI prediction models, and a consumer batch rating system.
+            {t('howItWorks.heroDesc')}
           </p>
 
           <VeinMapJourney />
@@ -356,13 +349,13 @@ export default function HowItWorksPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl lg:text-[4.5rem] font-bold tracking-tight text-[#184E48] leading-[1.08] font-serif mb-4">
-              WorkFlow Breakdown
+              {t('howItWorks.workflow.tag')}
             </h2>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1e293b] font-serif">
-              What happens at each stage of Dravya?
+              {t('howItWorks.workflow.title')}
             </h3>
             <p className="text-slate-600 mt-4 max-w-2xl mx-auto text-base font-medium">
-              Detailed breakdown of how user roles, batch QR code verification, AI predictions, AYUSH verification officers, and batch rating systems work together.
+              {t('howItWorks.workflow.subtitle')}
             </p>
           </div>
 
@@ -430,9 +423,8 @@ export default function HowItWorksPage() {
       <section className="py-20 bg-[#E1E9E1]/30 border-t border-[#184E48]/10">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
-           
             <h2 className="text-3xl md:text-4xl font-bold text-[#1e293b] font-serif">
-              Why Dravya sets the gold standard for Ayurvedic herbs
+              {t('howItWorks.goldStandard.title')}
             </h2>
           </div>
 
@@ -442,9 +434,11 @@ export default function HowItWorksPage() {
               <div className="w-14 h-14 rounded-2xl bg-[#184E48] text-white flex items-center justify-center mb-6 shadow-md shadow-[#184E48]/20">
                 <BrainCircuit className="w-7 h-7" />
               </div>
-              <h3 className="text-xl font-bold text-[#1e293b] mb-3 font-serif">AI Prediction & Verification</h3>
+              <h3 className="text-xl font-bold text-[#1e293b] mb-3 font-serif">
+                {t('howItWorks.goldStandard.f1Title')}
+              </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Using machine learning to predict herb authenticity and active compound levels before batch approval, preventing market adulteration.
+                {t('howItWorks.goldStandard.f1Desc')}
               </p>
             </div>
 
@@ -453,9 +447,11 @@ export default function HowItWorksPage() {
               <div className="w-14 h-14 rounded-2xl bg-[#184E48] text-white flex items-center justify-center mb-6 shadow-md shadow-[#184E48]/20">
                 <Landmark className="w-7 h-7" />
               </div>
-              <h3 className="text-xl font-bold text-[#1e293b] mb-3 font-serif">Scalable Verification Officers</h3>
+              <h3 className="text-xl font-bold text-[#1e293b] mb-3 font-serif">
+                {t('howItWorks.goldStandard.f2Title')}
+              </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Enabling certified AYUSH & Government Verification Officers to audit batches physically and stamp digital signatures on the blockchain.
+                {t('howItWorks.goldStandard.f2Desc')}
               </p>
             </div>
 
@@ -464,16 +460,16 @@ export default function HowItWorksPage() {
               <div className="w-14 h-14 rounded-2xl bg-[#184E48] text-white flex items-center justify-center mb-6 shadow-md shadow-[#184E48]/20">
                 <Star className="w-7 h-7" />
               </div>
-              <h3 className="text-xl font-bold text-[#1e293b] mb-3 font-serif">Batch Rating & Reviews</h3>
+              <h3 className="text-xl font-bold text-[#1e293b] mb-3 font-serif">
+                {t('howItWorks.goldStandard.f3Title')}
+              </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Empowering consumers and buyers to review specific batches, creating transparent quality ratings for farmers, manufacturers, and sellers.
+                {t('howItWorks.goldStandard.f3Desc')}
               </p>
             </div>
           </div>
         </div>
       </section>
-
-   
 
       <Footer className="bg-[#184E48]" />
     </div>

@@ -23,76 +23,77 @@ import {
 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
-const mainFeatures = [
-  {
-    icon: Brain,
-    title: 'AI / ML Prediction Engine',
-    desc: 'Deep Learning-based Medicinal Plant & Herb Image Classification, trained on Kaggle datasets via the PlantPredictor inference pipeline. Returns a confidence score and AI verification status, with canonical species and botanical taxonomy mapping.',
-    badge: 'Core AI',
-    highlights: [
-      'Deep Learning image classification',
-      'PlantPredictor inference pipeline',
-      'Confidence score + AI verification status',
-      'Canonical species / botanical taxonomy mapping',
-      'Python · FastAPI · Pydantic · SHA-256',
-      'Blockchain-ready traceability payload',
-    ],
-  },
-  {
-    icon: Package,
-    title: 'Batch & Inventory Intelligence',
-    desc: 'Unique deterministic Batch ID generation (DRAVYA-<HERB>-<DATE>-<SUFFIX>), automatic quantity normalization across units, herb-wise and farmer-wise batch organization, and full inventory tracking with search and retrieval.',
-    badge: 'Batch Engine',
-    highlights: [
-      'Deterministic Batch ID: DRAVYA-<HERB>-<DATE>-<SUFFIX>',
-      'Quantity normalization: g/kg/quintal/tonne/lbs → kg',
-      'Herb-wise & farmer-wise batch organization',
-      'Herb-wise & farmer-wise inventory summary',
-      'Total inventory tracking & batch retrieval',
-      'Batch search across all dimensions',
-    ],
-  },
-  {
-    icon: LinkIcon,
-    title: 'Traceability / Blockchain Ready',
-    desc: 'Every batch produces a blockchain-ready traceability payload with a SHA-256 tamper-evident hash linking AI prediction, batch data, farmer, and quantity — designed for future smart-contract and blockchain integration.',
-    badge: 'Blockchain',
-    highlights: [
-      'Blockchain-ready traceability payload',
-      'SHA-256 tamper-evident payload hash',
-      'AI prediction + batch + farmer + quantity linked',
-      'Designed for smart-contract integration',
-      'Full chain-of-custody audit trail',
-      'On-chain log for every transfer event',
-    ],
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Validation & Reliability',
-    desc: 'Pydantic request validation, confidence-based verification tiers (AI_CONFIRMED / REVIEW_REQUIRED / LOW_CONFIDENCE), complete error handling (404/400/422), and 237 automated tests + live API E2E verification.',
-    badge: 'Quality',
-    highlights: [
-      'Pydantic request validation',
-      '≥0.90 → AI_CONFIRMED | 0.70–0.89 → REVIEW_REQUIRED | <0.70 → LOW_CONFIDENCE',
-      'Invalid quantity/unit handling',
-      '404 / 400 / 422 error handling',
-      '237 automated tests',
-      'Live API E2E verification',
-    ],
-  },
-]
-
-const additionalFeatures = [
-  { icon: ClipboardList, title: 'POST /batches/create', desc: 'Register a new herb batch with GPS, species, quantity, and farmer details. Generates deterministic Batch ID.' },
-  { icon: TestTube,      title: 'POST /batches/create-from-image', desc: 'Upload a herb image; AI classifies species, maps taxonomy, and auto-creates a verified batch.' },
-  { icon: Database,      title: 'GET /batches/{batch_id}', desc: 'Retrieve full batch record including AI prediction, farmer, quantity, and verification status.' },
-  { icon: Hash,          title: 'GET /batches/{batch_id}/traceability', desc: 'Returns the blockchain-ready traceability payload with SHA-256 hash for on-chain anchoring.' },
-  { icon: BarChart3,     title: 'GET /inventory/summary', desc: 'Aggregated total inventory across all herbs and farmers with normalization to kg.' },
-  { icon: Zap,           title: 'Real-Time Alerts', desc: 'Instant notifications for failed quality checks, batch transfers, and certification expirations.' },
-]
-
 export default function FeaturesPage() {
   const { t } = useTranslation()
+
+  const mainFeatures = [
+    {
+      icon: Brain,
+      title: t('features.cards.coreAi.title'),
+      desc: t('features.cards.coreAi.desc'),
+      badge: t('features.cards.coreAi.badge'),
+      highlights: [
+        t('features.cards.coreAi.h1'),
+        t('features.cards.coreAi.h2'),
+        t('features.cards.coreAi.h3'),
+        t('features.cards.coreAi.h4'),
+        t('features.cards.coreAi.h5'),
+        t('features.cards.coreAi.h6'),
+      ],
+    },
+    {
+      icon: Package,
+      title: t('features.cards.batchEngine.title'),
+      desc: t('features.cards.batchEngine.desc'),
+      badge: t('features.cards.batchEngine.badge'),
+      highlights: [
+        t('features.cards.batchEngine.h1'),
+        t('features.cards.batchEngine.h2'),
+        t('features.cards.batchEngine.h3'),
+        t('features.cards.batchEngine.h4'),
+        t('features.cards.batchEngine.h5'),
+        t('features.cards.batchEngine.h6'),
+      ],
+    },
+    {
+      icon: LinkIcon,
+      title: t('features.cards.blockchain.title'),
+      desc: t('features.cards.blockchain.desc'),
+      badge: t('features.cards.blockchain.badge'),
+      highlights: [
+        t('features.cards.blockchain.h1'),
+        t('features.cards.blockchain.h2'),
+        t('features.cards.blockchain.h3'),
+        t('features.cards.blockchain.h4'),
+        t('features.cards.blockchain.h5'),
+        t('features.cards.blockchain.h6'),
+      ],
+    },
+    {
+      icon: ShieldCheck,
+      title: t('features.cards.quality.title'),
+      desc: t('features.cards.quality.desc'),
+      badge: t('features.cards.quality.badge'),
+      highlights: [
+        t('features.cards.quality.h1'),
+        t('features.cards.quality.h2'),
+        t('features.cards.quality.h3'),
+        t('features.cards.quality.h4'),
+        t('features.cards.quality.h5'),
+        t('features.cards.quality.h6'),
+      ],
+    },
+  ]
+
+  const additionalFeatures = [
+    { icon: ClipboardList, title: 'POST /batches/create', desc: t('features.additional.batchCreate') },
+    { icon: TestTube,      title: 'POST /batches/create-from-image', desc: t('features.additional.batchCreateImg') },
+    { icon: Database,      title: 'GET /batches/{batch_id}', desc: t('features.additional.batchGet') },
+    { icon: Hash,          title: 'GET /batches/{batch_id}/traceability', desc: t('features.additional.batchTrace') },
+    { icon: BarChart3,     title: 'GET /inventory/summary', desc: t('features.additional.invSummary') },
+    { icon: Zap,           title: t('features.additional.realtimeAlertsTitle'), desc: t('features.additional.realtimeAlertsDesc') },
+  ]
+
   return (
     <div className="min-h-screen flex flex-col bg-white relative font-sans overflow-x-hidden">
       <LandingNavbar />
@@ -149,7 +150,7 @@ export default function FeaturesPage() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                 </span>
-                <span>Scanning batch</span>
+                <span>{t('features.scanner.badge')}</span>
               </div>
 
               {/* Center Scanner Radar/Graphic */}
@@ -167,15 +168,13 @@ export default function FeaturesPage() {
               </div>
 
               {/* Bottom Tech Label */}
-             <div className="text-[10px] font-mono text-emerald-400/70 tracking-wider uppercase z-20">
-  FastAPI · HerbPredictor
-</div>
+              <div className="text-[10px] font-mono text-emerald-400/70 tracking-wider uppercase z-20">
+                FastAPI · HerbPredictor
+              </div>
             </div>
 
             {/* Card Content */}
             <div className="flex-1">
-            
-
               <h3 className="text-2xl md:text-3xl font-bold font-serif text-slate-900 mb-3 leading-snug">
                 {t('features.scannerTitle')}
               </h3>
@@ -188,21 +187,21 @@ export default function FeaturesPage() {
                 Python · FastAPI · Pydantic · Deep Learning / PlantPredictor · REST API · SHA-256 · Batch/Inventory Aggregation · Blockchain-ready Traceability
               </p>
 
-              {/* Practical Platform Features (Replacing unprovable stats) */}
+              {/* Practical Platform Features */}
               <div className="grid grid-cols-3 gap-3">
-  <div className="bg-[#fcfdfc] border border-[#184E48]/20 rounded-xl p-3">
-    <p className="text-[11px] font-medium text-slate-500 mb-0.5">Analysis Engine</p>
-    <p className="text-xs md:text-sm font-bold text-[#184E48]">Deep Learning Vision</p>
-  </div>
-  <div className="bg-[#fcfdfc] border border-[#184E48]/20 rounded-xl p-3">
-    <p className="text-[11px] font-medium text-slate-500 mb-0.5">Model</p>
-    <p className="text-xs md:text-sm font-bold text-[#184E48]">PlantPredictor</p>
-  </div>
-  <div className="bg-[#fcfdfc] border border-[#184E48]/20 rounded-xl p-3">
-    <p className="text-[11px] font-medium text-slate-500 mb-0.5">Output</p>
-    <p className="text-xs md:text-sm font-bold text-[#184E48]">Confidence + Taxonomy</p>
-  </div>
-</div>
+                <div className="bg-[#fcfdfc] border border-[#184E48]/20 rounded-xl p-3">
+                  <p className="text-[11px] font-medium text-slate-500 mb-0.5">{t('features.scanner.analysisEngineLabel')}</p>
+                  <p className="text-xs md:text-sm font-bold text-[#184E48]">{t('features.scanner.analysisEngineVal')}</p>
+                </div>
+                <div className="bg-[#fcfdfc] border border-[#184E48]/20 rounded-xl p-3">
+                  <p className="text-[11px] font-medium text-slate-500 mb-0.5">{t('features.scanner.modelLabel')}</p>
+                  <p className="text-xs md:text-sm font-bold text-[#184E48]">{t('features.scanner.modelVal')}</p>
+                </div>
+                <div className="bg-[#fcfdfc] border border-[#184E48]/20 rounded-xl p-3">
+                  <p className="text-[11px] font-medium text-slate-500 mb-0.5">{t('features.scanner.outputLabel')}</p>
+                  <p className="text-xs md:text-sm font-bold text-[#184E48]">{t('features.scanner.outputVal')}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

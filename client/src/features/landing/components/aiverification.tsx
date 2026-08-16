@@ -10,7 +10,7 @@ export function AIVerification() {
   const { t } = useTranslation()
 
   return (
-    <section className="relative overflow-hidden bg-white py-24 lg:py-32">
+    <section className=" bg relative overflow-hidden bg-white py-24 lg:py-32">
       <style>
         {`
           @keyframes scan {
