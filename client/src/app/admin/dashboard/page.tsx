@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { ShieldCheck, UserCheck, SearchCheck, Activity, Database, Server, Network } from 'lucide-react'
+import { ShieldCheck, UserCheck, SearchCheck, Activity, Database, Server, Network, FlaskConical } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { useAuthStore } from '@/store/authStore'
@@ -12,7 +12,7 @@ export default function AdminDashboard() {
   const glassCard = "bg-white/80 backdrop-blur-xl border border-white/60 shadow-[0_8px_40px_rgb(0,0,0,0.04)] rounded-[24px] overflow-hidden relative group hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all duration-500"
 
   return (
-    <div className="max-w-[1400px] mx-auto p-4 md:p-6 space-y-6 h-[calc(100vh-80px)] flex flex-col justify-center">
+    <div className="max-w-[1400px] mx-auto p-4 md:p-6 space-y-6">
       
       {/* Hero Section */}
       <div className="relative rounded-[24px] overflow-hidden bg-gradient-to-br from-[#184E48] to-[#113834] p-6 md:p-8 shadow-xl border border-white/10">
@@ -45,6 +45,26 @@ export default function AdminDashboard() {
                 <CardTitle className="text-xl font-bold text-[#1e293b] font-serif">Verifications</CardTitle>
                 <CardDescription className="text-sm mt-1 text-slate-500 font-medium leading-relaxed">
                   Review and assign pending producer verification requests to authorized government verifiers.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="ghost" className="w-full justify-between mt-2 text-[#184E48] hover:text-white hover:bg-[#184E48] font-bold text-sm rounded-xl py-4 group/btn transition-all duration-300 shadow-sm border border-[#184E48]/10">
+                  Manage Queue
+                  <span className="transform translate-x-0 group-hover/btn:translate-x-1 transition-transform duration-200">→</span>
+                </Button>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link href="/admin/lab-tests" className="block h-full">
+            <Card className={`${glassCard} h-full border-[#184E48]/20 bg-gradient-to-b from-white to-teal-50/30`}>
+              <CardHeader className="pb-3">
+                <div className="w-12 h-12 bg-[#184E48]/10 rounded-2xl flex items-center justify-center mb-4 ring-4 ring-white shadow-sm group-hover:scale-110 group-hover:bg-[#184E48] transition-all duration-300">
+                  <FlaskConical className="w-6 h-6 text-[#184E48] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <CardTitle className="text-xl font-bold text-[#1e293b] font-serif">Lab Tests</CardTitle>
+                <CardDescription className="text-sm mt-1 text-slate-500 font-medium leading-relaxed">
+                  Assign approved batches to active laboratories for quality testing.
                 </CardDescription>
               </CardHeader>
               <CardContent>

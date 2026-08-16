@@ -62,3 +62,15 @@ export interface CreateBatchPayload {
   latitude?: number
   longitude?: number
 }
+
+export interface LotInspectionRequest {
+  id: string
+  batchId: string
+  status: 'PENDING' | 'UNDER_INSPECTION' | 'APPROVED' | 'REJECTED'
+  declaredQuantity: number
+  authorityId: string | null
+  assignedBy: string | null
+  assignedAt: string | null
+  createdAt: string
+  updatedAt: string
+}
