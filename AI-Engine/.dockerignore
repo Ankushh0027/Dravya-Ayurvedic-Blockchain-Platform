@@ -27,9 +27,13 @@ datasets/processed/*
 datasets/final/*
 !datasets/final/.gitkeep
 
-# Models & Checkpoints (Runtime Mounted via Volume)
-models/*
+# Models & Checkpoints
+models/runs/
+models/*.tmp
+!models/v1-kaggle/
+!models/active_model.json
 !models/.gitkeep
+
 
 # Reports & Operational Artifacts
 reports/generated/
