@@ -53,7 +53,7 @@ const formSchema = z.object({
     .regex(/[0-9]/, { message: "Password must contain at least one number." }),
   confirmPassword: z.string(),
   role: z.enum(['PRODUCER', 'LAB', 'DISTRIBUTOR'], {
-    required_error: "Please select a role.",
+    message: "Please select a role.",
   })
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords don't match.",

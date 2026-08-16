@@ -41,7 +41,7 @@ interface ProducerProfileFormProps {
 
 export function ProducerProfileForm({ initialData, onSubmit, isLoading }: ProducerProfileFormProps) {
   const form = useForm<z.infer<typeof profileSchema>>({
-    resolver: zodResolver(profileSchema),
+    resolver: zodResolver(profileSchema) as any,
     defaultValues: {
       farmName: initialData?.farmName || '',
       address: initialData?.address || '',
@@ -78,10 +78,10 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#184E48]/5 rounded-full blur-[80px] pointer-events-none" />
       
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6 relative z-10">
+        <form onSubmit={form.handleSubmit(handleSubmit as any)} className="space-y-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
             <FormField
-              control={form.control}
+              control={form.control as any}
               name="farmName"
               render={({ field }) => (
                 <FormItem>
@@ -95,7 +95,7 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
             />
 
             <FormField
-              control={form.control}
+              control={form.control as any}
               name="address"
               render={({ field }) => (
                 <FormItem>
@@ -109,7 +109,7 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
             />
 
             <FormField
-              control={form.control}
+              control={form.control as any}
               name="village"
               render={({ field }) => (
                 <FormItem>
@@ -123,7 +123,7 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
             />
 
             <FormField
-              control={form.control}
+              control={form.control as any}
               name="tehsil"
               render={({ field }) => (
                 <FormItem>
@@ -137,7 +137,7 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
             />
 
             <FormField
-              control={form.control}
+              control={form.control as any}
               name="district"
               render={({ field }) => (
                 <FormItem>
@@ -151,7 +151,7 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
             />
 
             <FormField
-              control={form.control}
+              control={form.control as any}
               name="state"
               render={({ field }) => (
                 <FormItem>
@@ -165,7 +165,7 @@ export function ProducerProfileForm({ initialData, onSubmit, isLoading }: Produc
             />
 
             <FormField
-              control={form.control}
+              control={form.control as any}
               name="pincode"
               render={({ field }) => (
                 <FormItem>
