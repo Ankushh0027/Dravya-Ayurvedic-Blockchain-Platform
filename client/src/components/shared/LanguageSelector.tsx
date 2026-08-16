@@ -27,7 +27,7 @@ export function LanguageSelector({ variant = 'navbar', className = '' }: Languag
 
   const currentLanguage = i18n.language?.startsWith('hi') ? 'hi' : 'en'
 
-  const handleLanguageChange = (newLang: string) => {
+  const handleLanguageChange = (newLang: string | null) => {
     if (!newLang) return
     i18n.changeLanguage(newLang)
     if (typeof window !== 'undefined') {
