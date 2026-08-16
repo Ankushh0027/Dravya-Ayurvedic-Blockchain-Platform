@@ -39,8 +39,9 @@ blockchain/fabric-samples/
 venv/
 __pycache__/
 *.py[cod]
-AI-Engine/data/
-AI-Engine/scratch/
+/AI-Engine/data/
+/AI-Engine/scratch/
+
 *.pt
 *.ckpt
 *.onnx
