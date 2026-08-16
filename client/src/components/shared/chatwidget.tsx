@@ -1,11 +1,12 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { X, Send, Leaf } from 'lucide-react'
+import { X, Send } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
-import { LeafSprig } from '@/features/landing/components/LeafSprig'
+
+const AI_ENGINE_URL = 'https://dravya-ai-engine.onrender.com'
 
 type ChatMessage = {
   id: string
@@ -14,19 +15,21 @@ type ChatMessage = {
 }
 
 const INITIAL_MESSAGES: ChatMessage[] = [
-{
-  id: 'm1',
-  role: 'assistant',
-  text: "Mai iss desh ka hanuman hu!  ",
-},
+  {
+    id: 'm1',
+    role: 'assistant',
+    text: 'Welcome to Dravya! 🌿 Ask anything about herbs, batches, farmers, or inventory in English, Hindi, or Hinglish.',
+  },
 ]
 
 export function ChatWidget() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<ChatMessage[]>(INITIAL_MESSAGES)
   const [input, setInput] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
   const scrollRef = useRef<HTMLDivElement>(null)
   const widgetRef = useRef<HTMLDivElement>(null)
+  const conversationIdRef = useRef<string | null>(null)
 
   useEffect(() => {
     if (open) {
@@ -48,22 +51,55 @@ export function ChatWidget() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [open])
 
-  const handleSend = () => {
-    if (!input.trim()) return
-    const userMsg: ChatMessage = { id: `m${Date.now()}`, role: 'user', text: input }
+  const handleSend = async () => {
+    if (!input.trim() || isLoading) return
+
+    const userMessage = input.trim()
+    const userMsg: ChatMessage = { id: `m${Date.now()}`, role: 'user', text: userMessage }
     setMessages((prev) => [...prev, userMsg])
     setInput('')
+    setIsLoading(true)
 
-    setTimeout(() => {
+    try {
+      const res = await fetch(`${AI_ENGINE_URL}/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: userMessage,
+          conversation_id: conversationIdRef.current ?? undefined,
+        }),
+      })
+
+      if (!res.ok) {
+        throw new Error(`Server error: ${res.status}`)
+      }
+
+      const data = await res.json()
+     
+      if (data.conversation_id) {
+        conversationIdRef.current = data.conversation_id
+      }
+
       setMessages((prev) => [
         ...prev,
         {
           id: `m${Date.now() + 1}`,
           role: 'assistant',
-          text: 'Aapka query note kar liya gaya hai. (Demo response — yahan apna AI call wire karein.)', 
+          text: data.answer ?? 'Answer not found',
         },
       ])
-    }, 500)
+    } catch (err) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: `m${Date.now() + 1}`,
+          role: 'assistant',
+          text: "⚠️ Couldn't connect to the server. Please try again.",
+        },
+      ])
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -124,6 +160,24 @@ export function ChatWidget() {
                   </div>
                 </div>
               ))}
+
+              {/* Typing indicator */}
+              {isLoading && (
+                <div className="flex items-start justify-start">
+                  <Avatar className="mr-2 h-6 w-6 shrink-0 bg-[#184E48]">
+                    <AvatarFallback className="bg-[#184E48]">
+                      <img src="/logo-out.png" alt="typing" className="rounded-full object-cover" />
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="rounded-2xl rounded-tl-sm border border-[#184E48]/10 bg-white px-4 py-3 shadow-sm">
+                    <span className="flex gap-1">
+                      <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#184E48]/50 [animation-delay:0ms]" />
+                      <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#184E48]/50 [animation-delay:150ms]" />
+                      <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#184E48]/50 [animation-delay:300ms]" />
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -140,9 +194,9 @@ export function ChatWidget() {
               />
               <Button
                 onClick={handleSend}
-                disabled={!input.trim()}
+                disabled={!input.trim() || isLoading}
                 size="icon"
-                className="h-7 w-7 shrink-0 rounded-full bg-[#184E48] text-white hover:bg-accent "
+                className="h-7 w-7 shrink-0 rounded-full bg-[#184E48] text-white hover:bg-accent disabled:opacity-50"
                 aria-label="Send message"
               >
                 <Send className="h-3.5 w-3.5" />

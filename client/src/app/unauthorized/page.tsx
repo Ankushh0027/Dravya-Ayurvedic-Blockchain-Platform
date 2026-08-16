@@ -18,7 +18,7 @@ export default function UnauthorizedPage() {
     if (user) {
       router.push(getDashboardRoute(user.role))
     } else {
-      router.push('/login')
+      router.push('/')
     }
   }
 
