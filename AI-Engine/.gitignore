@@ -21,7 +21,8 @@ __pycache__/
 htmlcov/
 
 # Datasets & Processed Data
-data/
+/data/
+
 datasets/raw/*
 !datasets/raw/.gitkeep
 datasets/processed/*
