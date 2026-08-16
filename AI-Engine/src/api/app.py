@@ -52,10 +52,21 @@ def create_app() -> FastAPI:
         "http://127.0.0.1:3000",
         "http://127.0.0.1:5173",
     ]
-    configured_origins = api_cfg.get("cors_allowed_origins", default_origins)
-    env_origins = os.getenv("DRAVYA_CORS_ORIGINS") or os.getenv("CORS_ALLOWED_ORIGINS")
-    if env_origins:
-        configured_origins = [o.strip() for o in env_origins.split(",") if o.strip()]
+    configured_origins = list(api_cfg.get("cors_allowed_origins", default_origins))
+
+    # Collect additional origins from environment variables
+    env_frontend = os.getenv("DRAVYA_FRONTEND_ORIGIN")
+    env_cors = os.getenv("DRAVYA_CORS_ORIGINS") or os.getenv("CORS_ALLOWED_ORIGINS")
+
+    additional_origins = []
+    if env_frontend:
+        additional_origins.extend([o.strip().rstrip("/") for o in env_frontend.split(",") if o.strip()])
+    if env_cors:
+        additional_origins.extend([o.strip().rstrip("/") for o in env_cors.split(",") if o.strip()])
+
+    for origin in additional_origins:
+        if origin not in configured_origins:
+            configured_origins.append(origin)
 
     app.add_middleware(
         CORSMiddleware,
@@ -64,6 +75,7 @@ def create_app() -> FastAPI:
         allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         allow_headers=["*"],
     )
+
 
 
     # Include routes
@@ -131,3 +143,11 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    port = int(os.getenv("PORT", "8000"))
+    host = os.getenv("HOST", "0.0.0.0")
+    uvicorn.run("src.api.app:app", host=host, port=port, reload=False)
