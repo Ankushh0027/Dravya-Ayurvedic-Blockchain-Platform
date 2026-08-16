@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Union
 
-from src.data.paths import load_config, get_project_root
+from src.data.paths import load_config, get_project_root, get_models_dir
 from src.data.taxonomy_review import atomic_json_write
 
 
@@ -19,12 +19,7 @@ class ModelVersionManager:
         if models_dir:
             self.models_dir = Path(models_dir)
         else:
-            config_dict = load_config()
-            rel_models = config_dict.get("paths", {}).get("model_output", "models")
-            models_path = Path(rel_models)
-            if not models_path.is_absolute():
-                models_path = get_project_root() / models_path
-            self.models_dir = models_path.resolve()
+            self.models_dir = get_models_dir().resolve()
 
         self.models_dir.mkdir(parents=True, exist_ok=True)
         self.active_pointer_file = self.models_dir / "active_model.json"

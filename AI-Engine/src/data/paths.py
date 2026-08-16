@@ -83,6 +83,20 @@ def get_evaluation_reports_dir() -> Path:
     return config_path
 
 
+def get_models_dir() -> Path:
+    """Return the models directory path, supporting env var & config overrides."""
+    env_path = os.getenv("DRAVYA_MODELS_DIR") or os.getenv("MODELS_DIR_PATH")
+    if env_path:
+        return Path(env_path)
+
+    config_models = _CONFIG.get("paths", {}).get("model_output", "models")
+    config_path = Path(config_models)
+    if not config_path.is_absolute():
+        return (PROJECT_ROOT / config_path).resolve()
+    return config_path
+
+
+
 
 def get_dataset_paths(
     root: Optional[Union[str, Path]] = None,
