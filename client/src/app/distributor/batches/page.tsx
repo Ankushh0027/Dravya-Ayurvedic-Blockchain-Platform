@@ -11,7 +11,7 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Search, Truck, ArrowRight, Filter, Clock, Package } from 'lucide-react'
 import Link from 'next/link'
-import { Card } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import {
   Select,
   SelectContent,
@@ -114,7 +114,7 @@ function DistributorBatchesContent() {
             />
           </div>
           <div className="w-full md:w-64">
-            <Select value={statusFilter} onValueChange={setStatusFilter}>
+            <Select value={statusFilter} onValueChange={(val: any) => setStatusFilter(val)}>
               <SelectTrigger className="h-12 bg-white border-slate-200 rounded-xl focus:ring-[#184E48]">
                 <div className="flex items-center gap-2">
                   <Filter className="w-4 h-4 text-slate-500" />
@@ -135,21 +135,22 @@ function DistributorBatchesContent() {
 
       {filteredAssignments.length === 0 ? (
         <EmptyState
-          icon={Truck}
+          icon={<Truck className="w-10 h-10 text-slate-400" />}
           title="No assignments found"
           description={
             searchTerm || statusFilter !== 'ALL'
               ? 'No assignments match your current search filters.'
               : 'You have no batches assigned for distribution yet.'
           }
-          actionLabel={searchTerm || statusFilter !== 'ALL' ? 'Clear Filters' : undefined}
-          onAction={
-            searchTerm || statusFilter !== 'ALL'
-              ? () => {
-                  setSearchTerm('')
-                  setStatusFilter('ALL')
-                }
-              : undefined
+          action={
+            (searchTerm || statusFilter !== 'ALL') ? (
+              <Button onClick={() => {
+                setSearchTerm('')
+                setStatusFilter('ALL')
+              }}>
+                Clear Filters
+              </Button>
+            ) : undefined
           }
         />
       ) : (

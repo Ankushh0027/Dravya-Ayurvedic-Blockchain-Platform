@@ -324,7 +324,7 @@ export default function AuthorityInspectionDetailsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-slate-700">Physical Quality <span className="text-red-500">*</span></label>
-                    <Select value={physicalQualityStatus} onValueChange={setPhysicalQualityStatus} disabled={isFinalized}>
+                    <Select value={physicalQualityStatus} onValueChange={(val: any) => setPhysicalQualityStatus(val)} disabled={isFinalized}>
                       <SelectTrigger className="bg-white">
                         <SelectValue placeholder="Select quality status" />
                       </SelectTrigger>
@@ -338,7 +338,7 @@ export default function AuthorityInspectionDetailsPage() {
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-slate-700">Packaging Status <span className="text-red-500">*</span></label>
-                    <Select value={packagingStatus} onValueChange={setPackagingStatus} disabled={isFinalized}>
+                    <Select value={packagingStatus} onValueChange={(val: any) => setPackagingStatus(val)} disabled={isFinalized}>
                       <SelectTrigger className="bg-white">
                         <SelectValue placeholder="Select packaging status" />
                       </SelectTrigger>
