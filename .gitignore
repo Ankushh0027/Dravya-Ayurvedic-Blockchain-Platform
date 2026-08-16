@@ -32,3 +32,18 @@ yarn-error.log*
 *.pem
 .vercel
 *.tsbuildinfo
+blockchain/fabric-samples/
+
+# Python & AI-Engine
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+AI-Engine/data/
+AI-Engine/scratch/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+

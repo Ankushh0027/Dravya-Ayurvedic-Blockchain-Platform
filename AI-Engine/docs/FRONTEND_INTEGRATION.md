@@ -6,25 +6,26 @@
 
 ## 1. Environment & Base URLs
 
-Set your frontend environment variable (e.g. in `.env.local` for Next.js / Vite):
+Set your frontend environment variable in `.env.local` (Next.js / Vite):
 
 ```bash
-NEXT_PUBLIC_DRAVYA_AI_API_URL=http://127.0.0.1:8000
+# Production:
+NEXT_PUBLIC_DRAVYA_AI_API_URL=https://<deployed-ai-engine-domain>
+
+# Local Development:
+# NEXT_PUBLIC_DRAVYA_AI_API_URL=http://127.0.0.1:8000
 ```
 
-| Asset | Local URL |
-| :--- | :--- |
-| **API Base URL** | `http://127.0.0.1:8000` |
-| **Interactive Swagger Docs** | [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) |
-| **OpenAPI Specification (JSON)** | [http://127.0.0.1:8000/openapi.json](http://127.0.0.1:8000/openapi.json) |
+| Asset | Production HTTPS | Local Development |
+| :--- | :--- | :--- |
+| **API Base URL** | `https://<deployed-ai-engine-domain>` | `http://127.0.0.1:8000` |
+| **Interactive Swagger Docs** | `https://<deployed-ai-engine-domain>/docs` | `http://127.0.0.1:8000/docs` |
+| **OpenAPI Specification (JSON)** | `https://<deployed-ai-engine-domain>/openapi.json` | `http://127.0.0.1:8000/openapi.json` |
+| **Health Check** | `https://<deployed-ai-engine-domain>/health` | `http://127.0.0.1:8000/health` |
 
-### CORS Preflight Configuration
-The API engine sends appropriate `Access-Control-Allow-Origin` headers.
-Default allowed origins:
-- `http://localhost:3000` (Next.js default)
-- `http://localhost:5173` (Vite default)
-- `http://127.0.0.1:3000`
-- `http://127.0.0.1:5173`
+### Production CORS Preflight Configuration
+The API backend responds to CORS preflight requests from the origin configured via `DRAVYA_FRONTEND_ORIGIN` (and default localhost development origins).
+
 
 ---
 
@@ -235,11 +236,17 @@ export async function getBatchTraceability(batchId: string): Promise<Traceabilit
 
 ### F. Query Dravya AI Assistant (Chat Interface)
 ```typescript
-export async function sendChatMessage(message: string): Promise<ChatResponse> {
+export async function sendChatMessage(
+  message: string,
+  conversationId?: string
+): Promise<ChatResponse> {
   const response = await fetch(`${API_BASE}/chat`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message }),
+    body: JSON.stringify({
+      message, // e.g. "Ashwagandha ki total quantity kitni hai?"
+      conversation_id: conversationId,
+    }),
   });
 
   if (!response.ok) {
@@ -249,6 +256,36 @@ export async function sendChatMessage(message: string): Promise<ChatResponse> {
   return response.json();
 }
 ```
+
+#### Example Request:
+```json
+{
+  "message": "Ashwagandha ki total quantity kitni hai?"
+}
+```
+
+#### Example Response:
+```json
+{
+  "answer": "Dravya system me Withania somnifera ki total recorded quantity 1850.50 kg hai. Isme total 8 batches aur 4 farmers registered hain.",
+  "intent": "herb_summary",
+  "data": {
+    "herb": "Ashwagandha",
+    "canonical_species": "Withania somnifera",
+    "total_batches": 8,
+    "total_quantity": 1850.5,
+    "quantity_unit": "kg",
+    "farmers_count": 4,
+    "farmers": ["F001", "F002", "F003", "F004"],
+    "verification_breakdown": {
+      "AI_CONFIRMED": 6,
+      "REVIEW_REQUIRED": 2
+    }
+  },
+  "tool_used": "get_herb_summary"
+}
+```
+
 
 ---
 

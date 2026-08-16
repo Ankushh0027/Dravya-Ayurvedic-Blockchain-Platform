@@ -20,14 +20,14 @@ __pycache__/
 .coverage
 htmlcov/
 
-# Datasets & Processed Data (Raw dataset images ignored; directory structures preserved)
+# Datasets & Processed Data
+data/
 datasets/raw/*
 !datasets/raw/.gitkeep
 datasets/processed/*
 !datasets/processed/.gitkeep
 datasets/final/*
 !datasets/final/.gitkeep
-data/processed/
 
 # Model Checkpoints & Deep Learning Weights
 models/*
@@ -38,6 +38,9 @@ models/*
 *.ckpt
 *.onnx
 *.safetensors
+
+# Scratch & Temporary Files
+scratch/
 
 # Generated Operational Reports & Logs
 reports/generated/
