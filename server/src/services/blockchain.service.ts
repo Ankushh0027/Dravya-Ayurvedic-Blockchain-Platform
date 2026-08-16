@@ -249,7 +249,7 @@ export class BlockchainService {
 
       const recordId = `DRV-${entityType}-${entityId}-V${recordVersion}`;
       const resultBytes = await contract.evaluateTransaction('VerifyRecordHash', recordId, currentHash);
-      const isVerified = resultBytes.toString() === 'true';
+      const isVerified = Buffer.from(resultBytes).toString('utf8') === 'true';
 
       if (!isVerified) {
         const admin = await prisma.user.findFirst({ where: { role: 'ADMIN' } });

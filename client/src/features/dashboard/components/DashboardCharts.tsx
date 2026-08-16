@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from 'recharts'
+import { useTranslation } from 'react-i18next'
 
 const data = [
   { name: 'Jan', total: Math.floor(Math.random() * 5000) + 1000 },
@@ -13,11 +14,13 @@ const data = [
 ]
 
 export function DashboardCharts() {
+  const { t } = useTranslation()
+
   return (
-    <Card className="col-span-4">
+    <Card className="col-span-4 bg-[#184E48]">
       <CardHeader>
-        <CardTitle>Overview</CardTitle>
-        <CardDescription>Monthly herb batches processed.</CardDescription>
+        <CardTitle>{t('dashboard.overview')}</CardTitle>
+        <CardDescription>{t('dashboard.monthlyProcessed')}</CardDescription>
       </CardHeader>
       <CardContent className="pl-2">
         <ResponsiveContainer width="100%" height={350}>

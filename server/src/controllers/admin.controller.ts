@@ -5,6 +5,40 @@ import { AuthenticatedRequest } from '../middleware/auth.middleware'
 import { NotificationService } from '../services/notification.service'
 import { AuditService } from '../services/audit.service'
 
+export async function getPendingVerifications(req: AuthenticatedRequest, res: Response): Promise<void> {
+  try {
+    const verifications = await prisma.producerVerification.findMany({
+      where: { status: { in: ['PENDING', 'ASSIGNED'] } },
+      orderBy: { createdAt: 'desc' },
+      include: {
+        producerProfile: {
+          include: { user: { select: { name: true, email: true } } }
+        },
+        authority: { select: { name: true, email: true } }
+      }
+    })
+
+    sendSuccess(res, 'Pending verifications retrieved successfully.', { verifications })
+  } catch (error) {
+    console.error('Get pending verifications error:', error)
+    sendError(res, 'Internal server error.', 500)
+  }
+}
+
+export async function getVerificationAuthorities(req: AuthenticatedRequest, res: Response): Promise<void> {
+  try {
+    const authorities = await prisma.user.findMany({
+      where: { role: 'VERIFICATION_AUTHORITY', isActive: true },
+      select: { id: true, name: true, email: true, organization: true }
+    })
+
+    sendSuccess(res, 'Verification authorities retrieved successfully.', { authorities })
+  } catch (error) {
+    console.error('Get verification authorities error:', error)
+    sendError(res, 'Internal server error.', 500)
+  }
+}
+
 export async function assignVerificationAuthority(req: AuthenticatedRequest, res: Response): Promise<void> {
   try {
     const adminId = req.user!.id

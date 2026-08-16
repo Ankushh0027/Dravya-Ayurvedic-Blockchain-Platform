@@ -10,31 +10,41 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarFooter,
 } from '@/components/ui/sidebar'
 import {
   Home,
   Package,
   FlaskConical,
-  Factory,
   Truck,
-  Store,
   LineChart,
   Settings,
+  LogOut,
 } from 'lucide-react'
 import Link from 'next/link'
-
-const navItems = [
-  { title: 'Dashboard', url: '/dashboard', icon: Home },
-  { title: 'Herb Batches', url: '/dashboard/batches', icon: Package },
-  { title: 'Laboratories', url: '/dashboard/laboratories', icon: FlaskConical },
-  { title: 'Manufacturers', url: '/dashboard/manufacturers', icon: Factory },
-  { title: 'Distributors', url: '/dashboard/distributors', icon: Truck },
-  { title: 'Retailers', url: '/dashboard/retailers', icon: Store },
-  { title: 'Analytics', url: '/dashboard/analytics', icon: LineChart },
-  { title: 'Settings', url: '/dashboard/settings', icon: Settings },
-]
+import { useRouter } from 'next/navigation'
+import { useAuthStore } from '@/store/authStore'
+import { useTranslation } from 'react-i18next'
+import { NotificationBell } from '@/components/shared/NotificationBell'
 
 export function AppSidebar() {
+  const { t } = useTranslation()
+  const router = useRouter()
+  const logout = useAuthStore(state => state.logout)
+
+  const handleLogout = () => {
+    logout()
+  }
+
+  const navItems = [
+    { title: t('nav.dashboard'), url: '/admin/dashboard', icon: Home },
+    { title: t('nav.batches'), url: '/admin/batches', icon: Package },
+    { title: t('nav.laboratories'), url: '/admin/lab', icon: FlaskConical },
+    { title: t('nav.distributors'), url: '/admin/distributors', icon: Truck },
+    { title: t('nav.analytics'), url: '/admin/audit', icon: LineChart },
+    { title: t('nav.settings'), url: '/admin/settings', icon: Settings },
+  ]
+
   return (
     <Sidebar>
       <SidebarHeader>
@@ -47,11 +57,11 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Menu</SidebarGroupLabel>
+          <SidebarGroupLabel>{t('nav.dashboard')}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.url}>
                   <Link href={item.url}>
                     <SidebarMenuButton>
                       <item.icon />
@@ -64,6 +74,20 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      
+      <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem className="flex justify-center py-2">
+            <NotificationBell />
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton onClick={handleLogout} className="text-red-500 hover:text-red-600 hover:bg-red-50 font-medium">
+              <LogOut className="w-4 h-4 mr-2" />
+              <span>{t('auth.logout') || 'Logout'}</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarFooter>
     </Sidebar>
   )
 }

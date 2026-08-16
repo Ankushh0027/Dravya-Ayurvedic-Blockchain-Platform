@@ -8,6 +8,7 @@ import { Footer } from '@/features/landing/components/Footer'
 import { LoginForm } from '@/features/auth/components/LoginForm'
 import { LeafSprig } from '@/features/landing/components/LeafSprig'
 import { FloatingLeaf } from '@/features/landing/components/FloatingLeaf'
+import { VeinMapJourney } from '@/features/landing/components/VeinMapJourney'
 import { Button } from '@/components/ui/button'
 import {
   ShieldCheck,
@@ -27,7 +28,10 @@ import { AIVerification } from '@/features/landing/components/aiverification'
 
 import Image from 'next/image'
 
+import { useTranslation } from 'react-i18next'
+
 export default function HomePage() {
+  const { t } = useTranslation()
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -63,7 +67,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-white relative font-sans overflow-x-hidden">
       <LandingNavbar />
- 
+
       <div className="relative flex-1 flex flex-col w-full">
         {/* Logo Watermark Background */}
         <div
@@ -75,7 +79,6 @@ export default function HomePage() {
             backgroundRepeat: 'no-repeat',
           }}
         />
-
 
         {/* Floating Leaf 1 — lower, right of watermark */}
         <div className="absolute top-[79%] left-[52%] w-[80px] md:w-[100px] lg:w-[122px] pointer-events-none z-0 opacity-37 mix-blend-multiply">
@@ -93,17 +96,15 @@ export default function HomePage() {
 
             {/* Typography Group */}
             <div className="mb-8">
-
-
               <h1 className="text-5xl md:text-6xl lg:text-[5.5rem] font-bold tracking-tight text-[#1e293b] leading-[1.05] font-serif mb-4">
                 DRAVYA
                 <span className="block text-4xl md:text-5xl lg:text-[4rem] text-[#184E48] mt-2">
-                  From Root to Trust.
+                  {t('landing.titleSub')}
                 </span>
               </h1>
 
               <p className="text-[17px] md:text-[19px] lg:text-[20px] text-slate-600 leading-relaxed font-medium mt-6 max-w-xl">
-                AI-powered verification and blockchain traceability for a more transparent, secure, and authentic Ayurvedic supply chain.
+                {t('landing.heroDescription')}
               </p>
             </div>
 
@@ -115,16 +116,16 @@ export default function HomePage() {
                   className="w-full sm:w-auto bg-[#184E48] hover:bg-[#184E48]/90 text-white hover:text-white rounded-xl px-8 py-6 text-[16px] font-semibold shadow-[0_8px_30px_rgb(24,78,72,0.2)] hover:shadow-[0_8px_30px_rgb(24,78,72,0.3)] hover:-translate-y-0.5 transition-all duration-300 group flex items-center justify-center gap-2"
                 >
                   <BadgeCheck className="w-5 h-5" />
-                  Start Verifying
+                  {t('landing.startVerifying')}
                 </Button>
               </Link>
               <Link href="/register" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto border-[#184E48] bg-white hover:bg-slate-50 text-[#184E48] rounded-xl px-8 py-6 text-[16px] font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                  className="w-full sm:w-auto !border !border-black bg-white hover:bg-slate-50 text-[#184E48] rounded-xl px-8 py-6 text-[16px] font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  Get Started
+                  {t('landing.getStarted')}
                 </Button>
               </Link>
             </div>
@@ -140,9 +141,9 @@ export default function HomePage() {
                   </div>
                   <div className="pr-2">
                     <h3 className="font-bold text-slate-900 text-[14px] leading-tight mb-0.5">
-                      Traceability
+                      {t('landing.featureTraceability')}
                     </h3>
-                    <p className="text-[12px] text-slate-500 font-medium whitespace-nowrap">End-to-End verified</p>
+                    <p className="text-[12px] text-slate-500 font-medium whitespace-nowrap">{t('landing.featureTraceabilitySub')}</p>
                   </div>
                 </div>
 
@@ -153,9 +154,9 @@ export default function HomePage() {
                   </div>
                   <div className="pr-2">
                     <h3 className="font-bold text-slate-900 text-[14px] leading-tight mb-0.5">
-                      Quality
+                      {t('landing.featureQuality')}
                     </h3>
-                    <p className="text-[12px] text-slate-500 font-medium whitespace-nowrap">100% lab assured</p>
+                    <p className="text-[12px] text-slate-500 font-medium whitespace-nowrap">{t('landing.featureQualitySub')}</p>
                   </div>
                 </div>
 
@@ -166,16 +167,15 @@ export default function HomePage() {
                   </div>
                   <div className="pr-2">
                     <h3 className="font-bold text-slate-900 text-[14px] leading-tight mb-0.5">
-                      Security
+                      {t('landing.featureSecurity')}
                     </h3>
-                    <p className="text-[12px] text-slate-500 font-medium whitespace-nowrap">Tamper-proof records</p>
+                    <p className="text-[12px] text-slate-500 font-medium whitespace-nowrap">{t('landing.featureSecuritySub')}</p>
                   </div>
                 </div>
 
               </div>
             </div>
           </div>
-
 
           {/* Right Content (Login Form) */}
           <div className="w-full lg:w-[450px] flex-shrink-0 border-[#184E48] py-6">
@@ -184,10 +184,7 @@ export default function HomePage() {
         </main>
       </div>
 
-
-
-
-      {/* Video Demo Section (Warmer White --ww background) */}
+      {/* Video Demo Section */}
       <section className="relative py-16 lg:py-24 overflow-hidden bg-[#E1E9E1]/30 border-y border-[#184E48]/10">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[800px] h-[800px] bg-[#184E48]/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -206,13 +203,12 @@ export default function HomePage() {
 
             {/* Left Content */}
             <div className="max-w-2xl lg:col-span-5">
-
               <h2 className="text-4xl lg:text-[3.25rem] font-bold tracking-tight text-[#1e293b] leading-[1.1] mb-6 font-serif">
-                Experience radical <br className="hidden lg:block" />
-                <span className="text-[#184E48]">transparency.</span>
+                {t('landing.demoTitle')} <br className="hidden lg:block" />
+                <span className="text-[#184E48]">{t('landing.demoTitleHighlight')}</span>
               </h2>
               <p className="text-lg text-slate-600 font-medium leading-relaxed mb-10">
-                Watch how our platform creates an unbroken chain of trust from farm to pharmacy. Every step is verified, recorded, and easily accessible.
+                {t('landing.demoDescription')}
               </p>
 
               <div className="space-y-4">
@@ -222,8 +218,8 @@ export default function HomePage() {
                     <ShieldCheck className="w-7 h-7 group-hover/item:scale-110 transition-transform duration-300" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#1e293b] mb-2 group-hover/item:text-[#184E48] transition-colors duration-300">Immutable Records</h3>
-                    <p className="text-slate-600 leading-relaxed">Every transaction and quality check is permanently recorded on the blockchain, eliminating the possibility of fraud.</p>
+                    <h3 className="text-xl font-bold text-[#1e293b] mb-2 group-hover/item:text-[#184E48] transition-colors duration-300">{t('landing.immutableRecords')}</h3>
+                    <p className="text-slate-600 leading-relaxed">{t('landing.immutableRecordsDesc')}</p>
                   </div>
                 </div>
 
@@ -233,8 +229,8 @@ export default function HomePage() {
                     <TestTube2 className="w-7 h-7 group-hover/item:scale-110 transition-transform duration-300" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#1e293b] mb-2 group-hover/item:text-[#184E48] transition-colors duration-300">Integrated Lab Reports</h3>
-                    <p className="text-slate-600 leading-relaxed">Instantly access AI-verified quality certificates and lab test results for every batch of raw materials.</p>
+                    <h3 className="text-xl font-bold text-[#1e293b] mb-2 group-hover/item:text-[#184E48] transition-colors duration-300">{t('landing.integratedLabReports')}</h3>
+                    <p className="text-slate-600 leading-relaxed">{t('landing.integratedLabReportsDesc')}</p>
                   </div>
                 </div>
 
@@ -244,8 +240,8 @@ export default function HomePage() {
                     <Tractor className="w-7 h-7 group-hover/item:scale-110 transition-transform duration-300" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#1e293b] mb-2 group-hover/item:text-[#184E48] transition-colors duration-300">Farm to Consumer Tracking</h3>
-                    <p className="text-slate-600 leading-relaxed">Empower consumers to trace the complete journey of their Ayurvedic products by simply scanning a QR code.</p>
+                    <h3 className="text-xl font-bold text-[#1e293b] mb-2 group-hover/item:text-[#184E48] transition-colors duration-300">{t('landing.farmToConsumer')}</h3>
+                    <p className="text-slate-600 leading-relaxed">{t('landing.farmToConsumerDesc')}</p>
                   </div>
                 </div>
               </div>
@@ -282,11 +278,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works Section (Warmer White --ww background) */}
-      <HowItWorks />
+      {/* Supply Chain Map Section */}
+      <VeinMapJourney />
 
       {/* AI Verification Section (Pure White background) */}
       <AIVerification />
+
+      {/* How It Works Section (Warmer White --ww background) */}
+      <HowItWorks />
 
       <Footer />
     </div>

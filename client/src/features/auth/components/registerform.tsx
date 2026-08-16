@@ -30,437 +30,305 @@ import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
 import { Eye, EyeOff, ShieldCheck, UserRoundPen } from 'lucide-react'
 import { useState } from 'react'
+import api from '@/services/api/axios'
+import { useAuthStore } from '@/store/authStore'
 
+
+import { useTranslation } from 'react-i18next'
 
 const formSchema = z.object({
-
-  name: z.string().min(2,{
-    message:"Name is required."
+  name: z.string().min(2, {
+    message: "Name is required."
   }),
-   
-
-  email:z.string().email({
-    message:"Please enter a valid email address."
+  email: z.string().email({
+    message: "Please enter a valid email address."
   }),
+  organization: z.string().optional(),
+  phone: z.string().optional(),
+  password: z.string().min(8, {
+    message: "Password must be at least 8 characters."
+  })
+    .regex(/[A-Z]/, { message: "Password must contain at least one uppercase letter." })
+    .regex(/[a-z]/, { message: "Password must contain at least one lowercase letter." })
+    .regex(/[0-9]/, { message: "Password must contain at least one number." }),
+  confirmPassword: z.string(),
+  role: z.enum(['PRODUCER', 'LAB', 'DISTRIBUTOR'], {
+    required_error: "Please select a role.",
+  })
+}).refine((data) => data.password === data.confirmPassword, {
+  message: "Passwords don't match.",
+  path: ["confirmPassword"]
+})
 
-  gstNumber:z.string().min(15, {
-    message:"GST Number must be exactly 15 characters."
-  }).max(15, {
-    message:"GST Number must be exactly 15 characters."
-  }),
+export function RegisterForm() {
+  const { t } = useTranslation()
+  const router = useRouter()
 
-  password:z.string().min(6,{
-    message:"Password must be at least 6 characters."
-  }),
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
-  confirmPassword:z.string(),
+  const login = useAuthStore(state => state.login)
+  const [isLoading, setIsLoading] = useState(false)
 
-  role:z.string({
-    message:"Please select a role."
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      organization: "",
+      phone: "",
+      password: "",
+      confirmPassword: "",
+      role: "PRODUCER",
+    }
   })
 
-}).refine((data)=>data.password===data.confirmPassword,{
-  message:"Passwords don't match.",
-  path:["confirmPassword"]
-})
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true)
+    try {
+      // Don't send confirmPassword to backend
+      const { confirmPassword, ...payload } = values
 
+      // Convert empty strings to undefined so backend .optional() validation works
+      const cleanPayload = {
+        ...payload,
+        organization: payload.organization?.trim() || undefined,
+        phone: payload.phone?.trim() || undefined,
+      }
 
+      const response = await api.post('/auth/register', cleanPayload)
 
-export function RegisterForm(){
+      if (response.data?.success && response.data?.data) {
+        const { user, token } = response.data.data
 
-const router = useRouter()
+        // Save token to localStorage for axios and cookie for middleware
+        localStorage.setItem('token', token)
+        document.cookie = `auth_token=${token}; path=/; max-age=604800; samesite=lax`
 
-const [showPassword,setShowPassword] = useState(false)
-const [showConfirmPassword,setShowConfirmPassword] = useState(false)
+        // Update zustand store
+        login(user)
 
+        toast.success(t('common.success') || 'Registration successful!')
 
+        // Redirect to dashboard
+        window.location.href = `/${user.role.toLowerCase()}/dashboard`
+      } else {
+        toast.error(response.data?.message || 'Registration failed')
+      }
+    } catch (error: any) {
+      console.error('Registration error:', error)
+      const message = error?.response?.data?.message || error?.message || 'An unexpected error occurred'
+      toast.error(message)
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
-const form = useForm<z.infer<typeof formSchema>>({
+  return (
+    <div className="w-full max-w-[768px] mx-auto relative group">
+      {/* Decorative background blur */}
+      <div className="absolute -inset-1 bg-gradient-to-r from-[#184E48]/20 to-primary/20 rounded-[32px] blur-xl opacity-50 group-hover:opacity-70 transition duration-1000 group-hover:duration-300"></div>
 
-resolver:zodResolver(formSchema),
-
-defaultValues:{
-  name:"",
-  email:"",
-  gstNumber:"",
-  password:"",
-  confirmPassword:"",
-  role:"",
-  
-}
-
-})
-
-
-
-function onSubmit(values:z.infer<typeof formSchema>){
-
-console.log(values)
-
-    // eslint-disable-next-line react-hooks/immutability
-    document.cookie="auth_token=mock_token; path=/"
-
-toast.success("Account created successfully!")
-
-router.push("/dashboard")
-
-}
-
-return (
-
-<div className="w-full max-w-[640px] mx-auto relative group">
-  {/* Decorative background blur */}
-  <div className="absolute -inset-1 bg-gradient-to-r from-[#184E48]/20 to-primary/20 rounded-[32px] blur-xl opacity-50 group-hover:opacity-70 transition duration-1000 group-hover:duration-300"></div>
-
-  <Card className="relative bg-white/90 backdrop-blur-xl border border-slate-100 shadow-[0_8px_40px_rgb(0,0,0,0.06)] rounded-[24px] overflow-hidden p-6 sm:p-8">
-
+      <Card className="relative bg-white/90 backdrop-blur-xl border border-black shadow-[0_8px_40px_rgb(0,0,0,0.06)] rounded-[24px] overflow-hidden p-6 sm:p-8">
         <div className="flex flex-col items-center text-center mb-6">
           <div className="h-12 w-12 p-2 bg-[#184E48]/10 rounded-2xl text-[#184E48] mb-2 shadow-sm border border-[#184E48]/10 flex items-center justify-center">
-            <UserRoundPen className='h-full w-full'/>
+            <UserRoundPen className='h-full w-full' />
           </div>
           <h1 className="text-2xl font-bold tracking-tight text-[#1e293b] leading-[1.15] font-serif">
-            Set up your account
+            {t('auth.setupAccount')}
           </h1>
-          <p className="text-slate-500 text-sm font-medium mt-1">Start tracing your batches with absolute trust.</p>
-        </div><Form {...form}>
-
-<form 
-onSubmit={form.handleSubmit(onSubmit)}
-className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3"
->
-
-
-
-<FormField
-
-control={form.control}
-
-name="name"
-
-render={({field})=>(
-
-<FormItem>
-
-<FormLabel className="text-slate-700 font-semibold text-sm ml-1">Full Name <span className="text-red-500">*</span></FormLabel>
-
-<FormControl>
-
-<Input
-placeholder="Enter your name"
- style={{ caretColor: 'black', color: field.value ? 'black' : undefined }}
-                        className="px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm"
-{...field}
-/>
-
-</FormControl>
-
-<FormMessage/>
-
-</FormItem>
-
-)}
-
-/>
-
-
-
-<FormField
-
-control={form.control}
-
-name="email"
-
-render={({field})=>(
-
-<FormItem>
-
-<FormLabel className="text-slate-700 font-semibold text-sm ml-1">Email Address <span className="text-red-500">*</span></FormLabel>
-
-<FormControl>
-
-<Input
-placeholder="Enter your email"
- style={{ caretColor: 'black', color: field.value ? 'black' : undefined }}
-                        className="px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm"
-{...field}
-/>
-
-</FormControl>
-
-<FormMessage/>
-
-</FormItem>
-
-)}
-
-/>
-
-
-
-
-
-<FormField
-  control={form.control}
-  name="gstNumber"
-  render={({field})=>(
-    <FormItem>
-      <FormLabel className="text-slate-700 font-semibold text-sm ml-1">GST Number <span className="text-red-500">*</span></FormLabel>
-      <FormControl>
-        <Input
-          placeholder="Enter 15-digit GST number"
-          style={{ caretColor: 'black', color: field.value ? 'black' : undefined }}
-          className="px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm uppercase"
-          maxLength={15}
-          {...field}
-        />
-      </FormControl>
-      <FormMessage/>
-    </FormItem>
-  )}
-/>
-
-<FormField
-
-control={form.control}
-
-name="role"
-
-render={({field})=>(
-
-<FormItem>
-
-<FormLabel className="text-slate-700 font-semibold text-sm ml-1">Select Your Role <span className="text-red-500">*</span></FormLabel>
-
-
-<Select
-
-onValueChange={field.onChange}
-
-defaultValue={field.value}
-
->
-
-<FormControl>
-
-<SelectTrigger className="w-full px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus:ring-[#184E48]/20 focus:border-[#184E48] transition-all text-sm shadow-sm">
-
-<SelectValue placeholder="Select your role"/>
-
-</SelectTrigger>
-
-</FormControl>
-
-
-<SelectContent>
-
-<SelectItem value="admin">
-Admin
-</SelectItem>
-
-
-<SelectItem value="processor">
-Processor
-</SelectItem>
-
-
-<SelectItem value="manufacturer">
-Manufacturer
-</SelectItem>
-
-
-<SelectItem value="lab">
-Lab
-</SelectItem>
-
-
-</SelectContent>
-
-
-</Select>
-
-
-<FormMessage/>
-
-</FormItem>
-
-)}
-
-/>
-
-
-
-
-<FormField
-
-control={form.control}
-
-name="password"
-
-render={({field})=>(
-
-<FormItem>
-
-<FormLabel className="text-slate-700 font-semibold text-sm ml-1">Password <span className="text-red-500">*</span></FormLabel>
-
-
-<div className="relative">
-
-<FormControl>
-
-<Input
-
-type={showPassword ? "text":"password"}
-
-placeholder="Create password"
-
- style={{ caretColor: 'black', color: field.value ? 'black' : undefined }}
-                        className="px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm"
-
-{...field}
-
-/>
-
-</FormControl>
-
-
-<button
-
-type="button"
-
-onClick={()=>setShowPassword(!showPassword)}
-
-className="absolute right-3 top-2.5 text-slate-400"
-
->
-
-{
-
-showPassword ?
-
-<EyeOff size={18}/>:
-
-<Eye size={18}/>
-
-}
-
-</button>
-
-
-</div>
-
-
-<FormMessage/>
-
-</FormItem>
-
-)}
-
-/>
-
-
-
-
-<FormField
-
-control={form.control}
-
-name="confirmPassword"
-
-render={({field})=>(
-
-<FormItem>
-
-<FormLabel className="text-slate-700 font-semibold text-sm ml-1">Confirm Password <span className="text-red-500">*</span></FormLabel>
-
-
-<div className="relative">
-
-
-<FormControl>
-
-<Input
-
-type={showConfirmPassword ? "text":"password"}
-
-placeholder="Confirm password"
-
- style={{ caretColor: 'black', color: field.value ? 'black' : undefined }}
-                        className="px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm"
-
-{...field}
-
-/>
-
-</FormControl>
-
-
-<button
-
-type="button"
-
-onClick={()=>setShowConfirmPassword(!showConfirmPassword)}
-
-className="absolute right-3 top-2.5 text-slate-400"
-
->
-
-{
-
-showConfirmPassword ?
-
-<EyeOff size={18}/>:
-
-<Eye size={18}/>
-
-}
-
-</button>
-
-
-</div>
-
-
-<FormMessage/>
-
-</FormItem>
-
-)}
-
-/>
-
-
-
-<Button
-type="submit"
-className="col-span-1 sm:col-span-2 w-full h-10 rounded-xl text-[14px] font-semibold bg-[#184E48] hover:bg-[#184E48]/90 text-white shadow-[0_4px_14px_0_rgb(24,78,72,0.2)] hover:shadow-[0_6px_20px_rgb(24,78,72,0.23)] transition-all active:scale-[0.98] mt-2"
->
-Create Account
-</Button>
-
-
-
-</form>
-
-</Form>
-
-  <div className="mt-4 pt-4 border-t border-slate-100 flex flex-col items-center gap-2">
-    <div className="flex items-center gap-2 text-[13px] font-semibold text-[#1a4a2c]">
-      <ShieldCheck className="w-4 h-4 text-[#184E48]" />
-      <span>Secure, encrypted registration</span>
+          <p className="text-slate-500 text-sm font-medium mt-1">{t('auth.setupSubtitle')}</p>
+        </div>
+
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3"
+          >
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-slate-700 font-semibold text-sm ml-1">{t('auth.fullName')} <span className="text-red-500">*</span></FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder={t('auth.fullNamePlaceholder')}
+                      className="px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm text-black"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-slate-700 font-semibold text-sm ml-1">{t('auth.emailLabel')} <span className="text-red-500">*</span></FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder={t('auth.emailPlaceholder')}
+                      className="px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm text-black"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="organization"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-slate-700 font-semibold text-sm ml-1">Organization (Optional)</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="e.g. Acme Farms"
+                      className="px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm text-black"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-slate-700 font-semibold text-sm ml-1">Phone Number (Optional)</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="+919876543210"
+                      className="px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm text-black"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="role"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-slate-700 font-semibold text-sm ml-1">{t('auth.selectRole')} <span className="text-red-500">*</span></FormLabel>
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <FormControl>
+                      <SelectTrigger className="w-full px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 text-black rounded-xl focus:ring-[#184E48]/20 focus:border-[#184E48] transition-all text-sm shadow-sm">
+                        <SelectValue placeholder={t('auth.selectRolePlaceholder')} />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="PRODUCER">Producer (Farmer/Collector)</SelectItem>
+                      <SelectItem value="LAB">Testing Laboratory</SelectItem>
+                      <SelectItem value="DISTRIBUTOR">Distributor / Retailer</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-slate-700 font-semibold text-sm ml-1">{t('auth.passwordLabel')} <span className="text-red-500">*</span></FormLabel>
+                  <div className="relative">
+                    <FormControl>
+                      <Input
+                        type={showPassword ? "text" : "password"}
+                        placeholder={t('auth.createPasswordPlaceholder')}
+                        className="px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm text-black"
+                        {...field}
+                      />
+                    </FormControl>
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute right-3 top-2.5 text-slate-400"
+                    >
+                      {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                    </button>
+                  </div>
+                  <p className="text-[11px] text-slate-500 font-medium leading-tight mt-1.5 ml-1">
+                    Must be at least 8 characters and include an uppercase letter, a lowercase letter, and a number.
+                  </p>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="confirmPassword"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-slate-700 font-semibold text-sm ml-1">{t('auth.confirmPasswordLabel')} <span className="text-red-500">*</span></FormLabel>
+                  <div className="relative">
+                    <FormControl>
+                      <Input
+                        type={showConfirmPassword ? "text" : "password"}
+                        placeholder={t('auth.confirmPasswordPlaceholder')}
+                        className="px-3.5 h-9 border-slate-200 bg-slate-50/50 hover:bg-slate-50 rounded-xl focus-visible:ring-[#184E48]/20 focus-visible:border-[#184E48] transition-all text-sm shadow-sm text-black"
+                        {...field}
+                      />
+                    </FormControl>
+                    <button
+                      type="button"
+                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                      className="absolute right-3 top-2.5 text-slate-400"
+                    >
+                      {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                    </button>
+                  </div>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <Button
+              type="submit"
+              disabled={isLoading}
+              className="col-span-1 sm:col-span-2 w-full h-10 rounded-xl text-[14px] font-semibold bg-[#184E48] hover:bg-[#184E48]/90 text-white shadow-[0_4px_14px_0_rgb(24,78,72,0.2)] hover:shadow-[0_6px_20px_rgb(24,78,72,0.23)] transition-all active:scale-[0.98] mt-2"
+            >
+              {isLoading ? 'Creating account...' : t('auth.createAccount')}
+            </Button>
+          </form>
+        </Form>
+        <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col items-center gap-2">
+          <div className="flex items-center gap-2 text-[13px] font-semibold text-[#1a4a2c]">
+            <ShieldCheck className="w-4 h-4 text-[#184E48]" />
+            <span>{t('auth.secureRegistration')}</span>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[12px] text-slate-500 font-medium">
+            <a href="#" className="hover:text-slate-800 transition-colors">{t('auth.privacyPolicy')}</a>
+            <span className="w-1 h-1 rounded-full bg-slate-300"></span>
+            <a href="#" className="hover:text-slate-800 transition-colors">{t('auth.termsOfService')}</a>
+            <span className="w-1 h-1 rounded-full bg-slate-300"></span>
+            <a href="#" className="hover:text-slate-800 transition-colors">{t('auth.helpCenter')}</a>
+          </div>
+        </div>
+      </Card>
+
+      <div className="mt-6 p-4 rounded-xl bg-white/60 backdrop-blur-md border border-[#184E48]/10 flex items-start gap-3 shadow-sm relative z-10">
+        <ShieldCheck className="w-5 h-5 text-[#184E48] flex-shrink-0 mt-0.5" />
+        <p className="text-sm text-slate-700 leading-relaxed font-medium">
+          After submitting your registration, your account will be reviewed by our admin team. You will receive an email notification once your account is approved. This process typically takes 1-2 business days.
+        </p>
+      </div>
     </div>
-    <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[12px] text-slate-500 font-medium">
-      <a href="#" className="hover:text-slate-800 transition-colors">Privacy Policy</a>
-      <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-      <a href="#" className="hover:text-slate-800 transition-colors">Terms of Service</a>
-      <span className="w-1 h-1 rounded-full bg-slate-300"></span>
-      <a href="#" className="hover:text-slate-800 transition-colors">Help Center</a>
-    </div>
-  </div>
-
-</Card>
-</div>
-
-
-)
-
+  )
 }

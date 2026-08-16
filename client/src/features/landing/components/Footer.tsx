@@ -1,5 +1,6 @@
 import { Sprout, Mail } from 'lucide-react'
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 
 const Twitter = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -55,9 +56,13 @@ const Github = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-export function Footer() {
+import { useTranslation } from 'react-i18next'
+
+export function Footer({ className }: { className?: string }) {
+  const { t } = useTranslation()
+
   return (
-    <footer className="w-full bg-[#184E48] text-slate-200 py-16 lg:py-20 relative z-20">
+    <footer className={cn('w-full bg-[#184E48] text-slate-200 py-16 lg:py-20 relative z-20', className)}>
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
           <div className="lg:col-span-2 space-y-6">
@@ -77,8 +82,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-[15px] leading-relaxed max-w-sm text-slate-300">
-              AI-powered traceability platform ensuring authenticity, quality, and complete
-              transparency across the entire Ayurvedic herb supply chain.
+              {t('footer.brandDesc')}
             </p>
             <div className="flex items-center gap-4 pt-2">
               <Link
@@ -103,73 +107,73 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-6">Platform</h4>
+            <h4 className="text-white font-semibold mb-6">{t('footer.platform')}</h4>
             <ul className="space-y-4 text-[15px]">
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
-                  How it Works
+                  {t('footer.howItWorks')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
-                  Traceability
+                  {t('footer.traceability')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
-                  Quality Assurance
+                  {t('footer.qualityAssurance')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
-                  For Farmers
+                  {t('footer.forFarmers')}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-6">Company</h4>
+            <h4 className="text-white font-semibold mb-6">{t('footer.company')}</h4>
             <ul className="space-y-4 text-[15px]">
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
-                  About Us
+                  {t('footer.aboutUs')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
-                  Careers
+                  {t('footer.careers')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
-                  Blog
+                  {t('footer.blog')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
-                  Contact
+                  {t('footer.contact')}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-6">Legal</h4>
+            <h4 className="text-white font-semibold mb-6">{t('footer.legal')}</h4>
             <ul className="space-y-4 text-[15px]">
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
-                  Privacy Policy
+                  {t('footer.privacyPolicy')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
-                  Terms of Service
+                  {t('footer.termsOfService')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
-                  Cookie Policy
+                  {t('footer.cookiePolicy')}
                 </Link>
               </li>
             </ul>
@@ -177,16 +181,16 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400">
-          <p>© {new Date().getFullYear()} Dravya Platform. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {t('footer.allRightsReserved')}</p>
           <div className="flex items-center gap-6">
             <Link href="#" className="hover:text-white transition-colors">
-              Terms
+              {t('footer.terms')}
             </Link>
             <Link href="#" className="hover:text-white transition-colors">
-              Privacy
+              {t('footer.privacy')}
             </Link>
             <Link href="#" className="hover:text-white transition-colors">
-              Cookies
+              {t('footer.cookies')}
             </Link>
           </div>
         </div>

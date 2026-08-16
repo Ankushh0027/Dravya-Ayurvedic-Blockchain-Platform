@@ -75,7 +75,7 @@ export class TraceabilityContract extends Contract {
                     txId: res.value.txId,
                     timestamp: res.value.timestamp,
                     isDelete: res.value.isDelete,
-                    record: res.value.isDelete ? undefined : JSON.parse(res.value.value.toString('utf8')),
+                    record: res.value.isDelete ? undefined : JSON.parse(Buffer.from(res.value.value).toString('utf8')),
                 };
                 allResults.push(historyRecord);
             }
