@@ -47,7 +47,7 @@ export default function LabTestResults() {
   const [isCompleting, setIsCompleting] = useState(false)
 
   const { register, handleSubmit, control, reset, formState: { errors } } = useForm<TestResultFormValues>({
-    resolver: zodResolver(addTestResultSchema),
+    resolver: zodResolver(addTestResultSchema) as any,
     defaultValues: {
       parameter: '',
       value: undefined,
@@ -201,7 +201,7 @@ export default function LabTestResults() {
           {isUnderTest && (
             <Card className={`${glassCard} p-6`}>
               <h2 className="text-xl font-bold text-[#1e293b] font-serif mb-6">Add Parameter Result</h2>
-              <form onSubmit={handleSubmit(onSubmitResult)} className="space-y-4">
+              <form onSubmit={handleSubmit(onSubmitResult as any)} className="space-y-4">
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-1.5">Parameter Name *</label>
                   <Input 

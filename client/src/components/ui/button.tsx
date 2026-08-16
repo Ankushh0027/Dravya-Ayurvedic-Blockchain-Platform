@@ -52,7 +52,7 @@ function Button({
     return (
       <Slot
         className={cn(buttonVariants({ variant, size, className }))}
-        {...props}
+        {...(props as any)}
       />
     )
   }
