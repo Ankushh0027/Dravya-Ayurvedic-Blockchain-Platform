@@ -59,19 +59,19 @@ export function LoginForm() {
     setIsLoading(true)
     try {
       const response = await api.post('/auth/login', values)
-
+      
       if (response.data?.success && response.data?.data) {
         const { user, token } = response.data.data
-
+        
         // Save token to localStorage for axios and cookie for middleware
         localStorage.setItem('token', token)
         // eslint-disable-next-line react-hooks/immutability
         document.cookie = `auth_token=${token}; path=/; max-age=604800; samesite=lax`
-
+        
         // Update auth store
         login(user)
         toast.success(t('common.success') || 'Login successful')
-
+        
         // Redirect based on role
         const dashboardUrl = getDashboardRoute(user.role)
         router.push(dashboardUrl)
@@ -79,24 +79,9 @@ export function LoginForm() {
         toast.error('Unexpected response format')
       }
     } catch (error: unknown) {
-      const err = error as {
-        response?: { status?: number; data?: { message?: string } }
-        message?: string
-      }
-
-      // Log full error details to help diagnose backend/server issues (e.g. 500s)
-      console.error('Login error:', {
-        status: err.response?.status,
-        data: err.response?.data,
-        message: err.message,
-      })
-
-      const message =
-        err.response?.data?.message ||
-        (err.response?.status === 500
-          ? 'Something went wrong on our end — please try again in a moment.'
-          : 'Failed to login')
-
+      console.error('Login error:', error)
+      const err = error as { response?: { data?: { message?: string } } }
+      const message = err.response?.data?.message || 'Failed to login'
       toast.error(message)
     } finally {
       setIsLoading(false)
@@ -108,9 +93,9 @@ export function LoginForm() {
       <div className="relative group">
         {/* Decorative background blur */}
         <div className="absolute -inset-1 bg-gradient-to-r from-[#184E48]/20 to-primary/20 rounded-[32px] blur-xl opacity-50 group-hover:opacity-70 transition duration-1000 group-hover:duration-300"></div>
-
+        
         <Card className="relative bg-white/90 backdrop-blur-xl border border-black shadow-[0_8px_40px_rgb(0,0,0,0.06)] rounded-[28px] overflow-hidden">
-
+          
           <CardHeader className="pt-8 pb-4 flex flex-col items-center text-center">
             <CardTitle className="text-2xl font-bold text-slate-900 tracking-tight">
               {t('auth.welcomeBack')}
@@ -119,7 +104,7 @@ export function LoginForm() {
               {t('auth.loginSubtitle')}
             </CardDescription>
           </CardHeader>
-
+          
           <CardContent className="px-8 pb-6">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -212,13 +197,13 @@ export function LoginForm() {
               </form>
             </Form>
           </CardContent>
-
+          
           <CardFooter className="flex-col gap-3 border-t border-slate-100 px-8 py-5 bg-slate-50/50">
             <div className="flex items-center justify-center gap-2 text-[13px] font-semibold text-[#1a4a2c] mb-2">
               <ShieldCheck className="w-4 h-4 text-[#184E48]" />
               <span>{t('auth.secureAuth')}</span>
             </div>
-
+            
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[12px] text-slate-500 font-medium">
               <a href="#" className="hover:text-slate-800 transition-colors">{t('auth.privacyPolicy')}</a>
               <span className="w-1 h-1 rounded-full bg-slate-300"></span>
