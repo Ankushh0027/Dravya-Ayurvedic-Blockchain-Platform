@@ -38,8 +38,10 @@ models/*.tmp
 *.onnx
 *.safetensors
 !models/v1-kaggle/
+!models/v2-smoke/
 !models/active_model.json
 !models/.gitkeep
+
 
 
 # Scratch & Temporary Files

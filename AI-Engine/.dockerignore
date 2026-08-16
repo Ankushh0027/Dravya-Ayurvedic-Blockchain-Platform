@@ -31,8 +31,10 @@ datasets/final/*
 models/runs/
 models/*.tmp
 !models/v1-kaggle/
+!models/v2-smoke/
 !models/active_model.json
 !models/.gitkeep
+
 
 
 # Reports & Operational Artifacts

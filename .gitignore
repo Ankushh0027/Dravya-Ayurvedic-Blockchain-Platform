@@ -47,4 +47,5 @@ __pycache__/
 *.onnx
 *.safetensors
 !AI-Engine/models/v1-kaggle/
+!AI-Engine/models/v2-smoke/
 !AI-Engine/models/active_model.json
