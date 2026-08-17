@@ -25,7 +25,7 @@ import {
   BadgeCheck,
 } from 'lucide-react'
 import { AIVerification } from '@/features/landing/components/aiverification'
-
+import { StepShowcaseCarousel } from '@/features/landing/components/Howitworkskabhai'
 import Image from 'next/image'
 
 import { useTranslation } from 'react-i18next'
@@ -280,12 +280,12 @@ export default function HomePage() {
 
       {/* Supply Chain Map Section */}
       <VeinMapJourney />
-
+         <HowItWorks/>
       {/* AI Verification Section (Pure White background) */}
       <AIVerification />
 
       {/* How It Works Section (Warmer White --ww background) */}
-      <HowItWorks />
+   
 
       <Footer />
     </div>
