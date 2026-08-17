@@ -1,0 +1,28 @@
+// ─── Development Build Configuration ─────────────────────
+// Dravya Mobile — Development Environment
+//
+// This xcconfig defines build settings for the development environment.
+// For staging/production, create Staging.xcconfig and Production.xcconfig
+// with the appropriate values.
+
+// API Configuration
+// ─────────────────
+// iOS Simulator: localhost refers to the Mac running the simulator.
+// Physical iPhone: localhost refers to the iPhone itself.
+//
+// For Simulator testing:
+//   API_BASE_URL = http://localhost:8000/api
+//
+// For Physical Device testing:
+//   Replace localhost with your Mac's LAN IP address.
+//   Both the iPhone and Mac must be on the same Wi-Fi network.
+//   Find your Mac's IP: System Settings → Wi-Fi → Details → IP Address
+//   Example: API_BASE_URL = http://192.168.1.42:8000/api
+//
+API_BASE_URL = http:/$()/localhost:8000/api
+
+// App Transport Security
+// ──────────────────────
+// Development uses HTTP (not HTTPS). ATS exceptions are configured
+// in the Info.plist only for the development scheme.
+// Production builds MUST use HTTPS.

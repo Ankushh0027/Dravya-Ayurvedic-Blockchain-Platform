@@ -1,17 +1,14 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { LogOut, LayoutDashboard, ShieldCheck } from 'lucide-react'
+import { ClipboardCheck, FlaskConical, LogOut, LayoutDashboard, QrCode, ShieldCheck } from 'lucide-react'
 import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
 import { LanguageSelector } from '@/components/shared/LanguageSelector'
 import { NotificationBell } from '@/components/shared/NotificationBell'
 import { useAuthStore } from '@/store/authStore'
-import { useRouter, usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 export function AdminNavbar() {
-  const { t } = useTranslation()
-  const router = useRouter()
   const pathname = usePathname()
   const logout = useAuthStore(state => state.logout)
   const user = useAuthStore(state => state.user)
@@ -61,6 +58,24 @@ export function AdminNavbar() {
             <Button variant="ghost" className={`text-sm font-semibold rounded-xl px-4 transition-all duration-300 ${isActive('/admin/verifications') ? 'bg-white/10 text-white shadow-inner' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
               <ShieldCheck className="w-4 h-4 mr-2" />
               Verifications
+            </Button>
+          </Link>
+          <Link href="/admin/inspections">
+            <Button variant="ghost" className={`text-sm font-semibold rounded-xl px-4 transition-all duration-300 ${isActive('/admin/inspections') ? 'bg-white/10 text-white shadow-inner' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
+              <ClipboardCheck className="w-4 h-4 mr-2" />
+              Lot Inspections
+            </Button>
+          </Link>
+          <Link href="/admin/lab-tests">
+            <Button variant="ghost" className={`text-sm font-semibold rounded-xl px-4 transition-all duration-300 ${isActive('/admin/lab-tests') ? 'bg-white/10 text-white shadow-inner' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
+              <FlaskConical className="w-4 h-4 mr-2" />
+              Lab Tests
+            </Button>
+          </Link>
+          <Link href="/admin/qr">
+            <Button variant="ghost" className={`text-sm font-semibold rounded-xl px-4 transition-all duration-300 ${isActive('/admin/qr') ? 'bg-white/10 text-white shadow-inner' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
+              <QrCode className="w-4 h-4 mr-2" />
+              QR Management
             </Button>
           </Link>
         </div>

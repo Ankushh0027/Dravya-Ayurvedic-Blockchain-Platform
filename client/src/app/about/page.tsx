@@ -21,43 +21,43 @@ import { ContactPreviewCard } from '@/components/shared/contapre'
 import { TeamCarousel } from '@/features/landing/components/teamScroll'
 import { useTranslation } from 'react-i18next'
 
-const timeline = [
-  {
-    id: 1,
-    number: '01',
-    icon: Lightbulb,
-    title: 'The Idea',
-    desc: 'Noticed how often ayurvedic products like Adivasi Oil were being sold as counterfeit, and realized traceability across the Ayurvedic supply chain was almost non-existent.',
-    accent: 'from-emerald-500/20 to-teal-500/10',
-  },
-  {
-    id: 2,
-    number: '02',
-    icon: Code2,
-    title: 'Development Begins',
-    desc: 'Started building Dravya, referencing frameworks like Anvesha and Ministry of AYUSH guidelines to shape the traceability model.',
-    accent: 'from-cyan-500/20 to-blue-500/10',
-  },
-  {
-    id: 3,
-    number: '03',
-    icon: Shrub,
-    title: 'Scale & Go Live',
-    desc: 'Expanding to more producers, manufacturers, and labs nationwide, while integrating AI — including a chatbot assistant — to make the platform more interactive and accessible.',
-    accent: 'from-violet-500/20 to-purple-500/10',
-  },
-  {
-    id: 4,
-    number: '04',
-    icon: Sparkle,
-    title: 'Future Horizons',
-    desc: 'We are constantly adding new AI capabilities, laboratory integrations, and enhanced blockchain auditing tools to Dravya. Stay tuned for more features!',
-    accent: 'from-amber-500/20 to-orange-500/10',
-  },
-]
-
 export default function AboutPage() {
   const { t } = useTranslation()
+
+  const timeline = [
+    {
+      id: 1,
+      number: '01',
+      icon: Lightbulb,
+      title: t('about.timeline.step1Title'),
+      desc: t('about.timeline.step1Desc'),
+      accent: 'from-emerald-500/20 to-teal-500/10',
+    },
+    {
+      id: 2,
+      number: '02',
+      icon: Code2,
+      title: t('about.timeline.step2Title'),
+      desc: t('about.timeline.step2Desc'),
+      accent: 'from-cyan-500/20 to-blue-500/10',
+    },
+    {
+      id: 3,
+      number: '03',
+      icon: Shrub,
+      title: t('about.timeline.step3Title'),
+      desc: t('about.timeline.step3Desc'),
+      accent: 'from-violet-500/20 to-purple-500/10',
+    },
+    {
+      id: 4,
+      number: '04',
+      icon: Sparkle,
+      title: t('about.timeline.step4Title'),
+      desc: t('about.timeline.step4Desc'),
+      accent: 'from-amber-500/20 to-orange-500/10',
+    },
+  ]
 
   return (
     <div className="min-h-screen flex flex-col bg-white relative font-sans overflow-x-hidden">

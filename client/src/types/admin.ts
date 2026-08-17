@@ -40,3 +40,57 @@ export interface AdminVerification {
 export interface AssignVerificationPayload {
   authorityId: string
 }
+
+export interface Laboratory {
+  id: string
+  name: string
+  email: string
+  organization: string | null
+}
+
+export interface PendingLabAssignment {
+  id: string
+  batchNumber: string
+  quantity: number
+  unit: string
+  status: 'READY_FOR_LAB'
+  updatedAt: string
+  herb: {
+    commonName: string
+  }
+  producerProfile: {
+    farmName: string
+  }
+}
+
+export interface AssignLabTestPayload {
+  labId: string
+}
+
+export interface GeneratedQRCode {
+  code: string
+  verificationUrl: string
+}
+
+export interface AdminLotInspection {
+  id: string
+  batchId: string
+  authorityId: string | null
+  assignedBy: string | null
+  assignedAt: string | null
+  status: 'PENDING' | 'UNDER_INSPECTION' | 'APPROVED' | 'REJECTED'
+  declaredQuantity: number
+  createdAt: string
+  authority: VerificationAuthority | null
+  batch: {
+    batchNumber: string
+    quantity: number
+    unit: string
+    herb: {
+      commonName: string
+    }
+    producerProfile: {
+      farmName: string
+    }
+  }
+}
