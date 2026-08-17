@@ -40,8 +40,8 @@ interface CreateBatchFormProps {
 }
 
 export function CreateBatchForm({ herbs, onSubmit, isLoading }: CreateBatchFormProps) {
-  const form = useForm<z.infer<typeof createBatchSchema>>({
-    resolver: zodResolver(createBatchSchema),
+  const form = useForm<FormValues>({
+    resolver: zodResolver(createBatchSchema) as any,
     defaultValues: {
       herbId: '',
       farmLocation: '',

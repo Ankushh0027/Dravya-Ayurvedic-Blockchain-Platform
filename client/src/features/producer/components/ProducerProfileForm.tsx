@@ -40,8 +40,8 @@ interface ProducerProfileFormProps {
 }
 
 export function ProducerProfileForm({ initialData, onSubmit, isLoading }: ProducerProfileFormProps) {
-  const form = useForm<z.infer<typeof profileSchema>>({
-    resolver: zodResolver(profileSchema),
+  const form = useForm<ProfileFormValues>({
+    resolver: zodResolver(profileSchema) as any,
     defaultValues: {
       farmName: initialData?.farmName || '',
       address: initialData?.address || '',

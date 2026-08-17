@@ -126,7 +126,7 @@ function LabTestsQueueContent() {
             <div className="bg-white/50 border border-slate-200 rounded-xl flex items-center h-12 px-3 text-slate-500 flex-shrink-0">
               <Filter className="w-5 h-5" />
             </div>
-            <Select value={statusFilter} onValueChange={setStatusFilter}>
+            <Select value={statusFilter} onValueChange={(val) => setStatusFilter(val || 'ALL')}>
               <SelectTrigger className="w-full md:w-[200px] h-12 bg-white/50 border-slate-200 rounded-xl font-medium focus:ring-[#184E48]/20 focus:border-[#184E48]">
                 <SelectValue placeholder="All Statuses" />
               </SelectTrigger>

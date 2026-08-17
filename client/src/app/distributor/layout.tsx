@@ -11,23 +11,21 @@ export default function DistributorLayout({
 }: {
   children: React.ReactNode
 }) {
-  const { user, isHydrated, role } = useAuthStore()
+  const { user } = useAuthStore()
   const router = useRouter()
-  const [isAuthorized, setIsAuthorized] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    if (isHydrated) {
-      if (!user) {
-        router.replace('/login')
-      } else if (role !== 'DISTRIBUTOR') {
-        router.replace('/unauthorized')
-      } else {
-        setIsAuthorized(true)
-      }
-    }
-  }, [user, isHydrated, role, router])
+    setMounted(true)
+  }, [])
 
-  if (!isHydrated || !isAuthorized) {
+  useEffect(() => {
+    if (mounted && user && user.role !== 'DISTRIBUTOR') {
+      router.replace('/unauthorized')
+    }
+  }, [user, mounted, router])
+
+  if (!mounted) {
     return <LoadingState message="Verifying access..." />
   }
 
