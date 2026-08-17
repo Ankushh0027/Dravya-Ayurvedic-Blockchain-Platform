@@ -19,13 +19,18 @@ COPY requirements.txt pyproject.toml /app/
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy source code and default configurations
+# Copy source code, models registry & checkpoints, and configurations
 COPY src/ /app/src/
 COPY configs/ /app/configs/
+COPY models/ /app/models/
 COPY README.md /app/
 
+# Set default model version environment variable
+ENV DRAVYA_ACTIVE_MODEL_VERSION=v1-kaggle
+
 # Create placeholder directories for runtime mounts
-RUN mkdir -p /app/models /app/reports/model_evaluation /app/datasets/raw
+RUN mkdir -p /app/reports/model_evaluation /app/datasets/raw
+
 
 # Expose FastAPI server port
 EXPOSE 8000

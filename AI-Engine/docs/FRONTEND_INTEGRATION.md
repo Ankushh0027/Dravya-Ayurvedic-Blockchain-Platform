@@ -234,8 +234,15 @@ export async function getBatchTraceability(batchId: string): Promise<Traceabilit
 }
 ```
 
-### F. Query Dravya AI Assistant (Chat Interface)
+### 3. Dravya AI Copilot Chat Component (`POST /chat`)
+
+The **Dravya AI Copilot** is a hybrid assistant providing real-time live data queries and authoritative project knowledge responses.
+
 ```typescript
+import { ChatResponse } from '@/types/dravya';
+
+const API_BASE = process.env.NEXT_PUBLIC_DRAVYA_AI_API_URL || 'http://127.0.0.1:8000';
+
 export async function sendChatMessage(
   message: string,
   conversationId?: string
@@ -244,20 +251,27 @@ export async function sendChatMessage(
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      message, // e.g. "Ashwagandha ki total quantity kitni hai?"
-      conversation_id: conversationId,
+      message, // e.g. "Ashwagandha ki total quantity kitni hai?" or "What problem does Dravya solve?"
+      conversation_id: conversationId, // Preserve session context for multi-turn pronoun resolution
     }),
   });
 
   if (!response.ok) {
-    throw new Error('Failed to communicate with Dravya AI Assistant');
+    throw new Error('Failed to communicate with Dravya AI Copilot');
   }
 
   return response.json();
 }
 ```
 
-#### Example Request:
+#### Example Project Knowledge Request:
+```json
+{
+  "message": "What is Dravya and how does it prevent adulteration?"
+}
+```
+
+#### Example Live Inventory Request:
 ```json
 {
   "message": "Ashwagandha ki total quantity kitni hai?"

@@ -22,6 +22,8 @@ model:
   model_version: "v1"
   device: "cpu"
 
+
+
 evaluation:
   quality_gate:
     min_accuracy: 0.70
@@ -47,6 +49,7 @@ api:
     - "http://localhost:5173"
     - "http://127.0.0.1:3000"
     - "http://127.0.0.1:5173"
+    - "https://dravya-ayurvedic-blockchain-platfor-nine.vercel.app"
 
 
 batch:

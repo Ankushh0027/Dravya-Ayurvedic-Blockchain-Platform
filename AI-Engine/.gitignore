@@ -21,7 +21,8 @@ __pycache__/
 htmlcov/
 
 # Datasets & Processed Data
-data/
+/data/
+
 datasets/raw/*
 !datasets/raw/.gitkeep
 datasets/processed/*
@@ -30,14 +31,18 @@ datasets/final/*
 !datasets/final/.gitkeep
 
 # Model Checkpoints & Deep Learning Weights
-models/*
-!models/.gitkeep
-!models/active_model.json
+models/runs/
+models/*.tmp
 *.pt
-*.pth
 *.ckpt
 *.onnx
 *.safetensors
+!models/v1-kaggle/
+!models/v2-smoke/
+!models/active_model.json
+!models/.gitkeep
+
+
 
 # Scratch & Temporary Files
 scratch/
