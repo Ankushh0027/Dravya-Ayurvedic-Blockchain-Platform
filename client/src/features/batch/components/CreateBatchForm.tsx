@@ -40,7 +40,7 @@ interface CreateBatchFormProps {
 }
 
 export function CreateBatchForm({ herbs, onSubmit, isLoading }: CreateBatchFormProps) {
-  const form = useForm<z.infer<typeof createBatchSchema>>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(createBatchSchema) as any,
     defaultValues: {
       herbId: '',
@@ -76,10 +76,10 @@ export function CreateBatchForm({ herbs, onSubmit, isLoading }: CreateBatchFormP
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#184E48]/5 rounded-full blur-[80px] pointer-events-none" />
       
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(handleSubmit as any)} className="space-y-6 relative z-10">
+        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
             <FormField
-              control={form.control as any}
+              control={form.control}
               name="herbId"
               render={({ field }) => (
                 <FormItem>
@@ -104,7 +104,7 @@ export function CreateBatchForm({ herbs, onSubmit, isLoading }: CreateBatchFormP
             />
 
             <FormField
-              control={form.control as any}
+              control={form.control}
               name="farmLocation"
               render={({ field }) => (
                 <FormItem>
@@ -119,7 +119,7 @@ export function CreateBatchForm({ herbs, onSubmit, isLoading }: CreateBatchFormP
 
             <div className="flex space-x-4">
               <FormField
-                control={form.control as any}
+                control={form.control}
                 name="quantity"
                 render={({ field }) => (
                   <FormItem className="flex-1">
@@ -133,7 +133,7 @@ export function CreateBatchForm({ herbs, onSubmit, isLoading }: CreateBatchFormP
               />
               
               <FormField
-                control={form.control as any}
+                control={form.control}
                 name="unit"
                 render={({ field }) => (
                   <FormItem className="w-1/3">
@@ -148,7 +148,7 @@ export function CreateBatchForm({ herbs, onSubmit, isLoading }: CreateBatchFormP
             </div>
 
             <FormField
-              control={form.control as any}
+              control={form.control}
               name="harvestDate"
               render={({ field }) => (
                 <FormItem>
@@ -162,7 +162,7 @@ export function CreateBatchForm({ herbs, onSubmit, isLoading }: CreateBatchFormP
             />
 
             <FormField
-              control={form.control as any}
+              control={form.control}
               name="cultivationMethod"
               render={({ field }) => (
                 <FormItem>
@@ -186,7 +186,7 @@ export function CreateBatchForm({ herbs, onSubmit, isLoading }: CreateBatchFormP
             />
 
             <FormField
-              control={form.control as any}
+              control={form.control}
               name="latitude"
               render={({ field }) => (
                 <FormItem>
@@ -200,7 +200,7 @@ export function CreateBatchForm({ herbs, onSubmit, isLoading }: CreateBatchFormP
             />
 
             <FormField
-              control={form.control as any}
+              control={form.control}
               name="longitude"
               render={({ field }) => (
                 <FormItem>

@@ -114,7 +114,7 @@ function DistributorBatchesContent() {
             />
           </div>
           <div className="w-full md:w-64">
-            <Select value={statusFilter} onValueChange={(val: any) => setStatusFilter(val)}>
+            <Select value={statusFilter} onValueChange={(val) => setStatusFilter(val || 'ALL')}>
               <SelectTrigger className="h-12 bg-white border-slate-200 rounded-xl focus:ring-[#184E48]">
                 <div className="flex items-center gap-2">
                   <Filter className="w-4 h-4 text-slate-500" />
@@ -135,7 +135,7 @@ function DistributorBatchesContent() {
 
       {filteredAssignments.length === 0 ? (
         <EmptyState
-          icon={<Truck className="w-10 h-10 text-slate-400" />}
+          icon={<Truck className="w-8 h-8 text-slate-400" />}
           title="No assignments found"
           description={
             searchTerm || statusFilter !== 'ALL'
@@ -143,11 +143,14 @@ function DistributorBatchesContent() {
               : 'You have no batches assigned for distribution yet.'
           }
           action={
-            (searchTerm || statusFilter !== 'ALL') ? (
-              <Button onClick={() => {
-                setSearchTerm('')
-                setStatusFilter('ALL')
-              }}>
+            searchTerm || statusFilter !== 'ALL' ? (
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setSearchTerm('')
+                  setStatusFilter('ALL')
+                }}
+              >
                 Clear Filters
               </Button>
             ) : undefined
