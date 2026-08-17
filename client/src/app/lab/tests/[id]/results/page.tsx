@@ -248,7 +248,7 @@ export default function LabTestResults() {
                     control={control}
                     name="resultStatus"
                     render={({ field }) => (
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <Select onValueChange={(val) => field.onChange(val || 'PASS')} defaultValue={field.value}>
                         <SelectTrigger className="bg-white/50 border-slate-200 focus:border-[#184E48] rounded-xl">
                           <SelectValue placeholder="Select status" />
                         </SelectTrigger>
